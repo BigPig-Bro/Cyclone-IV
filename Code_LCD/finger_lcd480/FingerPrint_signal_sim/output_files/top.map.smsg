@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at vga_timing.v(16): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: C:/Users/HUIP/Desktop/FingerPrint_signal_sim/src/vga_timing.v Line: 16
+Info (10281): Verilog HDL Declaration information at vga_timing.v(20): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: C:/Users/HUIP/Desktop/FingerPrint_signal_sim/src/vga_timing.v Line: 20
