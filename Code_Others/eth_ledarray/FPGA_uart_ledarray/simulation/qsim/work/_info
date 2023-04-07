@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HUIP/Desktop/led_lcd/simulation/qsim
+vhard_block
+!s110 1649041945
+!i10b 1
+!s100 <dTCGOQTZRMVeK05I;HU>3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4B0CR4ORoUE_M0=Rf_f[V3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649041945
+Z3 8top.vo
+Z4 Ftop.vo
+!i122 2
+L0 8257 34
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1649041945.000000
+Z6 !s107 top.vo|
+Z7 !s90 -work|work|top.vo|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+vtop
+Z10 !s110 1649042130
+!i10b 1
+!s100 UI]LcP=[_9fG?_V;JHMO`3
+R1
+I=3`GSn3@`CbVWe=M81G0>0
+R2
+R0
+Z11 w1649042129
+R3
+R4
+!i122 6
+L0 32 10562
+R5
+r1
+!s85 0
+31
+Z12 !s108 1649042130.000000
+R6
+R7
+!i113 1
+R8
+R9
+vtop_vlg_vec_tst
+R10
+!i10b 1
+!s100 2oA^occJXK89Fi@Y7Da5f3
+R1
+IXKI9e?:G@9^A8Yc=@>_cg1
+R2
+R0
+R11
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 42
+R5
+r1
+!s85 0
+31
+R12
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R8
+R9

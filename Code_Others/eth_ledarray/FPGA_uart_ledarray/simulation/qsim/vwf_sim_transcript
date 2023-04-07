@@ -1,0 +1,265 @@
+Determining the location of the ModelSim executable...
+
+Using: D:\intelFPGA_lite\20.1\modelsim_ase\win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off top -c top --vector_source="C:/Users/HUIP/Desktop/led_lcd/Waveform.vwf" --testbench_file="C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Mon Apr 04 11:15:29 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off top -c top --vector_source=C:/Users/HUIP/Desktop/led_lcd/Waveform.vwf --testbench_file=C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/Waveform.vwf.vt
+Info (119006): Selected device EP4CE10F17C8 for design "top"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+g (201007): Can't find port "rx_data[31]" in design
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/" top -c top
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Mon Apr 04 11:15:29 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/ top -c top
+Info (119006): Selected device EP4CE10F17C8 for design "top"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file top.vo in folder "C:/Users/HUIP/Desktop/led_lcd/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Mon Apr 04 11:15:30 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/top.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vsim -c -do top.do
+
+Reading pref.tcl
+
+# 2020.1
+
+
+# do top.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:15:30 on Apr 04,2022
+# vlog -work work top.vo 
+# -- Compiling module top
+
+# 
+# Top level modules:
+# 	top
+# End time: 11:15:30 on Apr 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:15:30 on Apr 04,2022
+# vlog -work work Waveform.vwf.vt 
+
+# -- Compiling module top_vlg_vec_tst
+# 
+# Top level modules:
+# 	top_vlg_vec_tst
+# End time: 11:15:30 on Apr 04,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.top_vlg_vec_tst 
+# Start time: 11:15:30 on Apr 04,2022
+# Loading work.top_vlg_vec_tst
+# Loading work.top
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# after#25
+
+# Simulation time: 15795001 ps
+
+# ** Note: $finish    : Waveform.vwf.vt(61)
+#    Time: 100 us  Iteration: 0  Instance: /top_vlg_vec_tst
+# End time: 11:15:36 on Apr 04,2022, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/HUIP/Desktop/led_lcd/Waveform.vwf...
+
+Reading C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/top.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: rx_data[55] - signal not found in VCD.
+
+Warning: rx_data[54] - signal not found in VCD.
+
+Warning: rx_data[53] - signal not found in VCD.
+
+Warning: rx_data[52] - signal not found in VCD.
+
+Warning: rx_data[51] - signal not found in VCD.
+
+Warning: rx_data[50] - signal not found in VCD.
+
+Warning: rx_data[49] - signal not found in VCD.
+
+Warning: rx_data[48] - signal not found in VCD.
+
+Warning: rx_data[47] - signal not found in VCD.
+
+Warning: rx_data[46] - signal not found in VCD.
+
+Warning: rx_data[45] - signal not found in VCD.
+
+Warning: rx_data[44] - signal not found in VCD.
+
+Warning: rx_data[43] - signal not found in VCD.
+
+Warning: rx_data[42] - signal not found in VCD.
+
+Warning: rx_data[41] - signal not found in VCD.
+
+Warning: rx_data[40] - signal not found in VCD.
+
+Warning: rx_data[39] - signal not found in VCD.
+
+Warning: rx_data[38] - signal not found in VCD.
+
+Warning: rx_data[37] - signal not found in VCD.
+
+Warning: rx_data[36] - signal not found in VCD.
+
+Warning: rx_data[35] - signal not found in VCD.
+
+Warning: rx_data[34] - signal not found in VCD.
+
+Warning: rx_data[33] - signal not found in VCD.
+
+Warning: rx_data[32] - signal not found in VCD.
+
+Warning: rx_data[31] - signal not found in VCD.
+
+Warning: rx_data[30] - signal not found in VCD.
+
+Warning: rx_data[29] - signal not found in VCD.
+
+Warning: rx_data[28] - signal not found in VCD.
+
+Warning: rx_data[27] - signal not found in VCD.
+
+Warning: rx_data[26] - signal not found in VCD.
+
+Warning: rx_data[25] - signal not found in VCD.
+
+Warning: rx_data[24] - signal not found in VCD.
+
+Warning: rx_data[23] - signal not found in VCD.
+
+Warning: rx_data[22] - signal not found in VCD.
+
+Warning: rx_data[21] - signal not found in VCD.
+
+Warning: rx_data[20] - signal not found in VCD.
+
+Warning: rx_data[19] - signal not found in VCD.
+
+Warning: rx_data[18] - signal not found in VCD.
+
+Warning: rx_data[17] - signal not found in VCD.
+
+Warning: rx_data[16] - signal not found in VCD.
+
+Warning: rx_data[15] - signal not found in VCD.
+
+Warning: rx_data[14] - signal not found in VCD.
+
+Warning: rx_data[13] - signal not found in VCD.
+
+Warning: rx_data[12] - signal not found in VCD.
+
+Warning: rx_data[11] - signal not found in VCD.
+
+Warning: rx_data[10] - signal not found in VCD.
+
+Warning: rx_data[9] - signal not found in VCD.
+
+Warning: rx_data[8] - signal not found in VCD.
+
+Warning: rx_data[7] - signal not found in VCD.
+
+Warning: rx_data[6] - signal not found in VCD.
+
+Warning: rx_data[5] - signal not found in VCD.
+
+Warning: rx_data[4] - signal not found in VCD.
+
+Warning: rx_data[3] - signal not found in VCD.
+
+Warning: rx_data[2] - signal not found in VCD.
+
+Warning: rx_data[1] - signal not found in VCD.
+
+Warning: rx_data[0] - signal not found in VCD.
+
+Warning: light_in - signal not found in VCD.
+
+Warning: clk_led - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/HUIP/Desktop/led_lcd/simulation/qsim/top_20220404111536.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

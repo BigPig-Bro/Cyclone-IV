@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at led_ctrl.v(36): always construct contains both blocking and non-blocking assignments File: C:/Users/HUIP/Desktop/led_lcd/src/led_ctrl.v Line: 36
