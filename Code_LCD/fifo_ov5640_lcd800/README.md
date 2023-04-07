@@ -10,7 +10,6 @@
 
 - 可能需要多次复位键（反正能复位到一次正常的就行，原因暂时未知
 
-![image-20230407151843696](C:\Users\BigPig\AppData\Roaming\Typora\typora-user-images\image-20230407151843696.png)
 
 
-
+![image-20230407151843696](image-20230407151843696.png)
