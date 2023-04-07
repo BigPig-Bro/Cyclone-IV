@@ -1,0 +1,35 @@
+
+State Machine - |top|uart_top:m2|state
+Name state.IDLE state.WAIT state.SEND 
+state.IDLE 0 0 0 
+state.SEND 1 0 1 
+state.WAIT 1 1 0 
+
+State Machine - |top|uart_top:m2|uart_tx:uart_tx_inst|state
+Name state.S_SEND_BYTE state.S_START state.S_IDLE state.S_STOP 
+state.S_IDLE 0 0 0 0 
+state.S_START 0 1 1 0 
+state.S_SEND_BYTE 1 0 1 0 
+state.S_STOP 0 0 1 1 
+
+State Machine - |top|ds1302_top:m1|state_next
+Name state_next.WAIT_TIME state_next.READ_TIME state_next.INIT_TIME state_next.0000 state_next.WAIT_BUSY 
+state_next.0000 0 0 0 0 0 
+state_next.INIT_TIME 0 0 1 1 0 
+state_next.READ_TIME 0 1 0 1 0 
+state_next.WAIT_TIME 1 0 0 1 0 
+state_next.WAIT_BUSY 0 0 0 1 1 
+
+State Machine - |top|ds1302_top:m1|state_main
+Name state_main.WAIT_TIME state_main.READ_TIME state_main.INIT_TIME state_main.0000 state_main.WAIT_BUSY 
+state_main.0000 0 0 0 0 0 
+state_main.INIT_TIME 0 0 1 1 0 
+state_main.READ_TIME 0 1 0 1 0 
+state_main.WAIT_TIME 1 0 0 1 0 
+state_main.WAIT_BUSY 0 0 0 1 1 
+
+State Machine - |top|ds1302_top:m1|ds1302_drive:m3|state_main
+Name state_main.000 state_main.STATE_DATA state_main.STATE_REG 
+state_main.000 0 0 0 
+state_main.STATE_REG 1 0 1 
+state_main.STATE_DATA 1 1 0 

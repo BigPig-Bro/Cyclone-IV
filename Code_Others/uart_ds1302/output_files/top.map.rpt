@@ -1,0 +1,593 @@
+Analysis & Synthesis report for top
+Tue Oct 25 20:24:03 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top|uart_top:m2|state
+  9. State Machine - |top|uart_top:m2|uart_tx:uart_tx_inst|state
+ 10. State Machine - |top|ds1302_top:m1|state_next
+ 11. State Machine - |top|ds1302_top:m1|state_main
+ 12. State Machine - |top|ds1302_top:m1|ds1302_drive:m3|state_main
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 19. Parameter Settings for User Entity Instance: ds1302_top:m1
+ 20. Parameter Settings for User Entity Instance: ds1302_top:m1|ds1302_drive:m3
+ 21. Parameter Settings for User Entity Instance: uart_top:m2
+ 22. Parameter Settings for User Entity Instance: uart_top:m2|uart_tx:uart_tx_inst
+ 23. Port Connectivity Checks: "uart_top:m2"
+ 24. Port Connectivity Checks: "ds1302_top:m1"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 25 20:24:03 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 380                                         ;
+;     Total combinational functions  ; 333                                         ;
+;     Dedicated logic registers      ; 199                                         ;
+; Total registers                    ; 199                                         ;
+; Total pins                         ; 22                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
+; src/ds1302_top.sv                ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv   ;         ;
+; src/ds1302_drive.sv              ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv ;         ;
+; src/top.v                        ; yes             ; User Verilog HDL File        ; D:/Users/HUIP/Desktop/UART_DS1302/src/top.v           ;         ;
+; src/UART/uart_tx.v               ; yes             ; User Verilog HDL File        ; D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_tx.v  ;         ;
+; src/UART/uart_top.v              ; yes             ; User Verilog HDL File        ; D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 380       ;
+;                                             ;           ;
+; Total combinational functions               ; 333       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 152       ;
+;     -- 3 input functions                    ; 33        ;
+;     -- <=2 input functions                  ; 148       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 238       ;
+;     -- arithmetic mode                      ; 95        ;
+;                                             ;           ;
+; Total registers                             ; 199       ;
+;     -- Dedicated logic registers            ; 199       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 22        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 162       ;
+; Total fan-out                               ; 1652      ;
+; Average fan-out                             ; 2.86      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name  ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+--------------+
+; |top                         ; 333 (17)            ; 199 (16)                  ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top                                  ; top          ; work         ;
+;    |ds1302_top:m1|           ; 151 (102)           ; 98 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_top:m1                    ; ds1302_top   ; work         ;
+;       |ds1302_drive:m3|      ; 49 (49)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_top:m1|ds1302_drive:m3    ; ds1302_drive ; work         ;
+;    |uart_top:m2|             ; 165 (123)           ; 85 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:m2                      ; uart_top     ; work         ;
+;       |uart_tx:uart_tx_inst| ; 42 (42)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:m2|uart_tx:uart_tx_inst ; uart_tx      ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------+
+; State Machine - |top|uart_top:m2|state            ;
++------------+------------+------------+------------+
+; Name       ; state.IDLE ; state.WAIT ; state.SEND ;
++------------+------------+------------+------------+
+; state.IDLE ; 0          ; 0          ; 0          ;
+; state.SEND ; 1          ; 0          ; 1          ;
+; state.WAIT ; 1          ; 1          ; 0          ;
++------------+------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |top|uart_top:m2|uart_tx:uart_tx_inst|state                         ;
++-------------------+-------------------+---------------+--------------+--------------+
+; Name              ; state.S_SEND_BYTE ; state.S_START ; state.S_IDLE ; state.S_STOP ;
++-------------------+-------------------+---------------+--------------+--------------+
+; state.S_IDLE      ; 0                 ; 0             ; 0            ; 0            ;
+; state.S_START     ; 0                 ; 1             ; 1            ; 0            ;
+; state.S_SEND_BYTE ; 1                 ; 0             ; 1            ; 0            ;
+; state.S_STOP      ; 0                 ; 0             ; 1            ; 1            ;
++-------------------+-------------------+---------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_top:m1|state_next                                                                                      ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+; Name                 ; state_next.WAIT_TIME ; state_next.READ_TIME ; state_next.INIT_TIME ; state_next.0000 ; state_next.WAIT_BUSY ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+; state_next.0000      ; 0                    ; 0                    ; 0                    ; 0               ; 0                    ;
+; state_next.INIT_TIME ; 0                    ; 0                    ; 1                    ; 1               ; 0                    ;
+; state_next.READ_TIME ; 0                    ; 1                    ; 0                    ; 1               ; 0                    ;
+; state_next.WAIT_TIME ; 1                    ; 0                    ; 0                    ; 1               ; 0                    ;
+; state_next.WAIT_BUSY ; 0                    ; 0                    ; 0                    ; 1               ; 1                    ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_top:m1|state_main                                                                                      ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+; Name                 ; state_main.WAIT_TIME ; state_main.READ_TIME ; state_main.INIT_TIME ; state_main.0000 ; state_main.WAIT_BUSY ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+; state_main.0000      ; 0                    ; 0                    ; 0                    ; 0               ; 0                    ;
+; state_main.INIT_TIME ; 0                    ; 0                    ; 1                    ; 1               ; 0                    ;
+; state_main.READ_TIME ; 0                    ; 1                    ; 0                    ; 1               ; 0                    ;
+; state_main.WAIT_TIME ; 1                    ; 0                    ; 0                    ; 1               ; 0                    ;
+; state_main.WAIT_BUSY ; 0                    ; 0                    ; 0                    ; 1               ; 1                    ;
++----------------------+----------------------+----------------------+----------------------+-----------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_top:m1|ds1302_drive:m3|state_main                         ;
++-----------------------+----------------+-----------------------+----------------------+
+; Name                  ; state_main.000 ; state_main.STATE_DATA ; state_main.STATE_REG ;
++-----------------------+----------------+-----------------------+----------------------+
+; state_main.000        ; 0              ; 0                     ; 0                    ;
+; state_main.STATE_REG  ; 1              ; 0                     ; 1                    ;
+; state_main.STATE_DATA ; 1              ; 1                     ; 0                    ;
++-----------------------+----------------+-----------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++--------------------------------------------------+-----------------------------------------------------+
+; Register name                                    ; Reason for Removal                                  ;
++--------------------------------------------------+-----------------------------------------------------+
+; ds1302_top:m1|send_data[2,3,6]                   ; Stuck at GND due to stuck port data_in              ;
+; ds1302_top:m1|ds1302_drive:m3|send_data_r[2,3,6] ; Stuck at GND due to stuck port data_in              ;
+; ds1302_top:m1|ds1302_drive:m3|addr_r[5,6]        ; Merged with ds1302_top:m1|ds1302_drive:m3|addr_r[4] ;
+; ds1302_top:m1|send_addr[5,6]                     ; Merged with ds1302_top:m1|send_addr[4]              ;
+; ds1302_top:m1|ds1302_drive:m3|state_sub[1]       ; Stuck at GND due to stuck port data_in              ;
+; ds1302_top:m1|send_addr[7]                       ; Stuck at VCC due to stuck port data_in              ;
+; ds1302_top:m1|send_addr[4]                       ; Stuck at GND due to stuck port data_in              ;
+; ds1302_top:m1|ds1302_drive:m3|addr_r[4]          ; Stuck at GND due to stuck port data_in              ;
+; uart_top:m2|state~9                              ; Lost fanout                                         ;
+; uart_top:m2|state~10                             ; Lost fanout                                         ;
+; uart_top:m2|uart_tx:uart_tx_inst|state~4         ; Lost fanout                                         ;
+; uart_top:m2|uart_tx:uart_tx_inst|state~5         ; Lost fanout                                         ;
+; ds1302_top:m1|state_next~7                       ; Lost fanout                                         ;
+; ds1302_top:m1|state_next~8                       ; Lost fanout                                         ;
+; ds1302_top:m1|state_next~10                      ; Lost fanout                                         ;
+; ds1302_top:m1|state_main~9                       ; Lost fanout                                         ;
+; ds1302_top:m1|state_main~10                      ; Lost fanout                                         ;
+; ds1302_top:m1|state_main~12                      ; Lost fanout                                         ;
+; ds1302_top:m1|ds1302_drive:m3|state_main~6       ; Lost fanout                                         ;
+; ds1302_top:m1|state_next.WAIT_TIME               ; Merged with ds1302_top:m1|state_next.WAIT_BUSY      ;
+; ds1302_top:m1|state_next.WAIT_BUSY               ; Stuck at GND due to stuck port data_in              ;
+; Total Number of Removed Registers = 27           ;                                                     ;
++--------------------------------------------------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                           ;
++----------------------------+---------------------------+----------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register       ;
++----------------------------+---------------------------+----------------------------------------------+
+; ds1302_top:m1|send_data[6] ; Stuck at GND              ; ds1302_top:m1|ds1302_drive:m3|send_data_r[6] ;
+;                            ; due to stuck port data_in ;                                              ;
+; ds1302_top:m1|send_data[3] ; Stuck at GND              ; ds1302_top:m1|ds1302_drive:m3|send_data_r[3] ;
+;                            ; due to stuck port data_in ;                                              ;
+; ds1302_top:m1|send_data[2] ; Stuck at GND              ; ds1302_top:m1|ds1302_drive:m3|send_data_r[2] ;
+;                            ; due to stuck port data_in ;                                              ;
+; ds1302_top:m1|send_addr[4] ; Stuck at GND              ; ds1302_top:m1|ds1302_drive:m3|addr_r[4]      ;
+;                            ; due to stuck port data_in ;                                              ;
++----------------------------+---------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 199   ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 95    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 92    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; uart_top:m2|uart_tx:uart_tx_inst|tx_reg ; 1       ;
+; Total number of inverted registers = 1  ;         ;
++-----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_top:m2|tx_cnt[1]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|uart_top:m2|uart_tx:uart_tx_inst|bit_cnt[2] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top|ds1302_top:m1|clk_delay[0]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|ds1302_top:m1|ds1302_drive:m3|send_cnt[1]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|uart_top:m2|tx_data[0]                      ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |top|ds1302_top:m1|send_data[0]                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|ds1302_top:m1|send_addr[4]                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|ds1302_top:m1|send_cnt[0]                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top|ds1302_top:m1|state_next.READ_TIME          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; No         ; |top|ds1302_top:m1|state_next.0000               ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |top|ds1302_top:m1|Selector23                    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top|ds1302_top:m1|Selector21                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ds1302_top:m1 ;
++----------------+----------+--------------------------------+
+; Parameter Name ; Value    ; Type                           ;
++----------------+----------+--------------------------------+
+; CLK_FRE        ; 50       ; Signed Integer                 ;
+; DS1302_FRE     ; 100000   ; Signed Integer                 ;
+; START_SEC      ; 00000001 ; Unsigned Binary                ;
+; START_MIN      ; 00000001 ; Unsigned Binary                ;
+; START_HOU      ; 00010010 ; Unsigned Binary                ;
+; START_DAY      ; 00000001 ; Unsigned Binary                ;
+; START_MON      ; 00000001 ; Unsigned Binary                ;
+; START_WEK      ; 00000001 ; Unsigned Binary                ;
+; START_YEA      ; 00100010 ; Unsigned Binary                ;
++----------------+----------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ds1302_top:m1|ds1302_drive:m3 ;
++----------------+--------+--------------------------------------------------+
+; Parameter Name ; Value  ; Type                                             ;
++----------------+--------+--------------------------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                                   ;
+; DS1302_FRE     ; 100000 ; Signed Integer                                   ;
++----------------+--------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:m2 ;
++----------------+--------+--------------------------------+
+; Parameter Name ; Value  ; Type                           ;
++----------------+--------+--------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                 ;
+; BAUD_RATE      ; 115200 ; Signed Integer                 ;
++----------------+--------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:m2|uart_tx:uart_tx_inst ;
++----------------+--------+-----------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                ;
++----------------+--------+-----------------------------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                                      ;
+; BAUD_RATE      ; 115200 ; Signed Integer                                      ;
++----------------+--------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "uart_top:m2"             ;
++---------+-------+----------+------------------------+
+; Port    ; Type  ; Severity ; Details                ;
++---------+-------+----------+------------------------+
+; uart_rx ; Input ; Info     ; Explicitly unconnected ;
++---------+-------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "ds1302_top:m1"             ;
++----------+--------+----------+------------------------+
+; Port     ; Type   ; Severity ; Details                ;
++----------+--------+----------+------------------------+
+; min_data ; Output ; Info     ; Explicitly unconnected ;
+; hou_data ; Output ; Info     ; Explicitly unconnected ;
+; day_data ; Output ; Info     ; Explicitly unconnected ;
+; mon_data ; Output ; Info     ; Explicitly unconnected ;
+; wek_data ; Output ; Info     ; Explicitly unconnected ;
+; yea_data ; Output ; Info     ; Explicitly unconnected ;
++----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 199                         ;
+;     CLR               ; 52                          ;
+;     CLR SCLR          ; 16                          ;
+;     ENA               ; 61                          ;
+;     ENA CLR           ; 23                          ;
+;     ENA CLR SLD       ; 4                           ;
+;     ENA SCLR          ; 2                           ;
+;     ENA SCLR SLD      ; 2                           ;
+;     plain             ; 39                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 334                         ;
+;     arith             ; 95                          ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 239                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 152                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.25                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 25 20:23:56 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/ds1302_top.sv
+    Info (12023): Found entity 1: ds1302_top File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/ds1302_drive.sv
+    Info (12023): Found entity 1: ds1302_drive File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/UART_DS1302/src/top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_tx.v
+    Info (12023): Found entity 1: uart_tx File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_tx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_top.v
+    Info (12023): Found entity 1: uart_top File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_rx.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at ds1302_top.sv(28): Parameter Declaration in module "ds1302_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 28
+Warning (10222): Verilog HDL Parameter Declaration warning at ds1302_top.sv(29): Parameter Declaration in module "ds1302_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 29
+Warning (10222): Verilog HDL Parameter Declaration warning at ds1302_top.sv(30): Parameter Declaration in module "ds1302_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 30
+Warning (10222): Verilog HDL Parameter Declaration warning at ds1302_drive.sv(22): Parameter Declaration in module "ds1302_drive" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.v(76): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 76
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.v(77): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 77
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.v(78): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 78
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top.v(12): truncated value with size 32 to match size of target (16) File: D:/Users/HUIP/Desktop/UART_DS1302/src/top.v Line: 12
+Info (12128): Elaborating entity "ds1302_top" for hierarchy "ds1302_top:m1" File: D:/Users/HUIP/Desktop/UART_DS1302/src/top.v Line: 43
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(57): truncated value with size 32 to match size of target (20) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(69): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(134): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 134
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(137): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(141): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 141
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(146): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 146
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(151): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 151
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(156): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 156
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(161): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 161
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(166): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 166
+Warning (10230): Verilog HDL assignment warning at ds1302_top.sv(183): truncated value with size 32 to match size of target (20) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 183
+Info (12128): Elaborating entity "ds1302_drive" for hierarchy "ds1302_top:m1|ds1302_drive:m3" File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_top.sv Line: 209
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(25): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(60): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(62): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(65): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(79): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(81): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at ds1302_drive.sv(84): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/UART_DS1302/src/ds1302_drive.sv Line: 84
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:m2" File: D:/Users/HUIP/Desktop/UART_DS1302/src/top.v Line: 56
+Warning (10036): Verilog HDL or VHDL warning at uart_top.v(22): object "rx_data_ready" assigned a value but never read File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 22
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:m2|uart_tx:uart_tx_inst" File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_top.v Line: 99
+Info (13000): Registers with preset signals will power-up high File: D:/Users/HUIP/Desktop/UART_DS1302/src/UART/uart_tx.v Line: 121
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 406 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 384 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Tue Oct 25 20:24:03 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
+
+
