@@ -1,0 +1,29 @@
+
+State Machine - |LCD12864_top|state_sub
+Name state_sub.0000 state_sub.END state_sub.SEND_BLOCK 
+state_sub.0000 0 0 0 
+state_sub.SEND_BLOCK 1 0 1 
+state_sub.END 1 1 0 
+
+State Machine - |LCD12864_top|state_pre
+Name state_pre.DELAY_1S state_pre.DISPLAY state_pre.INIT state_pre.0000 state_pre.WAIT_BUSY 
+state_pre.0000 0 0 0 0 0 
+state_pre.INIT 0 0 1 1 0 
+state_pre.DISPLAY 0 1 0 1 0 
+state_pre.DELAY_1S 1 0 0 1 0 
+state_pre.WAIT_BUSY 0 0 0 1 1 
+
+State Machine - |LCD12864_top|state_main
+Name state_main.DELAY_1S state_main.DISPLAY state_main.INIT state_main.0000 state_main.WAIT_BUSY 
+state_main.0000 0 0 0 0 0 
+state_main.INIT 0 0 1 1 0 
+state_main.DISPLAY 0 1 0 1 0 
+state_main.DELAY_1S 1 0 0 1 0 
+state_main.WAIT_BUSY 0 0 0 1 1 
+
+State Machine - |LCD12864_top|LCD12864_drive:LCD12864_drive_m0|state
+Name state.WAIT state.SEND state.DEC_BUSY state.000 
+state.000 0 0 0 0 
+state.DEC_BUSY 0 0 1 1 
+state.SEND 0 1 0 1 
+state.WAIT 1 0 0 1 

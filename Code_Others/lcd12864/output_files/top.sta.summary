@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -6.879
+TNS   : -485.687
+
+Type  : Slow 1200mV 85C Model Setup 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -2.426
+TNS   : -24.111
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -194.823
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -6.335
+TNS   : -440.081
+
+Type  : Slow 1200mV 0C Model Setup 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -2.216
+TNS   : -21.177
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -194.823
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.467
+TNS   : -141.850
+
+Type  : Fast 1200mV 0C Model Setup 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -0.417
+TNS   : -1.423
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -140.946
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD12864_drive:LCD12864_drive_m0|clk_1k'
+Slack : -1.000
+TNS   : -17.000
+
+------------------------------------------------------------

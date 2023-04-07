@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/src {D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv}
+vlog -sv -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/src {D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv}
+

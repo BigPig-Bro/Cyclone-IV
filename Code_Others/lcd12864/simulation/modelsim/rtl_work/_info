@@ -1,0 +1,88 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Users/HUIP/Desktop/LCD12864/simulation/modelsim
+vLCD12864_drive
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1666496811
+!i10b 1
+!s100 A>>GeXzHAmSSmRE2Akh7P1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iz8n`h0nOHgbac_^=Gm2Ci3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1666496704
+8D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv
+FD:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv
+!i122 6
+L0 1 65
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1666496811.000000
+!s107 D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv|D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv|
+Z7 !s90 -reportprogress|300|-work|work|D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv|D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+n@l@c@d12864_drive
+vLCD12864_top
+R1
+R2
+!i10b 1
+!s100 J;6M7KL@TlZ5F57RkP34?3
+R3
+Ij4eo:VV:Wdo]n@4Q[:`L=3
+R4
+S1
+R0
+w1666496753
+8D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+FD:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+!i122 6
+L0 1 188
+R5
+r1
+!s85 0
+31
+R6
+Z10 !s107 D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv|D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv|
+R7
+!i113 1
+R8
+R9
+n@l@c@d12864_top
+vLCD12864_top_vlg_tst
+!s110 1666455698
+!i10b 1
+!s100 9fRQN8mL]WUHX2`ZNi1bW2
+R3
+IP`e?iPOaIHlXS2eCS6WK]2
+R4
+R0
+w1666455615
+8D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt
+FD:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt
+!i122 2
+L0 26 37
+R5
+r1
+!s85 0
+31
+!s108 1666455698.000000
+!s107 D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim|D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim
+R9
+n@l@c@d12864_top_vlg_tst

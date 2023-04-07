@@ -1,0 +1,194 @@
+# Reading pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/src {D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:21:38 on Oct 23,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Users/HUIP/Desktop/LCD12864/src" D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv 
+# -- Compiling module LCD12864_drive
+# 
+# Top level modules:
+# 	LCD12864_drive
+# End time: 00:21:38 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/src {D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:21:38 on Oct 23,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Users/HUIP/Desktop/LCD12864/src" D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv 
+# -- Compiling module LCD12864_top
+# 
+# Top level modules:
+# 	LCD12864_top
+# End time: 00:21:38 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim {D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:21:38 on Oct 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim" D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt 
+# -- Compiling module LCD12864_top_vlg_tst
+# 
+# Top level modules:
+# 	LCD12864_top_vlg_tst
+# End time: 00:21:38 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  LCD12864_top_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" LCD12864_top_vlg_tst 
+# Start time: 00:21:39 on Oct 23,2022
+# Loading work.LCD12864_top_vlg_tst
+# Loading sv_std.std
+# Loading work.LCD12864_top
+# Loading work.LCD12864_drive
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(29)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+add wave -position insertpoint  \
+sim:/LCD12864_top_vlg_tst/i1/state_main \
+sim:/LCD12864_top_vlg_tst/i1/state_sub \
+sim:/LCD12864_top_vlg_tst/i1/state_pre \
+sim:/LCD12864_top_vlg_tst/i1/clk_cnt \
+sim:/LCD12864_top_vlg_tst/i1/send_en \
+sim:/LCD12864_top_vlg_tst/i1/send_data \
+sim:/LCD12864_top_vlg_tst/i1/send_cnt \
+sim:/LCD12864_top_vlg_tst/i1/send_busy \
+sim:/LCD12864_top_vlg_tst/i1/send_rs \
+sim:/LCD12864_top_vlg_tst/i1/block_cnt \
+sim:/LCD12864_top_vlg_tst/i1/page_cnt \
+sim:/LCD12864_top_vlg_tst/i1/data_r
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+
+run 10ms
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(29)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+
+run 10ms
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(29)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:23:27 on Oct 23,2022
+# vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv 
+# -- Compiling module LCD12864_drive
+# -- Compiling module LCD12864_top
+# 
+# Top level modules:
+# 	LCD12864_top
+# End time: 00:23:27 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.LCD12864_top
+# Loading work.LCD12864_drive
+
+run 10ms
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(29)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+run 10ms
+# Running testbench
+vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:42 on Oct 23,2022
+# vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv 
+# -- Compiling module LCD12864_drive
+# -- Compiling module LCD12864_top
+# 
+# Top level modules:
+# 	LCD12864_top
+# End time: 11:17:42 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.LCD12864_top
+# Loading work.LCD12864_drive
+run 20ms
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(29)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+run 10ms
+# Running testbench
+vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:45:13 on Oct 23,2022
+# vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv 
+# -- Compiling module LCD12864_drive
+# -- Compiling module LCD12864_top
+# 
+# Top level modules:
+# 	LCD12864_top
+# End time: 11:45:13 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.LCD12864_top
+# Loading work.LCD12864_drive
+run 20ms
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(30)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:46:51 on Oct 23,2022
+# vlog -reportprogress 300 -work work D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv 
+# -- Compiling module LCD12864_drive
+# -- Compiling module LCD12864_top
+# 
+# Top level modules:
+# 	LCD12864_top
+# End time: 11:46:51 on Oct 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.LCD12864_top
+# Loading work.LCD12864_drive
+run -continue
+# ** Warning: (vsim-7) Failed to open readmem file "VME50.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv(30)
+#    Time: 0 ps  Iteration: 0  Instance: /LCD12864_top_vlg_tst/i1
+# ** Note: $stop    : D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt(57)
+#    Time: 100 us  Iteration: 0  Instance: /LCD12864_top_vlg_tst
+# Break in Module LCD12864_top_vlg_tst at D:/Users/HUIP/Desktop/LCD12864/simulation/modelsim/LCD12864_top.vt line 57
+run 20ms
+# Running testbench
+# End time: 14:38:09 on Oct 23,2022, Elapsed time: 14:16:30
+# Errors: 0, Warnings: 1
