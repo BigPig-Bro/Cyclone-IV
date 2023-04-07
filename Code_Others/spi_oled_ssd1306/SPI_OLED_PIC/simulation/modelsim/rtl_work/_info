@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Users/HUIP/Desktop/SPI_OLED/simulation/modelsim
+voled_ctrl
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1665895293
+!i10b 1
+!s100 TY;lkS8?ndzK:^X^c4VaC3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iz^:@9Y=T`Qc^j^n@kBeOW2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1665894306
+8D:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv
+FD:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv
+!i122 2
+L0 1 225
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1665895293.000000
+!s107 D:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src|D:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src
+Z6 tCvgOpt 0
+vspi_master
+R1
+!i10b 1
+!s100 il<Q72iOX^SE0D;G]24Dz1
+R2
+I=>kQ]=<USoFYB`T9?z=Wc0
+R3
+R0
+w1665895271
+8D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v
+FD:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v
+!i122 1
+L0 1 89
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src|D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src
+R6
+vspi_master_tb
+R1
+!i10b 1
+!s100 WzDco?4TKA09fB<WZ@gV^3
+R2
+I?HHBoBH40@e@cIRh3N1E12
+R3
+R0
+w1665843448
+8D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v
+FD:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v
+!i122 3
+L0 9 58
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src|D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v|
+!i113 1
+R7
+R8
+R6
+vtop
+R1
+!i10b 1
+!s100 ePaISkM6kRdFP0oI@D[Mo3
+R2
+IQia;CnQU2SR:Y@44a1h7S0
+R3
+R0
+w1665893600
+8D:/Users/HUIP/Desktop/SPI_OLED/src/top.v
+FD:/Users/HUIP/Desktop/SPI_OLED/src/top.v
+!i122 0
+L0 1 54
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Users/HUIP/Desktop/SPI_OLED/src/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src|D:/Users/HUIP/Desktop/SPI_OLED/src/top.v|
+!i113 1
+R7
+R8
+R6

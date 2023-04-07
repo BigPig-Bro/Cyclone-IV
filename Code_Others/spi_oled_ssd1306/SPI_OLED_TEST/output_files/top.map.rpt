@@ -1,0 +1,431 @@
+Analysis & Synthesis report for top
+Tue Oct 18 14:02:19 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 13. Parameter Settings for User Entity Instance: oled_ctrl:oled_ctrl_m0
+ 14. Parameter Settings for User Entity Instance: spi_master:spi_master_m0
+ 15. Port Connectivity Checks: "spi_master:spi_master_m0"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 18 14:02:19 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 249                                         ;
+;     Total combinational functions  ; 249                                         ;
+;     Dedicated logic registers      ; 93                                          ;
+; Total registers                    ; 93                                          ;
+; Total pins                         ; 7                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; src/oled_ctrl.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv ;         ;
+; src/top.v                        ; yes             ; User Verilog HDL File        ; E:/EP4CE6F17C8/module/Others/SPI_OLED/src/top.v        ;         ;
+; src/spi_master.v                 ; yes             ; User Verilog HDL File        ; E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 249       ;
+;                                             ;           ;
+; Total combinational functions               ; 249       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 124       ;
+;     -- 3 input functions                    ; 45        ;
+;     -- <=2 input functions                  ; 80        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 193       ;
+;     -- arithmetic mode                      ; 56        ;
+;                                             ;           ;
+; Total registers                             ; 93        ;
+;     -- Dedicated logic registers            ; 93        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 76        ;
+; Total fan-out                               ; 1087      ;
+; Average fan-out                             ; 3.05      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; |top                          ; 249 (0)             ; 93 (0)                    ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |top                          ; top         ; work         ;
+;    |oled_ctrl:oled_ctrl_m0|   ; 211 (211)           ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|oled_ctrl:oled_ctrl_m0   ; oled_ctrl   ; work         ;
+;    |spi_master:spi_master_m0| ; 38 (38)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_master:spi_master_m0 ; spi_master  ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; oled_ctrl:oled_ctrl_m0|state_sub[2]   ; Stuck at GND due to stuck port data_in ;
+; oled_ctrl:oled_ctrl_m0|pre_state[2]   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                              ;
++-------------------------------------+---------------------------+----------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------------------+---------------------------+----------------------------------------+
+; oled_ctrl:oled_ctrl_m0|state_sub[2] ; Stuck at GND              ; oled_ctrl:oled_ctrl_m0|pre_state[2]    ;
+;                                     ; due to stuck port data_in ;                                        ;
++-------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 93    ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|spi_master:spi_master_m0|recv_cnt[3]    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |top|spi_master:spi_master_m0|send_data_r[6] ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|clk_delay[19]    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|page_cnt[0]      ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 9 LEs                ; 21 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_data[3]     ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 9 LEs                ; 21 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_data[4]     ;
+; 15:1               ; 11 bits   ; 110 LEs       ; 11 LEs               ; 99 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_cnt[0]      ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 12 LEs               ; 21 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|state_main[1]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                             ;
+; SPI_FRE        ; 100   ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: oled_ctrl:oled_ctrl_m0 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_master:spi_master_m0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                               ;
+; SPI_FRE        ; 100   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "spi_master:spi_master_m0"   ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; recv_data ; Output ; Info     ; Explicitly unconnected ;
+; spi_miso  ; Input  ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 7                           ;
+; cycloneiii_ff         ; 93                          ;
+;     CLR               ; 5                           ;
+;     ENA               ; 39                          ;
+;     ENA SCLR          ; 15                          ;
+;     ENA SLD           ; 9                           ;
+;     SLD               ; 1                           ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 249                         ;
+;     arith             ; 56                          ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 193                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 124                         ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 18 14:02:13 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled_ctrl.sv
+    Info (12023): Found entity 1: oled_ctrl File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_master_tb.v
+    Info (12023): Found entity 1: spi_master_tb File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master_tb.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_master.v
+    Info (12023): Found entity 1: spi_master File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(13): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 13
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(15): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(16): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(18): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(19): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 19
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(21): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 21
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(22): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(24): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(25): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(26): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(27): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 27
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(28): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 28
+Warning (10222): Verilog HDL Parameter Declaration warning at spi_master.v(23): Parameter Declaration in module "spi_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 23
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "oled_ctrl" for hierarchy "oled_ctrl:oled_ctrl_m0" File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/top.v Line: 29
+Warning (10036): Verilog HDL or VHDL warning at oled_ctrl.sv(37): object "clear_x" assigned a value but never read File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(123): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(128): truncated value with size 32 to match size of target (3) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 128
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(148): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 148
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(154): truncated value with size 32 to match size of target (3) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 154
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(167): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(172): truncated value with size 32 to match size of target (3) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 172
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(194): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 194
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(200): truncated value with size 32 to match size of target (3) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 200
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(213): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 213
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(218): truncated value with size 32 to match size of target (3) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 218
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:spi_master_m0" File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/top.v Line: 52
+Warning (10230): Verilog HDL assignment warning at spi_master.v(26): truncated value with size 32 to match size of target (10) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 26
+Warning (10230): Verilog HDL assignment warning at spi_master.v(59): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 59
+Warning (10230): Verilog HDL assignment warning at spi_master.v(63): truncated value with size 32 to match size of target (1) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 63
+Warning (10230): Verilog HDL assignment warning at spi_master.v(65): truncated value with size 32 to match size of target (2) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 65
+Warning (10230): Verilog HDL assignment warning at spi_master.v(71): truncated value with size 32 to match size of target (4) File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/spi_master.v Line: 71
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file E:/EP4CE6F17C8/module/Others/SPI_OLED/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 249 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4778 megabytes
+    Info: Processing ended: Tue Oct 18 14:02:19 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/EP4CE6F17C8/module/Others/SPI_OLED/output_files/top.map.smsg.
+
+

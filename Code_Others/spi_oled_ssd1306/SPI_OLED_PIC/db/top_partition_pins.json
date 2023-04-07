@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oled_cs",
+					"strict" : false
+				},
+				{
+					"name" : "oled_sck",
+					"strict" : false
+				},
+				{
+					"name" : "oled_rst",
+					"strict" : false
+				},
+				{
+					"name" : "oled_dc",
+					"strict" : false
+				},
+				{
+					"name" : "oled_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

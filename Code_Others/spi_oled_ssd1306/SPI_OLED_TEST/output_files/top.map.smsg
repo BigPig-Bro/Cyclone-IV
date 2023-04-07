@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at oled_ctrl.sv(71): always construct contains both blocking and non-blocking assignments File: E:/EP4CE6F17C8/module/Others/SPI_OLED/src/oled_ctrl.sv Line: 71

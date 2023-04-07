@@ -1,0 +1,133 @@
+# Reading pref.tcl
+# A bookmarks file was found in the current directory with 1 bookmark
+# Bookmark(s) were restored for window "Wave"
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src {D:/Users/HUIP/Desktop/SPI_OLED/src/top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:33 on Oct 16,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src" D:/Users/HUIP/Desktop/SPI_OLED/src/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:41:33 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src {D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:33 on Oct 16,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src" D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master.v 
+# -- Compiling module spi_master
+# 
+# Top level modules:
+# 	spi_master
+# End time: 12:41:33 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src {D:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:33 on Oct 16,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src" D:/Users/HUIP/Desktop/SPI_OLED/src/oled_ctrl.sv 
+# -- Compiling module oled_ctrl
+# 
+# Top level modules:
+# 	oled_ctrl
+# End time: 12:41:33 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Users/HUIP/Desktop/SPI_OLED/src {D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:33 on Oct 16,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/HUIP/Desktop/SPI_OLED/src" D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v 
+# -- Compiling module spi_master_tb
+# 
+# Top level modules:
+# 	spi_master_tb
+# End time: 12:41:33 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  spi_master_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" spi_master_tb 
+# Start time: 12:41:33 on Oct 16,2022
+# Loading work.spi_master_tb
+# Loading work.top
+# Loading sv_std.std
+# Loading work.oled_ctrl
+# Loading work.spi_master
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'mo'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /spi_master_tb/mo File: D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v Line: 49
+# ** Warning: (vsim-3722) D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(49): [TFMPC] - Missing connection for port 'rst_n'.
+# Bookmark "bookmark0" already exists with that definition in window "Wave", ignoring
+# A bookmarks file was found in the current directory with 1 bookmark
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(60)
+#    Time: 1 ms  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v line 60
+
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'mo'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /spi_master_tb/mo File: D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v Line: 49
+# ** Warning: (vsim-3722) D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(49): [TFMPC] - Missing connection for port 'rst_n'.
+add wave -position insertpoint  \
+sim:/spi_master_tb/mo/oled_ctrl_m0/state_rst \
+sim:/spi_master_tb/mo/oled_ctrl_m0/state_busy \
+sim:/spi_master_tb/mo/oled_ctrl_m0/send_en \
+sim:/spi_master_tb/mo/oled_ctrl_m0/send_dc \
+sim:/spi_master_tb/mo/oled_ctrl_m0/send_data \
+sim:/spi_master_tb/mo/oled_ctrl_m0/pre_state \
+sim:/spi_master_tb/mo/oled_ctrl_m0/state_main \
+sim:/spi_master_tb/mo/oled_ctrl_m0/state_sub \
+sim:/spi_master_tb/mo/oled_ctrl_m0/clk_delay \
+sim:/spi_master_tb/mo/oled_ctrl_m0/send_cnt \
+sim:/spi_master_tb/mo/oled_ctrl_m0/clear_page \
+sim:/spi_master_tb/mo/oled_ctrl_m0/clear_x
+run 10ms
+# ** Note: $stop    : D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(60)
+#    Time: 1 ms  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v line 60
+add wave -position insertpoint  \
+sim:/spi_master_tb/mo/spi_master_m0/recv_cnt
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'mo'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /spi_master_tb/mo File: D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v Line: 49
+# ** Warning: (vsim-3722) D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(49): [TFMPC] - Missing connection for port 'rst_n'.
+run
+run
+run
+run
+run
+run
+run -continue
+run -all
+# ** Note: $stop    : D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(60)
+#    Time: 1 ms  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v line 60
+add wave -position insertpoint  \
+sim:/spi_master_tb/mo/spi_master_m0/state
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'mo'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /spi_master_tb/mo File: D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v Line: 49
+# ** Warning: (vsim-3722) D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(49): [TFMPC] - Missing connection for port 'rst_n'.
+run 1ms
+# ** Note: $stop    : D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v(60)
+#    Time: 1 ms  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/Users/HUIP/Desktop/SPI_OLED/src/spi_master_tb.v line 60
+# End time: 12:43:45 on Oct 16,2022, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 2
