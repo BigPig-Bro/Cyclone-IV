@@ -1,0 +1,728 @@
+Analysis & Synthesis report for top
+Tue Oct 18 21:09:14 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0|altsyncram_3el1:auto_generated
+ 15. Source assignments for iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|altsyncram_4e81:altsyncram2
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 17. Parameter Settings for User Entity Instance: oled_ctrl:oled_ctrl_m0
+ 18. Parameter Settings for User Entity Instance: iic_master:iic_master_m0
+ 19. Parameter Settings for Inferred Entity Instance: oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0
+ 20. Parameter Settings for Inferred Entity Instance: iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. altshift_taps Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "iic_master:iic_master_m0"
+ 24. Port Connectivity Checks: "oled_ram:oled_ram_m0"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 18 21:09:14 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 308                                         ;
+;     Total combinational functions  ; 297                                         ;
+;     Dedicated logic registers      ; 118                                         ;
+; Total registers                    ; 118                                         ;
+; Total pins                         ; 14                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,240                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                 ; Library ;
++---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------+---------+
+; src/oled_ram.sv                       ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ram.sv                               ;         ;
+; src/iic_master.sv                     ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv                             ;         ;
+; src/oled_ctrl.sv                      ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv                              ;         ;
+; src/top.v                             ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/IIC_OLED/src/top.v                                     ;         ;
+; src/pic.txt                           ; yes             ; Auto-Found File                                       ; D:/Users/HUIP/Desktop/IIC_OLED/src/pic.txt                                   ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_3el1.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/IIC_OLED/db/altsyncram_3el1.tdf                        ;         ;
+; db/top.ram0_oled_ram_76aaff49.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Users/HUIP/Desktop/IIC_OLED/db/top.ram0_oled_ram_76aaff49.hdl.mif         ;         ;
+; altshift_taps.tdf                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf     ;         ;
+; lpm_counter.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc       ;         ;
+; lpm_compare.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
+; lpm_constant.inc                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
+; db/shift_taps_c6m.tdf                 ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/IIC_OLED/db/shift_taps_c6m.tdf                         ;         ;
+; db/altsyncram_4e81.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/IIC_OLED/db/altsyncram_4e81.tdf                        ;         ;
+; db/cntr_sqf.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/IIC_OLED/db/cntr_sqf.tdf                               ;         ;
+; db/cmpr_rgc.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/IIC_OLED/db/cmpr_rgc.tdf                               ;         ;
++---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 308       ;
+;                                             ;           ;
+; Total combinational functions               ; 297       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 155       ;
+;     -- 3 input functions                    ; 49        ;
+;     -- <=2 input functions                  ; 93        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 234       ;
+;     -- arithmetic mode                      ; 63        ;
+;                                             ;           ;
+; Total registers                             ; 118       ;
+;     -- Dedicated logic registers            ; 118       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 14        ;
+; Total memory bits                           ; 8240      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 102       ;
+; Total fan-out                               ; 1434      ;
+; Average fan-out                             ; 3.16      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |top                                      ; 297 (11)            ; 118 (10)                  ; 8240        ; 0            ; 0       ; 0         ; 14   ; 0            ; |top                                                                                                                    ; top             ; work         ;
+;    |iic_master:iic_master_m0|             ; 96 (84)             ; 42 (37)                   ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0                                                                                           ; iic_master      ; work         ;
+;       |altshift_taps:sda_out_r_rtl_0|     ; 12 (0)              ; 5 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0                                                             ; altshift_taps   ; work         ;
+;          |shift_taps_c6m:auto_generated|  ; 12 (0)              ; 5 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated                               ; shift_taps_c6m  ; work         ;
+;             |altsyncram_4e81:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|altsyncram_4e81:altsyncram2   ; altsyncram_4e81 ; work         ;
+;             |cntr_sqf:cntr1|              ; 12 (11)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|cntr_sqf:cntr1                ; cntr_sqf        ; work         ;
+;                |cmpr_rgc:cmpr4|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|cntr_sqf:cntr1|cmpr_rgc:cmpr4 ; cmpr_rgc        ; work         ;
+;    |oled_ctrl:oled_ctrl_m0|               ; 190 (190)           ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|oled_ctrl:oled_ctrl_m0                                                                                             ; oled_ctrl       ; work         ;
+;    |oled_ram:oled_ram_m0|                 ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|oled_ram:oled_ram_m0                                                                                               ; oled_ram        ; work         ;
+;       |altsyncram:ram_data_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0                                                                     ; altsyncram      ; work         ;
+;          |altsyncram_3el1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0|altsyncram_3el1:auto_generated                                      ; altsyncram_3el1 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+; Name                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                   ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+; iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|altsyncram_4e81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 24           ; 2            ; 24           ; 2            ; 48   ; None                                  ;
+; oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0|altsyncram_3el1:auto_generated|ALTSYNCRAM                                    ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192 ; db/top.ram0_oled_ram_76aaff49.hdl.mif ;
++-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++---------------------------------------------------+------------------------------------------------------+
+; Register name                                     ; Reason for Removal                                   ;
++---------------------------------------------------+------------------------------------------------------+
+; iic_master:iic_master_m0|slave_addr_r[0..2,7..15] ; Stuck at GND due to stuck port data_in               ;
+; iic_master:iic_master_m0|slave_addr_r[4..6]       ; Merged with iic_master:iic_master_m0|slave_addr_r[3] ;
+; iic_master:iic_master_m0|reg_addr_r[1..5,7]       ; Merged with iic_master:iic_master_m0|reg_addr_r[0]   ;
+; oled_ctrl:oled_ctrl_m0|send_addr[1..5,7]          ; Merged with oled_ctrl:oled_ctrl_m0|send_addr[0]      ;
+; iic_master:iic_master_m0|state_sub[1]             ; Stuck at GND due to stuck port data_in               ;
+; oled_ctrl:oled_ctrl_m0|pre_state[2]               ; Stuck at GND due to stuck port data_in               ;
+; oled_ctrl:oled_ctrl_m0|state_sub[2]               ; Stuck at GND due to stuck port data_in               ;
+; Total Number of Removed Registers = 30            ;                                                      ;
++---------------------------------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 118   ;
+; Number of registers using Synchronous Clear  ; 11    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; iic_master:iic_master_m0|sda_out       ; 5       ;
+; iic_master:iic_master_m0|sda_en        ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                      ;
++-------------------------------------------+------------------------------------------+------------+
+; Register Name                             ; Megafunction                             ; Type       ;
++-------------------------------------------+------------------------------------------+------------+
+; oled_ram:oled_ram_m0|read_data[0..7]      ; oled_ram:oled_ram_m0|ram_data_rtl_0      ; RAM        ;
+; iic_master:iic_master_m0|sda_out_r[0..25] ; iic_master:iic_master_m0|sda_out_r_rtl_0 ; SHIFT_TAPS ;
+; iic_master:iic_master_m0|sda_en_r[0..25]  ; iic_master:iic_master_m0|sda_out_r_rtl_0 ; SHIFT_TAPS ;
++-------------------------------------------+------------------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |top|iic_master:iic_master_m0|send_cnt[0]    ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |top|iic_master:iic_master_m0|send_data_r[0] ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|page_cnt[0]      ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|pre_state[2]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_data[5]     ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 21 LEs               ; 18 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|state_sub[0]     ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 8 LEs                ; 44 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_data[1]     ;
+; 19:1               ; 11 bits   ; 132 LEs       ; 11 LEs               ; 121 LEs                ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|send_cnt[8]      ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 15 LEs               ; 27 LEs                 ; Yes        ; |top|oled_ctrl:oled_ctrl_m0|state_main[2]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0|altsyncram_3el1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0|shift_taps_c6m:auto_generated|altsyncram_4e81:altsyncram2 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++------------------------+------------------+-------------------------+
+; Parameter Name         ; Value            ; Type                    ;
++------------------------+------------------+-------------------------+
+; CLK_FRE                ; 50               ; Signed Integer          ;
+; IIC_FRE                ; 400              ; Signed Integer          ;
+; IIC_OLED_SLAVE_ADDR_EX ; 0                ; Signed Integer          ;
+; IIC_OLED_SLAVE_ADDR    ; 0000000001111000 ; Unsigned Binary         ;
++------------------------+------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: oled_ctrl:oled_ctrl_m0 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: iic_master:iic_master_m0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                               ;
+; IIC_FRE        ; 400   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0 ;
++------------------------------------+---------------------------------------+--------------------+
+; Parameter Name                     ; Value                                 ; Type               ;
++------------------------------------+---------------------------------------+--------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                     ; Untyped            ;
+; AUTO_CARRY_CHAINS                  ; ON                                    ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                   ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS                ; ON                                    ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                   ; IGNORE_CASCADE     ;
+; WIDTH_BYTEENA                      ; 1                                     ; Untyped            ;
+; OPERATION_MODE                     ; DUAL_PORT                             ; Untyped            ;
+; WIDTH_A                            ; 8                                     ; Untyped            ;
+; WIDTHAD_A                          ; 10                                    ; Untyped            ;
+; NUMWORDS_A                         ; 1024                                  ; Untyped            ;
+; OUTDATA_REG_A                      ; UNREGISTERED                          ; Untyped            ;
+; ADDRESS_ACLR_A                     ; NONE                                  ; Untyped            ;
+; OUTDATA_ACLR_A                     ; NONE                                  ; Untyped            ;
+; WRCONTROL_ACLR_A                   ; NONE                                  ; Untyped            ;
+; INDATA_ACLR_A                      ; NONE                                  ; Untyped            ;
+; BYTEENA_ACLR_A                     ; NONE                                  ; Untyped            ;
+; WIDTH_B                            ; 8                                     ; Untyped            ;
+; WIDTHAD_B                          ; 10                                    ; Untyped            ;
+; NUMWORDS_B                         ; 1024                                  ; Untyped            ;
+; INDATA_REG_B                       ; CLOCK1                                ; Untyped            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                ; Untyped            ;
+; RDCONTROL_REG_B                    ; CLOCK1                                ; Untyped            ;
+; ADDRESS_REG_B                      ; CLOCK0                                ; Untyped            ;
+; OUTDATA_REG_B                      ; UNREGISTERED                          ; Untyped            ;
+; BYTEENA_REG_B                      ; CLOCK1                                ; Untyped            ;
+; INDATA_ACLR_B                      ; NONE                                  ; Untyped            ;
+; WRCONTROL_ACLR_B                   ; NONE                                  ; Untyped            ;
+; ADDRESS_ACLR_B                     ; NONE                                  ; Untyped            ;
+; OUTDATA_ACLR_B                     ; NONE                                  ; Untyped            ;
+; RDCONTROL_ACLR_B                   ; NONE                                  ; Untyped            ;
+; BYTEENA_ACLR_B                     ; NONE                                  ; Untyped            ;
+; WIDTH_BYTEENA_A                    ; 1                                     ; Untyped            ;
+; WIDTH_BYTEENA_B                    ; 1                                     ; Untyped            ;
+; RAM_BLOCK_TYPE                     ; AUTO                                  ; Untyped            ;
+; BYTE_SIZE                          ; 8                                     ; Untyped            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                              ; Untyped            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                  ; Untyped            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                  ; Untyped            ;
+; INIT_FILE                          ; db/top.ram0_oled_ram_76aaff49.hdl.mif ; Untyped            ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                ; Untyped            ;
+; MAXIMUM_DEPTH                      ; 0                                     ; Untyped            ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                ; Untyped            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                ; Untyped            ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                ; Untyped            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                ; Untyped            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                       ; Untyped            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                       ; Untyped            ;
+; ENABLE_ECC                         ; FALSE                                 ; Untyped            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                 ; Untyped            ;
+; WIDTH_ECCSTATUS                    ; 3                                     ; Untyped            ;
+; DEVICE_FAMILY                      ; Cyclone IV E                          ; Untyped            ;
+; CBXI_PARAMETER                     ; altsyncram_3el1                       ; Untyped            ;
++------------------------------------+---------------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0 ;
++----------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                  ;
++----------------+----------------+-----------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                               ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                               ;
+; TAP_DISTANCE   ; 26             ; Untyped                                                               ;
+; WIDTH          ; 2              ; Untyped                                                               ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                               ;
+; CBXI_PARAMETER ; shift_taps_c6m ; Untyped                                                               ;
++----------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 1                                              ;
+; Entity Instance                           ; oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                      ;
+;     -- WIDTH_A                            ; 8                                              ;
+;     -- NUMWORDS_A                         ; 1024                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 8                                              ;
+;     -- NUMWORDS_B                         ; 1024                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ;
++-------------------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                 ;
++----------------------------+--------------------------------------------------------+
+; Name                       ; Value                                                  ;
++----------------------------+--------------------------------------------------------+
+; Number of entity instances ; 1                                                      ;
+; Entity Instance            ; iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                      ;
+;     -- TAP_DISTANCE        ; 26                                                     ;
+;     -- WIDTH               ; 2                                                      ;
++----------------------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "iic_master:iic_master_m0"                                                                                                                                                                       ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; slave_addr_ex     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; slave_addr_ex[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; slave_addr[6..3]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; slave_addr[15..7] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; slave_addr[2..0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; send_rw           ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; recv_data         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "oled_ram:oled_ram_m0"       ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; write_addr ; Input ; Info     ; Explicitly unconnected ;
+; write_data ; Input ; Info     ; Explicitly unconnected ;
++------------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 14                          ;
+; cycloneiii_ff         ; 118                         ;
+;     CLR               ; 9                           ;
+;     ENA               ; 53                          ;
+;     ENA CLR SCLR      ; 11                          ;
+;     ENA SLD           ; 8                           ;
+;     plain             ; 37                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 297                         ;
+;     arith             ; 63                          ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 234                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 155                         ;
+; cycloneiii_ram_block  ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.86                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 18 21:09:07 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled_ram.sv
+    Info (12023): Found entity 1: oled_ram File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ram.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/iic_master_tb.v
+    Info (12023): Found entity 1: iic_master_tb File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master_tb.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file src/iic_master.sv
+    Info (12023): Found entity 1: iic_master File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled_ctrl.sv
+    Info (12023): Found entity 1: oled_ctrl File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/IIC_OLED/src/top.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(17): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(19): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 19
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(20): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 20
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(22): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(23): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(25): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(26): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(28): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 28
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(29): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 29
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(30): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 30
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(31): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 31
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(32): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 32
+Warning (10222): Verilog HDL Parameter Declaration warning at oled_ctrl.sv(33): Parameter Declaration in module "oled_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 33
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(34): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 34
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(52): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 52
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(53): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 53
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(54): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 54
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(55): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 55
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(56): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 56
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(57): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 57
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(58): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 58
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top.v(10): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/IIC_OLED/src/top.v Line: 10
+Info (12128): Elaborating entity "oled_ram" for hierarchy "oled_ram:oled_ram_m0" File: D:/Users/HUIP/Desktop/IIC_OLED/src/top.v Line: 28
+Info (12128): Elaborating entity "oled_ctrl" for hierarchy "oled_ctrl:oled_ctrl_m0" File: D:/Users/HUIP/Desktop/IIC_OLED/src/top.v Line: 50
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(90): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(102): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(108): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(111): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 111
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(121): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 121
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(127): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(134): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 134
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(137): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(146): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 146
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(150): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 150
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(153): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 153
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(163): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 163
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(168): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 168
+Warning (10230): Verilog HDL assignment warning at oled_ctrl.sv(171): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/oled_ctrl.sv Line: 171
+Info (12128): Elaborating entity "iic_master" for hierarchy "iic_master:iic_master_m0" File: D:/Users/HUIP/Desktop/IIC_OLED/src/top.v Line: 72
+Warning (10036): Verilog HDL or VHDL warning at iic_master.sv(48): object "recv_data_r" assigned a value but never read File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(37): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(74): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(88): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(90): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(97): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(98): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(108): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(110): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 110
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(118): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 118
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(119): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(129): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 129
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(131): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 131
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(139): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 139
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(140): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 140
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(148): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 148
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(151): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 151
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(153): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 153
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(160): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 160
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(163): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 163
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(164): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(175): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 175
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(197): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 197
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(204): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 204
+Warning (10034): Output port "recv_data" at iic_master.sv(18) has no driver File: D:/Users/HUIP/Desktop/IIC_OLED/src/iic_master.sv Line: 18
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "oled_ram:oled_ram_m0|ram_data_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1024
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/top.ram0_oled_ram_76aaff49.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "iic_master:iic_master_m0|sda_out_r_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 26
+        Info (286033): Parameter WIDTH set to 2
+Info (12130): Elaborated megafunction instantiation "oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0"
+Info (12133): Instantiated megafunction "oled_ram:oled_ram_m0|altsyncram:ram_data_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1024"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/top.ram0_oled_ram_76aaff49.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3el1.tdf
+    Info (12023): Found entity 1: altsyncram_3el1 File: D:/Users/HUIP/Desktop/IIC_OLED/db/altsyncram_3el1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0"
+Info (12133): Instantiated megafunction "iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "26"
+    Info (12134): Parameter "WIDTH" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_c6m.tdf
+    Info (12023): Found entity 1: shift_taps_c6m File: D:/Users/HUIP/Desktop/IIC_OLED/db/shift_taps_c6m.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4e81.tdf
+    Info (12023): Found entity 1: altsyncram_4e81 File: D:/Users/HUIP/Desktop/IIC_OLED/db/altsyncram_4e81.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sqf.tdf
+    Info (12023): Found entity 1: cntr_sqf File: D:/Users/HUIP/Desktop/IIC_OLED/db/cntr_sqf.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_rgc.tdf
+    Info (12023): Found entity 1: cmpr_rgc File: D:/Users/HUIP/Desktop/IIC_OLED/db/cmpr_rgc.tdf Line: 23
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 332 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 308 logic cells
+    Info (21064): Implemented 10 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Tue Oct 18 21:09:14 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
+
+

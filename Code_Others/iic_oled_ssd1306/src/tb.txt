@@ -1,0 +1,27 @@
+add wave -position insertpoint  \
+sim:/iic_master_tb/mo/oled_ctrl_m0/brust_ready \
+sim:/iic_master_tb/mo/oled_ctrl_m0/brust_vaild \
+sim:/iic_master_tb/mo/oled_ctrl_m0/send_busy \
+sim:/iic_master_tb/mo/oled_ctrl_m0/send_en \
+sim:/iic_master_tb/mo/oled_ctrl_m0/send_addr \
+sim:/iic_master_tb/mo/oled_ctrl_m0/send_data \
+sim:/iic_master_tb/mo/oled_ctrl_m0/pre_state \
+sim:/iic_master_tb/mo/oled_ctrl_m0/state_main \
+sim:/iic_master_tb/mo/oled_ctrl_m0/state_sub \
+sim:/iic_master_tb/mo/oled_ctrl_m0/clk_delay \
+sim:/iic_master_tb/mo/oled_ctrl_m0/send_cnt \
+sim:/iic_master_tb/mo/oled_ctrl_m0/page_cnt \
+sim:/iic_master_tb/mo/oled_ctrl_m0/clear_x
+add wave -position insertpoint  \
+sim:/iic_master_tb/mo/iic_master_m0/send_data \
+sim:/iic_master_tb/mo/iic_master_m0/send_busy \
+sim:/iic_master_tb/mo/iic_master_m0/iic_scl \
+sim:/iic_master_tb/mo/iic_master_m0/iic_sda \
+sim:/iic_master_tb/mo/iic_master_m0/sda_en \
+sim:/iic_master_tb/mo/iic_master_m0/scl_x2 \
+sim:/iic_master_tb/mo/iic_master_m0/send_cnt \
+sim:/iic_master_tb/mo/iic_master_m0/state_main \
+sim:/iic_master_tb/mo/iic_master_m0/state_next \
+sim:/iic_master_tb/mo/iic_master_m0/state_sub
+restart
+run 10ms
