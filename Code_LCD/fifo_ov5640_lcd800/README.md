@@ -1,0 +1,16 @@
+# 工程环境
+
++ FPGA开发板 ：AX301 （Cyclone IV )
++ 摄像头：OV5640 DVP
++ 屏幕：直插LCD 480x282 @ 60fps
+
+
+
+# 下载现象
+
+- 可能需要多次复位键（反正能复位到一次正常的就行，原因暂时未知
+
+![image-20230407151843696](C:\Users\BigPig\AppData\Roaming\Typora\typora-user-images\image-20230407151843696.png)
+
+
+
