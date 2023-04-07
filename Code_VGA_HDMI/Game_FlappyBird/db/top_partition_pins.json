@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "vga_hs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_vs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "uart_rx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
