@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at tft_ctrl.sv(46): always construct contains both blocking and non-blocking assignments File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 46

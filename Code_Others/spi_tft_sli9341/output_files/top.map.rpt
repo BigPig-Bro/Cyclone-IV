@@ -1,0 +1,493 @@
+Analysis & Synthesis report for top
+Thu Oct 20 18:25:55 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 12. Parameter Settings for User Entity Instance: tft_ctrl:tft_ctrl_m0
+ 13. Parameter Settings for User Entity Instance: spi_master:spi_master_m0
+ 14. Port Connectivity Checks: "spi_master:spi_master_m0"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 20 18:25:55 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 278                                         ;
+;     Total combinational functions  ; 278                                         ;
+;     Dedicated logic registers      ; 97                                          ;
+; Total registers                    ; 97                                          ;
+; Total pins                         ; 7                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; src/top.v                        ; yes             ; User Verilog HDL File        ; D:/Users/HUIP/Desktop/SPI_TFT_320/src/top.v        ;         ;
+; src/tft_ctrl.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv  ;         ;
+; src/spi_master.v                 ; yes             ; User Verilog HDL File        ; D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v ;         ;
+; src/init.txt                     ; yes             ; Auto-Found File              ; D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt     ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 278       ;
+;                                             ;           ;
+; Total combinational functions               ; 278       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 145       ;
+;     -- 3 input functions                    ; 41        ;
+;     -- <=2 input functions                  ; 92        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 220       ;
+;     -- arithmetic mode                      ; 58        ;
+;                                             ;           ;
+; Total registers                             ; 97        ;
+;     -- Dedicated logic registers            ; 97        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 80        ;
+; Total fan-out                               ; 1212      ;
+; Average fan-out                             ; 3.12      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; |top                          ; 278 (0)             ; 97 (0)                    ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |top                          ; top         ; work         ;
+;    |spi_master:spi_master_m0| ; 38 (38)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_master:spi_master_m0 ; spi_master  ; work         ;
+;    |tft_ctrl:tft_ctrl_m0|     ; 240 (240)           ; 69 (69)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|tft_ctrl:tft_ctrl_m0     ; tft_ctrl    ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; tft_ctrl:tft_ctrl_m0|state_sub[2]     ; Stuck at GND due to stuck port data_in ;
+; tft_ctrl:tft_ctrl_m0|pre_state[1]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 97    ;
+; Number of registers using Synchronous Clear  ; 23    ;
+; Number of registers using Synchronous Load   ; 11    ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 73    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|spi_master:spi_master_m0|recv_cnt[3]    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |top|spi_master:spi_master_m0|send_data_r[6] ;
+; 13:1               ; 32 bits   ; 256 LEs       ; 32 LEs               ; 224 LEs                ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|clk_delay[21]      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|pre_state[0]       ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 8 LEs                ; 28 LEs                 ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|send_data[7]       ;
+; 14:1               ; 19 bits   ; 171 LEs       ; 19 LEs               ; 152 LEs                ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|send_cnt[8]        ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|state_main[1]      ;
+; 25:1               ; 4 bits    ; 64 LEs        ; 36 LEs               ; 28 LEs                 ; Yes        ; |top|tft_ctrl:tft_ctrl_m0|send_data[3]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                             ;
+; SPI_FRE        ; 200   ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tft_ctrl:tft_ctrl_m0 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_master:spi_master_m0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                               ;
+; SPI_FRE        ; 200   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "spi_master:spi_master_m0"   ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; recv_data ; Output ; Info     ; Explicitly unconnected ;
+; spi_miso  ; Input  ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 7                           ;
+; cycloneiii_ff         ; 97                          ;
+;     CLR               ; 4                           ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 41                          ;
+;     ENA SCLR          ; 23                          ;
+;     ENA SLD           ; 9                           ;
+;     SLD               ; 1                           ;
+;     plain             ; 18                          ;
+; cycloneiii_lcell_comb ; 278                         ;
+;     arith             ; 58                          ;
+;         2 data inputs ; 58                          ;
+;     normal            ; 220                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 145                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 4.44                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Oct 20 18:25:49 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/top.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file src/tft_ram.sv
+Info (12021): Found 1 design units, including 1 entities, in source file src/tft_ctrl.sv
+    Info (12023): Found entity 1: tft_ctrl File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_master.v
+    Info (12023): Found entity 1: spi_master File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(13): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 13
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(15): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(16): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(21): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 21
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(22): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(23): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(26): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(27): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 27
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(28): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 28
+Warning (10222): Verilog HDL Parameter Declaration warning at tft_ctrl.sv(29): Parameter Declaration in module "tft_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 29
+Warning (10222): Verilog HDL Parameter Declaration warning at spi_master.v(23): Parameter Declaration in module "spi_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 23
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "tft_ctrl" for hierarchy "tft_ctrl:tft_ctrl_m0" File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/top.v Line: 28
+Warning (10230): Verilog HDL assignment warning at init.txt(1): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 1
+Warning (10230): Verilog HDL assignment warning at init.txt(2): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 2
+Warning (10230): Verilog HDL assignment warning at init.txt(3): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 3
+Warning (10230): Verilog HDL assignment warning at init.txt(4): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 4
+Warning (10230): Verilog HDL assignment warning at init.txt(5): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 5
+Warning (10230): Verilog HDL assignment warning at init.txt(6): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 6
+Warning (10230): Verilog HDL assignment warning at init.txt(7): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 7
+Warning (10230): Verilog HDL assignment warning at init.txt(8): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 8
+Warning (10230): Verilog HDL assignment warning at init.txt(9): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 9
+Warning (10230): Verilog HDL assignment warning at init.txt(10): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 10
+Warning (10230): Verilog HDL assignment warning at init.txt(11): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 11
+Warning (10230): Verilog HDL assignment warning at init.txt(12): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 12
+Warning (10230): Verilog HDL assignment warning at init.txt(13): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 13
+Warning (10230): Verilog HDL assignment warning at init.txt(14): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 14
+Warning (10230): Verilog HDL assignment warning at init.txt(15): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 15
+Warning (10230): Verilog HDL assignment warning at init.txt(16): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 16
+Warning (10230): Verilog HDL assignment warning at init.txt(17): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 17
+Warning (10230): Verilog HDL assignment warning at init.txt(18): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 18
+Warning (10230): Verilog HDL assignment warning at init.txt(19): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 19
+Warning (10230): Verilog HDL assignment warning at init.txt(20): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 20
+Warning (10230): Verilog HDL assignment warning at init.txt(21): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 21
+Warning (10230): Verilog HDL assignment warning at init.txt(22): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 22
+Warning (10230): Verilog HDL assignment warning at init.txt(23): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 23
+Warning (10230): Verilog HDL assignment warning at init.txt(24): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 24
+Warning (10230): Verilog HDL assignment warning at init.txt(25): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 25
+Warning (10230): Verilog HDL assignment warning at init.txt(26): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 26
+Warning (10230): Verilog HDL assignment warning at init.txt(27): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 27
+Warning (10230): Verilog HDL assignment warning at init.txt(28): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 28
+Warning (10230): Verilog HDL assignment warning at init.txt(29): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 29
+Warning (10230): Verilog HDL assignment warning at init.txt(30): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 30
+Warning (10230): Verilog HDL assignment warning at init.txt(31): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 31
+Warning (10230): Verilog HDL assignment warning at init.txt(32): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 32
+Warning (10230): Verilog HDL assignment warning at init.txt(33): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 33
+Warning (10230): Verilog HDL assignment warning at init.txt(34): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 34
+Warning (10230): Verilog HDL assignment warning at init.txt(35): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 35
+Warning (10230): Verilog HDL assignment warning at init.txt(36): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 36
+Warning (10230): Verilog HDL assignment warning at init.txt(37): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 37
+Warning (10230): Verilog HDL assignment warning at init.txt(38): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 38
+Warning (10230): Verilog HDL assignment warning at init.txt(39): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 39
+Warning (10230): Verilog HDL assignment warning at init.txt(40): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 40
+Warning (10230): Verilog HDL assignment warning at init.txt(41): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 41
+Warning (10230): Verilog HDL assignment warning at init.txt(42): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 42
+Warning (10230): Verilog HDL assignment warning at init.txt(43): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 43
+Warning (10230): Verilog HDL assignment warning at init.txt(44): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 44
+Warning (10230): Verilog HDL assignment warning at init.txt(45): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 45
+Warning (10230): Verilog HDL assignment warning at init.txt(46): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 46
+Warning (10230): Verilog HDL assignment warning at init.txt(47): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 47
+Warning (10230): Verilog HDL assignment warning at init.txt(48): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 48
+Warning (10230): Verilog HDL assignment warning at init.txt(49): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 49
+Warning (10230): Verilog HDL assignment warning at init.txt(50): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 50
+Warning (10230): Verilog HDL assignment warning at init.txt(51): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 51
+Warning (10230): Verilog HDL assignment warning at init.txt(52): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 52
+Warning (10230): Verilog HDL assignment warning at init.txt(53): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 53
+Warning (10230): Verilog HDL assignment warning at init.txt(54): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 54
+Warning (10230): Verilog HDL assignment warning at init.txt(55): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 55
+Warning (10230): Verilog HDL assignment warning at init.txt(56): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 56
+Warning (10230): Verilog HDL assignment warning at init.txt(57): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 57
+Warning (10230): Verilog HDL assignment warning at init.txt(58): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 58
+Warning (10230): Verilog HDL assignment warning at init.txt(59): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 59
+Warning (10230): Verilog HDL assignment warning at init.txt(60): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 60
+Warning (10230): Verilog HDL assignment warning at init.txt(61): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 61
+Warning (10230): Verilog HDL assignment warning at init.txt(62): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 62
+Warning (10230): Verilog HDL assignment warning at init.txt(63): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 63
+Warning (10230): Verilog HDL assignment warning at init.txt(64): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 64
+Warning (10230): Verilog HDL assignment warning at init.txt(65): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 65
+Warning (10230): Verilog HDL assignment warning at init.txt(66): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 66
+Warning (10230): Verilog HDL assignment warning at init.txt(67): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 67
+Warning (10230): Verilog HDL assignment warning at init.txt(68): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 68
+Warning (10230): Verilog HDL assignment warning at init.txt(69): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 69
+Warning (10230): Verilog HDL assignment warning at init.txt(70): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 70
+Warning (10230): Verilog HDL assignment warning at init.txt(71): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 71
+Warning (10230): Verilog HDL assignment warning at init.txt(72): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 72
+Warning (10230): Verilog HDL assignment warning at init.txt(73): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 73
+Warning (10230): Verilog HDL assignment warning at init.txt(74): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 74
+Warning (10230): Verilog HDL assignment warning at init.txt(75): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 75
+Warning (10230): Verilog HDL assignment warning at init.txt(76): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 76
+Warning (10230): Verilog HDL assignment warning at init.txt(77): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 77
+Warning (10230): Verilog HDL assignment warning at init.txt(78): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 78
+Warning (10230): Verilog HDL assignment warning at init.txt(79): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 79
+Warning (10230): Verilog HDL assignment warning at init.txt(80): truncated value with size 12 to match size of target (9) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/init.txt Line: 80
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(103): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(124): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 124
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(125): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(137): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(158): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 158
+Warning (10230): Verilog HDL assignment warning at tft_ctrl.sv(175): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/tft_ctrl.sv Line: 175
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:spi_master_m0" File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/top.v Line: 51
+Warning (10230): Verilog HDL assignment warning at spi_master.v(26): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 26
+Warning (10230): Verilog HDL assignment warning at spi_master.v(59): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 59
+Warning (10230): Verilog HDL assignment warning at spi_master.v(63): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 63
+Warning (10230): Verilog HDL assignment warning at spi_master.v(65): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 65
+Warning (10230): Verilog HDL assignment warning at spi_master.v(71): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/SPI_TFT_320/src/spi_master.v Line: 71
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Users/HUIP/Desktop/SPI_TFT_320/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 286 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 279 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Thu Oct 20 18:25:55 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Users/HUIP/Desktop/SPI_TFT_320/output_files/top.map.smsg.
+
+
