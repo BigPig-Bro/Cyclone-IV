@@ -103,12 +103,12 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp2.stp
+set_global_assignment -name VERILOG_FILE src/rgb_timing.v
 set_global_assignment -name SYSTEMVERILOG_FILE src/iic_init/iic_master.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/iic_init/iic_ctrl.sv
 set_global_assignment -name SDC_FILE src/top.sdc
 set_global_assignment -name VERILOG_FILE src/video_timing_data.v
 set_global_assignment -name VERILOG_FILE src/top.v
-set_global_assignment -name VERILOG_FILE src/color_bar.v
 set_global_assignment -name VERILOG_FILE src/cmos_8_16bit.v
 set_global_assignment -name QIP_FILE src/ip/sys_pll.qip
 set_global_assignment -name QIP_FILE src/ip/video_fifo.qip

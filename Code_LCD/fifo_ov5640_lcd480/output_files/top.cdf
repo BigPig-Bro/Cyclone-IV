@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10F17) Path("E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10F17) Path("D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

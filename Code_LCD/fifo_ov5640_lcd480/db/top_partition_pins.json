@@ -104,6 +104,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "cmos_vsync",
+					"strict" : false
+				},
+				{
 					"name" : "cmos_db[0]",
 					"strict" : false
 				},
@@ -133,10 +137,6 @@
 				},
 				{
 					"name" : "cmos_db[7]",
-					"strict" : false
-				},
-				{
-					"name" : "cmos_vsync",
 					"strict" : false
 				}
 			]

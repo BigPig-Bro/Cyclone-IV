@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Fri Oct 21 19:28:01 2022
+Fri Apr 07 15:34:52 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  33. Parameter Settings for User Entity Instance: iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0
  34. Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0
  35. Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component
- 36. Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0|color_bar:color_bar_m0
+ 36. Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0
  37. Parameter Settings for Inferred Entity Instance: iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0
  38. Parameter Settings for Inferred Entity Instance: iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1
  39. Parameter Settings for Inferred Entity Instance: iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|altshift_taps:sda_out_r_rtl_0
@@ -49,7 +49,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  41. dcfifo Parameter Settings by Entity Instance
  42. altsyncram Parameter Settings by Entity Instance
  43. altshift_taps Parameter Settings by Entity Instance
- 44. Port Connectivity Checks: "video_timing_data:video_timing_data_m0|color_bar:color_bar_m0"
+ 44. Port Connectivity Checks: "video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0"
  45. Port Connectivity Checks: "cmos_8_16bit:cmos_8_16bit_m0"
  46. Port Connectivity Checks: "iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0"
  47. Post-Synthesis Netlist Statistics for Top Partition
@@ -82,15 +82,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 21 19:28:01 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 07 15:34:52 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 395                                         ;
-;     Total combinational functions  ; 327                                         ;
-;     Dedicated logic registers      ; 241                                         ;
-; Total registers                    ; 241                                         ;
+; Total logic elements               ; 360                                         ;
+;     Total combinational functions  ; 291                                         ;
+;     Dedicated logic registers      ; 220                                         ;
+; Total registers                    ; 220                                         ;
 ; Total pins                         ; 44                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 71,728                                      ;
@@ -190,113 +190,113 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
-+---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                             ; Library ;
-+---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
-; src/iic_init/iic_master.sv            ; yes             ; User SystemVerilog HDL File                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv            ;         ;
-; src/iic_init/iic_ctrl.sv              ; yes             ; User SystemVerilog HDL File                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv              ;         ;
-; src/video_timing_data.v               ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v               ;         ;
-; src/top.v                             ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v                             ;         ;
-; src/color_bar.v                       ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/color_bar.v                       ;         ;
-; src/cmos_8_16bit.v                    ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/cmos_8_16bit.v                    ;         ;
-; src/ip/sys_pll.v                      ; yes             ; User Wizard-Generated File                            ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/sys_pll.v                      ;         ;
-; src/ip/video_fifo.v                   ; yes             ; User Wizard-Generated File                            ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/video_fifo.v                   ;         ;
-; src/iic_init/init_480x272_60.txt      ; yes             ; Auto-Found File                                       ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/init_480x272_60.txt      ;         ;
-; altpll.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                        ;         ;
-; aglobal201.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
-; stratix_pll.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                   ;         ;
-; stratixii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc                 ;         ;
-; cycloneii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc                 ;         ;
-; db/sys_pll_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/sys_pll_altpll.v                   ;         ;
-; dcfifo.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf                        ;         ;
-; lpm_counter.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                   ;         ;
-; lpm_add_sub.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                   ;         ;
-; altdpram.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                      ;         ;
-; a_graycounter.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc                 ;         ;
-; a_fefifo.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc                      ;         ;
-; a_gray2bin.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc                    ;         ;
-; dffpipe.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc                       ;         ;
-; alt_sync_fifo.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc                 ;         ;
-; lpm_compare.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                   ;         ;
-; altsyncram_fifo.inc                   ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc               ;         ;
-; db/dcfifo_kkn1.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf                    ;         ;
-; db/a_graycounter_877.tdf              ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/a_graycounter_877.tdf              ;         ;
-; db/a_graycounter_4lc.tdf              ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/a_graycounter_4lc.tdf              ;         ;
-; db/altsyncram_9u81.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_9u81.tdf                ;         ;
-; db/dffpipe_3dc.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dffpipe_3dc.tdf                    ;         ;
-; db/alt_synch_pipe_g98.tdf             ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/alt_synch_pipe_g98.tdf             ;         ;
-; db/dffpipe_re9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dffpipe_re9.tdf                    ;         ;
-; db/alt_synch_pipe_1e8.tdf             ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/alt_synch_pipe_1e8.tdf             ;         ;
-; db/cmpr_d66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_d66.tdf                       ;         ;
-; db/cmpr_c66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_c66.tdf                       ;         ;
-; db/mux_j28.tdf                        ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/mux_j28.tdf                        ;         ;
-; altsyncram.tdf                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                    ;         ;
-; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc             ;         ;
-; lpm_mux.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                       ;         ;
-; lpm_decode.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                    ;         ;
-; a_rdenreg.inc                         ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                     ;         ;
-; altrom.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                        ;         ;
-; altram.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                        ;         ;
-; db/altsyncram_mf71.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf                ;         ;
-; db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ;         ;
-; altshift_taps.tdf                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf                 ;         ;
-; lpm_constant.inc                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                  ;         ;
-; db/shift_taps_c6m.tdf                 ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/shift_taps_c6m.tdf                 ;         ;
-; db/altsyncram_4e81.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_4e81.tdf                ;         ;
-; db/cntr_sqf.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cntr_sqf.tdf                       ;         ;
-; db/cmpr_rgc.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_rgc.tdf                       ;         ;
-+---------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++---------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                   ; Library ;
++---------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+---------+
+; src/rgb_timing.v                      ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v                      ;         ;
+; src/iic_init/iic_master.sv            ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv            ;         ;
+; src/iic_init/iic_ctrl.sv              ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv              ;         ;
+; src/video_timing_data.v               ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v               ;         ;
+; src/top.v                             ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v                             ;         ;
+; src/cmos_8_16bit.v                    ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/cmos_8_16bit.v                    ;         ;
+; src/ip/sys_pll.v                      ; yes             ; User Wizard-Generated File                            ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/sys_pll.v                      ;         ;
+; src/ip/video_fifo.v                   ; yes             ; User Wizard-Generated File                            ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/video_fifo.v                   ;         ;
+; src/iic_init/init_480x272_60.txt      ; yes             ; Auto-Found File                                       ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/init_480x272_60.txt      ;         ;
+; altpll.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf              ;         ;
+; aglobal201.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;         ;
+; stratix_pll.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
+; stratixii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc       ;         ;
+; cycloneii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc       ;         ;
+; db/sys_pll_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/sys_pll_altpll.v                   ;         ;
+; dcfifo.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf              ;         ;
+; lpm_counter.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; lpm_add_sub.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; a_graycounter.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc       ;         ;
+; a_fefifo.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc            ;         ;
+; a_gray2bin.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc          ;         ;
+; dffpipe.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; alt_sync_fifo.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc       ;         ;
+; lpm_compare.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; altsyncram_fifo.inc                   ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc     ;         ;
+; db/dcfifo_kkn1.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf                    ;         ;
+; db/a_graycounter_877.tdf              ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/a_graycounter_877.tdf              ;         ;
+; db/a_graycounter_4lc.tdf              ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/a_graycounter_4lc.tdf              ;         ;
+; db/altsyncram_9u81.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_9u81.tdf                ;         ;
+; db/dffpipe_3dc.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dffpipe_3dc.tdf                    ;         ;
+; db/alt_synch_pipe_g98.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/alt_synch_pipe_g98.tdf             ;         ;
+; db/dffpipe_re9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dffpipe_re9.tdf                    ;         ;
+; db/alt_synch_pipe_1e8.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/alt_synch_pipe_1e8.tdf             ;         ;
+; db/cmpr_d66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_d66.tdf                       ;         ;
+; db/cmpr_c66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_c66.tdf                       ;         ;
+; db/mux_j28.tdf                        ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/mux_j28.tdf                        ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; db/altsyncram_mf71.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf                ;         ;
+; db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ;         ;
+; altshift_taps.tdf                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf       ;         ;
+; lpm_constant.inc                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; db/shift_taps_c6m.tdf                 ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/shift_taps_c6m.tdf                 ;         ;
+; db/altsyncram_4e81.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_4e81.tdf                ;         ;
+; db/cntr_sqf.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cntr_sqf.tdf                       ;         ;
+; db/cmpr_rgc.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_rgc.tdf                       ;         ;
++---------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                             ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                     ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 395                                                                                       ;
-;                                             ;                                                                                           ;
-; Total combinational functions               ; 327                                                                                       ;
-; Logic element usage by number of LUT inputs ;                                                                                           ;
-;     -- 4 input functions                    ; 138                                                                                       ;
-;     -- 3 input functions                    ; 32                                                                                        ;
-;     -- <=2 input functions                  ; 157                                                                                       ;
-;                                             ;                                                                                           ;
-; Logic elements by mode                      ;                                                                                           ;
-;     -- normal mode                          ; 231                                                                                       ;
-;     -- arithmetic mode                      ; 96                                                                                        ;
-;                                             ;                                                                                           ;
-; Total registers                             ; 241                                                                                       ;
-;     -- Dedicated logic registers            ; 241                                                                                       ;
-;     -- I/O registers                        ; 0                                                                                         ;
-;                                             ;                                                                                           ;
-; I/O pins                                    ; 44                                                                                        ;
-; Total memory bits                           ; 71728                                                                                     ;
-;                                             ;                                                                                           ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                         ;
-;                                             ;                                                                                           ;
-; Total PLLs                                  ; 1                                                                                         ;
-;     -- PLLs                                 ; 1                                                                                         ;
-;                                             ;                                                                                           ;
-; Maximum fan-out node                        ; sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 93                                                                                        ;
-; Total fan-out                               ; 2511                                                                                      ;
-; Average fan-out                             ; 3.59                                                                                      ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 360       ;
+;                                             ;           ;
+; Total combinational functions               ; 291       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 126       ;
+;     -- 3 input functions                    ; 35        ;
+;     -- <=2 input functions                  ; 130       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 214       ;
+;     -- arithmetic mode                      ; 77        ;
+;                                             ;           ;
+; Total registers                             ; 220       ;
+;     -- Dedicated logic registers            ; 220       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 44        ;
+; Total memory bits                           ; 71728     ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Total PLLs                                  ; 1         ;
+;     -- PLLs                                 ; 1         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 91        ;
+; Total fan-out                               ; 2337      ;
+; Average fan-out                             ; 3.63      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -304,9 +304,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name       ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |top                                         ; 327 (0)             ; 241 (0)                   ; 71728       ; 0            ; 0       ; 0         ; 44   ; 0            ; |top                                                                                                                                                ; top               ; work         ;
+; |top                                         ; 291 (0)             ; 220 (0)                   ; 71728       ; 0            ; 0       ; 0         ; 44   ; 0            ; |top                                                                                                                                                ; top               ; work         ;
 ;    |cmos_8_16bit:cmos_8_16bit_m0|            ; 2 (2)               ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|cmos_8_16bit:cmos_8_16bit_m0                                                                                                                   ; cmos_8_16bit      ; work         ;
-;    |iic_ctrl:iic_ctrl_m0|                    ; 179 (82)            ; 109 (48)                  ; 6192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_ctrl:iic_ctrl_m0                                                                                                                           ; iic_ctrl          ; work         ;
+;    |iic_ctrl:iic_ctrl_m0|                    ; 178 (81)            ; 109 (48)                  ; 6192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_ctrl:iic_ctrl_m0                                                                                                                           ; iic_ctrl          ; work         ;
 ;       |altsyncram:init_cmd_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0                                                                                                 ; altsyncram        ; work         ;
 ;          |altsyncram_mf71:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated                                                                  ; altsyncram_mf71   ; work         ;
 ;       |altsyncram:init_cmd_rtl_1|            ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1                                                                                                 ; altsyncram        ; work         ;
@@ -320,13 +320,13 @@ https://fpgasoftware.intel.com/eula.
 ;    |sys_pll:sys_pll_m0|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0                                                                                                                             ; sys_pll           ; work         ;
 ;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0|altpll:altpll_component                                                                                                     ; altpll            ; work         ;
 ;          |sys_pll_altpll:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated                                                                       ; sys_pll_altpll    ; work         ;
-;    |video_timing_data:video_timing_data_m0|  ; 146 (31)            ; 106 (27)                  ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0                                                                                                         ; video_timing_data ; work         ;
-;       |color_bar:color_bar_m0|               ; 58 (58)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|color_bar:color_bar_m0                                                                                  ; color_bar         ; work         ;
-;       |video_fifo:video_fifo_m0|             ; 57 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0                                                                                ; video_fifo        ; work         ;
-;          |dcfifo:dcfifo_component|           ; 57 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component                                                        ; dcfifo            ; work         ;
-;             |dcfifo_kkn1:auto_generated|     ; 57 (3)              ; 51 (13)                   ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated                             ; dcfifo_kkn1       ; work         ;
-;                |a_graycounter_4lc:wrptr_g1p| ; 27 (27)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p ; a_graycounter_4lc ; work         ;
-;                |a_graycounter_877:rdptr_g1p| ; 27 (27)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p ; a_graycounter_877 ; work         ;
+;    |video_timing_data:video_timing_data_m0|  ; 111 (1)             ; 85 (6)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0                                                                                                         ; video_timing_data ; work         ;
+;       |rgb_timing:rgb_timing_m0|             ; 56 (56)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0                                                                                ; rgb_timing        ; work         ;
+;       |video_fifo:video_fifo_m0|             ; 54 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0                                                                                ; video_fifo        ; work         ;
+;          |dcfifo:dcfifo_component|           ; 54 (0)              ; 51 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component                                                        ; dcfifo            ; work         ;
+;             |dcfifo_kkn1:auto_generated|     ; 54 (3)              ; 51 (13)                   ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated                             ; dcfifo_kkn1       ; work         ;
+;                |a_graycounter_4lc:wrptr_g1p| ; 25 (25)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p ; a_graycounter_4lc ; work         ;
+;                |a_graycounter_877:rdptr_g1p| ; 26 (26)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p ; a_graycounter_877 ; work         ;
 ;                |altsyncram_9u81:fifo_ram|    ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|altsyncram_9u81:fifo_ram    ; altsyncram_9u81   ; work         ;
 ;                |dffpipe_3dc:rdaclr|          ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|dffpipe_3dc:rdaclr          ; dffpipe_3dc       ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
@@ -396,6 +396,7 @@ Encoding Type:  One-Hot
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|slave_addr_r[0..2,7]      ; Stuck at GND due to stuck port data_in                                    ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|slave_addr_r[4..6]        ; Merged with iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|slave_addr_r[3] ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_sub[1]              ; Stuck at GND due to stuck port data_in                                    ;
+; video_timing_data:video_timing_data_m0|video_state[1]                   ; Stuck at GND due to stuck port clock_enable                               ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_next~8              ; Lost fanout                                                               ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_next~9              ; Lost fanout                                                               ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_next~10             ; Lost fanout                                                               ;
@@ -404,7 +405,7 @@ Encoding Type:  One-Hot
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_main~11             ; Lost fanout                                                               ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_main.STATE_SLAVE_EX ; Stuck at GND due to stuck port data_in                                    ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_next.STATE_SLAVE    ; Stuck at GND due to stuck port data_in                                    ;
-; Total Number of Removed Registers = 18                                  ;                                                                           ;
+; Total Number of Removed Registers = 19                                  ;                                                                           ;
 +-------------------------------------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -423,12 +424,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 241   ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 220   ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 112   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 143   ;
+; Number of registers using Clock Enable       ; 123   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -438,9 +439,9 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                         ; Fan out ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p|counter1a0 ; 7       ;
+; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p|counter1a0 ; 6       ;
 ; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p|counter4a0 ; 6       ;
-; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p|parity2    ; 5       ;
+; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p|parity2    ; 4       ;
 ; video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p|parity5    ; 4       ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|sda_out                                                                                                     ; 2       ;
 ; iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|sda_en                                                                                                      ; 3       ;
@@ -465,12 +466,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|send_cnt[1]                             ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|video_timing_data:video_timing_data_m0|video_state[1]        ;
-; 6:1                ; 20 bits   ; 80 LEs        ; 20 LEs               ; 60 LEs                 ; Yes        ; |top|video_timing_data:video_timing_data_m0|clk_delay[3]          ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|send_cnt[10]                            ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|send_data_r[7] ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|state_main[2]                           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|send_cnt[2]    ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|state_main[1]                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|send_cnt[1]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -1045,24 +1044,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0|color_bar:color_bar_m0 ;
-+----------------+------------------+------------------------------------------------------------------------+
-; Parameter Name ; Value            ; Type                                                                   ;
-+----------------+------------------+------------------------------------------------------------------------+
-; H_ACTIVE       ; 0000000111100000 ; Unsigned Binary                                                        ;
-; H_FP           ; 0000000000000010 ; Unsigned Binary                                                        ;
-; H_SYNC         ; 0000000000101001 ; Unsigned Binary                                                        ;
-; H_BP           ; 0000000000000010 ; Unsigned Binary                                                        ;
-; V_ACTIVE       ; 0000000100010000 ; Unsigned Binary                                                        ;
-; V_FP           ; 0000000000000010 ; Unsigned Binary                                                        ;
-; V_SYNC         ; 0000000000001010 ; Unsigned Binary                                                        ;
-; V_BP           ; 0000000000000010 ; Unsigned Binary                                                        ;
-; HS_POL         ; 0                ; Unsigned Binary                                                        ;
-; VS_POL         ; 0                ; Unsigned Binary                                                        ;
-; H_TOTAL        ; 0000001000001101 ; Unsigned Binary                                                        ;
-; V_TOTAL        ; 0000000100011110 ; Unsigned Binary                                                        ;
-+----------------+------------------+------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0 ;
++----------------+----------------------------------+----------------------------------------------------------+
+; Parameter Name ; Value                            ; Type                                                     ;
++----------------+----------------------------------+----------------------------------------------------------+
+; H_ACTIVE       ; 0000000111100000                 ; Unsigned Binary                                          ;
+; H_FP           ; 0000000000000010                 ; Unsigned Binary                                          ;
+; H_SYNC         ; 0000000000101001                 ; Unsigned Binary                                          ;
+; H_BP           ; 0000000000000010                 ; Unsigned Binary                                          ;
+; V_ACTIVE       ; 0000000100010000                 ; Unsigned Binary                                          ;
+; V_FP           ; 0000000000000010                 ; Unsigned Binary                                          ;
+; V_SYNC         ; 0000000000001010                 ; Unsigned Binary                                          ;
+; V_BP           ; 0000000000000010                 ; Unsigned Binary                                          ;
+; HS_POL         ; 00000000000000000000000000000000 ; Unsigned Binary                                          ;
+; VS_POL         ; 00000000000000000000000000000000 ; Unsigned Binary                                          ;
+; H_TOTAL        ; 0000001000001101                 ; Unsigned Binary                                          ;
+; V_TOTAL        ; 0000000100011110                 ; Unsigned Binary                                          ;
++----------------+----------------------------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1279,13 +1278,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------+-----------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "video_timing_data:video_timing_data_m0|color_bar:color_bar_m0"                                                                               ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; vs_in ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0" ;
++-------+--------+----------+-----------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                         ;
++-------+--------+----------+-----------------------------------------------------------------+
+; rgb_x ; Output ; Info     ; Explicitly unconnected                                          ;
+; rgb_y ; Output ; Info     ; Explicitly unconnected                                          ;
++-------+--------+----------+-----------------------------------------------------------------+
 
 
 +----------------------------------------------------------+
@@ -1318,28 +1318,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 241                         ;
+; cycloneiii_ff         ; 220                         ;
 ;     CLR               ; 50                          ;
 ;     ENA               ; 61                          ;
 ;     ENA CLR           ; 62                          ;
-;     ENA SCLR          ; 20                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 47                          ;
+;     plain             ; 46                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 329                         ;
-;     arith             ; 96                          ;
-;         2 data inputs ; 96                          ;
-;     normal            ; 233                         ;
+; cycloneiii_lcell_comb ; 293                         ;
+;     arith             ; 77                          ;
+;         2 data inputs ; 77                          ;
+;     normal            ; 216                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 50                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 138                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 126                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 42                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1348,7 +1347,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1358,38 +1357,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 21 19:27:53 2022
+    Info: Processing started: Fri Apr 07 15:34:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/rgb_timing.v
+    Info (12023): Found entity 1: rgb_timing File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/iic_init/iic_master.sv
-    Info (12023): Found entity 1: iic_master File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 1
+    Info (12023): Found entity 1: iic_master File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/iic_init/iic_ctrl.sv
-    Info (12023): Found entity 1: iic_ctrl File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 1
+    Info (12023): Found entity 1: iic_ctrl File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/video_timing_data.v
-    Info (12023): Found entity 1: video_timing_data File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 1
+    Info (12023): Found entity 1: video_timing_data File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
-    Info (12023): Found entity 1: top File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file src/color_bar.v
-    Info (12023): Found entity 1: color_bar File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/color_bar.v Line: 1
+    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/cmos_8_16bit.v
-    Info (12023): Found entity 1: cmos_8_16bit File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/cmos_8_16bit.v Line: 1
+    Info (12023): Found entity 1: cmos_8_16bit File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/cmos_8_16bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip/sys_pll.v
-    Info (12023): Found entity 1: sys_pll File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/sys_pll.v Line: 40
+    Info (12023): Found entity 1: sys_pll File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/sys_pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip/video_fifo.v
-    Info (12023): Found entity 1: video_fifo File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/video_fifo.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at top.v(69): created implicit net for "cmos_16bit_wr" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 69
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(35): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 35
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(14): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 14
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(16): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 16
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(17): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 17
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(18): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 18
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(19): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 19
+    Info (12023): Found entity 1: video_fifo File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/video_fifo.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at top.v(69): created implicit net for "cmos_16bit_wr" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 69
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(35): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 35
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(14): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(16): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(17): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(18): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_ctrl.sv(19): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 19
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 44
-Info (12128): Elaborating entity "altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/sys_pll.v Line: 91
-Info (12130): Elaborated megafunction instantiation "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/sys_pll.v Line: 91
-Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_component" with the following parameter: File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/sys_pll.v Line: 91
+Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 44
+Info (12128): Elaborating entity "altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/sys_pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "sys_pll:sys_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/sys_pll.v Line: 91
+Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_component" with the following parameter: File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/sys_pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "50000"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1445,43 +1444,43 @@ Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_compon
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/sys_pll_altpll.v
-    Info (12023): Found entity 1: sys_pll_altpll File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/sys_pll_altpll.v Line: 30
+    Info (12023): Found entity 1: sys_pll_altpll File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/sys_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "sys_pll_altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "iic_ctrl" for hierarchy "iic_ctrl:iic_ctrl_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 59
-Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(46): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(56): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(62): truncated value with size 32 to match size of target (11) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(65): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 65
-Warning (10030): Net "init_cmd.data_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
-Warning (10030): Net "init_cmd.waddr_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
-Warning (10030): Net "init_cmd.we_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
-Info (12128): Elaborating entity "iic_master" for hierarchy "iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_ctrl.sv Line: 104
-Warning (10036): Verilog HDL or VHDL warning at iic_master.sv(49): object "recv_data_r" assigned a value but never read File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 49
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(38): truncated value with size 32 to match size of target (10) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(83): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 83
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(85): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(103): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 103
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(105): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 105
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(124): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 124
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(126): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 126
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(145): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 145
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(147): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 147
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(164): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(167): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 167
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(169): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 169
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(176): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 176
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(191): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 191
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(213): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 213
-Warning (10034): Output port "recv_data" at iic_master.sv(19) has no driver File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/iic_init/iic_master.sv Line: 19
-Info (12128): Elaborating entity "cmos_8_16bit" for hierarchy "cmos_8_16bit:cmos_8_16bit_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 70
-Info (12128): Elaborating entity "video_timing_data" for hierarchy "video_timing_data:video_timing_data_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 87
-Warning (10230): Verilog HDL assignment warning at video_timing_data.v(52): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 52
-Warning (10230): Verilog HDL assignment warning at video_timing_data.v(58): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 58
-Warning (10230): Verilog HDL assignment warning at video_timing_data.v(60): truncated value with size 32 to match size of target (20) File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 60
-Info (12128): Elaborating entity "video_fifo" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 41
-Info (12128): Elaborating entity "dcfifo" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/video_fifo.v Line: 81
-Info (12130): Elaborated megafunction instantiation "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/video_fifo.v Line: 81
-Info (12133): Instantiated megafunction "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" with the following parameter: File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/ip/video_fifo.v Line: 81
+Info (12128): Elaborating entity "iic_ctrl" for hierarchy "iic_ctrl:iic_ctrl_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 59
+Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(46): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(56): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(62): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at iic_ctrl.sv(65): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 65
+Warning (10030): Net "init_cmd.data_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
+Warning (10030): Net "init_cmd.waddr_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
+Warning (10030): Net "init_cmd.we_a" at iic_ctrl.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 32
+Info (12128): Elaborating entity "iic_master" for hierarchy "iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_ctrl.sv Line: 104
+Warning (10036): Verilog HDL or VHDL warning at iic_master.sv(49): object "recv_data_r" assigned a value but never read File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(38): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(83): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(85): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(103): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(105): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 105
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(124): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 124
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(126): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(145): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 145
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(147): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 147
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(164): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(167): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(169): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 169
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(176): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 176
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(191): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 191
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(213): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 213
+Warning (10034): Output port "recv_data" at iic_master.sv(19) has no driver File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/iic_init/iic_master.sv Line: 19
+Info (12128): Elaborating entity "cmos_8_16bit" for hierarchy "cmos_8_16bit:cmos_8_16bit_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 70
+Info (12128): Elaborating entity "video_timing_data" for hierarchy "video_timing_data:video_timing_data_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 87
+Warning (10036): Verilog HDL or VHDL warning at video_timing_data.v(27): object "vs_degedge" assigned a value but never read File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 27
+Warning (10036): Verilog HDL or VHDL warning at video_timing_data.v(49): object "clk_delay" assigned a value but never read File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 49
+Warning (10230): Verilog HDL assignment warning at video_timing_data.v(54): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 54
+Info (12128): Elaborating entity "video_fifo" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 43
+Info (12128): Elaborating entity "dcfifo" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/video_fifo.v Line: 81
+Info (12130): Elaborated megafunction instantiation "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/video_fifo.v Line: 81
+Info (12133): Instantiated megafunction "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component" with the following parameter: File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/ip/video_fifo.v Line: 81
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=M9K"
     Info (12134): Parameter "lpm_numwords" = "4096"
@@ -1497,39 +1496,43 @@ Info (12133): Instantiated megafunction "video_timing_data:video_timing_data_m0|
     Info (12134): Parameter "write_aclr_synch" = "OFF"
     Info (12134): Parameter "wrsync_delaypipe" = "3"
 Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_kkn1.tdf
-    Info (12023): Found entity 1: dcfifo_kkn1 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 43
+    Info (12023): Found entity 1: dcfifo_kkn1 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 43
 Info (12128): Elaborating entity "dcfifo_kkn1" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_877.tdf
-    Info (12023): Found entity 1: a_graycounter_877 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/a_graycounter_877.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_877" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 54
+    Info (12023): Found entity 1: a_graycounter_877 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/a_graycounter_877.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_877" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_877:rdptr_g1p" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_4lc.tdf
-    Info (12023): Found entity 1: a_graycounter_4lc File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/a_graycounter_4lc.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_4lc" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 55
+    Info (12023): Found entity 1: a_graycounter_4lc File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/a_graycounter_4lc.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_4lc" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|a_graycounter_4lc:wrptr_g1p" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9u81.tdf
-    Info (12023): Found entity 1: altsyncram_9u81 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_9u81.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_9u81" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|altsyncram_9u81:fifo_ram" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 56
+    Info (12023): Found entity 1: altsyncram_9u81 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_9u81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_9u81" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|altsyncram_9u81:fifo_ram" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_3dc.tdf
-    Info (12023): Found entity 1: dffpipe_3dc File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dffpipe_3dc.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_3dc" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|dffpipe_3dc:rdaclr" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 73
+    Info (12023): Found entity 1: dffpipe_3dc File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dffpipe_3dc.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_3dc" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|dffpipe_3dc:rdaclr" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 73
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_g98.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_g98 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/alt_synch_pipe_g98.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_g98" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_g98:rs_dgwp" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 74
+    Info (12023): Found entity 1: alt_synch_pipe_g98 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/alt_synch_pipe_g98.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_g98" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_g98:rs_dgwp" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 74
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_re9.tdf
-    Info (12023): Found entity 1: dffpipe_re9 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dffpipe_re9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_re9" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_g98:rs_dgwp|dffpipe_re9:dffpipe8" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/alt_synch_pipe_g98.tdf Line: 35
+    Info (12023): Found entity 1: dffpipe_re9 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dffpipe_re9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_re9" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_g98:rs_dgwp|dffpipe_re9:dffpipe8" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/alt_synch_pipe_g98.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_1e8.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_1e8 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/alt_synch_pipe_1e8.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_1e8" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_1e8:ws_dgrp" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 75
+    Info (12023): Found entity 1: alt_synch_pipe_1e8 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/alt_synch_pipe_1e8.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_1e8" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|alt_synch_pipe_1e8:ws_dgrp" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 75
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_d66.tdf
-    Info (12023): Found entity 1: cmpr_d66 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_d66.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_d66" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|cmpr_d66:rdempty_eq_comp1_lsb" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 76
+    Info (12023): Found entity 1: cmpr_d66 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_d66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_d66" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|cmpr_d66:rdempty_eq_comp1_lsb" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 76
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c66.tdf
-    Info (12023): Found entity 1: cmpr_c66 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_c66.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_c66" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|cmpr_c66:rdempty_eq_comp1_msb" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 77
+    Info (12023): Found entity 1: cmpr_c66 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_c66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_c66" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|cmpr_c66:rdempty_eq_comp1_msb" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 77
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_j28.tdf
-    Info (12023): Found entity 1: mux_j28 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/mux_j28.tdf Line: 23
-Info (12128): Elaborating entity "mux_j28" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|mux_j28:rdemp_eq_comp_lsb_mux" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/dcfifo_kkn1.tdf Line: 84
-Info (12128): Elaborating entity "color_bar" for hierarchy "video_timing_data:video_timing_data_m0|color_bar:color_bar_m0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/video_timing_data.v Line: 86
+    Info (12023): Found entity 1: mux_j28 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/mux_j28.tdf Line: 23
+Info (12128): Elaborating entity "mux_j28" for hierarchy "video_timing_data:video_timing_data_m0|video_fifo:video_fifo_m0|dcfifo:dcfifo_component|dcfifo_kkn1:auto_generated|mux_j28:rdemp_eq_comp_lsb_mux" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/dcfifo_kkn1.tdf Line: 84
+Info (12128): Elaborating entity "rgb_timing" for hierarchy "video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/video_timing_data.v Line: 89
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(37): truncated value with size 12 to match size of target (11) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 37
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(41): truncated value with size 12 to match size of target (11) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 41
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(68): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 68
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(86): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 86
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "iic_ctrl:iic_ctrl_m0|init_cmd_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1570,7 +1573,7 @@ Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|altsyncram:init_cm
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mf71.tdf
-    Info (12023): Found entity 1: altsyncram_mf71 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_mf71 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1"
 Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -1589,74 +1592,73 @@ Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|iic_master:iic_mas
     Info (12134): Parameter "TAP_DISTANCE" = "26"
     Info (12134): Parameter "WIDTH" = "2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_c6m.tdf
-    Info (12023): Found entity 1: shift_taps_c6m File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/shift_taps_c6m.tdf Line: 27
+    Info (12023): Found entity 1: shift_taps_c6m File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/shift_taps_c6m.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4e81.tdf
-    Info (12023): Found entity 1: altsyncram_4e81 File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_4e81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_4e81 File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_4e81.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sqf.tdf
-    Info (12023): Found entity 1: cntr_sqf File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cntr_sqf.tdf Line: 28
+    Info (12023): Found entity 1: cntr_sqf File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cntr_sqf.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_rgc.tdf
-    Info (12023): Found entity 1: cmpr_rgc File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/cmpr_rgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_rgc File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/cmpr_rgc.tdf Line: 23
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a8" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 204
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a9" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 225
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a10" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 246
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a11" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 267
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a12" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 288
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a13" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 309
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a14" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 330
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a15" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 351
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a16" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 372
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a17" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 393
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a18" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 414
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a19" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 435
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a20" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 456
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a21" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 477
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a22" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 498
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a23" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 519
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a0" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 36
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a1" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 57
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a2" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 78
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a3" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 99
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a4" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 120
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a5" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 141
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a6" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 162
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a7" File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/altsyncram_mf71.tdf Line: 183
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/db/a_graycounter_877.tdf Line: 33
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a8" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 204
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a9" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 225
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a10" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 246
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a11" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 267
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a12" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 288
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a13" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 309
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a14" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 330
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a15" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 351
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a16" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 372
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a17" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 393
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a18" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 414
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a19" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 435
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a20" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 456
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a21" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 477
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a22" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 498
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a23" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 519
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a0" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 36
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a1" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 57
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a2" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 78
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a3" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 99
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a4" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 120
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a5" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 141
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a6" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 162
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a7" File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 183
+Info (13000): Registers with preset signals will power-up high File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/db/a_graycounter_877.tdf Line: 33
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "cmos_pwdn" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 12
-    Warning (13410): Pin "lcd_r[0]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 17
-    Warning (13410): Pin "lcd_r[1]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 17
-    Warning (13410): Pin "lcd_r[2]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 17
-    Warning (13410): Pin "lcd_g[0]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 18
-    Warning (13410): Pin "lcd_g[1]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 18
-    Warning (13410): Pin "lcd_b[0]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 20
-    Warning (13410): Pin "lcd_b[1]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 20
-    Warning (13410): Pin "lcd_b[2]" is stuck at GND File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/top.v Line: 20
+    Warning (13410): Pin "cmos_pwdn" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 12
+    Warning (13410): Pin "lcd_r[0]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 17
+    Warning (13410): Pin "lcd_r[1]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 17
+    Warning (13410): Pin "lcd_r[2]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 17
+    Warning (13410): Pin "lcd_g[0]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 18
+    Warning (13410): Pin "lcd_g[1]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 18
+    Warning (13410): Pin "lcd_b[0]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 20
+    Warning (13410): Pin "lcd_b[1]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 20
+    Warning (13410): Pin "lcd_b[2]" is stuck at GND File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/top.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 483 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 396 logic cells
+    Info (21061): Implemented 361 logic cells
     Info (21064): Implemented 42 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Fri Oct 21 19:28:01 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Fri Apr 07 15:34:52 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/output_files/top.map.smsg.
+The suppressed messages can be found in D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/output_files/top.map.smsg.
 
 

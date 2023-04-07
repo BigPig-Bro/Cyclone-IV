@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at color_bar.v(11): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/color_bar.v Line: 11
-Info (10281): Verilog HDL Declaration information at color_bar.v(15): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: E:/FPGA_work/EP4CE6F17C8/Code_LCD/fifo_5640_lcd480/src/color_bar.v Line: 15
+Info (10281): Verilog HDL Declaration information at rgb_timing.v(13): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 13
+Info (10281): Verilog HDL Declaration information at rgb_timing.v(17): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: D:/Users/HUIP/Desktop/fifo_ov5640_lcd480/src/rgb_timing.v Line: 17
