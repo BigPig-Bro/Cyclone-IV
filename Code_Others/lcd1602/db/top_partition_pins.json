@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LCD1602_RS",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_E",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD1602_DAT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+
+State Machine - |LCD1602_top|LCD1602_drive:LCD1602_drive_m0|state
+Name state.000 state.WAIT state.SEND 
+state.000 0 0 0 
+state.SEND 1 0 1 
+state.WAIT 1 1 0 

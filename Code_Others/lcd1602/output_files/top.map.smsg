@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at LCD1602_top.sv(30): always construct contains both blocking and non-blocking assignments File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 30
+Info (10281): Verilog HDL Declaration information at LCD1602_drive.sv(29): object "STATE" differs only in case from object "state" in the same scope File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_drive.sv Line: 29
