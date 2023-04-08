@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RPI1031_led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RPI1031_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_tx",
+					"strict" : false
+				},
+				{
+					"name" : "RPI1031_state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RPI1031_state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
