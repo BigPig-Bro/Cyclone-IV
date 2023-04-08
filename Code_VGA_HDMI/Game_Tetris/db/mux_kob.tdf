@@ -1,0 +1,52 @@
+--lpm_mux CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone IV E" LPM_SIZE=16 LPM_WIDTH=1 LPM_WIDTHS=4 data result sel
+--VERSION_BEGIN 20.1 cbx_lpm_mux 2020:11:11:17:06:45:SJ cbx_mgl 2020:11:11:17:08:38:SJ  VERSION_END
+
+
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details, at
+--  https://fpgasoftware.intel.com/eula.
+
+
+
+--synthesis_resources = lut 10 
+SUBDESIGN mux_kob
+( 
+	data[15..0]	:	input;
+	result[0..0]	:	output;
+	sel[3..0]	:	input;
+) 
+VARIABLE 
+	result_node[0..0]	: WIRE;
+	sel_ffs_wire[3..0]	: WIRE;
+	sel_node[3..0]	: WIRE;
+	w_data286w[15..0]	: WIRE;
+	w_data341w[3..0]	: WIRE;
+	w_data342w[3..0]	: WIRE;
+	w_data343w[3..0]	: WIRE;
+	w_data344w[3..0]	: WIRE;
+	w_sel345w[1..0]	: WIRE;
+
+BEGIN 
+	result[] = result_node[];
+	result_node[] = ( ((((((w_data342w[1..1] & w_sel345w[0..0]) & (! (((w_data342w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data342w[2..2]))))) # ((((w_data342w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data342w[2..2]))) & (w_data342w[3..3] # (! w_sel345w[0..0])))) & sel_node[2..2]) & (! ((((((w_data341w[1..1] & w_sel345w[0..0]) & (! (((w_data341w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data341w[2..2]))))) # ((((w_data341w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data341w[2..2]))) & (w_data341w[3..3] # (! w_sel345w[0..0])))) & (! sel_node[3..3])) & (! sel_node[2..2])) # (sel_node[3..3] & (sel_node[2..2] # (((w_data343w[1..1] & w_sel345w[0..0]) & (! (((w_data343w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data343w[2..2]))))) # ((((w_data343w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data343w[2..2]))) & (w_data343w[3..3] # (! w_sel345w[0..0]))))))))) # (((((((w_data341w[1..1] & w_sel345w[0..0]) & (! (((w_data341w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data341w[2..2]))))) # ((((w_data341w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data341w[2..2]))) & (w_data341w[3..3] # (! w_sel345w[0..0])))) & (! sel_node[3..3])) & (! sel_node[2..2])) # (sel_node[3..3] & (sel_node[2..2] # (((w_data343w[1..1] & w_sel345w[0..0]) & (! (((w_data343w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data343w[2..2]))))) # ((((w_data343w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data343w[2..2]))) & (w_data343w[3..3] # (! w_sel345w[0..0]))))))) & ((((w_data344w[1..1] & w_sel345w[0..0]) & (! (((w_data344w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data344w[2..2]))))) # ((((w_data344w[0..0] & (! w_sel345w[1..1])) & (! w_sel345w[0..0])) # (w_sel345w[1..1] & (w_sel345w[0..0] # w_data344w[2..2]))) & (w_data344w[3..3] # (! w_sel345w[0..0])))) # (! sel_node[2..2])))));
+	sel_ffs_wire[] = ( sel[3..0]);
+	sel_node[] = ( sel_ffs_wire[3..2], sel[1..0]);
+	w_data286w[] = ( data[15..0]);
+	w_data341w[3..0] = w_data286w[3..0];
+	w_data342w[3..0] = w_data286w[7..4];
+	w_data343w[3..0] = w_data286w[11..8];
+	w_data344w[3..0] = w_data286w[15..12];
+	w_sel345w[1..0] = sel_node[1..0];
+END;
+--VALID FILE

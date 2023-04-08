@@ -1,0 +1,8 @@
+
+State Machine - |top|lcd_display:lcd_display_m0|ram_state
+Name ram_state.1001 ram_state.1000 ram_state.0001 ram_state.0000 ram_state.0111 
+ram_state.0000 0 0 0 0 0 
+ram_state.0001 0 0 1 1 0 
+ram_state.0111 0 0 0 1 1 
+ram_state.1000 0 1 0 1 0 
+ram_state.1001 1 0 0 1 0 

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -23.255
+TNS   : -1827.654
+
+Type  : Slow 1200mV 85C Model Setup 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : -5.526
+TNS   : -46.955
+
+Type  : Slow 1200mV 85C Model Setup 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -4.414
+TNS   : -99.168
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 10.601
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : 0.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 1.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -1.487
+TNS   : -35.688
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.783
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.839
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -21.262
+TNS   : -1695.280
+
+Type  : Slow 1200mV 0C Model Setup 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : -5.439
+TNS   : -45.954
+
+Type  : Slow 1200mV 0C Model Setup 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -4.000
+TNS   : -91.440
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 11.241
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : -0.081
+TNS   : -0.081
+
+Type  : Slow 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.211
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : 0.632
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 1.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -1.487
+TNS   : -35.688
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.773
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.812
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -10.114
+TNS   : -818.521
+
+Type  : Fast 1200mV 0C Model Setup 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : -2.870
+TNS   : -23.371
+
+Type  : Fast 1200mV 0C Model Setup 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -1.808
+TNS   : -39.598
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 15.899
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.560
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_timing:vga_timing_m0|vs_reg_d0'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcd_display:lcd_display_m0|cube_code[2]'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.434
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.886
+TNS   : 0.000
+
+------------------------------------------------------------

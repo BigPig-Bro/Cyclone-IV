@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at vga_timing.v(14): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/vga_timing.v Line: 14
+Info (10281): Verilog HDL Declaration information at vga_timing.v(18): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/vga_timing.v Line: 18
+Warning (10268): Verilog HDL information at lcd_display.v(217): always construct contains both blocking and non-blocking assignments File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
