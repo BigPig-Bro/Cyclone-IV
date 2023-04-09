@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at rgb_timing.sv(13): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: D:/Users/HUIP/Desktop/Game_GuessHand/src/rgb_timing.sv Line: 13
+Info (10281): Verilog HDL Declaration information at rgb_timing.sv(17): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: D:/Users/HUIP/Desktop/Game_GuessHand/src/rgb_timing.sv Line: 17
+Info (10281): Verilog HDL Declaration information at game_ctrl.sv(8): object "show" differs only in case from object "SHOW" in the same scope File: D:/Users/HUIP/Desktop/Game_GuessHand/src/game_ctrl.sv Line: 8
+Info (10281): Verilog HDL Declaration information at game_ctrl.sv(13): object "STATE" differs only in case from object "state" in the same scope File: D:/Users/HUIP/Desktop/Game_GuessHand/src/game_ctrl.sv Line: 13
