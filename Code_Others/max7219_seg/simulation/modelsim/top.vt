@@ -1,0 +1,32 @@
+
+`timescale 1 ps/ 1 ps
+module top_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_50M;
+// wires                                               
+wire seg_clk;
+wire seg_cs;
+wire seg_din;
+
+// assign statements (if any)                          
+top i1 (
+// port map - connection between master ports and signals/registers   
+	.clk_50M(clk_50M),
+	.seg_clk(seg_clk),
+	.seg_cs(seg_cs),
+	.seg_din(seg_din)
+);
+initial                                                
+begin   
+
+#0 clk_50M = 0;                                               
+#10000 $stop;                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always #5 clk_50M = !clk_50M;                                                    
+endmodule
+

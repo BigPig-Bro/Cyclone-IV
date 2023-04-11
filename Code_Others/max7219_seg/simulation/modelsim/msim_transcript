@@ -1,0 +1,64 @@
+# Reading pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/HUIP/Desktop/max7219 {C:/Users/HUIP/Desktop/max7219/top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:08 on Jul 14,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HUIP/Desktop/max7219" C:/Users/HUIP/Desktop/max7219/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 19:44:08 on Jul 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/HUIP/Desktop/max7219/simulation/modelsim {C:/Users/HUIP/Desktop/max7219/simulation/modelsim/top.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:08 on Jul 14,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/HUIP/Desktop/max7219/simulation/modelsim" C:/Users/HUIP/Desktop/max7219/simulation/modelsim/top.vt 
+# -- Compiling module top_vlg_tst
+# 
+# Top level modules:
+# 	top_vlg_tst
+# End time: 19:44:08 on Jul 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" top_vlg_tst 
+# Start time: 19:44:08 on Jul 14,2021
+# Loading work.top_vlg_tst
+# Loading work.top
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/HUIP/Desktop/max7219/simulation/modelsim/top.vt(26)
+#    Time: 10 ns  Iteration: 0  Instance: /top_vlg_tst
+# Break in Module top_vlg_tst at C:/Users/HUIP/Desktop/max7219/simulation/modelsim/top.vt line 26
+add wave -position insertpoint  \
+sim:/top_vlg_tst/i1/send_cnt \
+sim:/top_vlg_tst/i1/send_data \
+sim:/top_vlg_tst/i1/state \
+sim:/top_vlg_tst/i1/write_cnt
+restart
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:45:17 on Jul 14,2021, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

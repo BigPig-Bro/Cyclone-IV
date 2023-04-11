@@ -1,0 +1,14 @@
+|top
+clk_50M => clk_div[0].CLK
+clk_50M => clk_div[1].CLK
+clk_50M => clk_div[2].CLK
+clk_50M => clk_div[3].CLK
+clk_50M => clk_div[4].CLK
+clk_50M => clk_div[5].CLK
+clk_50M => clk_div[6].CLK
+clk_50M => clk_div[7].CLK
+seg_clk << seg_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_cs << seg_cs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg_din << seg_din~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
