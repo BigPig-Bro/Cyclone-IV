@@ -1,0 +1,245 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "data_frame[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[15]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[16]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[17]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[18]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[19]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[20]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[21]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[22]",
+					"strict" : false
+				},
+				{
+					"name" : "data_frame[23]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[0]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[1]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[2]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[3]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[4]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[5]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[6]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[7]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[8]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[9]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[10]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[11]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[12]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[13]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[14]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[15]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[16]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[17]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[18]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[19]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[20]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[21]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[22]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[23]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[24]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[25]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[26]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[27]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[28]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[29]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[30]",
+					"strict" : false
+				},
+				{
+					"name" : "send_frame[31]",
+					"strict" : false
+				},
+				{
+					"name" : "sk9822_ck",
+					"strict" : false
+				},
+				{
+					"name" : "sk9822_da",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
