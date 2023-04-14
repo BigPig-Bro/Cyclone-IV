@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sat Apr 08 22:34:14 2023
+Fri Apr 14 15:56:04 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -31,9 +31,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  23. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_divide:Div5
  24. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_divide:Div9
  25. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_divide:Div10
- 26. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult4
+ 26. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult0
  27. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult2
- 28. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult4
  29. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult1
  30. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_divide:Mod3
  31. Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_divide:Mod2
@@ -76,13 +76,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 08 22:34:14 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 14 15:56:04 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,107                                       ;
-;     Total combinational functions  ; 3,064                                       ;
+; Total logic elements               ; 3,305                                       ;
+;     Total combinational functions  ; 3,262                                       ;
 ;     Dedicated logic registers      ; 379                                         ;
 ; Total registers                    ; 379                                         ;
 ; Total pins                         ; 35                                          ;
@@ -199,7 +199,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.1%      ;
 ;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.1%      ;
-;     Processors 8-10        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -292,16 +293,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                           ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3,107                                                                                           ;
+; Estimated Total logic elements              ; 3,305                                                                                           ;
 ;                                             ;                                                                                                 ;
-; Total combinational functions               ; 3064                                                                                            ;
+; Total combinational functions               ; 3262                                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 1226                                                                                            ;
-;     -- 3 input functions                    ; 867                                                                                             ;
-;     -- <=2 input functions                  ; 971                                                                                             ;
+;     -- 4 input functions                    ; 1373                                                                                            ;
+;     -- 3 input functions                    ; 914                                                                                             ;
+;     -- <=2 input functions                  ; 975                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 2209                                                                                            ;
+;     -- normal mode                          ; 2407                                                                                            ;
 ;     -- arithmetic mode                      ; 855                                                                                             ;
 ;                                             ;                                                                                                 ;
 ; Total registers                             ; 379                                                                                             ;
@@ -318,8 +319,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                                                 ;
 ; Maximum fan-out node                        ; video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 266                                                                                             ;
-; Total fan-out                               ; 10624                                                                                           ;
-; Average fan-out                             ; 3.02                                                                                            ;
+; Total fan-out                               ; 11344                                                                                           ;
+; Average fan-out                             ; 3.05                                                                                            ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -328,11 +329,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                    ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                              ; 3064 (1)            ; 379 (0)                   ; 53450       ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                                                                   ; top                 ; work         ;
+; |top                                              ; 3262 (1)            ; 379 (0)                   ; 53450       ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                                                                   ; top                 ; work         ;
 ;    |key:key_m0|                                   ; 76 (76)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|key:key_m0                                                                                                                                        ; key                 ; work         ;
 ;    |key:key_m1|                                   ; 76 (76)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|key:key_m1                                                                                                                                        ; key                 ; work         ;
 ;    |key:key_m2|                                   ; 76 (76)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|key:key_m2                                                                                                                                        ; key                 ; work         ;
-;    |lcd_display:lcd_display_m0|                   ; 2764 (1729)         ; 229 (225)                 ; 53450       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_display:lcd_display_m0                                                                                                                        ; lcd_display         ; work         ;
+;    |lcd_display:lcd_display_m0|                   ; 2962 (1927)         ; 229 (225)                 ; 53450       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_display:lcd_display_m0                                                                                                                        ; lcd_display         ; work         ;
 ;       |level:level_m0|                            ; 6 (0)               ; 2 (0)                     ; 25700       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_display:lcd_display_m0|level:level_m0                                                                                                         ; level               ; work         ;
 ;          |altsyncram:altsyncram_component|        ; 6 (0)               ; 2 (0)                     ; 25700       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component                                                                         ; altsyncram          ; work         ;
 ;             |altsyncram_tra1:auto_generated|      ; 6 (0)               ; 2 (2)                     ; 25700       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component|altsyncram_tra1:auto_generated                                          ; altsyncram_tra1     ; work         ;
@@ -465,15 +466,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+----------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
 +----------------------------------------------------+----------------------------------+------------------------+
-; lcd_display:lcd_display_m0|cube[6]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[4]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[5]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[7]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[2]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[0]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[1]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[3]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
-; lcd_display:lcd_display_m0|cube[8]                 ; lcd_display:lcd_display_m0|Mux83 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[6]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[4]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[5]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[7]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[2]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[0]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[1]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[3]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
+; lcd_display:lcd_display_m0|cube[8]                 ; lcd_display:lcd_display_m0|Mux91 ; yes                    ;
 ; Number of user-specified and inferred latches = 9  ;                                  ;                        ;
 +----------------------------------------------------+----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -495,11 +496,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 379   ;
-; Number of registers using Synchronous Clear  ; 40    ;
-; Number of registers using Synchronous Load   ; 89    ;
+; Number of registers using Synchronous Clear  ; 38    ;
+; Number of registers using Synchronous Load   ; 79    ;
 ; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 198   ;
+; Number of registers using Clock Enable       ; 203   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -509,8 +510,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; lcd_display:lcd_display_m0|cube_loc_x[1] ; 56      ;
-; lcd_display:lcd_display_m0|cube_loc_y[1] ; 70      ;
+; lcd_display:lcd_display_m0|cube_loc_x[1] ; 57      ;
+; lcd_display:lcd_display_m0|cube_loc_y[1] ; 91      ;
 ; lcd_display:lcd_display_m0|cube_new      ; 4       ;
 ; Total number of inverted registers = 3   ;         ;
 +------------------------------------------+---------+
@@ -522,29 +523,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|time_cnt[6]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m0|cnt[19]                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m2|cnt[1]                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m1|cnt[30]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|vs_cnt[3]     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|speed[4]      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|level_mode[1] ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 3 LEs                ; 30 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|cube_loc_y[3] ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 4 LEs                ; 44 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|score_scan[1] ;
-; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|score[1]      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|cube_loc_x[3] ;
-; 8:1                ; 15 bits   ; 75 LEs        ; 60 LEs               ; 15 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|num_add[8]    ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 14 LEs               ; 18 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|ram_state[2]  ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux38         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m0|cnt[0]                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m2|cnt[30]                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|key:key_m1|cnt[27]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|vs_cnt[0]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|speed[1]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|lcd_display:lcd_display_m0|level_mode[0] ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 3 LEs                ; 30 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|cube_loc_y[0] ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|score[5]      ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 4 LEs                ; 44 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|score_scan[3] ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 60 LEs               ; 15 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|num_add[7]    ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 3 LEs                ; 18 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|cube_loc_x[3] ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lcd_display:lcd_display_m0|ram_state[1]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux41         ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|rgb_out       ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux60         ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux60         ;
-; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux24         ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux80         ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux29         ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux71         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; No         ; |top|lcd_display:lcd_display_m0|Mux46         ;
-; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux68         ;
-; 1:1                ; 4 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Add58         ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux36         ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux54         ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux25         ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux82         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux28         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux71         ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 48 LEs               ; 12 LEs                 ; No         ; |top|lcd_display:lcd_display_m0|Mux43         ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|lcd_display:lcd_display_m0|Mux68         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
@@ -1199,7 +1199,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult4 ;
+; Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+----------------------------+
 ; Parameter Name                                 ; Value        ; Type                       ;
 +------------------------------------------------+--------------+----------------------------+
@@ -1269,7 +1269,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult0 ;
+; Parameter Settings for Inferred Entity Instance: lcd_display:lcd_display_m0|lpm_mult:Mult4 ;
 +------------------------------------------------+--------------+----------------------------+
 ; Parameter Name                                 ; Value        ; Type                       ;
 +------------------------------------------------+--------------+----------------------------+
@@ -1553,7 +1553,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                                     ;
 +---------------------------------------+-------------------------------------------+
 ; Number of entity instances            ; 4                                         ;
-; Entity Instance                       ; lcd_display:lcd_display_m0|lpm_mult:Mult4 ;
+; Entity Instance                       ; lcd_display:lcd_display_m0|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 15                                        ;
 ;     -- LPM_WIDTHB                     ; 10                                        ;
 ;     -- LPM_WIDTHP                     ; 25                                        ;
@@ -1575,7 +1575,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                      ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                        ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                        ;
-; Entity Instance                       ; lcd_display:lcd_display_m0|lpm_mult:Mult0 ;
+; Entity Instance                       ; lcd_display:lcd_display_m0|lpm_mult:Mult4 ;
 ;     -- LPM_WIDTHA                     ; 15                                        ;
 ;     -- LPM_WIDTHB                     ; 10                                        ;
 ;     -- LPM_WIDTHP                     ; 25                                        ;
@@ -1619,29 +1619,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 35                          ;
 ; cycloneiii_ff         ; 379                         ;
 ;     CLR               ; 19                          ;
-;     ENA               ; 66                          ;
+;     ENA               ; 83                          ;
 ;     ENA CLR           ; 12                          ;
-;     ENA SCLR          ; 32                          ;
-;     ENA SLD           ; 88                          ;
+;     ENA SCLR          ; 30                          ;
+;     ENA SLD           ; 78                          ;
 ;     SCLR              ; 8                           ;
 ;     SLD               ; 1                           ;
-;     plain             ; 153                         ;
-; cycloneiii_lcell_comb ; 3064                        ;
+;     plain             ; 148                         ;
+; cycloneiii_lcell_comb ; 3262                        ;
 ;     arith             ; 855                         ;
 ;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 350                         ;
 ;         3 data inputs ; 483                         ;
-;     normal            ; 2209                        ;
+;     normal            ; 2407                        ;
 ;         0 data inputs ; 83                          ;
 ;         1 data inputs ; 23                          ;
-;         2 data inputs ; 493                         ;
-;         3 data inputs ; 384                         ;
-;         4 data inputs ; 1226                        ;
+;         2 data inputs ; 497                         ;
+;         3 data inputs ; 431                         ;
+;         4 data inputs ; 1373                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 29.90                       ;
-; Average LUT depth     ; 13.93                       ;
+; Average LUT depth     ; 13.81                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1650,7 +1650,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1660,7 +1660,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 08 22:34:04 2023
+    Info: Processing started: Fri Apr 14 15:55:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -1760,27 +1760,30 @@ Warning (10230): Verilog HDL assignment warning at lcd_display.v(199): truncated
 Warning (10230): Verilog HDL assignment warning at lcd_display.v(203): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 203
 Warning (10230): Verilog HDL assignment warning at lcd_display.v(214): truncated value with size 32 to match size of target (5) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 214
 Warning (10230): Verilog HDL assignment warning at lcd_display.v(245): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 245
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(249): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 249
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(253): truncated value with size 5 to match size of target (3) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 253
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(264): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 264
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(268): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 268
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(277): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 277
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(281): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 281
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(320): truncated value with size 32 to match size of target (6) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 320
-Warning (10230): Verilog HDL assignment warning at lcd_display.v(336): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 336
-Warning (10270): Verilog HDL Case Statement warning at lcd_display.v(353): incomplete case statement has no default case item File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Warning (10240): Verilog HDL Always Construct warning at lcd_display.v(353): inferring latch(es) for variable "cube", which holds its previous value in one or more paths through the always construct File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(250): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 250
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(254): truncated value with size 5 to match size of target (3) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 254
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(265): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 265
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(269): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 269
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(278): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 278
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(282): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 282
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(291): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 291
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(298): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 298
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(307): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 307
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(358): truncated value with size 32 to match size of target (6) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 358
+Warning (10230): Verilog HDL assignment warning at lcd_display.v(374): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 374
+Warning (10270): Verilog HDL Case Statement warning at lcd_display.v(391): incomplete case statement has no default case item File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Warning (10240): Verilog HDL Always Construct warning at lcd_display.v(391): inferring latch(es) for variable "cube", which holds its previous value in one or more paths through the always construct File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
 Warning (10030): Net "cube_code[5]" at lcd_display.v(183) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 183
-Info (10041): Inferred latch for "cube[0]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[1]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[2]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[3]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[4]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[5]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[6]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[7]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (10041): Inferred latch for "cube[8]" at lcd_display.v(353) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
-Info (12128): Elaborating entity "level" for hierarchy "lcd_display:lcd_display_m0|level:level_m0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 403
+Info (10041): Inferred latch for "cube[0]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[1]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[2]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[3]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[4]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[5]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[6]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[7]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (10041): Inferred latch for "cube[8]" at lcd_display.v(391) File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
+Info (12128): Elaborating entity "level" for hierarchy "lcd_display:lcd_display_m0|level:level_m0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 441
 Info (12128): Elaborating entity "altsyncram" for hierarchy "lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/level.v Line: 82
 Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/level.v Line: 82
 Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/level.v Line: 82
@@ -1807,7 +1810,7 @@ Info (12128): Elaborating entity "decode_f8a" for hierarchy "lcd_display:lcd_dis
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_vmb.tdf
     Info (12023): Found entity 1: mux_vmb File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/db/mux_vmb.tdf Line: 23
 Info (12128): Elaborating entity "mux_vmb" for hierarchy "lcd_display:lcd_display_m0|level:level_m0|altsyncram:altsyncram_component|altsyncram_tra1:auto_generated|mux_vmb:mux2" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/db/altsyncram_tra1.tdf Line: 41
-Info (12128): Elaborating entity "number" for hierarchy "lcd_display:lcd_display_m0|number:number_m0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 411
+Info (12128): Elaborating entity "number" for hierarchy "lcd_display:lcd_display_m0|number:number_m0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 449
 Info (12128): Elaborating entity "altsyncram" for hierarchy "lcd_display:lcd_display_m0|number:number_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/number.v Line: 82
 Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|number:number_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/number.v Line: 82
 Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|number:number_m0|altsyncram:altsyncram_component" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/ip/ROM/number.v Line: 82
@@ -1834,9 +1837,9 @@ Info (278001): Inferred 16 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_display:lcd_display_m0|Div5" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 117
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_display:lcd_display_m0|Div9" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 120
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_display:lcd_display_m0|Div10" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 120
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult4" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult2" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 143
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 126
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult2" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 143
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult4" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_display:lcd_display_m0|Mult1" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 136
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_display:lcd_display_m0|Mod3" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 214
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_display:lcd_display_m0|Mod2" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
@@ -1883,8 +1886,8 @@ Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_divide:D
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
-Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_mult:Mult4" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
+Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 126
+Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_mult:Mult0" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 126
     Info (12134): Parameter "LPM_WIDTHA" = "15"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -1894,18 +1897,18 @@ Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_mult:Mul
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|multcore:mult_core", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ngh.tdf
     Info (12023): Found entity 1: add_sub_ngh File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/db/add_sub_ngh.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
     Info (12023): Found entity 1: add_sub_rgh File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/db/add_sub_rgh.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4|altshift:external_latency_ffs", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult2" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 143
-Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_mult:Mult2" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 143
+Info (12131): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult0" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "lcd_display:lcd_display_m0|lpm_mult:Mult4" File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
+Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_mult:Mult4" with the following parameter: File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 158
     Info (12134): Parameter "LPM_WIDTHA" = "15"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -1980,23 +1983,23 @@ Info (12133): Instantiated megafunction "lcd_display:lcd_display_m0|lpm_divide:D
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
     Info (12023): Found entity 1: lpm_divide_hhm File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/db/lpm_divide_hhm.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[6] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[6] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[4] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[4] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[4] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[3] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[5] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[5] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[3] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[7] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[7] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[2] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[2] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[2] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[3] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[0] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[0] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[2] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[1] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[1] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[4] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[3] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[3] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[3] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
-Warning (13012): Latch lcd_display:lcd_display_m0|cube[8] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 353
+Warning (13012): Latch lcd_display:lcd_display_m0|cube[8] has unsafe behavior File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 391
     Warning (13013): Ports D and ENA on the latch are fed by the same signal lcd_display:lcd_display_m0|cube_code[4] File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/lcd_display.v Line: 217
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "lcd_pwm" is stuck at GND File: E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/src/top.v Line: 16
@@ -2004,17 +2007,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file E:/FPGA_work/CYCLONE_IV/Code_VGA_HDMI/Game_Tetris/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3158 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3356 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 3114 logic cells
+    Info (21061): Implemented 3312 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Sat Apr 08 22:34:14 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4887 megabytes
+    Info: Processing ended: Fri Apr 14 15:56:04 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

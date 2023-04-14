@@ -243,6 +243,7 @@ always@(posedge clk)
 			else if(key_s_reg == 2'b01) // 按键 旋转
 			begin
 				cube_code[1:0] = cube_code[1:0] + 1;
+				ram_state	<= 4'd6;
 			end
 			else if(state && x_in == 16'd1 && y_in == 16'd470)//延时模块 控制方块的快慢
 				if(ram_delay >= speed) begin ram_state <= cube_new? 4'b1:4'd7; ram_delay <= 0; end // 生成新块 or 旧块下移
@@ -252,14 +253,14 @@ always@(posedge clk)
 		4'd1:begin//RAM写入新方块 
 			cube_code[4:2]	= cube_new_count;//调用伪随机下一个方块
 			
-			cube_loc_y 	<= 4'd2;
+			cube_loc_y 	<= 4'd1;
 			cube_loc_x 	<= 4'd3;
 			cube_new 	<= 1'b0;
 			ram_state	<= 4'd7;
 		end
 
 		4'd2:begin//RAM 右移
-			if(cube[6] | cube[3] | cube[0])begin//算子有无空列
+			if(cube[6] | cube[3] | cube[0])begin//算子有无空右列
 				if(cube_loc_x == 6) cube_loc_x <= cube_loc_x;
 				else cube_loc_x <= cube_loc_x + 1;
 			end
@@ -268,11 +269,11 @@ always@(posedge clk)
 				else cube_loc_x <= cube_loc_x + 1;
 			end
 
-			ram_state	<= 4'd0;
+			ram_state	<= 4'd4; //检查是否右碰撞 重叠
 		end
 
 		4'd3:begin//RAM 左移
-			if(cube[8] | cube[5] | cube[2])begin//算子有无空列
+			if(cube[8] | cube[5] | cube[2])begin//算子有无空左列
 				if(cube_loc_x == 1) cube_loc_x <= cube_loc_x;
 				else cube_loc_x <= cube_loc_x - 1;
 			end
@@ -281,16 +282,53 @@ always@(posedge clk)
 				else cube_loc_x <= cube_loc_x - 1;
 			end
 
+			ram_state	<= 4'd5; //检查是否左碰撞 重叠
+		end
+
+		//移动时碰撞检测
+		4'd4:begin
+			if((game_ram[cube_loc_y - 4'd1][6 - cube_loc_x  +:3] & cube[8:6])||(game_ram[cube_loc_y][6 - cube_loc_x  +:3] & cube[5:3])||(game_ram[cube_loc_y+1][6 - cube_loc_x  +:3] & cube[2:0]))//卡砖
+				cube_loc_x <= cube_loc_x - 1;
+
+			ram_state	<= 4'd0;
+		end
+
+		4'd5:begin
+			if((game_ram[cube_loc_y - 4'd1][6 - cube_loc_x  +:3] & cube[8:6])||(game_ram[cube_loc_y][6 - cube_loc_x  +:3] & cube[5:3])||(game_ram[cube_loc_y+1][6 - cube_loc_x  +:3] & cube[2:0]))//卡砖
+				cube_loc_x <= cube_loc_x + 1;
+
+			ram_state	<= 4'd0;
+		end
+
+		//旋转时碰撞检测
+		4'd6:begin
+			if((game_ram[cube_loc_y - 4'd1][6 - cube_loc_x  +:3] & cube[8:6])||(game_ram[cube_loc_y][6 - cube_loc_x  +:3] & cube[5:3])||(game_ram[cube_loc_y+1][6 - cube_loc_x  +:3] & cube[2:0]) || //卡砖
+				(cube_loc_x == 7 && (cube[6] | cube[3] | cube[0])) || (cube_loc_x == 0 && (cube[8] | cube[5] | cube[2])))  //卡墙
+				cube_code[1:0] = cube_code[1:0] - 1;
+
 			ram_state	<= 4'd0;
 		end
 
 		4'd7://RAM移动操作，方块正常下落 ram_state <= ram_state + 4'd1;
-			//当方块触底
-			if(cube_loc_y == 4'd11 ||(game_ram[cube_loc_y - 4'd1][6 - cube_loc_x  +:3] & cube[8:6])||(game_ram[cube_loc_y][6 - cube_loc_x  +:3] & cube[5:3])||(game_ram[cube_loc_y+1][6 - cube_loc_x  +:3] & cube[2:0]))begin
+			//当方块触底 or 碰撞
+			if(cube_loc_x < 7 && (cube_loc_y == 4'd11 ||(game_ram[cube_loc_y - 4'd1][6 - cube_loc_x  +:3] & cube[8:6])||(game_ram[cube_loc_y][6 - cube_loc_x  +:3] & cube[5:3])||(game_ram[cube_loc_y+1][6 - cube_loc_x  +:3] & cube[2:0])) )begin
 				//将方块写入背景RAM
 				game_ram [cube_loc_y - 4'd2 ][6 - cube_loc_x  +:3] <= game_ram [cube_loc_y - 4'd2][6 - cube_loc_x  +:3] | cube[8:6];
 				game_ram [cube_loc_y - 4'd1 ][6 - cube_loc_x  +:3] <= game_ram [cube_loc_y - 4'd1][6 - cube_loc_x  +:3] | cube[5:3];
 				game_ram [cube_loc_y  		][6 - cube_loc_x  +:3] <= game_ram [cube_loc_y	     ][6 - cube_loc_x  +:3] | cube[2:0];
+
+				//更新方块RAM
+				cube_new <= 1'b1;
+
+				//计算分数
+				score_scan <= 14;
+				ram_state <= 4'd8;
+			end
+			else if(cube_loc_x == 7 && (cube_loc_y == 4'd11 ||(game_ram[cube_loc_y - 4'd1][1:0] & cube[8:7])||(game_ram[cube_loc_y][1:0] & cube[5:4])||(game_ram[cube_loc_y+1][1:0] & cube[2:1])) )begin
+				//将方块写入背景RAM
+				game_ram [cube_loc_y - 4'd2 ][1:0] <= game_ram [cube_loc_y - 4'd2][1:0] | cube[8:7];
+				game_ram [cube_loc_y - 4'd1 ][1:0] <= game_ram [cube_loc_y - 4'd1][1:0] | cube[5:4];
+				game_ram [cube_loc_y  		][1:0] <= game_ram [cube_loc_y	     ][1:0] | cube[2:1];
 
 				//更新方块RAM
 				cube_new <= 1'b1;
@@ -312,8 +350,8 @@ always@(posedge clk)
 			end
 		
 		4'd8://计算分数
-			if(score_scan > 4'd2 && cube_new)begin // 方块触底 
-				if(cube_loc_y <= 3)  // 方块触顶
+			if(score_scan > 4'd1 && cube_new)begin // 方块触底 
+				if(cube_loc_y <= 1)  // 方块触顶
 					ram_state <= 9;
 				else begin
 					if(game_ram[score_scan] == 8'hff)begin
