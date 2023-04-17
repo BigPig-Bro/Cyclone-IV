@@ -1,0 +1,88 @@
+
+State Machine - |top|sdram_core:sdram_core_m0|state
+Name state.S_TRFC state.S_AR state.S_TRP state.S_PRE state.S_TWR state.S_WD state.S_WRITE state.S_RD state.S_CL state.S_READ state.S_TRCD state.S_ACTIVE state.S_IDLE state.S_INIT_DONE state.S_INIT_TMRD state.S_INIT_MRS state.S_INIT_TRF2 state.S_INIT_AR2 state.S_INIT_TRF1 state.S_INIT_AR1 state.S_INIT_TRP state.S_INIT_PRE state.S_INIT_NOP 
+state.S_INIT_NOP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_INIT_PRE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_INIT_TRP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_INIT_AR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_INIT_TRF1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_INIT_AR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_INIT_TRF2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_INIT_MRS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_INIT_TMRD 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_INIT_DONE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_ACTIVE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRCD 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_READ 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_CL 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WRITE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WD 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TWR 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_PRE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRP 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_AR 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRFC 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_read:frame_fifo_read_m0|state
+Name state.S_END state.S_READ_BURST_END state.S_READ_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_READ_BURST 0 0 1 0 0 1 
+state.S_READ_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_write:frame_fifo_write_m0|state
+Name state.S_END state.S_WRITE_BURST_END state.S_WRITE_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_WRITE_BURST 0 0 1 0 0 1 
+state.S_WRITE_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_next
+Name state_next.STATE_END state_next.STATE_DATA state_next.STATE_REG state_next.STATE_REG_EX state_next.STATE_SLAVE state_next.000 
+state_next.000 0 0 0 0 0 0 
+state_next.STATE_SLAVE 0 0 0 0 1 1 
+state_next.STATE_REG_EX 0 0 0 1 0 1 
+state_next.STATE_REG 0 0 1 0 0 1 
+state_next.STATE_DATA 0 1 0 0 0 1 
+state_next.STATE_END 1 0 0 0 0 1 
+
+State Machine - |top|iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0|state_main
+Name state_main.STATE_END state_main.STATE_ACK state_main.STATE_DATA state_main.STATE_REG state_main.STATE_REG_EX state_main.STATE_SLAVE state_main.STATE_SLAVE_EX state_main.000 
+state_main.000 0 0 0 0 0 0 0 0 
+state_main.STATE_SLAVE_EX 0 0 0 0 0 0 1 1 
+state_main.STATE_SLAVE 0 0 0 0 0 1 0 1 
+state_main.STATE_REG_EX 0 0 0 0 1 0 0 1 
+state_main.STATE_REG 0 0 0 1 0 0 0 1 
+state_main.STATE_DATA 0 0 1 0 0 0 0 1 
+state_main.STATE_ACK 0 1 0 0 0 0 0 1 
+state_main.STATE_END 1 0 0 0 0 0 0 1 
+
+State Machine - |top|mark_fifo:mark_m0|mark_add:mark_add_m0|state
+Name state.110 state.101 state.011 state.001 state.000 
+state.000 0 0 0 0 0 
+state.001 0 0 0 1 1 
+state.011 0 0 1 0 1 
+state.101 0 1 0 0 1 
+state.110 1 0 0 0 1 
+
+State Machine - |top|keyfilter:u_keyfilter2|current_state
+Name current_state.S_out current_state.S_pos_cnt current_state.S_posedge current_state.S_nge_cnt current_state.S_negedge 
+current_state.S_negedge 0 0 0 0 0 
+current_state.S_nge_cnt 0 0 0 1 1 
+current_state.S_posedge 0 0 1 0 1 
+current_state.S_pos_cnt 0 1 0 0 1 
+current_state.S_out 1 0 0 0 1 
+
+State Machine - |top|keyfilter:u_keyfilter|current_state
+Name current_state.S_out current_state.S_pos_cnt current_state.S_posedge current_state.S_nge_cnt current_state.S_negedge 
+current_state.S_negedge 0 0 0 0 0 
+current_state.S_nge_cnt 0 0 0 1 1 
+current_state.S_posedge 0 0 1 0 1 
+current_state.S_pos_cnt 0 1 0 0 1 
+current_state.S_out 1 0 0 0 1 

@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at cam_thrould.v(16): always construct contains both blocking and non-blocking assignments File: D:/Users/HUIP/Desktop/sdram_ov5640_lcd480_connected/src/image_process/cam_thrould.v Line: 16
+Warning (10268): Verilog HDL information at video_out.v(57): always construct contains both blocking and non-blocking assignments File: D:/Users/HUIP/Desktop/sdram_ov5640_lcd480_connected/src/image_process/video_out.v Line: 57
+Info (10281): Verilog HDL Declaration information at color_bar.v(16): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: D:/Users/HUIP/Desktop/sdram_ov5640_lcd480_connected/src/color_bar.v Line: 16
+Info (10281): Verilog HDL Declaration information at color_bar.v(20): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: D:/Users/HUIP/Desktop/sdram_ov5640_lcd480_connected/src/color_bar.v Line: 20
