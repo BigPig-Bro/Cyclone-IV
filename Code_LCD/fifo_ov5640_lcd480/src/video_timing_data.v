@@ -4,7 +4,6 @@ module video_timing_data
 )
 (
 	input                       video_clk,          // Video pixel clock
-	input                       rst,
 
 	input [15:0] 			    fifo_data_in,
 	input	 			    	fifo_data_in_en,

@@ -1,5 +1,5 @@
 module cmos_8_16bit(
-	input              rst,
+	input              rst_n,
 	input              pclk,
 	input [7:0]        pdata_i,
 	input              de_i,
@@ -14,9 +14,9 @@ begin
 	pdata_i_d0 <= pdata_i;
 end
 
-always@(posedge pclk or posedge rst)
+always@(posedge pclk or negedge rst_n)
 begin
-	if(rst)
+	if(!rst_n)
 		x_cnt <= 0;
 	else if(de_i)
 		x_cnt <= ~x_cnt ;
@@ -24,9 +24,9 @@ begin
 		x_cnt <= 0;
 end
 
-always@(posedge pclk or posedge rst)
+always@(posedge pclk or negedge rst_n)
 begin
-	if(rst)
+	if(!rst_n)
 		de_o <= 1'b0;
 	else if(de_i && x_cnt)
 		de_o <= 1'b1;
@@ -34,17 +34,17 @@ begin
 		de_o <= 1'b0;
 end
 
-always@(posedge pclk or posedge rst)
+always@(posedge pclk or negedge rst_n)
 begin
-	if(rst)
+	if(!rst_n)
 		hblank <= 1'b0;
 	else
 		hblank <= de_i;
 end
 
-always@(posedge pclk or posedge rst)
+always@(posedge pclk or negedge rst_n)
 begin
-	if(rst)
+	if(!rst_n)
 		pdata_o <= 16'd0;
 	else if(de_i && x_cnt)
 		pdata_o <= {pdata_i_d0,pdata_i};

@@ -1,8 +1,6 @@
 |top
 clk => clk.IN2
-rst_n => _.IN1
-rst_n => _.IN1
-rst_n => _.IN1
+rst_n => rst_n.IN2
 cmos_scl << iic_ctrl:iic_ctrl_m0.iic_scl
 cmos_sda <> iic_ctrl:iic_ctrl_m0.iic_sda
 cmos_vsync => cmos_vsync.IN1
@@ -441,25 +439,25 @@ iic_sda <> iic_sda
 
 
 |top|cmos_8_16bit:cmos_8_16bit_m0
-rst => pdata_o[0]~reg0.ACLR
-rst => pdata_o[1]~reg0.ACLR
-rst => pdata_o[2]~reg0.ACLR
-rst => pdata_o[3]~reg0.ACLR
-rst => pdata_o[4]~reg0.ACLR
-rst => pdata_o[5]~reg0.ACLR
-rst => pdata_o[6]~reg0.ACLR
-rst => pdata_o[7]~reg0.ACLR
-rst => pdata_o[8]~reg0.ACLR
-rst => pdata_o[9]~reg0.ACLR
-rst => pdata_o[10]~reg0.ACLR
-rst => pdata_o[11]~reg0.ACLR
-rst => pdata_o[12]~reg0.ACLR
-rst => pdata_o[13]~reg0.ACLR
-rst => pdata_o[14]~reg0.ACLR
-rst => pdata_o[15]~reg0.ACLR
-rst => hblank~reg0.ACLR
-rst => de_o~reg0.ACLR
-rst => x_cnt.ACLR
+rst_n => pdata_o[0]~reg0.ACLR
+rst_n => pdata_o[1]~reg0.ACLR
+rst_n => pdata_o[2]~reg0.ACLR
+rst_n => pdata_o[3]~reg0.ACLR
+rst_n => pdata_o[4]~reg0.ACLR
+rst_n => pdata_o[5]~reg0.ACLR
+rst_n => pdata_o[6]~reg0.ACLR
+rst_n => pdata_o[7]~reg0.ACLR
+rst_n => pdata_o[8]~reg0.ACLR
+rst_n => pdata_o[9]~reg0.ACLR
+rst_n => pdata_o[10]~reg0.ACLR
+rst_n => pdata_o[11]~reg0.ACLR
+rst_n => pdata_o[12]~reg0.ACLR
+rst_n => pdata_o[13]~reg0.ACLR
+rst_n => pdata_o[14]~reg0.ACLR
+rst_n => pdata_o[15]~reg0.ACLR
+rst_n => hblank~reg0.ACLR
+rst_n => de_o~reg0.ACLR
+rst_n => x_cnt.ACLR
 pclk => pdata_o[0]~reg0.CLK
 pclk => pdata_o[1]~reg0.CLK
 pclk => pdata_o[2]~reg0.CLK
@@ -528,7 +526,6 @@ de_o <= de_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |top|video_timing_data:video_timing_data_m0
 video_clk => video_clk.IN2
-rst => ~NO_FANOUT~
 fifo_data_in[0] => fifo_data_in[0].IN1
 fifo_data_in[1] => fifo_data_in[1].IN1
 fifo_data_in[2] => fifo_data_in[2].IN1

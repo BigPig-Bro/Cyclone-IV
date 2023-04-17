@@ -53,14 +53,14 @@ iic_ctrl#(
  .INIT_CMD_NUM           	(256    					)
  ) iic_ctrl_m0(	
  .clk                        (clk                      ),
- .rst_n                      (~rst_n                   ),
+ .rst_n                      (rst_n                    ),
  .iic_scl                    (cmos_scl                 ),
  .iic_sda                    (cmos_sda                 )
  );
 
 //CMOS sensor 8bit data is converted to 16bit data
 cmos_8_16bit cmos_8_16bit_m0(
-	.rst                        (~rst_n                   ),
+	.rst_n                      (rst_n                    ),
 	.pclk                       (cmos_pclk                ),
 	.pdata_i                    (cmos_db                  ),
 	.de_i                       (cmos_href                ),
@@ -73,7 +73,6 @@ cmos_8_16bit cmos_8_16bit_m0(
 video_timing_data video_timing_data_m0
 (
 	.video_clk                  (video_clk                ),
-	.rst                        (~rst_n                   ),
 
 	.fifo_data_in   			(write_data 		  	  ),
 	.fifo_data_in_en			(cmos_16bit_wr 			  ),

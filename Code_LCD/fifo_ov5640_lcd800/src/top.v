@@ -1,7 +1,7 @@
 module top(
 	input                       clk,
 	input                       rst_n,
-	inout                       cmos_scl,          //cmos i2c clock
+	output                       cmos_scl,          //cmos i2c clock
 	inout                       cmos_sda,          //cmos i2c data
 	input                       cmos_vsync,        //cmos vsync
 	input                       cmos_href,         //cmos hsync refrence,data valid
@@ -10,7 +10,7 @@ module top(
 	input   [7:0]               cmos_db,           //cmos data
 //	output                      cmos_rst_n,        //cmos reset 新款不支持
 	output                      cmos_pwdn,         //cmos power down
-	output                      lcd_dclk,lcd_pwm,	
+	output                      lcd_dclk,	
 	output                      lcd_hs,            //lcd horizontal synchronization
 	output                      lcd_vs,            //lcd vertical synchronization        
 	output                      lcd_de,            //lcd data enable     
@@ -27,13 +27,9 @@ wire[15:0]                      vout_data;
 wire[15:0]                      cmos_16bit_data;
 wire[15:0] 						write_data;
 
-wire[9:0]                       lut_index;
-wire[31:0]                      lut_data;
-
 assign lcd_hs = hs;
 assign lcd_vs = vs;
 assign lcd_de = de;
-assign lcd_pwm = 1;
 assign lcd_r  = {vout_data[15:11],3'd0};
 assign lcd_g  = {vout_data[10:5],2'd0};
 assign lcd_b  = {vout_data[4:0],3'd0};
@@ -57,14 +53,14 @@ iic_ctrl#(
  .INIT_CMD_NUM           	(256    					)
  ) iic_ctrl_m0(	
  .clk                        (clk                      ),
- .rst_n                      (~rst_n                   ),
+ .rst_n                      (rst_n                    ),
  .iic_scl                    (cmos_scl                 ),
  .iic_sda                    (cmos_sda                 )
  );
 
 //CMOS sensor 8bit data is converted to 16bit data
 cmos_8_16bit cmos_8_16bit_m0(
-	.rst                        (~rst_n                   ),
+	.rst_n                      (rst_n                    ),
 	.pclk                       (cmos_pclk                ),
 	.pdata_i                    (cmos_db                  ),
 	.de_i                       (cmos_href                ),
@@ -77,7 +73,6 @@ cmos_8_16bit cmos_8_16bit_m0(
 video_timing_data video_timing_data_m0
 (
 	.video_clk                  (video_clk                ),
-	.rst                        (~rst_n                   ),
 
 	.fifo_data_in   			(write_data 		  	  ),
 	.fifo_data_in_en			(cmos_16bit_wr 			  ),
