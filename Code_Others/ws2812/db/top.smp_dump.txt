@@ -1,0 +1,8 @@
+
+State Machine - |top|state
+Name state.BIT_SEND_LOW state.BIT_SEND_HIGH state.DATA_SEND state.000 state.WAIT 
+state.000 0 0 0 0 0 
+state.DATA_SEND 0 0 1 1 0 
+state.BIT_SEND_HIGH 0 1 0 1 0 
+state.BIT_SEND_LOW 1 0 0 1 0 
+state.WAIT 0 0 0 1 1 

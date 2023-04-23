@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at top.sv(20): object "DATA_SEND" differs only in case from object "data_send" in the same scope File: D:/Users/HUIP/Desktop/ws2812/src/top.sv Line: 20

@@ -1,0 +1,1151 @@
+Timing Analyzer report for top
+Sun Apr 23 17:06:26 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Output Ports
+ 45. Unconstrained Output Ports
+ 46. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; top                                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE10F17C8                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.7%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 146.33 MHz ; 146.33 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -5.834 ; -372.618           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.433 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -114.525                         ;
++-------+--------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                  ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -5.834 ; bit_send[1]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.754      ;
+; -5.834 ; bit_send[1]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.754      ;
+; -5.834 ; bit_send[1]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.754      ;
+; -5.834 ; bit_send[1]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.754      ;
+; -5.718 ; bit_send[1]    ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.442      ; 7.161      ;
+; -5.718 ; bit_send[1]    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.442      ; 7.161      ;
+; -5.601 ; clk_delay[28]  ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.576     ; 6.026      ;
+; -5.601 ; clk_delay[28]  ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.576     ; 6.026      ;
+; -5.601 ; clk_delay[28]  ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.576     ; 6.026      ;
+; -5.601 ; clk_delay[28]  ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.576     ; 6.026      ;
+; -5.552 ; clk_delay[0]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.052     ; 6.501      ;
+; -5.552 ; clk_delay[0]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.052     ; 6.501      ;
+; -5.551 ; clk_delay[1]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.052     ; 6.500      ;
+; -5.551 ; clk_delay[1]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.052     ; 6.500      ;
+; -5.542 ; bit_send[1]    ; clk_delay[31]       ; clk          ; clk         ; 1.000        ; -0.080     ; 6.463      ;
+; -5.531 ; clk_delay[8]   ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.451      ;
+; -5.531 ; clk_delay[8]   ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.451      ;
+; -5.531 ; clk_delay[8]   ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 6.451      ;
+; -5.531 ; clk_delay[8]   ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.451      ;
+; -5.524 ; bit_send[2]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.444      ;
+; -5.524 ; bit_send[2]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.444      ;
+; -5.524 ; bit_send[2]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.444      ;
+; -5.524 ; bit_send[2]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.444      ;
+; -5.510 ; clk_delay[10]  ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.430      ;
+; -5.510 ; clk_delay[10]  ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.430      ;
+; -5.510 ; clk_delay[10]  ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 6.430      ;
+; -5.510 ; clk_delay[10]  ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.081     ; 6.430      ;
+; -5.486 ; bit_send[0]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.406      ;
+; -5.486 ; bit_send[0]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.406      ;
+; -5.486 ; bit_send[0]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.406      ;
+; -5.486 ; bit_send[0]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.081     ; 6.406      ;
+; -5.471 ; clk_delay[8]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.442      ; 6.914      ;
+; -5.471 ; clk_delay[8]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.442      ; 6.914      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.462 ; clk_delay[8]   ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.397      ;
+; -5.461 ; bit_send[1]    ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.084     ; 6.378      ;
+; -5.452 ; clk_delay[25]  ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.877      ;
+; -5.452 ; clk_delay[25]  ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.877      ;
+; -5.452 ; clk_delay[25]  ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.877      ;
+; -5.452 ; clk_delay[25]  ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.877      ;
+; -5.450 ; clk_delay[10]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.442      ; 6.893      ;
+; -5.450 ; clk_delay[10]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.442      ; 6.893      ;
+; -5.447 ; clk_delay[8]   ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.084     ; 6.364      ;
+; -5.446 ; clk_delay[26]  ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.871      ;
+; -5.446 ; clk_delay[26]  ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.871      ;
+; -5.446 ; clk_delay[26]  ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.871      ;
+; -5.446 ; clk_delay[26]  ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.576     ; 5.871      ;
+; -5.442 ; WS2812_data[0] ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.095     ; 6.348      ;
+; -5.442 ; WS2812_data[0] ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.095     ; 6.348      ;
+; -5.442 ; WS2812_data[0] ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.095     ; 6.348      ;
+; -5.442 ; WS2812_data[0] ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.095     ; 6.348      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.441 ; clk_delay[10]  ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.066     ; 6.376      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[6]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[8]   ; WS2812_data[5]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.360      ;
+; -5.426 ; clk_delay[10]  ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.084     ; 6.343      ;
+; -5.425 ; clk_delay[28]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.053     ; 6.373      ;
+; -5.425 ; clk_delay[28]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.053     ; 6.373      ;
+; -5.408 ; bit_send[2]    ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.442      ; 6.851      ;
+; -5.408 ; bit_send[2]    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.442      ; 6.851      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
+; -5.405 ; clk_delay[10]  ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.067     ; 6.339      ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                      ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.433 ; clk_delay[27]      ; clk_delay[27]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[24]      ; clk_delay[24]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[25]      ; clk_delay[25]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[26]      ; clk_delay[26]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[28]      ; clk_delay[28]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[29]      ; clk_delay[29]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; clk_delay[30]      ; clk_delay[30]       ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.434 ; state.BIT_SEND_LOW ; state.BIT_SEND_LOW  ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; clk_delay[23]      ; clk_delay[23]       ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.453 ; WS2812_Di~reg0     ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; clk_delay[31]      ; clk_delay[31]       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.507 ; WS2812_data[22]    ; WS2812_data[23]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.800      ;
+; 0.509 ; WS2812_data[19]    ; WS2812_data[20]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.802      ;
+; 0.509 ; WS2812_data[18]    ; WS2812_data[19]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.802      ;
+; 0.511 ; WS2812_data[0]     ; WS2812_data[1]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.804      ;
+; 0.511 ; WS2812_data[20]    ; WS2812_data[21]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.804      ;
+; 0.629 ; bit_send[3]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.578      ; 1.419      ;
+; 0.661 ; bit_send[2]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.578      ; 1.451      ;
+; 0.699 ; WS2812_data[2]     ; WS2812_data[3]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.992      ;
+; 0.699 ; WS2812_data[7]     ; WS2812_data[8]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.992      ;
+; 0.700 ; WS2812_data[14]    ; WS2812_data[15]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.993      ;
+; 0.700 ; WS2812_data[9]     ; WS2812_data[10]     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.993      ;
+; 0.704 ; WS2812_data[5]     ; WS2812_data[6]      ; clk          ; clk         ; 0.000        ; 0.081      ; 0.997      ;
+; 0.707 ; WS2812_data[17]    ; WS2812_data[18]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.000      ;
+; 0.707 ; WS2812_data[16]    ; WS2812_data[17]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.000      ;
+; 0.709 ; WS2812_data[21]    ; WS2812_data[22]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.002      ;
+; 0.712 ; WS2812_data[15]    ; WS2812_data[16]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.006      ;
+; 0.717 ; WS2812_data[23]    ; WS2812_data[0]      ; clk          ; clk         ; 0.000        ; 0.080      ; 1.009      ;
+; 0.726 ; data_send[5]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.037      ;
+; 0.726 ; WS2812_data[1]     ; WS2812_data[2]      ; clk          ; clk         ; 0.000        ; 0.081      ; 1.019      ;
+; 0.728 ; data_send[3]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.039      ;
+; 0.729 ; data_send[4]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.040      ;
+; 0.738 ; WS2812_data[12]    ; WS2812_data[13]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.030      ;
+; 0.746 ; data_send[7]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.057      ;
+; 0.746 ; data_send[1]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.057      ;
+; 0.748 ; data_send[2]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.059      ;
+; 0.757 ; bit_send[4]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.100      ; 1.069      ;
+; 0.763 ; data_send[0]       ; data_send[0]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.074      ;
+; 0.771 ; bit_send[3]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.064      ;
+; 0.784 ; bit_send[1]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.578      ; 1.574      ;
+; 0.787 ; bit_send[1]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.080      ;
+; 0.788 ; bit_send[2]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.081      ;
+; 0.801 ; bit_send[0]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.578      ; 1.591      ;
+; 0.805 ; bit_send[0]        ; bit_send[0]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.098      ;
+; 0.901 ; WS2812_data[3]     ; WS2812_data[4]      ; clk          ; clk         ; 0.000        ; 0.081      ; 1.194      ;
+; 0.912 ; WS2812_data[6]     ; WS2812_data[7]      ; clk          ; clk         ; 0.000        ; 0.081      ; 1.205      ;
+; 0.970 ; WS2812_data[11]    ; WS2812_data[12]     ; clk          ; clk         ; 0.000        ; 0.082      ; 1.264      ;
+; 1.082 ; data_send[3]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.393      ;
+; 1.090 ; data_send[4]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.401      ;
+; 1.100 ; data_send[1]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.411      ;
+; 1.107 ; data_send[0]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.418      ;
+; 1.109 ; data_send[2]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.420      ;
+; 1.109 ; data_send[6]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.420      ;
+; 1.116 ; data_send[0]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.427      ;
+; 1.118 ; WS2812_data[4]     ; WS2812_data[5]      ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; data_send[2]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.429      ;
+; 1.135 ; WS2812_data[10]    ; WS2812_data[11]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.141 ; bit_send[1]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.434      ;
+; 1.148 ; data_send[6]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.459      ;
+; 1.149 ; bit_send[2]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.442      ;
+; 1.149 ; bit_send[0]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.442      ;
+; 1.158 ; bit_send[0]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.451      ;
+; 1.193 ; WS2812_data[13]    ; WS2812_data[14]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.486      ;
+; 1.212 ; data_send[5]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.523      ;
+; 1.213 ; data_send[3]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.524      ;
+; 1.230 ; data_send[4]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.541      ;
+; 1.231 ; data_send[1]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.542      ;
+; 1.240 ; data_send[1]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.551      ;
+; 1.247 ; data_send[0]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.558      ;
+; 1.249 ; data_send[2]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.560      ;
+; 1.256 ; data_send[0]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.567      ;
+; 1.265 ; state.DATA_SEND    ; state.WAIT          ; clk          ; clk         ; 0.000        ; 0.147      ; 1.624      ;
+; 1.265 ; state.DATA_SEND    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 0.000        ; 0.147      ; 1.624      ;
+; 1.272 ; bit_send[1]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.565      ;
+; 1.289 ; bit_send[0]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.081      ; 1.582      ;
+; 1.353 ; data_send[3]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.664      ;
+; 1.371 ; data_send[1]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.682      ;
+; 1.387 ; data_send[0]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.698      ;
+; 1.389 ; data_send[2]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.700      ;
+; 1.414 ; state.WAIT         ; clk_delay[2]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.678      ;
+; 1.419 ; state.WAIT         ; clk_delay[6]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.683      ;
+; 1.421 ; state.WAIT         ; clk_delay[1]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.685      ;
+; 1.438 ; state.WAIT         ; clk_delay[3]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.702      ;
+; 1.443 ; state.WAIT         ; clk_delay[0]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.707      ;
+; 1.445 ; state.WAIT         ; clk_delay[5]        ; clk          ; clk         ; 0.000        ; 0.052      ; 1.709      ;
+; 1.481 ; data_send[5]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.792      ;
+; 1.499 ; data_send[4]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.810      ;
+; 1.508 ; clk_delay[19]      ; clk_delay[21]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.820      ;
+; 1.508 ; clk_delay[19]      ; clk_delay[22]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.820      ;
+; 1.510 ; clk_delay[19]      ; clk_delay[19]       ; clk          ; clk         ; 0.000        ; 0.100      ; 1.822      ;
+; 1.511 ; data_send[1]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.822      ;
+; 1.516 ; clk_delay[19]      ; clk_delay[20]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.829      ;
+; 1.519 ; clk_delay[19]      ; clk_delay[17]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.832      ;
+; 1.519 ; clk_delay[19]      ; clk_delay[11]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.832      ;
+; 1.520 ; clk_delay[19]      ; clk_delay[16]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.833      ;
+; 1.525 ; clk_delay[19]      ; clk_delay[18]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.838      ;
+; 1.525 ; clk_delay[19]      ; clk_delay[15]       ; clk          ; clk         ; 0.000        ; 0.101      ; 1.838      ;
+; 1.527 ; data_send[0]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.838      ;
+; 1.586 ; state.DATA_SEND    ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; -0.384     ; 1.414      ;
+; 1.610 ; state.DATA_SEND    ; state.DATA_SEND     ; clk          ; clk         ; 0.000        ; 0.100      ; 1.922      ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 154.37 MHz ; 154.37 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -5.478 ; -348.513          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.383 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -114.525                        ;
++-------+--------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                   ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -5.478 ; bit_send[1]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.408      ;
+; -5.478 ; bit_send[1]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.408      ;
+; -5.478 ; bit_send[1]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.408      ;
+; -5.478 ; bit_send[1]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.408      ;
+; -5.375 ; bit_send[1]    ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.414      ; 6.791      ;
+; -5.375 ; bit_send[1]    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.414      ; 6.791      ;
+; -5.203 ; bit_send[2]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.133      ;
+; -5.203 ; bit_send[2]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.133      ;
+; -5.203 ; bit_send[2]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.133      ;
+; -5.203 ; bit_send[2]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.133      ;
+; -5.202 ; bit_send[1]    ; clk_delay[31]       ; clk          ; clk         ; 1.000        ; -0.071     ; 6.133      ;
+; -5.177 ; clk_delay[1]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.057     ; 6.122      ;
+; -5.177 ; clk_delay[1]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.057     ; 6.122      ;
+; -5.175 ; clk_delay[0]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.057     ; 6.120      ;
+; -5.175 ; clk_delay[0]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.057     ; 6.120      ;
+; -5.170 ; bit_send[0]    ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.100      ;
+; -5.170 ; bit_send[0]    ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.100      ;
+; -5.170 ; bit_send[0]    ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.100      ;
+; -5.170 ; bit_send[0]    ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.072     ; 6.100      ;
+; -5.162 ; bit_send[1]    ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.075     ; 6.089      ;
+; -5.154 ; clk_delay[8]   ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.084      ;
+; -5.154 ; clk_delay[8]   ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.084      ;
+; -5.154 ; clk_delay[8]   ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.072     ; 6.084      ;
+; -5.154 ; clk_delay[8]   ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.084      ;
+; -5.137 ; clk_delay[28]  ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.601      ;
+; -5.137 ; clk_delay[28]  ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.601      ;
+; -5.137 ; clk_delay[28]  ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.601      ;
+; -5.137 ; clk_delay[28]  ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.601      ;
+; -5.135 ; clk_delay[10]  ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.065      ;
+; -5.135 ; clk_delay[10]  ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.065      ;
+; -5.135 ; clk_delay[10]  ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.072     ; 6.065      ;
+; -5.135 ; clk_delay[10]  ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.072     ; 6.065      ;
+; -5.100 ; bit_send[2]    ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.414      ; 6.516      ;
+; -5.100 ; bit_send[2]    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.414      ; 6.516      ;
+; -5.094 ; WS2812_data[0] ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.083     ; 6.013      ;
+; -5.094 ; WS2812_data[0] ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.083     ; 6.013      ;
+; -5.094 ; WS2812_data[0] ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.083     ; 6.013      ;
+; -5.094 ; WS2812_data[0] ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.083     ; 6.013      ;
+; -5.089 ; clk_delay[8]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.414      ; 6.505      ;
+; -5.089 ; clk_delay[8]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.414      ; 6.505      ;
+; -5.072 ; clk_delay[8]   ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.075     ; 5.999      ;
+; -5.070 ; clk_delay[10]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.414      ; 6.486      ;
+; -5.070 ; clk_delay[10]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.414      ; 6.486      ;
+; -5.067 ; bit_send[0]    ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.414      ; 6.483      ;
+; -5.067 ; bit_send[0]    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.414      ; 6.483      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.058 ; clk_delay[8]   ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.999      ;
+; -5.053 ; clk_delay[10]  ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.075     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.039 ; clk_delay[10]  ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.061     ; 5.980      ;
+; -5.036 ; clk_delay[28]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.052     ; 5.986      ;
+; -5.036 ; clk_delay[28]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.052     ; 5.986      ;
+; -5.030 ; clk_delay[2]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.057     ; 5.975      ;
+; -5.030 ; clk_delay[2]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.057     ; 5.975      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[6]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.028 ; clk_delay[8]   ; WS2812_data[5]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.968      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[6]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.009 ; clk_delay[10]  ; WS2812_data[5]      ; clk          ; clk         ; 1.000        ; -0.062     ; 5.949      ;
+; -5.001 ; clk_delay[25]  ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.465      ;
+; -5.001 ; clk_delay[25]  ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.538     ; 5.465      ;
++--------+----------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                       ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.383 ; state.BIT_SEND_LOW ; state.BIT_SEND_LOW  ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[27]      ; clk_delay[27]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[23]      ; clk_delay[23]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[24]      ; clk_delay[24]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[25]      ; clk_delay[25]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[26]      ; clk_delay[26]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[28]      ; clk_delay[28]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[29]      ; clk_delay[29]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; clk_delay[30]      ; clk_delay[30]       ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.401 ; WS2812_Di~reg0     ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; clk_delay[31]      ; clk_delay[31]       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.471 ; WS2812_data[0]     ; WS2812_data[1]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.739      ;
+; 0.476 ; WS2812_data[22]    ; WS2812_data[23]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.744      ;
+; 0.478 ; WS2812_data[19]    ; WS2812_data[20]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.746      ;
+; 0.479 ; WS2812_data[18]    ; WS2812_data[19]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.747      ;
+; 0.480 ; WS2812_data[20]    ; WS2812_data[21]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.748      ;
+; 0.565 ; bit_send[3]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.545      ; 1.305      ;
+; 0.592 ; bit_send[2]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.545      ; 1.332      ;
+; 0.629 ; WS2812_data[15]    ; WS2812_data[16]     ; clk          ; clk         ; 0.000        ; 0.074      ; 0.898      ;
+; 0.645 ; WS2812_data[2]     ; WS2812_data[3]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.913      ;
+; 0.645 ; WS2812_data[7]     ; WS2812_data[8]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.913      ;
+; 0.646 ; WS2812_data[14]    ; WS2812_data[15]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.914      ;
+; 0.646 ; WS2812_data[9]     ; WS2812_data[10]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.914      ;
+; 0.651 ; WS2812_data[5]     ; WS2812_data[6]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.919      ;
+; 0.654 ; WS2812_data[17]    ; WS2812_data[18]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.922      ;
+; 0.654 ; WS2812_data[16]    ; WS2812_data[17]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.922      ;
+; 0.656 ; WS2812_data[21]    ; WS2812_data[22]     ; clk          ; clk         ; 0.000        ; 0.073      ; 0.924      ;
+; 0.657 ; WS2812_data[12]    ; WS2812_data[13]     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.924      ;
+; 0.668 ; WS2812_data[1]     ; WS2812_data[2]      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.936      ;
+; 0.669 ; WS2812_data[23]    ; WS2812_data[0]      ; clk          ; clk         ; 0.000        ; 0.072      ; 0.936      ;
+; 0.675 ; data_send[5]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.959      ;
+; 0.678 ; data_send[3]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.962      ;
+; 0.681 ; data_send[4]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.965      ;
+; 0.691 ; data_send[7]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.975      ;
+; 0.692 ; data_send[1]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.976      ;
+; 0.695 ; data_send[2]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.979      ;
+; 0.704 ; bit_send[4]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.990      ;
+; 0.704 ; bit_send[1]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.545      ; 1.444      ;
+; 0.712 ; data_send[0]       ; data_send[0]        ; clk          ; clk         ; 0.000        ; 0.089      ; 0.996      ;
+; 0.713 ; bit_send[0]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.545      ; 1.453      ;
+; 0.716 ; bit_send[3]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.983      ;
+; 0.731 ; bit_send[2]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.998      ;
+; 0.731 ; bit_send[1]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.998      ;
+; 0.751 ; bit_send[0]        ; bit_send[0]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.018      ;
+; 0.833 ; WS2812_data[3]     ; WS2812_data[4]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.101      ;
+; 0.848 ; WS2812_data[6]     ; WS2812_data[7]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.116      ;
+; 0.861 ; WS2812_data[11]    ; WS2812_data[12]     ; clk          ; clk         ; 0.000        ; 0.074      ; 1.130      ;
+; 1.000 ; data_send[4]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.284      ;
+; 1.002 ; data_send[3]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.286      ;
+; 1.010 ; data_send[0]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.294      ;
+; 1.013 ; data_send[2]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.297      ;
+; 1.013 ; data_send[6]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.297      ;
+; 1.014 ; WS2812_data[4]     ; WS2812_data[5]      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.282      ;
+; 1.016 ; data_send[1]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.300      ;
+; 1.023 ; WS2812_data[10]    ; WS2812_data[11]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.291      ;
+; 1.025 ; data_send[0]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.309      ;
+; 1.029 ; data_send[2]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.313      ;
+; 1.049 ; bit_send[0]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.316      ;
+; 1.050 ; bit_send[2]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.317      ;
+; 1.055 ; bit_send[1]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.322      ;
+; 1.064 ; data_send[6]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.348      ;
+; 1.064 ; bit_send[0]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.331      ;
+; 1.073 ; WS2812_data[13]    ; WS2812_data[14]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.341      ;
+; 1.092 ; data_send[5]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.376      ;
+; 1.099 ; data_send[3]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.383      ;
+; 1.111 ; data_send[1]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.395      ;
+; 1.122 ; data_send[4]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.406      ;
+; 1.129 ; state.DATA_SEND    ; state.WAIT          ; clk          ; clk         ; 0.000        ; 0.126      ; 1.450      ;
+; 1.130 ; state.DATA_SEND    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 0.000        ; 0.126      ; 1.451      ;
+; 1.132 ; data_send[0]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.416      ;
+; 1.135 ; data_send[2]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.419      ;
+; 1.138 ; data_send[1]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.422      ;
+; 1.147 ; data_send[0]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.431      ;
+; 1.150 ; bit_send[1]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.417      ;
+; 1.171 ; bit_send[0]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.072      ; 1.438      ;
+; 1.221 ; data_send[3]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.505      ;
+; 1.233 ; data_send[1]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.517      ;
+; 1.254 ; data_send[0]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.538      ;
+; 1.257 ; data_send[2]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.541      ;
+; 1.266 ; state.WAIT         ; clk_delay[2]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.518      ;
+; 1.269 ; state.WAIT         ; clk_delay[3]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.521      ;
+; 1.273 ; state.WAIT         ; clk_delay[6]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.525      ;
+; 1.276 ; state.WAIT         ; clk_delay[0]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.528      ;
+; 1.276 ; state.WAIT         ; clk_delay[1]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.528      ;
+; 1.278 ; state.WAIT         ; clk_delay[5]        ; clk          ; clk         ; 0.000        ; 0.057      ; 1.530      ;
+; 1.355 ; data_send[1]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.639      ;
+; 1.356 ; data_send[5]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.640      ;
+; 1.371 ; clk_delay[19]      ; clk_delay[20]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.658      ;
+; 1.372 ; clk_delay[19]      ; clk_delay[21]       ; clk          ; clk         ; 0.000        ; 0.091      ; 1.658      ;
+; 1.372 ; clk_delay[19]      ; clk_delay[22]       ; clk          ; clk         ; 0.000        ; 0.091      ; 1.658      ;
+; 1.374 ; clk_delay[19]      ; clk_delay[17]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.661      ;
+; 1.374 ; clk_delay[19]      ; clk_delay[19]       ; clk          ; clk         ; 0.000        ; 0.091      ; 1.660      ;
+; 1.374 ; clk_delay[19]      ; clk_delay[11]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.661      ;
+; 1.374 ; data_send[4]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.658      ;
+; 1.375 ; clk_delay[19]      ; clk_delay[16]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.662      ;
+; 1.376 ; data_send[0]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.660      ;
+; 1.380 ; clk_delay[19]      ; clk_delay[18]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.667      ;
+; 1.381 ; clk_delay[19]      ; clk_delay[15]       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.668      ;
+; 1.442 ; state.DATA_SEND    ; state.DATA_SEND     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.728      ;
+; 1.444 ; state.DATA_SEND    ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; -0.371     ; 1.268      ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.922 ; -117.222          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.178 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -83.766                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                  ;
++--------+---------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -1.922 ; bit_send[1]   ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.872      ;
+; -1.922 ; bit_send[1]   ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.872      ;
+; -1.922 ; bit_send[1]   ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.872      ;
+; -1.922 ; bit_send[1]   ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.872      ;
+; -1.900 ; bit_send[1]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.166      ; 3.053      ;
+; -1.900 ; bit_send[1]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.166      ; 3.053      ;
+; -1.804 ; bit_send[1]   ; clk_delay[31]       ; clk          ; clk         ; 1.000        ; -0.036     ; 2.755      ;
+; -1.797 ; clk_delay[28] ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.548      ;
+; -1.797 ; clk_delay[28] ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.548      ;
+; -1.797 ; clk_delay[28] ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.548      ;
+; -1.797 ; clk_delay[28] ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.548      ;
+; -1.796 ; bit_send[2]   ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.746      ;
+; -1.796 ; bit_send[2]   ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.746      ;
+; -1.796 ; bit_send[2]   ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.746      ;
+; -1.796 ; bit_send[2]   ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.746      ;
+; -1.792 ; bit_send[1]   ; clk_delay[4]        ; clk          ; clk         ; 1.000        ; -0.040     ; 2.739      ;
+; -1.784 ; clk_delay[1]  ; clk_delay[31]       ; clk          ; clk         ; 1.000        ; -0.233     ; 2.538      ;
+; -1.783 ; bit_send[0]   ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.733      ;
+; -1.783 ; bit_send[0]   ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.733      ;
+; -1.783 ; bit_send[0]   ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.733      ;
+; -1.783 ; bit_send[0]   ; bit_send[0]         ; clk          ; clk         ; 1.000        ; -0.037     ; 2.733      ;
+; -1.774 ; bit_send[2]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.166      ; 2.927      ;
+; -1.774 ; bit_send[2]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.166      ; 2.927      ;
+; -1.766 ; clk_delay[8]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.167      ; 2.920      ;
+; -1.766 ; clk_delay[8]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.167      ; 2.920      ;
+; -1.763 ; clk_delay[10] ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.167      ; 2.917      ;
+; -1.763 ; clk_delay[10] ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.167      ; 2.917      ;
+; -1.761 ; bit_send[0]   ; state.WAIT          ; clk          ; clk         ; 1.000        ; 0.166      ; 2.914      ;
+; -1.761 ; bit_send[0]   ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; 0.166      ; 2.914      ;
+; -1.757 ; clk_delay[1]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.031     ; 2.713      ;
+; -1.757 ; clk_delay[1]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.031     ; 2.713      ;
+; -1.756 ; clk_delay[0]  ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.031     ; 2.712      ;
+; -1.756 ; clk_delay[0]  ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.031     ; 2.712      ;
+; -1.754 ; clk_delay[28] ; state.WAIT          ; clk          ; clk         ; 1.000        ; -0.033     ; 2.708      ;
+; -1.754 ; clk_delay[28] ; state.BIT_SEND_HIGH ; clk          ; clk         ; 1.000        ; -0.033     ; 2.708      ;
+; -1.744 ; clk_delay[8]  ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.695      ;
+; -1.744 ; clk_delay[8]  ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.695      ;
+; -1.744 ; clk_delay[8]  ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.036     ; 2.695      ;
+; -1.744 ; clk_delay[8]  ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.695      ;
+; -1.744 ; clk_delay[0]  ; clk_delay[31]       ; clk          ; clk         ; 1.000        ; -0.233     ; 2.498      ;
+; -1.741 ; clk_delay[10] ; clk_delay[9]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.692      ;
+; -1.741 ; clk_delay[10] ; clk_delay[7]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.692      ;
+; -1.741 ; clk_delay[10] ; clk_delay[10]       ; clk          ; clk         ; 1.000        ; -0.036     ; 2.692      ;
+; -1.741 ; clk_delay[10] ; clk_delay[8]        ; clk          ; clk         ; 1.000        ; -0.036     ; 2.692      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.737 ; clk_delay[8]  ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.694      ;
+; -1.734 ; bit_send[1]   ; clk_delay[27]       ; clk          ; clk         ; 1.000        ; 0.155      ; 2.876      ;
+; -1.734 ; bit_send[1]   ; clk_delay[25]       ; clk          ; clk         ; 1.000        ; 0.155      ; 2.876      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[23]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[22]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[21]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[20]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[19]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[18]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[17]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[16]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.734 ; clk_delay[10] ; WS2812_data[12]     ; clk          ; clk         ; 1.000        ; -0.030     ; 2.691      ;
+; -1.730 ; bit_send[1]   ; clk_delay[24]       ; clk          ; clk         ; 1.000        ; 0.155      ; 2.872      ;
+; -1.730 ; bit_send[1]   ; clk_delay[28]       ; clk          ; clk         ; 1.000        ; 0.155      ; 2.872      ;
+; -1.729 ; bit_send[1]   ; clk_delay[26]       ; clk          ; clk         ; 1.000        ; 0.155      ; 2.871      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[6]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.729 ; clk_delay[8]  ; WS2812_data[5]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.685      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[4]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[3]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[2]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[1]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[0]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[15]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[14]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[13]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[11]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[10]     ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[9]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[8]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[7]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[6]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.726 ; clk_delay[10] ; WS2812_data[5]      ; clk          ; clk         ; 1.000        ; -0.031     ; 2.682      ;
+; -1.723 ; clk_delay[26] ; bit_send[3]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.474      ;
+; -1.723 ; clk_delay[26] ; bit_send[2]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.474      ;
+; -1.723 ; clk_delay[26] ; bit_send[1]         ; clk          ; clk         ; 1.000        ; -0.236     ; 2.474      ;
++--------+---------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                       ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.178 ; state.BIT_SEND_LOW ; state.BIT_SEND_LOW  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; clk_delay[23]      ; clk_delay[23]       ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.179 ; clk_delay[27]      ; clk_delay[27]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[24]      ; clk_delay[24]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[25]      ; clk_delay[25]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[26]      ; clk_delay[26]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[28]      ; clk_delay[28]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[29]      ; clk_delay[29]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; clk_delay[30]      ; clk_delay[30]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.186 ; WS2812_Di~reg0     ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; clk_delay[31]      ; clk_delay[31]       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.196 ; WS2812_data[22]    ; WS2812_data[23]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.317      ;
+; 0.198 ; WS2812_data[19]    ; WS2812_data[20]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; WS2812_data[18]    ; WS2812_data[19]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.319      ;
+; 0.200 ; WS2812_data[20]    ; WS2812_data[21]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.321      ;
+; 0.210 ; WS2812_data[0]     ; WS2812_data[1]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.331      ;
+; 0.258 ; bit_send[3]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.237      ; 0.579      ;
+; 0.266 ; WS2812_data[7]     ; WS2812_data[8]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.387      ;
+; 0.267 ; WS2812_data[2]     ; WS2812_data[3]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.388      ;
+; 0.267 ; WS2812_data[14]    ; WS2812_data[15]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.388      ;
+; 0.267 ; WS2812_data[9]     ; WS2812_data[10]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.388      ;
+; 0.268 ; WS2812_data[15]    ; WS2812_data[16]     ; clk          ; clk         ; 0.000        ; 0.038      ; 0.390      ;
+; 0.268 ; WS2812_data[5]     ; WS2812_data[6]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.389      ;
+; 0.271 ; WS2812_data[16]    ; WS2812_data[17]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.392      ;
+; 0.272 ; WS2812_data[17]    ; WS2812_data[18]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.393      ;
+; 0.274 ; WS2812_data[21]    ; WS2812_data[22]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.395      ;
+; 0.277 ; WS2812_data[12]    ; WS2812_data[13]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.397      ;
+; 0.278 ; WS2812_data[23]    ; WS2812_data[0]      ; clk          ; clk         ; 0.000        ; 0.036      ; 0.398      ;
+; 0.278 ; bit_send[2]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.237      ; 0.599      ;
+; 0.280 ; WS2812_data[1]     ; WS2812_data[2]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.401      ;
+; 0.290 ; data_send[5]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.418      ;
+; 0.291 ; data_send[3]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.419      ;
+; 0.292 ; data_send[4]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.420      ;
+; 0.297 ; data_send[7]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.298 ; data_send[1]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.299 ; data_send[2]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.303 ; bit_send[4]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.432      ;
+; 0.307 ; data_send[0]       ; data_send[0]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.435      ;
+; 0.309 ; bit_send[3]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.430      ;
+; 0.317 ; bit_send[2]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.317 ; bit_send[1]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.326 ; bit_send[0]        ; bit_send[0]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.447      ;
+; 0.332 ; bit_send[1]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.237      ; 0.653      ;
+; 0.334 ; WS2812_data[3]     ; WS2812_data[4]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.455      ;
+; 0.340 ; WS2812_data[6]     ; WS2812_data[7]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.461      ;
+; 0.344 ; bit_send[0]        ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.237      ; 0.665      ;
+; 0.384 ; WS2812_data[11]    ; WS2812_data[12]     ; clk          ; clk         ; 0.000        ; 0.038      ; 0.506      ;
+; 0.427 ; WS2812_data[10]    ; WS2812_data[11]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.548      ;
+; 0.428 ; WS2812_data[4]     ; WS2812_data[5]      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.549      ;
+; 0.440 ; data_send[3]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.568      ;
+; 0.447 ; data_send[1]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.575      ;
+; 0.450 ; data_send[4]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.578      ;
+; 0.454 ; data_send[6]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.582      ;
+; 0.454 ; WS2812_data[13]    ; WS2812_data[14]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.456 ; data_send[0]       ; data_send[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.584      ;
+; 0.457 ; data_send[2]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.585      ;
+; 0.458 ; data_send[6]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.586      ;
+; 0.459 ; data_send[0]       ; data_send[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.587      ;
+; 0.460 ; data_send[2]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.588      ;
+; 0.466 ; bit_send[1]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.475 ; bit_send[2]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.596      ;
+; 0.475 ; bit_send[0]        ; bit_send[1]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.596      ;
+; 0.478 ; bit_send[0]        ; bit_send[2]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.599      ;
+; 0.502 ; data_send[5]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.630      ;
+; 0.503 ; data_send[3]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.631      ;
+; 0.510 ; data_send[1]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.638      ;
+; 0.513 ; data_send[1]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.641      ;
+; 0.516 ; data_send[4]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.644      ;
+; 0.522 ; data_send[0]       ; data_send[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.650      ;
+; 0.523 ; data_send[2]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.651      ;
+; 0.525 ; data_send[0]       ; data_send[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.653      ;
+; 0.529 ; bit_send[1]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.650      ;
+; 0.538 ; state.DATA_SEND    ; state.WAIT          ; clk          ; clk         ; 0.000        ; 0.054      ; 0.676      ;
+; 0.538 ; state.DATA_SEND    ; state.BIT_SEND_HIGH ; clk          ; clk         ; 0.000        ; 0.054      ; 0.676      ;
+; 0.541 ; bit_send[0]        ; bit_send[3]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.662      ;
+; 0.558 ; state.WAIT         ; clk_delay[2]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.673      ;
+; 0.563 ; state.WAIT         ; clk_delay[6]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.678      ;
+; 0.566 ; state.WAIT         ; clk_delay[1]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.681      ;
+; 0.568 ; state.WAIT         ; clk_delay[3]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.683      ;
+; 0.569 ; data_send[3]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.697      ;
+; 0.574 ; state.WAIT         ; clk_delay[0]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.689      ;
+; 0.576 ; state.WAIT         ; clk_delay[5]        ; clk          ; clk         ; 0.000        ; 0.031      ; 0.691      ;
+; 0.576 ; data_send[1]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.704      ;
+; 0.588 ; data_send[0]       ; data_send[5]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.716      ;
+; 0.589 ; data_send[2]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.717      ;
+; 0.593 ; data_send[5]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.721      ;
+; 0.607 ; data_send[4]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.735      ;
+; 0.628 ; state.DATA_SEND    ; state.DATA_SEND     ; clk          ; clk         ; 0.000        ; 0.045      ; 0.757      ;
+; 0.629 ; state.BIT_SEND_LOW ; bit_send[4]         ; clk          ; clk         ; 0.000        ; 0.044      ; 0.757      ;
+; 0.637 ; clk_delay[19]      ; clk_delay[21]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.765      ;
+; 0.637 ; clk_delay[19]      ; clk_delay[22]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.765      ;
+; 0.639 ; clk_delay[19]      ; clk_delay[19]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.767      ;
+; 0.642 ; data_send[1]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.770      ;
+; 0.646 ; state.DATA_SEND    ; WS2812_Di~reg0      ; clk          ; clk         ; 0.000        ; -0.152     ; 0.578      ;
+; 0.654 ; data_send[0]       ; data_send[7]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.782      ;
+; 0.657 ; clk_delay[19]      ; clk_delay[20]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.785      ;
+; 0.660 ; clk_delay[19]      ; clk_delay[11]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.788      ;
+; 0.660 ; data_send[3]       ; data_send[6]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.788      ;
+; 0.661 ; clk_delay[19]      ; clk_delay[16]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.789      ;
+; 0.661 ; clk_delay[19]      ; clk_delay[17]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.789      ;
++-------+--------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.834   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.834   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -372.618 ; 0.0   ; 0.0      ; 0.0     ; -114.525            ;
+;  clk             ; -372.618 ; 0.000 ; N/A      ; N/A     ; -114.525            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; WS2812_Di     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; WS2812_Di     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; WS2812_Di     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; WS2812_Di     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 7176     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 7176     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; WS2812_Di   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; WS2812_Di   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Apr 23 17:06:25 2023
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.834
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.834            -372.618 clk 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -114.525 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.478
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.478            -348.513 clk 
+Info (332146): Worst-case hold slack is 0.383
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.383               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -114.525 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.922
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.922            -117.222 clk 
+Info (332146): Worst-case hold slack is 0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.178               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -83.766 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Sun Apr 23 17:06:26 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
