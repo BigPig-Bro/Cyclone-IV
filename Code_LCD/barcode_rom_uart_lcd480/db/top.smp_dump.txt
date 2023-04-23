@@ -1,0 +1,18 @@
+
+State Machine - |top|uart_top:uart_top_m0|state
+Name state.WAIT 
+state.SEND 0 
+state.WAIT 1 
+
+State Machine - |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0|state
+Name state.STOP state.SEND state.START state.WAIT 
+state.WAIT 0 0 0 0 
+state.START 0 0 1 1 
+state.SEND 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |top|thres_scan:thres_scan_m0|scan_state
+Name scan_state.00 scan_state.10 scan_state.01 
+scan_state.00 0 0 0 
+scan_state.01 1 0 1 
+scan_state.10 1 1 0 
