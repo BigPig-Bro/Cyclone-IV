@@ -56,7 +56,7 @@ always@(posedge clk)
 			
 		BIT_SEND_HIGH:begin
 			WS2812_Di <= 1;
-			if (WS2812_data[bit_send]) 
+			if (WS2812_data[23 - bit_send]) 
 				if (clk_delay < DELAY_1_HIGH)
 					clk_delay <= clk_delay + 1;
 				else begin
