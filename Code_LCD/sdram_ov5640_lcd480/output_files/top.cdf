@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6F17) Path("D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6F17) Path("E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

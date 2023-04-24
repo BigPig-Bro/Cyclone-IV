@@ -70,39 +70,39 @@ CHIP  "top"  ASSIGNED TO AN: EP4CE6F17C8
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 3.3V    : 8         :                
-lcd_r[3]                     : A2        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_r[5]                     : A3        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_r[7]                     : A4        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[1]                     : A5        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[3]                     : A6        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[5]                     : A7        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[7]                     : A8        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_b[1]                     : A9        : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[3]                     : A10       : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[5]                     : A11       : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[7]                     : A12       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[19]                 : A2        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[21]                 : A3        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[23]                 : A4        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[9]                  : A5        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[11]                 : A6        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[13]                 : A7        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[15]                 : A8        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[1]                  : A9        : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[3]                  : A10       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[5]                  : A11       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[7]                  : A12       : output : 3.3-V LVTTL       :         : 7         : Y              
 lcd_hs                       : A13       : output : 3.3-V LVTTL       :         : 7         : Y              
 sdram_addr[4]                : A14       : output : 3.3-V LVTTL       :         : 7         : Y              
 sdram_addr[5]                : A15       : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 3.3V    : 7         :                
-lcd_r[0]                     : B1        : output : 3.3-V LVTTL       :         : 1         : Y              
+lcd_data[16]                 : B1        : output : 3.3-V LVTTL       :         : 1         : Y              
 GND                          : B2        : gnd    :                   :         :           :                
-lcd_r[2]                     : B3        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_r[4]                     : B4        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_r[6]                     : B5        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[0]                     : B6        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[2]                     : B7        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[4]                     : B8        : output : 3.3-V LVTTL       :         : 8         : Y              
-lcd_g[6]                     : B9        : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[0]                     : B10       : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[2]                     : B11       : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[4]                     : B12       : output : 3.3-V LVTTL       :         : 7         : Y              
-lcd_b[6]                     : B13       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[18]                 : B3        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[20]                 : B4        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[22]                 : B5        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[8]                  : B6        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[10]                 : B7        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[12]                 : B8        : output : 3.3-V LVTTL       :         : 8         : Y              
+lcd_data[14]                 : B9        : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[0]                  : B10       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[2]                  : B11       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[4]                  : B12       : output : 3.3-V LVTTL       :         : 7         : Y              
+lcd_data[6]                  : B13       : output : 3.3-V LVTTL       :         : 7         : Y              
 sdram_clk                    : B14       : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : B15       : gnd    :                   :         :           :                
 sdram_addr[6]                : B16       : output : 3.3-V LVTTL       :         : 6         : Y              
 RESERVED_INPUT               : C1        :        :                   :         : 1         :                
-lcd_r[1]                     : C2        : output : 3.3-V LVTTL       :         : 1         : Y              
+lcd_data[17]                 : C2        : output : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT               : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 3.3V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                

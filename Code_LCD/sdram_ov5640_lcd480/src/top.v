@@ -19,9 +19,7 @@ module top(
 	output                      lcd_hs,            //lcd horizontal synchronization
 	output                      lcd_vs,            //lcd vertical synchronization        
 	output                      lcd_de,            //lcd data enable     
-	output[7:0]                 lcd_r,             //lcd red
-	output[7:0]                 lcd_g,             //lcd green
-	output[7:0]                 lcd_b,	           //lcd blue
+	output[23:0]                lcd_data,             //lcd data
 
 	//SDRAM接口
 	output                      sdram_clk,         //sdram clock
@@ -106,9 +104,8 @@ wire[15:0]                      video_data;
 assign lcd_hs = video_hs;
 assign lcd_vs = video_vs;
 assign lcd_de = video_de;
-assign lcd_r  = {video_data[15:11],3'd0};
-assign lcd_g  = {video_data[10:5],2'd0};
-assign lcd_b  = {video_data[4:0],3'd0};
+assign lcd_data = {video_data[15:11],3'd0,video_data[10:5],2'd0,video_data[4:0],3'd0};
+
 assign lcd_clk = ~video_clk;
 
 video_timing_data video_timing_data_m0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Apr 23 11:02:37 2023
+Mon Apr 24 16:22:28 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -113,7 +113,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 23 11:02:37 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 24 16:22:28 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
@@ -229,81 +229,80 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processors 8-10        ;   0.0%      ;
+;     Processors 7-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
-+---------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                ; Library ;
-+---------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; src/lcd/video_timing_data.v           ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/video_timing_data.v           ;         ;
-; src/lcd/rgb_timing.v                  ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v                  ;         ;
-; src/iic_cam/iic_top.sv                ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv                ;         ;
-; src/iic_cam/iic_master.sv             ; yes             ; User SystemVerilog HDL File                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv             ;         ;
-; src/sdram/sdram_core.v                ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v                ;         ;
-; src/sdram/frame_read_write.v          ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v          ;         ;
-; src/sdram/frame_fifo_write.v          ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_fifo_write.v          ;         ;
-; src/sdram/frame_fifo_read.v           ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_fifo_read.v           ;         ;
-; src/sdram/cmos_write_req_gen.v        ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/cmos_write_req_gen.v        ;         ;
-; src/sdram/cmos_8_16bit.v              ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/cmos_8_16bit.v              ;         ;
-; src/ip_core/video_pll.v               ; yes             ; User Wizard-Generated File                            ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/video_pll.v               ;         ;
-; src/ip_core/sys_pll.v                 ; yes             ; User Wizard-Generated File                            ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/sys_pll.v                 ;         ;
-; src/ip_core/afifo_16_256.v            ; yes             ; User Wizard-Generated File                            ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_16_256.v            ;         ;
-; src/top.v                             ; yes             ; User Verilog HDL File                                 ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v                             ;         ;
-; src/iic_cam/init_480x272_60.txt       ; yes             ; Auto-Found File                                       ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/init_480x272_60.txt       ;         ;
-; altpll.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                           ;         ;
-; aglobal201.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                       ;         ;
-; stratix_pll.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                      ;         ;
-; stratixii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc                    ;         ;
-; cycloneii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc                    ;         ;
-; db/sys_pll_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/sys_pll_altpll.v                   ;         ;
-; db/video_pll_altpll.v                 ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/video_pll_altpll.v                 ;         ;
-; dcfifo.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf                           ;         ;
-; lpm_counter.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                      ;         ;
-; lpm_add_sub.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                      ;         ;
-; altdpram.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
-; a_graycounter.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc                    ;         ;
-; a_fefifo.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc                         ;         ;
-; a_gray2bin.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc                       ;         ;
-; dffpipe.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc                          ;         ;
-; alt_sync_fifo.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc                    ;         ;
-; lpm_compare.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                      ;         ;
-; altsyncram_fifo.inc                   ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc                  ;         ;
-; db/dcfifo_aql1.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf                    ;         ;
-; db/a_gray2bin_ugb.tdf                 ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_gray2bin_ugb.tdf                 ;         ;
-; db/a_graycounter_t57.tdf              ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_graycounter_t57.tdf              ;         ;
-; db/a_graycounter_pjc.tdf              ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_graycounter_pjc.tdf              ;         ;
-; db/altsyncram_mv61.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mv61.tdf                ;         ;
-; db/dffpipe_gd9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_gd9.tdf                    ;         ;
-; db/alt_synch_pipe_0ol.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_0ol.tdf             ;         ;
-; db/dffpipe_hd9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_hd9.tdf                    ;         ;
-; db/alt_synch_pipe_1ol.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_1ol.tdf             ;         ;
-; db/dffpipe_id9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_id9.tdf                    ;         ;
-; db/cmpr_f66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cmpr_f66.tdf                       ;         ;
-; altsyncram.tdf                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
-; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
-; lpm_mux.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
-; lpm_decode.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
-; a_rdenreg.inc                         ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
-; altrom.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
-; altram.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                           ;         ;
-; db/altsyncram_mf71.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf                ;         ;
-; db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ;         ;
-; altshift_taps.tdf                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf                    ;         ;
-; lpm_constant.inc                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                     ;         ;
-; db/shift_taps_c6m.tdf                 ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/shift_taps_c6m.tdf                 ;         ;
-; db/altsyncram_4e81.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_4e81.tdf                ;         ;
-; db/cntr_sqf.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cntr_sqf.tdf                       ;         ;
-; db/cmpr_rgc.tdf                       ; yes             ; Auto-Generated Megafunction                           ; D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cmpr_rgc.tdf                       ;         ;
-+---------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                            ; Library ;
++---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; src/lcd/video_timing_data.v           ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/video_timing_data.v           ;         ;
+; src/lcd/rgb_timing.v                  ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v                  ;         ;
+; src/iic_cam/iic_top.sv                ; yes             ; User SystemVerilog HDL File                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv                ;         ;
+; src/iic_cam/iic_master.sv             ; yes             ; User SystemVerilog HDL File                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv             ;         ;
+; src/sdram/sdram_core.v                ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v                ;         ;
+; src/sdram/frame_read_write.v          ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v          ;         ;
+; src/sdram/frame_fifo_write.v          ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_fifo_write.v          ;         ;
+; src/sdram/frame_fifo_read.v           ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_fifo_read.v           ;         ;
+; src/sdram/cmos_write_req_gen.v        ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/cmos_write_req_gen.v        ;         ;
+; src/sdram/cmos_8_16bit.v              ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/cmos_8_16bit.v              ;         ;
+; src/ip_core/video_pll.v               ; yes             ; User Wizard-Generated File                            ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/video_pll.v               ;         ;
+; src/ip_core/sys_pll.v                 ; yes             ; User Wizard-Generated File                            ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/sys_pll.v                 ;         ;
+; src/ip_core/afifo_16_256.v            ; yes             ; User Wizard-Generated File                            ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_16_256.v            ;         ;
+; src/top.v                             ; yes             ; User Verilog HDL File                                 ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v                             ;         ;
+; src/iic_cam/init_480x272_60.txt       ; yes             ; Auto-Found File                                       ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/init_480x272_60.txt       ;         ;
+; altpll.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                       ;         ;
+; aglobal201.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                   ;         ;
+; stratix_pll.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                  ;         ;
+; stratixii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc                ;         ;
+; cycloneii_pll.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc                ;         ;
+; db/sys_pll_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/sys_pll_altpll.v                   ;         ;
+; db/video_pll_altpll.v                 ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/video_pll_altpll.v                 ;         ;
+; dcfifo.tdf                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf                       ;         ;
+; lpm_counter.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc                  ;         ;
+; lpm_add_sub.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; a_graycounter.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc                ;         ;
+; a_fefifo.inc                          ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc                     ;         ;
+; a_gray2bin.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc                   ;         ;
+; dffpipe.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc                      ;         ;
+; alt_sync_fifo.inc                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc                ;         ;
+; lpm_compare.inc                       ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                  ;         ;
+; altsyncram_fifo.inc                   ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc              ;         ;
+; db/dcfifo_aql1.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf                    ;         ;
+; db/a_gray2bin_ugb.tdf                 ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_gray2bin_ugb.tdf                 ;         ;
+; db/a_graycounter_t57.tdf              ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_graycounter_t57.tdf              ;         ;
+; db/a_graycounter_pjc.tdf              ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_graycounter_pjc.tdf              ;         ;
+; db/altsyncram_mv61.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mv61.tdf                ;         ;
+; db/dffpipe_gd9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_gd9.tdf                    ;         ;
+; db/alt_synch_pipe_0ol.tdf             ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_0ol.tdf             ;         ;
+; db/dffpipe_hd9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_hd9.tdf                    ;         ;
+; db/alt_synch_pipe_1ol.tdf             ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_1ol.tdf             ;         ;
+; db/dffpipe_id9.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_id9.tdf                    ;         ;
+; db/cmpr_f66.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cmpr_f66.tdf                       ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                            ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; db/altsyncram_mf71.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf                ;         ;
+; db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif ;         ;
+; altshift_taps.tdf                     ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf                ;         ;
+; lpm_constant.inc                      ; yes             ; Megafunction                                          ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                 ;         ;
+; db/shift_taps_c6m.tdf                 ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/shift_taps_c6m.tdf                 ;         ;
+; db/altsyncram_4e81.tdf                ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_4e81.tdf                ;         ;
+; db/cntr_sqf.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cntr_sqf.tdf                       ;         ;
+; db/cmpr_rgc.tdf                       ; yes             ; Auto-Generated Megafunction                           ; E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cmpr_rgc.tdf                       ;         ;
++---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -2435,14 +2434,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "video_timing_data:video_timing_data_m0"                                                                     ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                  ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; video_x ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; video_y ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "video_timing_data:video_timing_data_m0"                                                                                        ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; video_x ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "video_x[9..1]" have no fanouts ;
+; video_x ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
+; video_y ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "video_y[9..1]" have no fanouts ;
+; video_y ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------+
@@ -2519,52 +2520,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 23 11:02:29 2023
+    Info: Processing started: Mon Apr 24 16:22:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sdram_ov5640_lcd -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd/video_timing_data.v
-    Info (12023): Found entity 1: video_timing_data File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/video_timing_data.v Line: 1
+    Info (12023): Found entity 1: video_timing_data File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/video_timing_data.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd/rgb_timing.v
-    Info (12023): Found entity 1: rgb_timing File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v Line: 1
+    Info (12023): Found entity 1: rgb_timing File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/iic_cam/iic_top.sv
-    Info (12023): Found entity 1: iic_ctrl File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 1
+    Info (12023): Found entity 1: iic_ctrl File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/iic_cam/iic_master.sv
-    Info (12023): Found entity 1: iic_master File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 1
+    Info (12023): Found entity 1: iic_master File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/sdram_core.v
-    Info (12023): Found entity 1: sdram_core File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v Line: 2
+    Info (12023): Found entity 1: sdram_core File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/frame_read_write.v
-    Info (12023): Found entity 1: frame_read_write File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 31
+    Info (12023): Found entity 1: frame_read_write File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/frame_fifo_write.v
-    Info (12023): Found entity 1: frame_fifo_write File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_fifo_write.v Line: 31
+    Info (12023): Found entity 1: frame_fifo_write File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_fifo_write.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/frame_fifo_read.v
-    Info (12023): Found entity 1: frame_fifo_read File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_fifo_read.v Line: 31
+    Info (12023): Found entity 1: frame_fifo_read File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_fifo_read.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/cmos_write_req_gen.v
-    Info (12023): Found entity 1: cmos_write_req_gen File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/cmos_write_req_gen.v Line: 30
+    Info (12023): Found entity 1: cmos_write_req_gen File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/cmos_write_req_gen.v Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram/cmos_8_16bit.v
-    Info (12023): Found entity 1: cmos_8_16bit File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/cmos_8_16bit.v Line: 30
+    Info (12023): Found entity 1: cmos_8_16bit File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/cmos_8_16bit.v Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/video_pll.v
-    Info (12023): Found entity 1: video_pll File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/video_pll.v Line: 40
+    Info (12023): Found entity 1: video_pll File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/video_pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/sys_pll.v
-    Info (12023): Found entity 1: sys_pll File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/sys_pll.v Line: 40
+    Info (12023): Found entity 1: sys_pll File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/sys_pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/afifo_16_256.v
-    Info (12023): Found entity 1: afifo_16_256 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_16_256.v Line: 40
+    Info (12023): Found entity 1: afifo_16_256 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_16_256.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/afifo_8i_16o_1024.v
-    Info (12023): Found entity 1: afifo_8i_16o_1024 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_8i_16o_1024.v Line: 40
+    Info (12023): Found entity 1: afifo_8i_16o_1024 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_8i_16o_1024.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
-    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top.v(84): created implicit net for "cmos_16bit_wr" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 84
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(14): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 14
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(16): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 16
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(17): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 17
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(18): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 18
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(19): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 19
-Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(35): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 35
+    Info (12023): Found entity 1: top File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at top.v(82): created implicit net for "cmos_16bit_wr" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 82
+Warning (10236): Verilog HDL Implicit Net warning at top.v(120): created implicit net for "video_x" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at top.v(121): created implicit net for "video_y" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 121
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(14): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(16): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(17): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(18): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_top.sv(19): Parameter Declaration in module "iic_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 19
+Warning (10222): Verilog HDL Parameter Declaration warning at iic_master.sv(35): Parameter Declaration in module "iic_master" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 35
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 46
-Info (12128): Elaborating entity "altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/sys_pll.v Line: 91
-Info (12130): Elaborated megafunction instantiation "sys_pll:sys_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/sys_pll.v Line: 91
-Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_component" with the following parameter: File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/sys_pll.v Line: 91
+Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 44
+Info (12128): Elaborating entity "altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/sys_pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/sys_pll.v Line: 91
+Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_component" with the following parameter: File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/sys_pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -2620,12 +2623,12 @@ Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_compon
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/sys_pll_altpll.v
-    Info (12023): Found entity 1: sys_pll_altpll File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/sys_pll_altpll.v Line: 30
+    Info (12023): Found entity 1: sys_pll_altpll File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/sys_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "sys_pll_altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "video_pll" for hierarchy "video_pll:video_pll_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 51
-Info (12128): Elaborating entity "altpll" for hierarchy "video_pll:video_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/video_pll.v Line: 91
-Info (12130): Elaborated megafunction instantiation "video_pll:video_pll_m0|altpll:altpll_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/video_pll.v Line: 91
-Info (12133): Instantiated megafunction "video_pll:video_pll_m0|altpll:altpll_component" with the following parameter: File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/video_pll.v Line: 91
+Info (12128): Elaborating entity "video_pll" for hierarchy "video_pll:video_pll_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 49
+Info (12128): Elaborating entity "altpll" for hierarchy "video_pll:video_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/video_pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "video_pll:video_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/video_pll.v Line: 91
+Info (12133): Instantiated megafunction "video_pll:video_pll_m0|altpll:altpll_component" with the following parameter: File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/video_pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "50"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -2681,47 +2684,47 @@ Info (12133): Instantiated megafunction "video_pll:video_pll_m0|altpll:altpll_co
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/video_pll_altpll.v
-    Info (12023): Found entity 1: video_pll_altpll File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/video_pll_altpll.v Line: 30
+    Info (12023): Found entity 1: video_pll_altpll File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/video_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "video_pll_altpll" for hierarchy "video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "iic_ctrl" for hierarchy "iic_ctrl:iic_ctrl_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 70
-Warning (10230): Verilog HDL assignment warning at iic_top.sv(46): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at iic_top.sv(56): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at iic_top.sv(62): truncated value with size 32 to match size of target (11) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at iic_top.sv(65): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 65
-Warning (10030): Net "init_cmd.data_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 32
-Warning (10030): Net "init_cmd.waddr_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 32
-Warning (10030): Net "init_cmd.we_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 32
-Info (12128): Elaborating entity "iic_master" for hierarchy "iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_top.sv Line: 104
-Warning (10036): Verilog HDL or VHDL warning at iic_master.sv(49): object "recv_data_r" assigned a value but never read File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 49
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(38): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(83): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 83
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(85): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(103): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 103
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(105): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 105
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(124): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 124
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(126): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 126
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(145): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 145
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(147): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 147
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(164): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(167): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 167
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(169): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 169
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(176): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 176
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(191): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 191
-Warning (10230): Verilog HDL assignment warning at iic_master.sv(213): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 213
-Warning (10034): Output port "recv_data" at iic_master.sv(19) has no driver File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/iic_cam/iic_master.sv Line: 19
-Info (12128): Elaborating entity "cmos_8_16bit" for hierarchy "cmos_8_16bit:cmos_8_16bit_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 85
-Info (12128): Elaborating entity "cmos_write_req_gen" for hierarchy "cmos_write_req_gen:cmos_write_req_gen_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 95
-Info (12128): Elaborating entity "video_timing_data" for hierarchy "video_timing_data:video_timing_data_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 126
-Info (12128): Elaborating entity "rgb_timing" for hierarchy "video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/video_timing_data.v Line: 65
-Warning (10230): Verilog HDL assignment warning at rgb_timing.v(37): truncated value with size 12 to match size of target (11) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v Line: 37
-Warning (10230): Verilog HDL assignment warning at rgb_timing.v(41): truncated value with size 12 to match size of target (11) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v Line: 41
-Warning (10230): Verilog HDL assignment warning at rgb_timing.v(68): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v Line: 68
-Warning (10230): Verilog HDL assignment warning at rgb_timing.v(86): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/lcd/rgb_timing.v Line: 86
-Info (12128): Elaborating entity "frame_read_write" for hierarchy "frame_read_write:frame_read_write_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 201
-Info (12128): Elaborating entity "afifo_16_256" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 99
-Info (12128): Elaborating entity "dcfifo" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_16_256.v Line: 97
-Info (12130): Elaborated megafunction instantiation "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_16_256.v Line: 97
-Info (12133): Instantiated megafunction "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" with the following parameter: File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/ip_core/afifo_16_256.v Line: 97
+Info (12128): Elaborating entity "iic_ctrl" for hierarchy "iic_ctrl:iic_ctrl_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 68
+Warning (10230): Verilog HDL assignment warning at iic_top.sv(46): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at iic_top.sv(56): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at iic_top.sv(62): truncated value with size 32 to match size of target (11) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at iic_top.sv(65): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 65
+Warning (10030): Net "init_cmd.data_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 32
+Warning (10030): Net "init_cmd.waddr_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 32
+Warning (10030): Net "init_cmd.we_a" at iic_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 32
+Info (12128): Elaborating entity "iic_master" for hierarchy "iic_ctrl:iic_ctrl_m0|iic_master:iic_master_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_top.sv Line: 104
+Warning (10036): Verilog HDL or VHDL warning at iic_master.sv(49): object "recv_data_r" assigned a value but never read File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(38): truncated value with size 32 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(83): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(85): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(103): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(105): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 105
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(124): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 124
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(126): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(145): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 145
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(147): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 147
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(164): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(167): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(169): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 169
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(176): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 176
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(191): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 191
+Warning (10230): Verilog HDL assignment warning at iic_master.sv(213): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 213
+Warning (10034): Output port "recv_data" at iic_master.sv(19) has no driver File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/iic_cam/iic_master.sv Line: 19
+Info (12128): Elaborating entity "cmos_8_16bit" for hierarchy "cmos_8_16bit:cmos_8_16bit_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 83
+Info (12128): Elaborating entity "cmos_write_req_gen" for hierarchy "cmos_write_req_gen:cmos_write_req_gen_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 93
+Info (12128): Elaborating entity "video_timing_data" for hierarchy "video_timing_data:video_timing_data_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 126
+Info (12128): Elaborating entity "rgb_timing" for hierarchy "video_timing_data:video_timing_data_m0|rgb_timing:rgb_timing_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/video_timing_data.v Line: 65
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(37): truncated value with size 12 to match size of target (11) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v Line: 37
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(41): truncated value with size 12 to match size of target (11) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v Line: 41
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(68): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v Line: 68
+Warning (10230): Verilog HDL assignment warning at rgb_timing.v(86): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/lcd/rgb_timing.v Line: 86
+Info (12128): Elaborating entity "frame_read_write" for hierarchy "frame_read_write:frame_read_write_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 201
+Info (12128): Elaborating entity "afifo_16_256" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 99
+Info (12128): Elaborating entity "dcfifo" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_16_256.v Line: 97
+Info (12130): Elaborated megafunction instantiation "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_16_256.v Line: 97
+Info (12133): Instantiated megafunction "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component" with the following parameter: File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/ip_core/afifo_16_256.v Line: 97
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_numwords" = "256"
     Info (12134): Parameter "lpm_showahead" = "OFF"
@@ -2736,61 +2739,61 @@ Info (12133): Instantiated megafunction "frame_read_write:frame_read_write_m0|af
     Info (12134): Parameter "write_aclr_synch" = "OFF"
     Info (12134): Parameter "wrsync_delaypipe" = "4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_aql1.tdf
-    Info (12023): Found entity 1: dcfifo_aql1 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 41
+    Info (12023): Found entity 1: dcfifo_aql1 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 41
 Info (12128): Elaborating entity "dcfifo_aql1" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_ugb.tdf
-    Info (12023): Found entity 1: a_gray2bin_ugb File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_gray2bin_ugb.tdf Line: 23
-Info (12128): Elaborating entity "a_gray2bin_ugb" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_gray2bin_ugb:rdptr_g_gray2bin" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 56
+    Info (12023): Found entity 1: a_gray2bin_ugb File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_gray2bin_ugb.tdf Line: 23
+Info (12128): Elaborating entity "a_gray2bin_ugb" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_gray2bin_ugb:rdptr_g_gray2bin" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_t57.tdf
-    Info (12023): Found entity 1: a_graycounter_t57 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_graycounter_t57.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_t57" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_graycounter_t57:rdptr_g1p" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 60
+    Info (12023): Found entity 1: a_graycounter_t57 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_graycounter_t57.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_t57" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_graycounter_t57:rdptr_g1p" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 60
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_pjc.tdf
-    Info (12023): Found entity 1: a_graycounter_pjc File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/a_graycounter_pjc.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_pjc" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_graycounter_pjc:wrptr_g1p" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 61
+    Info (12023): Found entity 1: a_graycounter_pjc File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/a_graycounter_pjc.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_pjc" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|a_graycounter_pjc:wrptr_g1p" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 61
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mv61.tdf
-    Info (12023): Found entity 1: altsyncram_mv61 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mv61.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_mv61" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|altsyncram_mv61:fifo_ram" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 62
+    Info (12023): Found entity 1: altsyncram_mv61 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mv61.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_mv61" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|altsyncram_mv61:fifo_ram" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 62
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_gd9.tdf
-    Info (12023): Found entity 1: dffpipe_gd9 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_gd9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|dffpipe_gd9:rs_brp" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 69
+    Info (12023): Found entity 1: dffpipe_gd9 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_gd9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|dffpipe_gd9:rs_brp" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 69
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_0ol.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_0ol File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_0ol.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_0ol" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_0ol:rs_dgwp" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 71
+    Info (12023): Found entity 1: alt_synch_pipe_0ol File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_0ol.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_0ol" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_0ol:rs_dgwp" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 71
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_hd9.tdf
-    Info (12023): Found entity 1: dffpipe_hd9 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_hd9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_hd9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_0ol.tdf Line: 35
+    Info (12023): Found entity 1: dffpipe_hd9 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_hd9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_hd9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_0ol.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_1ol.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_1ol File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_1ol.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_1ol" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_1ol:ws_dgrp" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 74
+    Info (12023): Found entity 1: alt_synch_pipe_1ol File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_1ol.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_1ol" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_1ol:ws_dgrp" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 74
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_id9.tdf
-    Info (12023): Found entity 1: dffpipe_id9 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dffpipe_id9.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_id9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe16" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/alt_synch_pipe_1ol.tdf Line: 35
+    Info (12023): Found entity 1: dffpipe_id9 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dffpipe_id9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_id9" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe16" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/alt_synch_pipe_1ol.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_f66.tdf
-    Info (12023): Found entity 1: cmpr_f66 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cmpr_f66.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_f66" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|cmpr_f66:rdempty_eq_comp" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/dcfifo_aql1.tdf Line: 81
-Info (12128): Elaborating entity "frame_fifo_write" for hierarchy "frame_read_write:frame_read_write_m0|frame_fifo_write:frame_fifo_write_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 130
-Info (12128): Elaborating entity "frame_fifo_read" for hierarchy "frame_read_write:frame_read_write_m0|frame_fifo_read:frame_fifo_read_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 176
-Info (12128): Elaborating entity "sdram_core" for hierarchy "sdram_core:sdram_core_m0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 228
-Info (10264): Verilog HDL Case Statement information at sdram_core.v(321): all case item expressions in this case statement are onehot File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v Line: 321
-Info (10264): Verilog HDL Case Statement information at sdram_core.v(378): all case item expressions in this case statement are onehot File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v Line: 378
-Warning (10034): Output port "sdram_cs_n" at sdram_core.v(38) has no driver File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v Line: 38
+    Info (12023): Found entity 1: cmpr_f66 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cmpr_f66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_f66" for hierarchy "frame_read_write:frame_read_write_m0|afifo_16_256:write_buf|dcfifo:dcfifo_component|dcfifo_aql1:auto_generated|cmpr_f66:rdempty_eq_comp" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/dcfifo_aql1.tdf Line: 81
+Info (12128): Elaborating entity "frame_fifo_write" for hierarchy "frame_read_write:frame_read_write_m0|frame_fifo_write:frame_fifo_write_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 130
+Info (12128): Elaborating entity "frame_fifo_read" for hierarchy "frame_read_write:frame_read_write_m0|frame_fifo_read:frame_fifo_read_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 176
+Info (12128): Elaborating entity "sdram_core" for hierarchy "sdram_core:sdram_core_m0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 228
+Info (10264): Verilog HDL Case Statement information at sdram_core.v(321): all case item expressions in this case statement are onehot File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v Line: 321
+Info (10264): Verilog HDL Case Statement information at sdram_core.v(378): all case item expressions in this case statement are onehot File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v Line: 378
+Warning (10034): Output port "sdram_cs_n" at sdram_core.v(38) has no driver File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v Line: 38
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[15]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[14]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[13]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[12]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[11]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[10]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[9]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[8]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 81
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[15]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[14]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[13]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[12]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[11]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[10]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[9]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
-    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[8]" is missing source, defaulting to GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[15]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[14]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[13]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[12]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[11]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[10]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[9]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|wrusedw[8]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 81
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[15]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[14]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[13]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[12]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[11]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[10]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[9]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
+    Warning (12110): Net "frame_read_write:frame_read_write_m0|rdusedw[8]" is missing source, defaulting to GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/frame_read_write.v Line: 82
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "iic_ctrl:iic_ctrl_m0|init_cmd_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -2831,7 +2834,7 @@ Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|altsyncram:init_cm
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_iic_ctrl_8c8f63b3.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mf71.tdf
-    Info (12023): Found entity 1: altsyncram_mf71 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_mf71 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1"
 Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -2850,63 +2853,63 @@ Info (12133): Instantiated megafunction "iic_ctrl:iic_ctrl_m0|iic_master:iic_mas
     Info (12134): Parameter "TAP_DISTANCE" = "26"
     Info (12134): Parameter "WIDTH" = "2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_c6m.tdf
-    Info (12023): Found entity 1: shift_taps_c6m File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/shift_taps_c6m.tdf Line: 27
+    Info (12023): Found entity 1: shift_taps_c6m File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/shift_taps_c6m.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4e81.tdf
-    Info (12023): Found entity 1: altsyncram_4e81 File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_4e81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_4e81 File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_4e81.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sqf.tdf
-    Info (12023): Found entity 1: cntr_sqf File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cntr_sqf.tdf Line: 28
+    Info (12023): Found entity 1: cntr_sqf File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cntr_sqf.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_rgc.tdf
-    Info (12023): Found entity 1: cmpr_rgc File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/cmpr_rgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_rgc File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/cmpr_rgc.tdf Line: 23
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a8" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 204
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a9" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 225
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a10" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 246
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a11" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 267
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a12" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 288
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a13" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 309
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a14" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 330
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a15" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 351
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a16" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 372
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a17" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 393
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a18" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 414
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a19" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 435
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a20" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 456
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a21" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 477
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a22" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 498
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a23" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 519
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a0" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 36
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a1" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 57
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a2" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 78
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a3" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 99
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a4" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 120
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a5" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 141
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a6" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 162
-        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a7" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/db/altsyncram_mf71.tdf Line: 183
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a8" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 204
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a9" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 225
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a10" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 246
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a11" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 267
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a12" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 288
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a13" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 309
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a14" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 330
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a15" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 351
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a16" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 372
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a17" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 393
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a18" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 414
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a19" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 435
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a20" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 456
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a21" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 477
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a22" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 498
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_1|altsyncram_mf71:auto_generated|ram_block1a23" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 519
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a0" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 36
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a1" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 57
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a2" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 78
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a3" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 99
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a4" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 120
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a5" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 141
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a6" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 162
+        Warning (14320): Synthesized away node "iic_ctrl:iic_ctrl_m0|altsyncram:init_cmd_rtl_0|altsyncram_mf71:auto_generated|ram_block1a7" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/db/altsyncram_mf71.tdf Line: 183
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "cmos_scl" and its non-tri-state driver. File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 7
-Info (13000): Registers with preset signals will power-up high File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/sdram/sdram_core.v Line: 41
+    Warning (13035): Inserted always-enabled tri-state buffer between "cmos_scl" and its non-tri-state driver. File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 7
+Info (13000): Registers with preset signals will power-up high File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/sdram/sdram_core.v Line: 41
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "cmos_scl~synth" File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 7
+    Warning (13010): Node "cmos_scl~synth" File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 7
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "cmos_pwdn" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 13
-    Warning (13410): Pin "lcd_r[0]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 22
-    Warning (13410): Pin "lcd_r[1]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 22
-    Warning (13410): Pin "lcd_r[2]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 22
-    Warning (13410): Pin "lcd_g[0]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 23
-    Warning (13410): Pin "lcd_g[1]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 23
-    Warning (13410): Pin "lcd_b[0]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 24
-    Warning (13410): Pin "lcd_b[1]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 24
-    Warning (13410): Pin "lcd_b[2]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 24
-    Warning (13410): Pin "sdram_cke" is stuck at VCC File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 28
-    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 29
-    Warning (13410): Pin "sdram_dqm[0]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 33
-    Warning (13410): Pin "sdram_dqm[1]" is stuck at GND File: D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/src/top.v Line: 33
+    Warning (13410): Pin "cmos_pwdn" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 13
+    Warning (13410): Pin "lcd_data[0]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[1]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[2]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[8]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[9]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[16]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[17]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "lcd_data[18]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 22
+    Warning (13410): Pin "sdram_cke" is stuck at VCC File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 26
+    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 27
+    Warning (13410): Pin "sdram_dqm[0]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 31
+    Warning (13410): Pin "sdram_dqm[1]" is stuck at GND File: E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/src/top.v Line: 31
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 34 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1180 device resources after synthesis - the final resource count might be different
@@ -2916,16 +2919,16 @@ Info (21057): Implemented 1180 device resources after synthesis - the final reso
     Info (21061): Implemented 1037 logic cells
     Info (21064): Implemented 58 RAM segments
     Info (21065): Implemented 2 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Sun Apr 23 11:02:37 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Mon Apr 24 16:22:28 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Users/HUIP/Desktop/18_2_sdram_ov5640_an430_lcd_new/output_files/top.map.smsg.
+The suppressed messages can be found in E:/FPGA_work/Cyclone/Code_LCD/sdram_ov5640_lcd480/output_files/top.map.smsg.
 
 

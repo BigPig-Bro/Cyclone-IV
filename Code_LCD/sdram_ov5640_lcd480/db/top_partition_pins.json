@@ -16,67 +16,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "lcd_r[3]",
+					"name" : "lcd_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_r[4]",
+					"name" : "lcd_data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_r[5]",
+					"name" : "lcd_data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_r[6]",
+					"name" : "lcd_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_r[7]",
+					"name" : "lcd_data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[2]",
+					"name" : "lcd_data[10]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[3]",
+					"name" : "lcd_data[11]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[4]",
+					"name" : "lcd_data[12]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[5]",
+					"name" : "lcd_data[13]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[6]",
+					"name" : "lcd_data[14]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_g[7]",
+					"name" : "lcd_data[15]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_b[3]",
+					"name" : "lcd_data[19]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_b[4]",
+					"name" : "lcd_data[20]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_b[5]",
+					"name" : "lcd_data[21]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_b[6]",
+					"name" : "lcd_data[22]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_b[7]",
+					"name" : "lcd_data[23]",
 					"strict" : false
 				},
 				{
