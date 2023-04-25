@@ -56,27 +56,24 @@ pic pic_m0(
 //条形码筛选部分 条码为1，背景为0
 wire [12:0] [3:0] scan_data;
 wire [ 9:0] bar_left,bar_right;
+wire scan_en;
 thres_scan thres_scan_m0(
-	.clk 		(lcd_clk 	),
+	.clk 		(lcd_clk 		),
 
-	.loc_x		(rgb_x		),
-	.loc_y		(rgb_y		),
-	.thres_de 	(rgb_de 	),
-	.thres_data (pic_data 	),
-	
-	.bar_left 	(bar_left   ),
-	.bar_right 	(bar_right  ),
-	.scan_data	(scan_data 	)
+	.loc_x		(rgb_x			),
+	.loc_y		(rgb_y			),
+	.thres_de 	(rgb_de 		),
+	.thres_data (pic_data 		),
+
+	.scan_en 	(scan_en 		),
+	.scan_data	(scan_data 		)
 	);
 
 //在标准RGB视频流中显示
 display display_m0(
-	.clk 			(lcd_clk 		),
-	
 	.x_in 			(rgb_x 			),
 	.y_in 			(rgb_y 			),
-	.bar_left 		(bar_left   	),
-	.bar_right 		(bar_right  	),
+	.scan_en 		(scan_en 		),
 
 	.in_hs 			(rgb_hs			),
 	.in_vs 			(rgb_vs			),

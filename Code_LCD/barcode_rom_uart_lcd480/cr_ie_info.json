@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "\nQuartus Prime requested that Windows modify job info, but Windows could not do so.\nPlease report the full text of this message to Intel so we can investigate its causes.\nIn the meantime, may wish to take the following steps to work around the problem:\n   * Disabled parallel compilation if it is enabled\n   * Ensure you have sufficient memory to run Quartus.\n   * Ensure all service packs and patches from Microsoft are installed\n\nTechnical details:\n   * API: result\n   * OS code: 6 (¾ä±úÎÞÐ§¡£)\n",
+		"source_file" : "/quartus/ccl/thr/thr_process.cpp",
+		"line" : "478",
+		"stack_trace" : "\t0x7ffaa55d24df: ccl_thr + 0x24df (thr_os_error + 0xcf)\n\t0x7ffaa55d2f37: ccl_thr + 0x2f37 (thr_windows_error + 0xb7)\n\t0x7ffaa55d1cc4: ccl_thr + 0x1cc4 (thr_process_create_and_save_job + 0x6f4)\n\t0x7ffa97ce399d: ccl_ipc + 0x399d (?run@IPC_COMMAND@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NPEAK01@Z + 0x41d)\n\t0x7ffa8fbd5561: sys_flow + 0x5561 (?flow_call_cmd_thread@@YAPEAXPEAX@Z + 0x1d1)\n\t0x7ffa4d964a5e: CCL_MSG + 0x14a5e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ffaa56f6af0: ccl_mem + 0x16af0 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ffaa55d27a1: ccl_thr + 0x27a1 (thr_thread_begin + 0xa1)\n\t0x7ffad6597033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7ffad7ae2650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "THR"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.1",
+		"build" : "720",
+		"edition" : "Lite Edition"
+	}
+}

@@ -85,7 +85,8 @@ set_location_assignment PIN_B5 -to lcd_rgb[17]
 set_location_assignment PIN_A4 -to lcd_rgb[16]
 set_location_assignment PIN_C6 -to lcd_vs
 set_global_assignment -name ENABLE_SIGNALTAP ON
-set_global_assignment -name USE_SIGNALTAP_FILE output_files/uart.stp
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_location_assignment PIN_N1 -to uart_tx
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_tx.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/thres_scan.sv
@@ -94,5 +95,4 @@ set_global_assignment -name VERILOG_FILE src/rgb_timing.v
 set_global_assignment -name VERILOG_FILE src/display.v
 set_global_assignment -name QIP_FILE src/ip_core/sys_pll.qip
 set_global_assignment -name QIP_FILE src/ip_core/pic.qip
-set_location_assignment PIN_N1 -to uart_tx
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
