@@ -1,0 +1,321 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_tx",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_hs",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_vs",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_de",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[16]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[17]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[18]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[19]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[20]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[21]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[22]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data[23]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_we_n",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_cas_n",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_ras_n",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_ba[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_ba[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_addr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_scl",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_sda",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sdram_dq[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "key_sel",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_pclk",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_href",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_vsync",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
