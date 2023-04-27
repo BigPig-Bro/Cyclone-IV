@@ -14,9 +14,7 @@ reg [1:0] state;
 reg  [ 7:0] send_cnt;
 reg  [ 7:0] send_data;
 reg  	    send_en;
-
-wire [ 7:0] recv_data;
-wire 		recv_en;
+wire 	    send_busy;
 
 //发送寄存器
 parameter 	ENG_NUM  = 20;//非中文字符数
@@ -24,7 +22,7 @@ parameter 	CHE_NUM  = 0;//  中文字符数
 parameter 	DATA_NUM = CHE_NUM * 3 + ENG_NUM; //中文字符使用UTF8，占用3个字节
 wire [ DATA_NUM * 8 - 1:0] char_data_r = {"Code:0000000000000","\r\n"};
 
-wire [7:0] char_data;
+reg [7:0] char_data;
 always@*
 	case(send_cnt)
 		8'd5,8'd6,8'd7,8'd8, 8'd9,8'd10,8'd11,8'd12 ,8'd13,8'd14,8'd15,8'd16 ,8'd17:

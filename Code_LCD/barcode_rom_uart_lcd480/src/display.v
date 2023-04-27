@@ -13,9 +13,9 @@ module display  (
 	output  reg 	[23:0]	out_data
 );
 
-parameter BAR_LOC_Y1 = 10'D80  + 2; //识别位置 1 + 扫描延迟
-parameter BAR_LOC_Y2 = 10'D100 + 2; //识别位置 2 + 扫描延迟
-parameter BAR_LOC_Y3 = 10'D130 + 2; //识别位置 3 + 扫描延迟
+parameter BAR_LOC_Y1 = 10'D2  + 2; //识别位置 1 + 扫描延迟
+parameter BAR_LOC_Y2 = 10'D7  + 2; //识别位置 2 + 扫描延迟
+parameter BAR_LOC_Y3 = 10'D12 + 2; //识别位置 3 + 扫描延迟
 
 always@(*)begin 
 	out_hs 	 	<= in_hs;

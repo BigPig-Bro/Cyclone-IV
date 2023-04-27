@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Apr 25 23:37:10 2023
+Thu Apr 27 15:50:27 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -20,7 +20,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  12. Registers Removed During Synthesis
  13. General Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated
+ 15. Source assignments for pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated
  16. Parameter Settings for User Entity Instance: sys_pll:sys_pll_m0|altpll:altpll_component
  17. Parameter Settings for User Entity Instance: rgb_timing:rgb_timing_m0
  18. Parameter Settings for User Entity Instance: pic:pic_m0|altsyncram:altsyncram_component
@@ -31,11 +31,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  23. altpll Parameter Settings by Entity Instance
  24. altsyncram Parameter Settings by Entity Instance
  25. Port Connectivity Checks: "pic:pic_m0"
- 26. Port Connectivity Checks: "rgb_timing:rgb_timing_m0"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
- 30. Analysis & Synthesis Suppressed Messages
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,16 +61,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 23:37:10 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 15:50:27 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,087                                       ;
-;     Total combinational functions  ; 1,028                                       ;
+; Total logic elements               ; 1,081                                       ;
+;     Total combinational functions  ; 1,022                                       ;
 ;     Dedicated logic registers      ; 316                                         ;
 ; Total registers                    ; 316                                         ;
-; Total pins                         ; 30                                          ;
+; Total pins                         ; 31                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 130,560                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -216,8 +215,8 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_gga1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_gga1.tdf ;         ;
-; ../src/pic/a2.mif                ; yes             ; Auto-Found Memory Initialization File  ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/pic/a2.mif         ;         ;
+; db/altsyncram_2l91.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_2l91.tdf ;         ;
+; a1.mif                           ; yes             ; Auto-Found Memory Initialization File  ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/a1.mif                 ;         ;
 ; db/decode_4aa.tdf                ; yes             ; Auto-Generated Megafunction            ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/decode_4aa.tdf      ;         ;
 ; db/mux_kob.tdf                   ; yes             ; Auto-Generated Megafunction            ; E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/mux_kob.tdf         ;         ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
@@ -228,23 +227,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                     ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,087                                                                                     ;
+; Estimated Total logic elements              ; 1,081                                                                                     ;
 ;                                             ;                                                                                           ;
-; Total combinational functions               ; 1028                                                                                      ;
+; Total combinational functions               ; 1022                                                                                      ;
 ; Logic element usage by number of LUT inputs ;                                                                                           ;
-;     -- 4 input functions                    ; 628                                                                                       ;
-;     -- 3 input functions                    ; 158                                                                                       ;
+;     -- 4 input functions                    ; 626                                                                                       ;
+;     -- 3 input functions                    ; 154                                                                                       ;
 ;     -- <=2 input functions                  ; 242                                                                                       ;
 ;                                             ;                                                                                           ;
 ; Logic elements by mode                      ;                                                                                           ;
-;     -- normal mode                          ; 818                                                                                       ;
+;     -- normal mode                          ; 812                                                                                       ;
 ;     -- arithmetic mode                      ; 210                                                                                       ;
 ;                                             ;                                                                                           ;
 ; Total registers                             ; 316                                                                                       ;
 ;     -- Dedicated logic registers            ; 316                                                                                       ;
 ;     -- I/O registers                        ; 0                                                                                         ;
 ;                                             ;                                                                                           ;
-; I/O pins                                    ; 30                                                                                        ;
+; I/O pins                                    ; 31                                                                                        ;
 ; Total memory bits                           ; 130560                                                                                    ;
 ;                                             ;                                                                                           ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                         ;
@@ -254,8 +253,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                                           ;
 ; Maximum fan-out node                        ; sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 247                                                                                       ;
-; Total fan-out                               ; 4628                                                                                      ;
-; Average fan-out                             ; 3.26                                                                                      ;
+; Total fan-out                               ; 4637                                                                                      ;
+; Average fan-out                             ; 3.27                                                                                      ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------+
 
 
@@ -264,31 +263,31 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                      ; 1028 (33)           ; 316 (0)                   ; 130560      ; 0            ; 0       ; 0         ; 30   ; 0            ; |top                                                                                                  ; top             ; work         ;
-;    |display:display_m0|                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display:display_m0                                                                               ; display         ; work         ;
+; |top                                      ; 1022 (33)           ; 316 (0)                   ; 130560      ; 0            ; 0       ; 0         ; 31   ; 0            ; |top                                                                                                  ; top             ; work         ;
+;    |display:display_m0|                   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|display:display_m0                                                                               ; display         ; work         ;
 ;    |pic:pic_m0|                           ; 28 (0)              ; 4 (0)                     ; 130560      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0                                                                                       ; pic             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 28 (0)              ; 4 (0)                     ; 130560      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
-;          |altsyncram_gga1:auto_generated| ; 28 (0)              ; 4 (4)                     ; 130560      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated                        ; altsyncram_gga1 ; work         ;
-;             |decode_4aa:rden_decode|      ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated|decode_4aa:rden_decode ; decode_4aa      ; work         ;
-;             |mux_kob:mux2|                ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated|mux_kob:mux2           ; mux_kob         ; work         ;
+;          |altsyncram_2l91:auto_generated| ; 28 (0)              ; 4 (4)                     ; 130560      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated                        ; altsyncram_2l91 ; work         ;
+;             |decode_4aa:rden_decode|      ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated|decode_4aa:rden_decode ; decode_4aa      ; work         ;
+;             |mux_kob:mux2|                ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated|mux_kob:mux2           ; mux_kob         ; work         ;
 ;    |rgb_timing:rgb_timing_m0|             ; 79 (79)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|rgb_timing:rgb_timing_m0                                                                         ; rgb_timing      ; work         ;
 ;    |sys_pll:sys_pll_m0|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0                                                                               ; sys_pll         ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0|altpll:altpll_component                                                       ; altpll          ; work         ;
 ;          |sys_pll_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated                         ; sys_pll_altpll  ; work         ;
-;    |thres_scan:thres_scan_m0|             ; 707 (707)           ; 177 (177)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|thres_scan:thres_scan_m0                                                                         ; thres_scan      ; work         ;
+;    |thres_scan:thres_scan_m0|             ; 704 (704)           ; 177 (177)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|thres_scan:thres_scan_m0                                                                         ; thres_scan      ; work         ;
 ;    |uart_top:uart_top_m0|                 ; 173 (123)           ; 87 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0                                                                             ; uart_top        ; work         ;
 ;       |uart_tx:uart_tx_m0|                ; 50 (50)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0                                                          ; uart_tx         ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                            ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
-; Name                                                                                 ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF               ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
-; pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 130560       ; 1            ; --           ; --           ; 130560 ; ../src/pic/a2.mif ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                 ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+--------+
+; Name                                                                                 ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF    ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+--------+
+; pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 130560       ; 1            ; --           ; --           ; 130560 ; a1.mif ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+--------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -349,7 +348,7 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 316   ;
 ; Number of registers using Synchronous Clear  ; 39    ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 194   ;
 ; Number of registers using Preset             ; 0     ;
@@ -388,7 +387,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated ;
+; Source assignments for pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -834,7 +833,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
-; INIT_FILE                          ; ../src/pic/a2.mif    ; Untyped                     ;
+; INIT_FILE                          ; a1.mif               ; Untyped                     ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
@@ -847,7 +846,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_gga1      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_2l91      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -857,9 +856,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------+-----------------------------------------+
 ; Parameter Name ; Value      ; Type                                    ;
 +----------------+------------+-----------------------------------------+
-; BAR_LOC_Y1     ; 0001010000 ; Unsigned Binary                         ;
-; BAR_LOC_Y2     ; 0001100100 ; Unsigned Binary                         ;
-; BAR_LOC_Y3     ; 0010000010 ; Unsigned Binary                         ;
+; BAR_LOC_Y1     ; 0000000010 ; Unsigned Binary                         ;
+; BAR_LOC_Y2     ; 0000000111 ; Unsigned Binary                         ;
+; BAR_LOC_Y3     ; 0000001100 ; Unsigned Binary                         ;
 +----------------+------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -869,9 +868,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------------------------+-----------------+
 ; Parameter Name ; Value                            ; Type            ;
 +----------------+----------------------------------+-----------------+
-; BAR_LOC_Y1     ; 00000000000000000000000001010010 ; Unsigned Binary ;
-; BAR_LOC_Y2     ; 00000000000000000000000001100110 ; Unsigned Binary ;
-; BAR_LOC_Y3     ; 00000000000000000000000010000100 ; Unsigned Binary ;
+; BAR_LOC_Y1     ; 00000000000000000000000000000100 ; Unsigned Binary ;
+; BAR_LOC_Y2     ; 00000000000000000000000000001001 ; Unsigned Binary ;
+; BAR_LOC_Y3     ; 00000000000000000000000000001110 ; Unsigned Binary ;
 +----------------+----------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -944,43 +943,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "rgb_timing:rgb_timing_m0" ;
-+-----------+-------+----------+-----------------------+
-; Port      ; Type  ; Severity ; Details               ;
-+-----------+-------+----------+-----------------------+
-; rgb_rst_n ; Input ; Info     ; Stuck at VCC          ;
-+-----------+-------+----------+-----------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 30                          ;
+; boundary_port         ; 31                          ;
 ; cycloneiii_ff         ; 316                         ;
-;     ENA               ; 147                         ;
+;     CLR               ; 16                          ;
+;     ENA               ; 135                         ;
+;     ENA CLR           ; 12                          ;
 ;     ENA SCLR          ; 39                          ;
 ;     ENA SLD           ; 8                           ;
 ;     SLD               ; 1                           ;
-;     plain             ; 121                         ;
-; cycloneiii_lcell_comb ; 1030                        ;
+;     plain             ; 105                         ;
+; cycloneiii_lcell_comb ; 1024                        ;
 ;     arith             ; 210                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 165                         ;
 ;         3 data inputs ; 44                          ;
-;     normal            ; 820                         ;
+;     normal            ; 814                         ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 17                          ;
 ;         2 data inputs ; 56                          ;
-;         3 data inputs ; 114                         ;
-;         4 data inputs ; 628                         ;
+;         3 data inputs ; 110                         ;
+;         4 data inputs ; 626                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.81                        ;
+; Average LUT depth     ; 4.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -989,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -999,10 +991,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 23:37:01 2023
+    Info: Processing started: Thu Apr 27 15:50:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/modelsim/top_tb.sv
+    Info (12023): Found entity 1: top_tb File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart_tx.sv
     Info (12023): Found entity 1: uart_tx File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart_top.sv
@@ -1019,13 +1013,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/ip_
     Info (12023): Found entity 1: sys_pll File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/pic.v
     Info (12023): Found entity 1: pic File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at uart_top.sv(72): created implicit net for "send_busy" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 72
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_tx.sv(14): Parameter Declaration in module "uart_tx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(20): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 20
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(21): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 21
 Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(22): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 22
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(23): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 23
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(24): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_tx.sv(14): Parameter Declaration in module "uart_tx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 14
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 19
+Info (12128): Elaborating entity "sys_pll" for hierarchy "sys_pll:sys_pll_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 20
 Info (12128): Elaborating entity "altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v Line: 91
 Info (12130): Elaborated megafunction instantiation "sys_pll:sys_pll_m0|altpll:altpll_component" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v Line: 91
 Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_component" with the following parameter: File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v Line: 91
@@ -1086,19 +1079,19 @@ Info (12133): Instantiated megafunction "sys_pll:sys_pll_m0|altpll:altpll_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/sys_pll_altpll.v
     Info (12023): Found entity 1: sys_pll_altpll File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "sys_pll_altpll" for hierarchy "sys_pll:sys_pll_m0|altpll:altpll_component|sys_pll_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "rgb_timing" for hierarchy "rgb_timing:rgb_timing_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 32
+Info (12128): Elaborating entity "rgb_timing" for hierarchy "rgb_timing:rgb_timing_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at rgb_timing.v(37): truncated value with size 12 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v Line: 37
 Warning (10230): Verilog HDL assignment warning at rgb_timing.v(41): truncated value with size 12 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v Line: 41
 Warning (10230): Verilog HDL assignment warning at rgb_timing.v(68): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v Line: 68
 Warning (10230): Verilog HDL assignment warning at rgb_timing.v(86): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v Line: 86
-Info (12128): Elaborating entity "pic" for hierarchy "pic:pic_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 40
+Info (12128): Elaborating entity "pic" for hierarchy "pic:pic_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 41
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v Line: 82
 Info (12130): Elaborated megafunction instantiation "pic:pic_m0|altsyncram:altsyncram_component" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v Line: 82
 Info (12133): Instantiated megafunction "pic:pic_m0|altsyncram:altsyncram_component" with the following parameter: File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../src/pic/a2.mif"
+    Info (12134): Parameter "init_file" = "a1.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -1109,30 +1102,30 @@ Info (12133): Instantiated megafunction "pic:pic_m0|altsyncram:altsyncram_compon
     Info (12134): Parameter "widthad_a" = "17"
     Info (12134): Parameter "width_a" = "1"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gga1.tdf
-    Info (12023): Found entity 1: altsyncram_gga1 File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_gga1.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_gga1" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2l91.tdf
+    Info (12023): Found entity 1: altsyncram_2l91 File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_2l91.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_2l91" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_4aa.tdf
     Info (12023): Found entity 1: decode_4aa File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/decode_4aa.tdf Line: 23
-Info (12128): Elaborating entity "decode_4aa" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated|decode_4aa:rden_decode" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_gga1.tdf Line: 40
+Info (12128): Elaborating entity "decode_4aa" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated|decode_4aa:rden_decode" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_2l91.tdf Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_kob.tdf
     Info (12023): Found entity 1: mux_kob File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/mux_kob.tdf Line: 23
-Info (12128): Elaborating entity "mux_kob" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_gga1:auto_generated|mux_kob:mux2" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_gga1.tdf Line: 41
-Info (12128): Elaborating entity "thres_scan" for hierarchy "thres_scan:thres_scan_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 70
-Warning (10762): Verilog HDL Case Statement warning at thres_scan.sv(28): can't check case statement for completeness because the case expression has too many possible states File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(52): truncated value with size 32 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(65): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(74): truncated value with size 32 to match size of target (7) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 74
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(80): truncated value with size 32 to match size of target (7) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(88): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(95): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 95
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(101): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 101
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(106): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 106
-Warning (10230): Verilog HDL assignment warning at thres_scan.sv(110): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 110
-Info (12128): Elaborating entity "display" for hierarchy "display:display_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 87
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 100
-Warning (10230): Verilog HDL assignment warning at uart_top.sv(50): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 50
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:uart_top_m0|uart_tx:uart_tx_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 76
+Info (12128): Elaborating entity "mux_kob" for hierarchy "pic:pic_m0|altsyncram:altsyncram_component|altsyncram_2l91:auto_generated|mux_kob:mux2" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/altsyncram_2l91.tdf Line: 41
+Info (12128): Elaborating entity "thres_scan" for hierarchy "thres_scan:thres_scan_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 71
+Warning (10762): Verilog HDL Case Statement warning at thres_scan.sv(31): can't check case statement for completeness because the case expression has too many possible states File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(55): truncated value with size 32 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(68): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(77): truncated value with size 32 to match size of target (7) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(83): truncated value with size 32 to match size of target (7) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(91): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(98): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(104): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 104
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(109): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 109
+Warning (10230): Verilog HDL assignment warning at thres_scan.sv(113): truncated value with size 32 to match size of target (2) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv Line: 113
+Info (12128): Elaborating entity "display" for hierarchy "display:display_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 88
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 101
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(48): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 48
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:uart_top_m0|uart_tx:uart_tx_m0" File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv Line: 74
 Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (21) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 43
 Warning (10230): Verilog HDL assignment warning at uart_tx.sv(51): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at uart_tx.sv(55): truncated value with size 32 to match size of target (21) File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv Line: 55
@@ -1143,17 +1136,17 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1146 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 1141 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1099 logic cells
+    Info (21061): Implemented 1093 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Tue Apr 25 23:37:10 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu Apr 27 15:50:27 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+

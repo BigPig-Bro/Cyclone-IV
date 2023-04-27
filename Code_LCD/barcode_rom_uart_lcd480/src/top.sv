@@ -1,5 +1,6 @@
  module top (
 	input 			clk,    // Clock
+	input 			rst_n,  // Reset, active low
 	
 	output 			uart_tx, // 串口发送
 
@@ -23,7 +24,7 @@ wire 		rgb_vs,rgb_hs,rgb_de;
 wire [ 9:0] rgb_x,rgb_y;
 rgb_timing rgb_timing_m0(
 	.rgb_clk	(lcd_clk	),	
-	.rgb_rst_n	(1'b1		),	
+	.rgb_rst_n	(rst_n		),	
 	.rgb_hs		(rgb_hs		),
 	.rgb_vs		(rgb_vs		),
 	.rgb_de		(rgb_de		),

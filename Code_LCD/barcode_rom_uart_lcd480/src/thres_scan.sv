@@ -8,9 +8,12 @@ module thres_scan(
 	output reg 	[12:0][3:0]	scan_data // 13 * 6
 	);
 
-parameter BAR_LOC_Y1 = 10'D80; //识别位置 1
-parameter BAR_LOC_Y2 = 10'D100; //识别位置 2
-parameter BAR_LOC_Y3 = 10'D130; //识别位置 3
+parameter BAR_LOC_Y1 = 10'D2 ; //识别位置 1
+parameter BAR_LOC_Y2 = 10'D7 ; //识别位置 2
+parameter BAR_LOC_Y3 = 10'D12; //识别位置 3
+
+reg  [3:0] bar_codeA,bar_codeB; // 4位的条形码解码数据
+reg [6:0] dec_data; // 7位的条形码编码数据
 
 reg [ 9:0] bar_left,bar_right; //阈值区域宽度 94位的像素位宽
 reg [ 9:0] bar_step ; // 半个条形码的宽度，用于识别采样点
@@ -126,7 +129,6 @@ end
 /************************************************/
 /**************   条形码编码  ******************/
 /************************************************/
-wire [6:0] dec_data; // 7位的条形码编码数据
 always@(posedge clk)
 	case(loc_x)//以下分配和前置码相关
 		'd1 : dec_data <= bar_data[ 9: 3];
@@ -145,7 +147,6 @@ always@(posedge clk)
 		default: dec_data <= 7'b0000000;
 	endcase
 
-reg  [3:0] bar_codeA,bar_codeB; // 4位的条形码解码数据
 always@* begin
 	case({dec_data[0],dec_data[1],dec_data[2],dec_data[3],dec_data[4],dec_data[5],dec_data[6]})
 		7'b0001101: bar_codeA = 4'D0;

@@ -1,0 +1,189 @@
+# Reading pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v 
+# -- Compiling module rgb_timing
+# 
+# Top level modules:
+# 	rgb_timing
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v 
+# -- Compiling module display
+# 
+# Top level modules:
+# 	display
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v 
+# -- Compiling module sys_pll
+# 
+# Top level modules:
+# 	sys_pll
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v 
+# -- Compiling module pic
+# 
+# Top level modules:
+# 	pic
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v 
+# -- Compiling module sys_pll_altpll
+# 
+# Top level modules:
+# 	sys_pll_altpll
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:38 on Apr 27,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv 
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# End time: 15:50:38 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:39 on Apr 27,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv 
+# -- Compiling module uart_top
+# 
+# Top level modules:
+# 	uart_top
+# End time: 15:50:39 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:39 on Apr 27,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv 
+# -- Compiling module thres_scan
+# 
+# Top level modules:
+# 	thres_scan
+# End time: 15:50:39 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:39 on Apr 27,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 15:50:39 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim {E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:39 on Apr 27,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim" E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 15:50:39 on Apr 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 15:50:39 on Apr 27,2023
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.top
+# Loading work.sys_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.rgb_timing
+# Loading work.pic
+# Loading altera_mf_ver.altsyncram
+# Loading work.thres_scan
+# Loading work.display
+# Loading work.uart_top
+# Loading work.uart_tx
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (17) does not match connection size (32) for port 'address'. The port definition is at: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/i1/pic_m0 File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 37
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: top_tb.i1.sys_pll_m0.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/top_tb/i1/rgb_x \
+sim:/top_tb/i1/rgb_y \
+sim:/top_tb/i1/pic_data
+
+run 1ms
+# ** Note: $stop    : E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv(60)
+#    Time: 1001 us  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv line 60
+add wave -position insertpoint  \
+sim:/top_tb/i1/thres_scan_m0/loc_x \
+sim:/top_tb/i1/thres_scan_m0/loc_y \
+sim:/top_tb/i1/thres_scan_m0/thres_data \
+sim:/top_tb/i1/thres_scan_m0/thres_de \
+sim:/top_tb/i1/thres_scan_m0/scan_en \
+sim:/top_tb/i1/thres_scan_m0/scan_data \
+sim:/top_tb/i1/thres_scan_m0/bar_codeA \
+sim:/top_tb/i1/thres_scan_m0/bar_codeB \
+sim:/top_tb/i1/thres_scan_m0/dec_data \
+sim:/top_tb/i1/thres_scan_m0/bar_left \
+sim:/top_tb/i1/thres_scan_m0/bar_right \
+sim:/top_tb/i1/thres_scan_m0/bar_step \
+sim:/top_tb/i1/thres_scan_m0/bar_data \
+sim:/top_tb/i1/thres_scan_m0/bar_data_cnt \
+sim:/top_tb/i1/thres_scan_m0/bar_bit_witdh \
+sim:/top_tb/i1/thres_scan_m0/scan_state
+
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (17) does not match connection size (32) for port 'address'. The port definition is at: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/i1/pic_m0 File: E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv Line: 37
+run 1ms
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: top_tb.i1.sys_pll_m0.altpll_component.cycloneiii_pll.pll3
+
+run 1 ms
+# ** Note: $stop    : E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv(60)
+#    Time: 1001 us  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv line 60
+# End time: 15:54:04 on Apr 27,2023, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 1

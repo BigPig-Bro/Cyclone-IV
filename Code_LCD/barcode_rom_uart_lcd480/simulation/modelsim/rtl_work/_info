@@ -1,0 +1,261 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim
+vdisplay
+Z1 !s110 1682581838
+!i10b 1
+!s100 _Wace>E^7Xo8_4NGeLe3?0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IaP_Eeb3F`k@:a8QfdB2o91
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1682520908
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v
+!i122 1
+L0 1 34
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1682581838.000000
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/display.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src
+Z8 tCvgOpt 0
+vpic
+R1
+!i10b 1
+!s100 Tj:WIoKOTb?a]::_C22W^2
+R2
+I>djOf<GI^IZ5a3U9TbOlh0
+R3
+R0
+w1682581783
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v
+!i122 3
+L0 40 61
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/pic.v|
+!i113 1
+R6
+Z9 !s92 -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core
+R8
+vrgb_timing
+R1
+!i10b 1
+!s100 e0mF?IXOS^NX<EngKmNS[2
+R2
+IKDzcTM^:NB62GnoU@geSA1
+R3
+R0
+w1679658541
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v
+!i122 0
+L0 1 101
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/rgb_timing.v|
+!i113 1
+R6
+R7
+R8
+vsys_pll
+R1
+!i10b 1
+!s100 LA5Mb5ma8nih<8Ih_7=@h2
+R2
+IDL_O3i7kn?[3E;;U1cYjj1
+R3
+R0
+w1682581815
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v
+!i122 2
+L0 40 110
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/ip_core/sys_pll.v|
+!i113 1
+R6
+R9
+R8
+vsys_pll_altpll
+R1
+!i10b 1
+!s100 HYn=;<5LC8o158HlWKDQ_1
+R2
+IQTM9Im>f1ZnCfCR[NJA1a2
+R3
+R0
+w1679659016
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v
+!i122 4
+L0 30 63
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db/sys_pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/db
+R8
+vthres_scan
+Z10 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z11 !s110 1682581839
+!i10b 1
+!s100 a9bH7_HfKhzo7TnnVXJE`1
+R2
+IC`PFLz6^<Xa55gi[kQ?>g2
+R3
+S1
+R0
+w1682521033
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv
+!i122 7
+L0 1 179
+R4
+r1
+!s85 0
+31
+Z12 !s108 1682581839.000000
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/thres_scan.sv|
+!i113 1
+Z13 o-sv -work work
+Z14 !s92 -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src
+R8
+vtop
+R10
+R11
+!i10b 1
+!s100 M2aGF^S1BYHR5ocj3FgK[1
+R2
+IRTk=B<ohYiN^:ME<6^2W:3
+R3
+S1
+R0
+w1682519993
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv
+!i122 8
+L0 1 102
+R4
+r1
+!s85 0
+31
+R12
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/top.sv|
+!i113 1
+R13
+R14
+R8
+vtop_tb
+R10
+R11
+!i10b 1
+!s100 ;>kDGcGBnQMjnFebKk<Ra2
+R2
+II^F62Z;FoGh9dEnPR<^3=1
+R3
+S1
+R0
+w1682521038
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv
+!i122 9
+L0 29 35
+R4
+r1
+!s85 0
+31
+R12
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim/top_tb.sv|
+!i113 1
+R13
+!s92 -sv -work work +incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/simulation/modelsim
+R8
+vuart_top
+R10
+R11
+!i10b 1
+!s100 a57^DhQzgl;g^65bB>S]H3
+R2
+IIOnXX6kP3Dd]H[2okQnA23
+R3
+S1
+R0
+w1682519789
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv
+!i122 6
+L0 1 76
+R4
+r1
+!s85 0
+31
+R12
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_top.sv|
+!i113 1
+R13
+R14
+R8
+vuart_tx
+R10
+R1
+!i10b 1
+!s100 iXG6RePal9lSTEgiFSnYQ2
+R2
+I6>XD`egfeFA6VFM_9b9MH3
+R3
+S1
+R0
+w1679827859
+8E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv
+FE:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv
+!i122 5
+L0 2 68
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src|E:/FPGA_work/Cyclone/Code_LCD/barcode_rom_uart_lcd480/src/uart_tx.sv|
+!i113 1
+R13
+R14
+R8
