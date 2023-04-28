@@ -1,0 +1,1563 @@
+Analysis & Synthesis report for top
+Fri Mar 11 21:29:13 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |top|flash_ctrl:flash_ctrl_m0|state
+ 11. State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state
+ 12. State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state
+ 13. State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state
+ 14. State Machine - |top|uart_rx:uart_rx_inst|state
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component
+ 21. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated
+ 22. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p
+ 23. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p
+ 24. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|altsyncram_av61:fifo_ram
+ 25. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp
+ 26. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp|dffpipe_pe9:dffpipe10
+ 27. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_brp
+ 28. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_bwp
+ 29. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp
+ 30. Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp|dffpipe_qe9:dffpipe12
+ 31. Source assignments for vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated
+ 32. Parameter Settings for User Entity Instance: video_pll:video_pll_m0|altpll:altpll_component
+ 33. Parameter Settings for User Entity Instance: uart_rx:uart_rx_inst
+ 34. Parameter Settings for User Entity Instance: flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component
+ 35. Parameter Settings for User Entity Instance: flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0
+ 36. Parameter Settings for User Entity Instance: vga_timing:vga_timing_m0
+ 37. Parameter Settings for User Entity Instance: vga_ram:vga_ram_m0|altsyncram:altsyncram_component
+ 38. altpll Parameter Settings by Entity Instance
+ 39. dcfifo Parameter Settings by Entity Instance
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. Port Connectivity Checks: "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0"
+ 42. Port Connectivity Checks: "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0"
+ 43. Port Connectivity Checks: "uart_rx:uart_rx_inst"
+ 44. Post-Synthesis Netlist Statistics for Top Partition
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
+ 47. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Mar 11 21:29:13 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 665                                         ;
+;     Total combinational functions  ; 547                                         ;
+;     Dedicated logic registers      ; 430                                         ;
+; Total registers                    ; 430                                         ;
+; Total pins                         ; 35                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 139,264                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; src/flash_ctrl.v                 ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/flash_ctrl.v                               ;         ;
+; src/uart_rx.v                    ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/uart_rx.v                                  ;         ;
+; src/spi_master.v                 ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/spi_master.v                               ;         ;
+; src/spi_flash_top.v              ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/spi_flash_top.v                            ;         ;
+; src/spi_flash_defines.v          ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/spi_flash_defines.v                        ;         ;
+; src/spi_flash_ctrl.v             ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v                           ;         ;
+; src/spi_flash_cmd.v              ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/spi_flash_cmd.v                            ;         ;
+; src/vga_timing.v                 ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/vga_timing.v                               ;         ;
+; src/top.v                        ; yes             ; User Verilog HDL File        ; C:/Users/HUIP/Desktop/project/src/top.v                                      ;         ;
+; ip/video_pll.v                   ; yes             ; User Wizard-Generated File   ; C:/Users/HUIP/Desktop/project/ip/video_pll.v                                 ;         ;
+; ip/vga_ram.v                     ; yes             ; User Wizard-Generated File   ; C:/Users/HUIP/Desktop/project/ip/vga_ram.v                                   ;         ;
+; ip/fifo1024.v                    ; yes             ; User Wizard-Generated File   ; C:/Users/HUIP/Desktop/project/ip/fifo1024.v                                  ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/video_pll_altpll.v            ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/video_pll_altpll.v                          ;         ;
+; dcfifo.tdf                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf            ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc       ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; a_graycounter.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc     ;         ;
+; a_fefifo.inc                     ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc          ;         ;
+; a_gray2bin.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc        ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc           ;         ;
+; alt_sync_fifo.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc     ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
+; altsyncram_fifo.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc   ;         ;
+; db/dcfifo_7jj1.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf                             ;         ;
+; db/a_gray2bin_7ib.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/a_gray2bin_7ib.tdf                          ;         ;
+; db/a_graycounter_677.tdf         ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/a_graycounter_677.tdf                       ;         ;
+; db/a_graycounter_2lc.tdf         ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/a_graycounter_2lc.tdf                       ;         ;
+; db/altsyncram_av61.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/altsyncram_av61.tdf                         ;         ;
+; db/alt_synch_pipe_e98.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_e98.tdf                      ;         ;
+; db/dffpipe_pe9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/dffpipe_pe9.tdf                             ;         ;
+; db/alt_synch_pipe_vd8.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_vd8.tdf                      ;         ;
+; db/dffpipe_qe9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/dffpipe_qe9.tdf                             ;         ;
+; db/cmpr_c66.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/cmpr_c66.tdf                                ;         ;
+; db/cmpr_b66.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/cmpr_b66.tdf                                ;         ;
+; db/mux_j28.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/mux_j28.tdf                                 ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; db/altsyncram_efk1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/altsyncram_efk1.tdf                         ;         ;
+; db/decode_jsa.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/decode_jsa.tdf                              ;         ;
+; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/decode_c8a.tdf                              ;         ;
+; db/mux_3nb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/HUIP/Desktop/project/db/mux_3nb.tdf                                 ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 665       ;
+;                                             ;           ;
+; Total combinational functions               ; 547       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 246       ;
+;     -- 3 input functions                    ; 91        ;
+;     -- <=2 input functions                  ; 210       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 392       ;
+;     -- arithmetic mode                      ; 155       ;
+;                                             ;           ;
+; Total registers                             ; 430       ;
+;     -- Dedicated logic registers            ; 430       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 35        ;
+; Total memory bits                           ; 139264    ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Total PLLs                                  ; 1         ;
+;     -- PLLs                                 ; 1         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 398       ;
+; Total fan-out                               ; 3916      ;
+; Average fan-out                             ; 3.65      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                      ;
++--------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                    ; Entity Name        ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |top                                             ; 547 (19)            ; 430 (3)                   ; 139264      ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                                                                   ; top                ; work         ;
+;    |flash_ctrl:flash_ctrl_m0|                    ; 384 (97)            ; 330 (96)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0                                                                                                                          ; flash_ctrl         ; work         ;
+;       |fifo1024:fifo1024_m0|                     ; 110 (0)             ; 98 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0                                                                                                     ; fifo1024           ; work         ;
+;          |dcfifo:dcfifo_component|               ; 110 (0)             ; 98 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component                                                                             ; dcfifo             ; work         ;
+;             |dcfifo_7jj1:auto_generated|         ; 110 (14)            ; 98 (37)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated                                                  ; dcfifo_7jj1        ; work         ;
+;                |a_gray2bin_7ib:wrptr_g_gray2bin| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; a_gray2bin_7ib     ; work         ;
+;                |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; a_gray2bin_7ib     ; work         ;
+;                |a_graycounter_2lc:wrptr_g1p|     ; 21 (21)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p                      ; a_graycounter_2lc  ; work         ;
+;                |a_graycounter_677:rdptr_g1p|     ; 23 (23)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p                      ; a_graycounter_677  ; work         ;
+;                |alt_synch_pipe_vd8:ws_dgrp|      ; 0 (0)               ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp                       ; alt_synch_pipe_vd8 ; work         ;
+;                   |dffpipe_qe9:dffpipe12|        ; 0 (0)               ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp|dffpipe_qe9:dffpipe12 ; dffpipe_qe9        ; work         ;
+;                |altsyncram_av61:fifo_ram|        ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|altsyncram_av61:fifo_ram                         ; altsyncram_av61    ; work         ;
+;                |dffpipe_pe9:ws_brp|              ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_brp                               ; dffpipe_pe9        ; work         ;
+;                |dffpipe_pe9:ws_bwp|              ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_bwp                               ; dffpipe_pe9        ; work         ;
+;                |mux_j28:rdemp_eq_comp_lsb_mux|   ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|mux_j28:rdemp_eq_comp_lsb_mux                    ; mux_j28            ; work         ;
+;                |mux_j28:rdemp_eq_comp_msb_mux|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|mux_j28:rdemp_eq_comp_msb_mux                    ; mux_j28            ; work         ;
+;                |mux_j28:wrfull_eq_comp_lsb_mux|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|mux_j28:wrfull_eq_comp_lsb_mux                   ; mux_j28            ; work         ;
+;                |mux_j28:wrfull_eq_comp_msb_mux|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|mux_j28:wrfull_eq_comp_msb_mux                   ; mux_j28            ; work         ;
+;       |spi_flash_top:spi_flash_top_m0|           ; 177 (0)             ; 136 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0                                                                                           ; spi_flash_top      ; work         ;
+;          |spi_flash_cmd:spi_flash_cmd_m0|        ; 76 (76)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0                                                            ; spi_flash_cmd      ; work         ;
+;          |spi_flash_ctrl:spi_flash_ctrl_m0|      ; 44 (44)             ; 47 (47)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0                                                          ; spi_flash_ctrl     ; work         ;
+;          |spi_master:spi_master_m0|              ; 57 (57)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0                                                                  ; spi_master         ; work         ;
+;    |uart_rx:uart_rx_inst|                        ; 59 (59)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart_rx_inst                                                                                                                              ; uart_rx            ; work         ;
+;    |vga_ram:vga_ram_m0|                          ; 2 (0)               ; 1 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_ram:vga_ram_m0                                                                                                                                ; vga_ram            ; work         ;
+;       |altsyncram:altsyncram_component|          ; 2 (0)               ; 1 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_ram:vga_ram_m0|altsyncram:altsyncram_component                                                                                                ; altsyncram         ; work         ;
+;          |altsyncram_efk1:auto_generated|        ; 2 (0)               ; 1 (1)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated                                                                 ; altsyncram_efk1    ; work         ;
+;             |decode_jsa:decode2|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated|decode_jsa:decode2                                              ; decode_jsa         ; work         ;
+;    |vga_timing:vga_timing_m0|                    ; 83 (83)             ; 53 (53)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|vga_timing:vga_timing_m0                                                                                                                          ; vga_timing         ; work         ;
+;    |video_pll:video_pll_m0|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_pll:video_pll_m0                                                                                                                            ; video_pll          ; work         ;
+;       |altpll:altpll_component|                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_pll:video_pll_m0|altpll:altpll_component                                                                                                    ; altpll             ; work         ;
+;          |video_pll_altpll:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated                                                                    ; video_pll_altpll   ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|altsyncram_av61:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192   ; None ;
+; vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated|ALTSYNCRAM                                         ; AUTO ; Simple Dual Port ; 16384        ; 8            ; 16384        ; 8            ; 131072 ; None ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                    ; IP Include File ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+-----------------+
+; Altera ; FIFO         ; 20.1    ; N/A          ; N/A          ; |top|flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0 ; ip/fifo1024.v   ;
+; Altera ; RAM: 2-PORT  ; 20.1    ; N/A          ; N/A          ; |top|vga_ram:vga_ram_m0                            ; ip/vga_ram.v    ;
+; Altera ; ALTPLL       ; 20.1    ; N/A          ; N/A          ; |top|video_pll:video_pll_m0                        ; ip/video_pll.v  ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |top|flash_ctrl:flash_ctrl_m0|state                                 ;
++--------------+--------------+--------------+------------+------------+--------------+
+; Name         ; state.S_WAIT ; state.S_READ ; state.S_PP ; state.S_SE ; state.S_IDLE ;
++--------------+--------------+--------------+------------+------------+--------------+
+; state.S_IDLE ; 0            ; 0            ; 0          ; 0          ; 0            ;
+; state.S_SE   ; 0            ; 0            ; 0          ; 1          ; 1            ;
+; state.S_PP   ; 0            ; 0            ; 1          ; 0          ; 1            ;
+; state.S_READ ; 0            ; 1            ; 0          ; 0          ; 1            ;
+; state.S_WAIT ; 1            ; 0            ; 0          ; 0          ; 1            ;
++--------------+--------------+--------------+------------+------------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state                 ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; Name                  ; state.ACK_WAIT ; state.LAST_HALF_CYCLE ; state.ACK ; state.DCLK_IDLE ; state.DCLK_EDGE ; state.IDLE ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; state.IDLE            ; 0              ; 0                     ; 0         ; 0               ; 0               ; 0          ;
+; state.DCLK_EDGE       ; 0              ; 0                     ; 0         ; 0               ; 1               ; 1          ;
+; state.DCLK_IDLE       ; 0              ; 0                     ; 0         ; 1               ; 0               ; 1          ;
+; state.ACK             ; 0              ; 0                     ; 1         ; 0               ; 0               ; 1          ;
+; state.LAST_HALF_CYCLE ; 0              ; 1                     ; 0         ; 0               ; 0               ; 1          ;
+; state.ACK_WAIT        ; 1              ; 0                     ; 0         ; 0               ; 0               ; 1          ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state                                                                                  ;
++---------------------+---------------------+-------------------+---------------------+--------------------+---------------------+-----------------+----------------+--------------+-----------------+
+; Name                ; state.S_WR_CMD_CODE ; state.S_CMD_LATCH ; state.S_WRITE_BYTES ; state.S_READ_BYTES ; state.S_KEEP_CS_LOW ; state.S_CS_HIGH ; state.S_CS_LOW ; state.S_IDLE ; state.S_CMD_ACK ;
++---------------------+---------------------+-------------------+---------------------+--------------------+---------------------+-----------------+----------------+--------------+-----------------+
+; state.S_IDLE        ; 0                   ; 0                 ; 0                   ; 0                  ; 0                   ; 0               ; 0              ; 0            ; 0               ;
+; state.S_CS_LOW      ; 0                   ; 0                 ; 0                   ; 0                  ; 0                   ; 0               ; 1              ; 1            ; 0               ;
+; state.S_CS_HIGH     ; 0                   ; 0                 ; 0                   ; 0                  ; 0                   ; 1               ; 0              ; 1            ; 0               ;
+; state.S_KEEP_CS_LOW ; 0                   ; 0                 ; 0                   ; 0                  ; 1                   ; 0               ; 0              ; 1            ; 0               ;
+; state.S_READ_BYTES  ; 0                   ; 0                 ; 0                   ; 1                  ; 0                   ; 0               ; 0              ; 1            ; 0               ;
+; state.S_WRITE_BYTES ; 0                   ; 0                 ; 1                   ; 0                  ; 0                   ; 0               ; 0              ; 1            ; 0               ;
+; state.S_CMD_LATCH   ; 0                   ; 1                 ; 0                   ; 0                  ; 0                   ; 0               ; 0              ; 1            ; 0               ;
+; state.S_WR_CMD_CODE ; 1                   ; 0                 ; 0                   ; 0                  ; 0                   ; 0               ; 0              ; 1            ; 0               ;
+; state.S_CMD_ACK     ; 0                   ; 0                 ; 0                   ; 0                  ; 0                   ; 0               ; 0              ; 1            ; 1               ;
++---------------------+---------------------+-------------------+---------------------+--------------------+---------------------+-----------------+----------------+--------------+-----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state                      ;
++------------------+--------------+------------------+-------------+---------------+--------------+------------+------------+--------------+
+; Name             ; state.S_WREN ; state.S_CK_STATE ; state.S_ACK ; state.S_WRITE ; state.S_READ ; state.S_BE ; state.S_SE ; state.S_IDLE ;
++------------------+--------------+------------------+-------------+---------------+--------------+------------+------------+--------------+
+; state.S_IDLE     ; 0            ; 0                ; 0           ; 0             ; 0            ; 0          ; 0          ; 0            ;
+; state.S_SE       ; 0            ; 0                ; 0           ; 0             ; 0            ; 0          ; 1          ; 1            ;
+; state.S_BE       ; 0            ; 0                ; 0           ; 0             ; 0            ; 1          ; 0          ; 1            ;
+; state.S_READ     ; 0            ; 0                ; 0           ; 0             ; 1            ; 0          ; 0          ; 1            ;
+; state.S_WRITE    ; 0            ; 0                ; 0           ; 1             ; 0            ; 0          ; 0          ; 1            ;
+; state.S_ACK      ; 0            ; 0                ; 1           ; 0             ; 0            ; 0          ; 0          ; 1            ;
+; state.S_CK_STATE ; 0            ; 1                ; 0           ; 0             ; 0            ; 0          ; 0          ; 1            ;
+; state.S_WREN     ; 1            ; 0                ; 0           ; 0             ; 0            ; 0          ; 0          ; 1            ;
++------------------+--------------+------------------+-------------+---------------+--------------+------------+------------+--------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |top|uart_rx:uart_rx_inst|state                                                  ;
++------------------+--------------+--------------+------------------+---------------+--------------+
+; Name             ; state.S_DATA ; state.S_STOP ; state.S_REC_BYTE ; state.S_START ; state.S_IDLE ;
++------------------+--------------+--------------+------------------+---------------+--------------+
+; state.S_IDLE     ; 0            ; 0            ; 0                ; 0             ; 0            ;
+; state.S_START    ; 0            ; 0            ; 0                ; 1             ; 1            ;
+; state.S_REC_BYTE ; 0            ; 0            ; 1                ; 0             ; 1            ;
+; state.S_STOP     ; 0            ; 1            ; 0                ; 0             ; 1            ;
+; state.S_DATA     ; 1            ; 0            ; 0                ; 0             ; 1            ;
++------------------+--------------+--------------+------------------+---------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                               ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                   ; Reason for Removal                                                                                             ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[5]                                 ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|size[1..8]                             ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[5]                              ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|flash_sector_addr[0..23]                                                                               ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[3..8]                          ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_bwp|dffe11a[10] ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_brp|dffe11a[10] ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[6]                                 ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[7]    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[3]                                 ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[4]    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[6]                              ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[7] ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[3]                              ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[4] ;
+; flash_ctrl:flash_ctrl_m0|data_out_addr_r[0]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|flash_read_addr[0]                                                        ;
+; flash_ctrl:flash_ctrl_m0|data_out_addr_r[1]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|flash_read_addr[1]                                                        ;
+; vga_timing:vga_timing_m0|active_x[0]                                                                                            ; Lost fanout                                                                                                    ;
+; vga_timing:vga_timing_m0|active_y[0]                                                                                            ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|state~9                                                                                                ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|state~10                                                                                               ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|state~11                                                                                               ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|state~12                                                                                               ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state~4                                        ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state~5                                        ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state~6                                        ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state~4                                  ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state~5                                  ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state~6                                  ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|state~8                                  ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state~4                                ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state~5                                ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state~6                                ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state~7                                ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state~8                                ; Lost fanout                                                                                                    ;
+; uart_rx:uart_rx_inst|state~4                                                                                                    ; Lost fanout                                                                                                    ;
+; uart_rx:uart_rx_inst|state~5                                                                                                    ; Lost fanout                                                                                                    ;
+; uart_rx:uart_rx_inst|state~6                                                                                                    ; Lost fanout                                                                                                    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|state.ACK_WAIT                                 ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|wr_ack_d0   ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|state.S_BE                             ; Stuck at GND due to stuck port data_in                                                                         ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[7]                                 ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[4]    ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[7]                              ; Merged with flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[4] ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[2]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[2]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[3]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[3]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[4]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[4]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[5]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[5]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[6]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[6]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[7]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[7]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[8]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[8]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[9]                                                                                     ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[9]                                                        ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[10]                                                                                    ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[10]                                                       ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[11]                                                                                    ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[11]                                                       ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[12]                                                                                    ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[12]                                                       ;
+; flash_ctrl:flash_ctrl_m0|flash_read_addr[13]                                                                                    ; Merged with flash_ctrl:flash_ctrl_m0|data_out_addr_r[13]                                                       ;
+; Total Number of Removed Registers = 85                                                                                          ;                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                        ;
++-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+
+; Register name                                                                                   ; Reason for Removal        ; Registers Removed due to This Register                                                               ;
++-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[5] ; Stuck at GND              ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|cmd_code[5],  ;
+;                                                                                                 ; due to stuck port data_in ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[8], ;
+;                                                                                                 ;                           ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[7], ;
+;                                                                                                 ;                           ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[6], ;
+;                                                                                                 ;                           ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[5], ;
+;                                                                                                 ;                           ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[4], ;
+;                                                                                                 ;                           ; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_size[3]  ;
++-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 430   ;
+; Number of registers using Synchronous Clear  ; 46    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 372   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 218   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                       ; Fan out ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[0]                                         ; 7       ;
+; flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|cmd[1]                                         ; 6       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter6a0 ; 7       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|rdemp_eq_comp_lsb_aeb                  ; 3       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|rdemp_eq_comp_msb_aeb                  ; 3       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p|counter3a0 ; 9       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity7    ; 4       ;
+; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p|parity4    ; 4       ;
+; Total number of inverted registers = 8                                                                                                  ;         ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|clk_edge_cnt[4]    ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|byte_cnt[8]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|uart_rx:uart_rx_inst|bit_cnt[2]                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|MOSI_shift[5]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0|MISO_shift[5]      ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|addr[6]    ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|send_data[4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|lcd_b                                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0|next_state ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0|next_state   ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |top|flash_ctrl:flash_ctrl_m0|Selector2                                                                  ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |top|flash_ctrl:flash_ctrl_m0|Selector3                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component ;
++---------------------------------+-------+------+---------------------------------------------+
+; Assignment                      ; Value ; From ; To                                          ;
++---------------------------------+-------+------+---------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                           ;
++---------------------------------+-------+------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated ;
++---------------------------------------+-------+------+------------------------------------------------------------------+
+; Assignment                            ; Value ; From ; To                                                               ;
++---------------------------------------+-------+------+------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION       ; OFF   ; -    ; -                                                                ;
+; REMOVE_DUPLICATE_REGISTERS            ; OFF   ; -    ; -                                                                ;
+; SYNCHRONIZER_IDENTIFICATION           ; OFF   ; -    ; -                                                                ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 1     ; -    ; -                                                                ;
+; POWER_UP_LEVEL                        ; HIGH  ; -    ; rdemp_eq_comp_lsb_aeb                                            ;
+; POWER_UP_LEVEL                        ; HIGH  ; -    ; rdemp_eq_comp_msb_aeb                                            ;
+; POWER_UP_LEVEL                        ; LOW   ; -    ; wrptr_g                                                          ;
++---------------------------------------+-------+------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                  ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter3a0                                                                                                          ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity4                                                                                                             ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                  ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter6a0                                                                                                          ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity7                                                                                                             ;
++----------------+-------+------+---------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|altsyncram_av61:fifo_ram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                  ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                                                          ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                                           ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp|dffpipe_pe9:dffpipe10 ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                      ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                       ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_brp ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                        ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                         ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|dffpipe_pe9:ws_bwp ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                        ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                         ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                                                          ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                                           ;
++-----------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp|dffpipe_qe9:dffpipe12 ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                      ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                       ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: video_pll:video_pll_m0|altpll:altpll_component ;
++-------------------------------+-----------------------------+-------------------------------+
+; Parameter Name                ; Value                       ; Type                          ;
++-------------------------------+-----------------------------+-------------------------------+
+; OPERATION_MODE                ; NORMAL                      ; Untyped                       ;
+; PLL_TYPE                      ; AUTO                        ; Untyped                       ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=video_pll ; Untyped                       ;
+; QUALIFY_CONF_DONE             ; OFF                         ; Untyped                       ;
+; COMPENSATE_CLOCK              ; CLK0                        ; Untyped                       ;
+; SCAN_CHAIN                    ; LONG                        ; Untyped                       ;
+; PRIMARY_CLOCK                 ; INCLK0                      ; Untyped                       ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                       ; Signed Integer                ;
+; INCLK1_INPUT_FREQUENCY        ; 0                           ; Untyped                       ;
+; GATE_LOCK_SIGNAL              ; NO                          ; Untyped                       ;
+; GATE_LOCK_COUNTER             ; 0                           ; Untyped                       ;
+; LOCK_HIGH                     ; 1                           ; Untyped                       ;
+; LOCK_LOW                      ; 1                           ; Untyped                       ;
+; VALID_LOCK_MULTIPLIER         ; 1                           ; Untyped                       ;
+; INVALID_LOCK_MULTIPLIER       ; 5                           ; Untyped                       ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                         ; Untyped                       ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                         ; Untyped                       ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                         ; Untyped                       ;
+; SKIP_VCO                      ; OFF                         ; Untyped                       ;
+; SWITCH_OVER_COUNTER           ; 0                           ; Untyped                       ;
+; SWITCH_OVER_TYPE              ; AUTO                        ; Untyped                       ;
+; FEEDBACK_SOURCE               ; EXTCLK0                     ; Untyped                       ;
+; BANDWIDTH                     ; 0                           ; Untyped                       ;
+; BANDWIDTH_TYPE                ; AUTO                        ; Untyped                       ;
+; SPREAD_FREQUENCY              ; 0                           ; Untyped                       ;
+; DOWN_SPREAD                   ; 0                           ; Untyped                       ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                         ; Untyped                       ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                         ; Untyped                       ;
+; CLK9_MULTIPLY_BY              ; 0                           ; Untyped                       ;
+; CLK8_MULTIPLY_BY              ; 0                           ; Untyped                       ;
+; CLK7_MULTIPLY_BY              ; 0                           ; Untyped                       ;
+; CLK6_MULTIPLY_BY              ; 0                           ; Untyped                       ;
+; CLK5_MULTIPLY_BY              ; 1                           ; Untyped                       ;
+; CLK4_MULTIPLY_BY              ; 1                           ; Untyped                       ;
+; CLK3_MULTIPLY_BY              ; 1                           ; Untyped                       ;
+; CLK2_MULTIPLY_BY              ; 1                           ; Untyped                       ;
+; CLK1_MULTIPLY_BY              ; 1                           ; Untyped                       ;
+; CLK0_MULTIPLY_BY              ; 9                           ; Signed Integer                ;
+; CLK9_DIVIDE_BY                ; 0                           ; Untyped                       ;
+; CLK8_DIVIDE_BY                ; 0                           ; Untyped                       ;
+; CLK7_DIVIDE_BY                ; 0                           ; Untyped                       ;
+; CLK6_DIVIDE_BY                ; 0                           ; Untyped                       ;
+; CLK5_DIVIDE_BY                ; 1                           ; Untyped                       ;
+; CLK4_DIVIDE_BY                ; 1                           ; Untyped                       ;
+; CLK3_DIVIDE_BY                ; 1                           ; Untyped                       ;
+; CLK2_DIVIDE_BY                ; 1                           ; Untyped                       ;
+; CLK1_DIVIDE_BY                ; 1                           ; Untyped                       ;
+; CLK0_DIVIDE_BY                ; 50                          ; Signed Integer                ;
+; CLK9_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK8_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK7_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK6_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK5_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK4_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK3_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK2_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK1_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK0_PHASE_SHIFT              ; 0                           ; Untyped                       ;
+; CLK5_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK4_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK3_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK2_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK1_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK0_TIME_DELAY               ; 0                           ; Untyped                       ;
+; CLK9_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK8_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK7_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK6_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK5_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK4_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK3_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK2_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK1_DUTY_CYCLE               ; 50                          ; Untyped                       ;
+; CLK0_DUTY_CYCLE               ; 50                          ; Signed Integer                ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                         ; Untyped                       ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                         ; Untyped                       ;
+; LOCK_WINDOW_UI                ;  0.05                       ; Untyped                       ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                      ; Untyped                       ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                      ; Untyped                       ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                      ; Untyped                       ;
+; DPA_MULTIPLY_BY               ; 0                           ; Untyped                       ;
+; DPA_DIVIDE_BY                 ; 1                           ; Untyped                       ;
+; DPA_DIVIDER                   ; 0                           ; Untyped                       ;
+; EXTCLK3_MULTIPLY_BY           ; 1                           ; Untyped                       ;
+; EXTCLK2_MULTIPLY_BY           ; 1                           ; Untyped                       ;
+; EXTCLK1_MULTIPLY_BY           ; 1                           ; Untyped                       ;
+; EXTCLK0_MULTIPLY_BY           ; 1                           ; Untyped                       ;
+; EXTCLK3_DIVIDE_BY             ; 1                           ; Untyped                       ;
+; EXTCLK2_DIVIDE_BY             ; 1                           ; Untyped                       ;
+; EXTCLK1_DIVIDE_BY             ; 1                           ; Untyped                       ;
+; EXTCLK0_DIVIDE_BY             ; 1                           ; Untyped                       ;
+; EXTCLK3_PHASE_SHIFT           ; 0                           ; Untyped                       ;
+; EXTCLK2_PHASE_SHIFT           ; 0                           ; Untyped                       ;
+; EXTCLK1_PHASE_SHIFT           ; 0                           ; Untyped                       ;
+; EXTCLK0_PHASE_SHIFT           ; 0                           ; Untyped                       ;
+; EXTCLK3_TIME_DELAY            ; 0                           ; Untyped                       ;
+; EXTCLK2_TIME_DELAY            ; 0                           ; Untyped                       ;
+; EXTCLK1_TIME_DELAY            ; 0                           ; Untyped                       ;
+; EXTCLK0_TIME_DELAY            ; 0                           ; Untyped                       ;
+; EXTCLK3_DUTY_CYCLE            ; 50                          ; Untyped                       ;
+; EXTCLK2_DUTY_CYCLE            ; 50                          ; Untyped                       ;
+; EXTCLK1_DUTY_CYCLE            ; 50                          ; Untyped                       ;
+; EXTCLK0_DUTY_CYCLE            ; 50                          ; Untyped                       ;
+; VCO_MULTIPLY_BY               ; 0                           ; Untyped                       ;
+; VCO_DIVIDE_BY                 ; 0                           ; Untyped                       ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                           ; Untyped                       ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                           ; Untyped                       ;
+; VCO_MIN                       ; 0                           ; Untyped                       ;
+; VCO_MAX                       ; 0                           ; Untyped                       ;
+; VCO_CENTER                    ; 0                           ; Untyped                       ;
+; PFD_MIN                       ; 0                           ; Untyped                       ;
+; PFD_MAX                       ; 0                           ; Untyped                       ;
+; M_INITIAL                     ; 0                           ; Untyped                       ;
+; M                             ; 0                           ; Untyped                       ;
+; N                             ; 1                           ; Untyped                       ;
+; M2                            ; 1                           ; Untyped                       ;
+; N2                            ; 1                           ; Untyped                       ;
+; SS                            ; 1                           ; Untyped                       ;
+; C0_HIGH                       ; 0                           ; Untyped                       ;
+; C1_HIGH                       ; 0                           ; Untyped                       ;
+; C2_HIGH                       ; 0                           ; Untyped                       ;
+; C3_HIGH                       ; 0                           ; Untyped                       ;
+; C4_HIGH                       ; 0                           ; Untyped                       ;
+; C5_HIGH                       ; 0                           ; Untyped                       ;
+; C6_HIGH                       ; 0                           ; Untyped                       ;
+; C7_HIGH                       ; 0                           ; Untyped                       ;
+; C8_HIGH                       ; 0                           ; Untyped                       ;
+; C9_HIGH                       ; 0                           ; Untyped                       ;
+; C0_LOW                        ; 0                           ; Untyped                       ;
+; C1_LOW                        ; 0                           ; Untyped                       ;
+; C2_LOW                        ; 0                           ; Untyped                       ;
+; C3_LOW                        ; 0                           ; Untyped                       ;
+; C4_LOW                        ; 0                           ; Untyped                       ;
+; C5_LOW                        ; 0                           ; Untyped                       ;
+; C6_LOW                        ; 0                           ; Untyped                       ;
+; C7_LOW                        ; 0                           ; Untyped                       ;
+; C8_LOW                        ; 0                           ; Untyped                       ;
+; C9_LOW                        ; 0                           ; Untyped                       ;
+; C0_INITIAL                    ; 0                           ; Untyped                       ;
+; C1_INITIAL                    ; 0                           ; Untyped                       ;
+; C2_INITIAL                    ; 0                           ; Untyped                       ;
+; C3_INITIAL                    ; 0                           ; Untyped                       ;
+; C4_INITIAL                    ; 0                           ; Untyped                       ;
+; C5_INITIAL                    ; 0                           ; Untyped                       ;
+; C6_INITIAL                    ; 0                           ; Untyped                       ;
+; C7_INITIAL                    ; 0                           ; Untyped                       ;
+; C8_INITIAL                    ; 0                           ; Untyped                       ;
+; C9_INITIAL                    ; 0                           ; Untyped                       ;
+; C0_MODE                       ; BYPASS                      ; Untyped                       ;
+; C1_MODE                       ; BYPASS                      ; Untyped                       ;
+; C2_MODE                       ; BYPASS                      ; Untyped                       ;
+; C3_MODE                       ; BYPASS                      ; Untyped                       ;
+; C4_MODE                       ; BYPASS                      ; Untyped                       ;
+; C5_MODE                       ; BYPASS                      ; Untyped                       ;
+; C6_MODE                       ; BYPASS                      ; Untyped                       ;
+; C7_MODE                       ; BYPASS                      ; Untyped                       ;
+; C8_MODE                       ; BYPASS                      ; Untyped                       ;
+; C9_MODE                       ; BYPASS                      ; Untyped                       ;
+; C0_PH                         ; 0                           ; Untyped                       ;
+; C1_PH                         ; 0                           ; Untyped                       ;
+; C2_PH                         ; 0                           ; Untyped                       ;
+; C3_PH                         ; 0                           ; Untyped                       ;
+; C4_PH                         ; 0                           ; Untyped                       ;
+; C5_PH                         ; 0                           ; Untyped                       ;
+; C6_PH                         ; 0                           ; Untyped                       ;
+; C7_PH                         ; 0                           ; Untyped                       ;
+; C8_PH                         ; 0                           ; Untyped                       ;
+; C9_PH                         ; 0                           ; Untyped                       ;
+; L0_HIGH                       ; 1                           ; Untyped                       ;
+; L1_HIGH                       ; 1                           ; Untyped                       ;
+; G0_HIGH                       ; 1                           ; Untyped                       ;
+; G1_HIGH                       ; 1                           ; Untyped                       ;
+; G2_HIGH                       ; 1                           ; Untyped                       ;
+; G3_HIGH                       ; 1                           ; Untyped                       ;
+; E0_HIGH                       ; 1                           ; Untyped                       ;
+; E1_HIGH                       ; 1                           ; Untyped                       ;
+; E2_HIGH                       ; 1                           ; Untyped                       ;
+; E3_HIGH                       ; 1                           ; Untyped                       ;
+; L0_LOW                        ; 1                           ; Untyped                       ;
+; L1_LOW                        ; 1                           ; Untyped                       ;
+; G0_LOW                        ; 1                           ; Untyped                       ;
+; G1_LOW                        ; 1                           ; Untyped                       ;
+; G2_LOW                        ; 1                           ; Untyped                       ;
+; G3_LOW                        ; 1                           ; Untyped                       ;
+; E0_LOW                        ; 1                           ; Untyped                       ;
+; E1_LOW                        ; 1                           ; Untyped                       ;
+; E2_LOW                        ; 1                           ; Untyped                       ;
+; E3_LOW                        ; 1                           ; Untyped                       ;
+; L0_INITIAL                    ; 1                           ; Untyped                       ;
+; L1_INITIAL                    ; 1                           ; Untyped                       ;
+; G0_INITIAL                    ; 1                           ; Untyped                       ;
+; G1_INITIAL                    ; 1                           ; Untyped                       ;
+; G2_INITIAL                    ; 1                           ; Untyped                       ;
+; G3_INITIAL                    ; 1                           ; Untyped                       ;
+; E0_INITIAL                    ; 1                           ; Untyped                       ;
+; E1_INITIAL                    ; 1                           ; Untyped                       ;
+; E2_INITIAL                    ; 1                           ; Untyped                       ;
+; E3_INITIAL                    ; 1                           ; Untyped                       ;
+; L0_MODE                       ; BYPASS                      ; Untyped                       ;
+; L1_MODE                       ; BYPASS                      ; Untyped                       ;
+; G0_MODE                       ; BYPASS                      ; Untyped                       ;
+; G1_MODE                       ; BYPASS                      ; Untyped                       ;
+; G2_MODE                       ; BYPASS                      ; Untyped                       ;
+; G3_MODE                       ; BYPASS                      ; Untyped                       ;
+; E0_MODE                       ; BYPASS                      ; Untyped                       ;
+; E1_MODE                       ; BYPASS                      ; Untyped                       ;
+; E2_MODE                       ; BYPASS                      ; Untyped                       ;
+; E3_MODE                       ; BYPASS                      ; Untyped                       ;
+; L0_PH                         ; 0                           ; Untyped                       ;
+; L1_PH                         ; 0                           ; Untyped                       ;
+; G0_PH                         ; 0                           ; Untyped                       ;
+; G1_PH                         ; 0                           ; Untyped                       ;
+; G2_PH                         ; 0                           ; Untyped                       ;
+; G3_PH                         ; 0                           ; Untyped                       ;
+; E0_PH                         ; 0                           ; Untyped                       ;
+; E1_PH                         ; 0                           ; Untyped                       ;
+; E2_PH                         ; 0                           ; Untyped                       ;
+; E3_PH                         ; 0                           ; Untyped                       ;
+; M_PH                          ; 0                           ; Untyped                       ;
+; C1_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C2_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C3_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C4_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C5_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C6_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C7_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C8_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; C9_USE_CASC_IN                ; OFF                         ; Untyped                       ;
+; CLK0_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK1_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK2_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK3_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK4_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK5_COUNTER                  ; G0                          ; Untyped                       ;
+; CLK6_COUNTER                  ; E0                          ; Untyped                       ;
+; CLK7_COUNTER                  ; E1                          ; Untyped                       ;
+; CLK8_COUNTER                  ; E2                          ; Untyped                       ;
+; CLK9_COUNTER                  ; E3                          ; Untyped                       ;
+; L0_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; L1_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; G0_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; G1_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; G2_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; G3_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; E0_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; E1_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; E2_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; E3_TIME_DELAY                 ; 0                           ; Untyped                       ;
+; M_TIME_DELAY                  ; 0                           ; Untyped                       ;
+; N_TIME_DELAY                  ; 0                           ; Untyped                       ;
+; EXTCLK3_COUNTER               ; E3                          ; Untyped                       ;
+; EXTCLK2_COUNTER               ; E2                          ; Untyped                       ;
+; EXTCLK1_COUNTER               ; E1                          ; Untyped                       ;
+; EXTCLK0_COUNTER               ; E0                          ; Untyped                       ;
+; ENABLE0_COUNTER               ; L0                          ; Untyped                       ;
+; ENABLE1_COUNTER               ; L0                          ; Untyped                       ;
+; CHARGE_PUMP_CURRENT           ; 2                           ; Untyped                       ;
+; LOOP_FILTER_R                 ;  1.000000                   ; Untyped                       ;
+; LOOP_FILTER_C                 ; 5                           ; Untyped                       ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                        ; Untyped                       ;
+; LOOP_FILTER_R_BITS            ; 9999                        ; Untyped                       ;
+; LOOP_FILTER_C_BITS            ; 9999                        ; Untyped                       ;
+; VCO_POST_SCALE                ; 0                           ; Untyped                       ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                           ; Untyped                       ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                           ; Untyped                       ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                           ; Untyped                       ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E                ; Untyped                       ;
+; PORT_CLKENA0                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKENA1                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKENA2                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKENA3                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKENA4                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKENA5                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_EXTCLK0                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_EXTCLK1                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_EXTCLK2                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_EXTCLK3                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKBAD0                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKBAD1                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK0                     ; PORT_USED                   ; Untyped                       ;
+; PORT_CLK1                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK2                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK3                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK4                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK5                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK6                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK7                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK8                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLK9                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANDATA                 ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANDONE                 ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKLOSS                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_INCLK1                   ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_INCLK0                   ; PORT_USED                   ; Untyped                       ;
+; PORT_FBIN                     ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_PLLENA                   ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CLKSWITCH                ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_ARESET                   ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_PFDENA                   ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANCLK                  ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANACLR                 ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANREAD                 ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANWRITE                ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_LOCKED                   ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_PHASEDONE                ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_PHASESTEP                ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_SCANCLKENA               ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED                 ; Untyped                       ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY           ; Untyped                       ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY           ; Untyped                       ;
+; M_TEST_SOURCE                 ; 5                           ; Untyped                       ;
+; C0_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C1_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C2_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C3_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C4_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C5_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C6_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C7_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C8_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; C9_TEST_SOURCE                ; 5                           ; Untyped                       ;
+; CBXI_PARAMETER                ; video_pll_altpll            ; Untyped                       ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                        ; Untyped                       ;
+; VCO_PHASE_SHIFT_STEP          ; 0                           ; Untyped                       ;
+; WIDTH_CLOCK                   ; 5                           ; Signed Integer                ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                           ; Untyped                       ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                         ; Untyped                       ;
+; DEVICE_FAMILY                 ; Cyclone IV E                ; Untyped                       ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                      ; Untyped                       ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                         ; Untyped                       ;
+; AUTO_CARRY_CHAINS             ; ON                          ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS          ; OFF                         ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS           ; ON                          ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                         ; IGNORE_CASCADE                ;
++-------------------------------+-----------------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:uart_rx_inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                           ;
+; BAUD_RATE      ; 9600  ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component ;
++-------------------------+--------------+---------------------------------------------------------------------------+
+; Parameter Name          ; Value        ; Type                                                                      ;
++-------------------------+--------------+---------------------------------------------------------------------------+
+; WIDTH_BYTEENA           ; 1            ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH               ; 8            ; Signed Integer                                                            ;
+; LPM_NUMWORDS            ; 1024         ; Signed Integer                                                            ;
+; LPM_WIDTHU              ; 10           ; Signed Integer                                                            ;
+; LPM_SHOWAHEAD           ; OFF          ; Untyped                                                                   ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                                                   ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                                                   ;
+; USE_EAB                 ; ON           ; Untyped                                                                   ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                                                   ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                                                   ;
+; DELAY_RDUSEDW           ; 1            ; Untyped                                                                   ;
+; DELAY_WRUSEDW           ; 1            ; Untyped                                                                   ;
+; RDSYNC_DELAYPIPE        ; 3            ; Signed Integer                                                            ;
+; WRSYNC_DELAYPIPE        ; 3            ; Signed Integer                                                            ;
+; CLOCKS_ARE_SYNCHRONIZED ; FALSE        ; Untyped                                                                   ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                                                   ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                                                   ;
+; ADD_USEDW_MSB_BIT       ; OFF          ; Untyped                                                                   ;
+; WRITE_ACLR_SYNCH        ; OFF          ; Untyped                                                                   ;
+; READ_ACLR_SYNCH         ; OFF          ; Untyped                                                                   ;
+; CBXI_PARAMETER          ; dcfifo_7jj1  ; Untyped                                                                   ;
++-------------------------+--------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------------+
+; S_IDLE         ; 0     ; Signed Integer                                                                                             ;
+; S_CS_LOW       ; 1     ; Signed Integer                                                                                             ;
+; S_CS_HIGH      ; 2     ; Signed Integer                                                                                             ;
+; S_KEEP_CS_LOW  ; 3     ; Signed Integer                                                                                             ;
+; S_READ_BYTES   ; 4     ; Signed Integer                                                                                             ;
+; S_WRITE_BYTES  ; 5     ; Signed Integer                                                                                             ;
+; S_CMD_LATCH    ; 6     ; Signed Integer                                                                                             ;
+; S_WR_CMD_CODE  ; 7     ; Signed Integer                                                                                             ;
+; S_CMD_ACK      ; 8     ; Signed Integer                                                                                             ;
++----------------+-------+------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_timing:vga_timing_m0 ;
++----------------+------------------+-----------------------------------+
+; Parameter Name ; Value            ; Type                              ;
++----------------+------------------+-----------------------------------+
+; H_ACTIVE       ; 0000000111100000 ; Unsigned Binary                   ;
+; H_FP           ; 0000000000000010 ; Unsigned Binary                   ;
+; H_SYNC         ; 0000000000101001 ; Unsigned Binary                   ;
+; H_BP           ; 0000000000000010 ; Unsigned Binary                   ;
+; V_ACTIVE       ; 0000000100010000 ; Unsigned Binary                   ;
+; V_FP           ; 0000000000000010 ; Unsigned Binary                   ;
+; V_SYNC         ; 0000000000001010 ; Unsigned Binary                   ;
+; V_BP           ; 0000000000000010 ; Unsigned Binary                   ;
+; HS_POL         ; 0                ; Unsigned Binary                   ;
+; VS_POL         ; 0                ; Unsigned Binary                   ;
+; H_TOTAL        ; 0000001000001101 ; Unsigned Binary                   ;
+; V_TOTAL        ; 0000000100011110 ; Unsigned Binary                   ;
++----------------+------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_ram:vga_ram_m0|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------+
+; Parameter Name                     ; Value                ; Type                                ;
++------------------------------------+----------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                             ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                             ;
+; WIDTH_A                            ; 8                    ; Signed Integer                      ;
+; WIDTHAD_A                          ; 14                   ; Signed Integer                      ;
+; NUMWORDS_A                         ; 16384                ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WIDTH_B                            ; 8                    ; Signed Integer                      ;
+; WIDTHAD_B                          ; 14                   ; Signed Integer                      ;
+; NUMWORDS_B                         ; 16384                ; Signed Integer                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; INIT_FILE                          ; UNUSED               ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_efk1      ; Untyped                             ;
++------------------------------------+----------------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                                   ;
++-------------------------------+------------------------------------------------+
+; Name                          ; Value                                          ;
++-------------------------------+------------------------------------------------+
+; Number of entity instances    ; 1                                              ;
+; Entity Instance               ; video_pll:video_pll_m0|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                         ;
+;     -- PLL_TYPE               ; AUTO                                           ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                         ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                          ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                              ;
+;     -- VCO_MULTIPLY_BY        ; 0                                              ;
+;     -- VCO_DIVIDE_BY          ; 0                                              ;
++-------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; dcfifo Parameter Settings by Entity Instance                                                       ;
++----------------------------+-----------------------------------------------------------------------+
+; Name                       ; Value                                                                 ;
++----------------------------+-----------------------------------------------------------------------+
+; Number of entity instances ; 1                                                                     ;
+; Entity Instance            ; flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component ;
+;     -- FIFO Type           ; Dual Clock                                                            ;
+;     -- LPM_WIDTH           ; 8                                                                     ;
+;     -- LPM_NUMWORDS        ; 1024                                                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                                                   ;
+;     -- USE_EAB             ; ON                                                                    ;
++----------------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                               ;
++-------------------------------------------+----------------------------------------------------+
+; Name                                      ; Value                                              ;
++-------------------------------------------+----------------------------------------------------+
+; Number of entity instances                ; 1                                                  ;
+; Entity Instance                           ; vga_ram:vga_ram_m0|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
+;     -- WIDTH_A                            ; 8                                                  ;
+;     -- NUMWORDS_A                         ; 16384                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
+;     -- WIDTH_B                            ; 8                                                  ;
+;     -- NUMWORDS_B                         ; 16384                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                          ;
++-------------------------------------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0" ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------+
+; CPOL ; Input ; Info     ; Stuck at VCC                                                                       ;
+; CPHA ; Input ; Info     ; Stuck at VCC                                                                       ;
++------+-------+----------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0"                                              ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_div                ; Input  ; Info     ; Stuck at GND                                                                        ;
+; flash_bulk_erase       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; flash_bulk_erase_ack   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flash_read_size[8..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; flash_read_size[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; flash_write_size[8..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; flash_write_size[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_rx:uart_rx_inst"                                                                                                                 ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                      ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; rx_data       ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "rx_data[15..8]" have no fanouts ;
+; rx_data_ready ; Input  ; Info     ; Stuck at VCC                                                                                                                 ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 430                         ;
+;     CLR               ; 160                         ;
+;     CLR SCLR          ; 32                          ;
+;     ENA               ; 38                          ;
+;     ENA CLR           ; 166                         ;
+;     ENA CLR SCLR      ; 14                          ;
+;     plain             ; 20                          ;
+; cycloneiii_lcell_comb ; 549                         ;
+;     arith             ; 155                         ;
+;         2 data inputs ; 138                         ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 394                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 246                         ;
+; cycloneiii_pll        ; 1                           ;
+; cycloneiii_ram_block  ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.66                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Mar 11 21:29:04 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 6 processors
+Info (12021): Found 1 design units, including 1 entities, in source file src/flash_ctrl.v
+    Info (12023): Found entity 1: flash_ctrl File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: C:/Users/HUIP/Desktop/project/src/uart_rx.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_master.v
+    Info (12023): Found entity 1: spi_master File: C:/Users/HUIP/Desktop/project/src/spi_master.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_flash_top.v
+    Info (12023): Found entity 1: spi_flash_top File: C:/Users/HUIP/Desktop/project/src/spi_flash_top.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_flash_test.v
+    Info (12023): Found entity 1: spi_flash_test File: C:/Users/HUIP/Desktop/project/src/spi_flash_test.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file src/spi_flash_defines.v
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_flash_ctrl.v
+    Info (12023): Found entity 1: spi_flash_ctrl File: C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_flash_cmd.v
+    Info (12023): Found entity 1: spi_flash_cmd File: C:/Users/HUIP/Desktop/project/src/spi_flash_cmd.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file src/vga_timing.v
+    Info (12023): Found entity 1: vga_timing File: C:/Users/HUIP/Desktop/project/src/vga_timing.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: C:/Users/HUIP/Desktop/project/src/top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ip/video_pll.v
+    Info (12023): Found entity 1: video_pll File: C:/Users/HUIP/Desktop/project/ip/video_pll.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ip/vga_ram.v
+    Info (12023): Found entity 1: vga_ram File: C:/Users/HUIP/Desktop/project/ip/vga_ram.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ip/fifo1024.v
+    Info (12023): Found entity 1: fifo1024 File: C:/Users/HUIP/Desktop/project/ip/fifo1024.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at top.v(79): created implicit net for "flash_data_en" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 79
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top.v(99): truncated value with size 32 to match size of target (14) File: C:/Users/HUIP/Desktop/project/src/top.v Line: 99
+Info (12128): Elaborating entity "video_pll" for hierarchy "video_pll:video_pll_m0" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 55
+Info (12128): Elaborating entity "altpll" for hierarchy "video_pll:video_pll_m0|altpll:altpll_component" File: C:/Users/HUIP/Desktop/project/ip/video_pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "video_pll:video_pll_m0|altpll:altpll_component" File: C:/Users/HUIP/Desktop/project/ip/video_pll.v Line: 91
+Info (12133): Instantiated megafunction "video_pll:video_pll_m0|altpll:altpll_component" with the following parameter: File: C:/Users/HUIP/Desktop/project/ip/video_pll.v Line: 91
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "50"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "9"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=video_pll"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/video_pll_altpll.v
+    Info (12023): Found entity 1: video_pll_altpll File: C:/Users/HUIP/Desktop/project/db/video_pll_altpll.v Line: 30
+Info (12128): Elaborating entity "video_pll_altpll" for hierarchy "video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx_inst" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 69
+Warning (10036): Verilog HDL or VHDL warning at uart_rx.v(102): object "rx_state" assigned a value but never read File: C:/Users/HUIP/Desktop/project/src/uart_rx.v Line: 102
+Info (12128): Elaborating entity "flash_ctrl" for hierarchy "flash_ctrl:flash_ctrl_m0" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 86
+Warning (10036): Verilog HDL or VHDL warning at flash_ctrl.v(45): object "timer" assigned a value but never read File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 45
+Warning (10230): Verilog HDL assignment warning at flash_ctrl.v(106): truncated value with size 32 to match size of target (24) File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 106
+Warning (10230): Verilog HDL assignment warning at flash_ctrl.v(126): truncated value with size 32 to match size of target (14) File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 126
+Warning (10230): Verilog HDL assignment warning at flash_ctrl.v(127): truncated value with size 32 to match size of target (24) File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 127
+Warning (10240): Verilog HDL Always Construct warning at flash_ctrl.v(54): inferring latch(es) for variable "flash_bulk_erase", which holds its previous value in one or more paths through the always construct File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 54
+Info (10041): Inferred latch for "flash_bulk_erase" at flash_ctrl.v(54) File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 54
+Info (12128): Elaborating entity "fifo1024" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0" File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 157
+Info (12128): Elaborating entity "dcfifo" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component" File: C:/Users/HUIP/Desktop/project/ip/fifo1024.v Line: 85
+Info (12130): Elaborated megafunction instantiation "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component" File: C:/Users/HUIP/Desktop/project/ip/fifo1024.v Line: 85
+Info (12133): Instantiated megafunction "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component" with the following parameter: File: C:/Users/HUIP/Desktop/project/ip/fifo1024.v Line: 85
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "3"
+    Info (12134): Parameter "read_aclr_synch" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "write_aclr_synch" = "OFF"
+    Info (12134): Parameter "wrsync_delaypipe" = "3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_7jj1.tdf
+    Info (12023): Found entity 1: dcfifo_7jj1 File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 45
+Info (12128): Elaborating entity "dcfifo_7jj1" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_7ib.tdf
+    Info (12023): Found entity 1: a_gray2bin_7ib File: C:/Users/HUIP/Desktop/project/db/a_gray2bin_7ib.tdf Line: 23
+Info (12128): Elaborating entity "a_gray2bin_7ib" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_677.tdf
+    Info (12023): Found entity 1: a_graycounter_677 File: C:/Users/HUIP/Desktop/project/db/a_graycounter_677.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_677" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_677:rdptr_g1p" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_2lc.tdf
+    Info (12023): Found entity 1: a_graycounter_2lc File: C:/Users/HUIP/Desktop/project/db/a_graycounter_2lc.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_2lc" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|a_graycounter_2lc:wrptr_g1p" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_av61.tdf
+    Info (12023): Found entity 1: altsyncram_av61 File: C:/Users/HUIP/Desktop/project/db/altsyncram_av61.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_av61" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|altsyncram_av61:fifo_ram" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 61
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_e98.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_e98 File: C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_e98.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_e98" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_pe9.tdf
+    Info (12023): Found entity 1: dffpipe_pe9 File: C:/Users/HUIP/Desktop/project/db/dffpipe_pe9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_pe9" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_e98:rs_dgwp|dffpipe_pe9:dffpipe10" File: C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_e98.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_vd8.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_vd8 File: C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_vd8.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_vd8" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 81
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_qe9.tdf
+    Info (12023): Found entity 1: dffpipe_qe9 File: C:/Users/HUIP/Desktop/project/db/dffpipe_qe9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_qe9" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|alt_synch_pipe_vd8:ws_dgrp|dffpipe_qe9:dffpipe12" File: C:/Users/HUIP/Desktop/project/db/alt_synch_pipe_vd8.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c66.tdf
+    Info (12023): Found entity 1: cmpr_c66 File: C:/Users/HUIP/Desktop/project/db/cmpr_c66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_c66" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|cmpr_c66:rdempty_eq_comp1_lsb" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 85
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_b66.tdf
+    Info (12023): Found entity 1: cmpr_b66 File: C:/Users/HUIP/Desktop/project/db/cmpr_b66.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_b66" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|cmpr_b66:rdempty_eq_comp1_msb" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 86
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_j28.tdf
+    Info (12023): Found entity 1: mux_j28 File: C:/Users/HUIP/Desktop/project/db/mux_j28.tdf Line: 23
+Info (12128): Elaborating entity "mux_j28" for hierarchy "flash_ctrl:flash_ctrl_m0|fifo1024:fifo1024_m0|dcfifo:dcfifo_component|dcfifo_7jj1:auto_generated|mux_j28:rdemp_eq_comp_lsb_mux" File: C:/Users/HUIP/Desktop/project/db/dcfifo_7jj1.tdf Line: 93
+Info (12128): Elaborating entity "spi_flash_top" for hierarchy "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0" File: C:/Users/HUIP/Desktop/project/src/flash_ctrl.v Line: 184
+Info (12128): Elaborating entity "spi_flash_ctrl" for hierarchy "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_ctrl:spi_flash_ctrl_m0" File: C:/Users/HUIP/Desktop/project/src/spi_flash_top.v Line: 67
+Info (10264): Verilog HDL Case Statement information at spi_flash_ctrl.v(121): all case item expressions in this case statement are onehot File: C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v Line: 121
+Info (10264): Verilog HDL Case Statement information at spi_flash_ctrl.v(144): all case item expressions in this case statement are onehot File: C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v Line: 144
+Info (10264): Verilog HDL Case Statement information at spi_flash_ctrl.v(203): all case item expressions in this case statement are onehot File: C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v Line: 203
+Info (12128): Elaborating entity "spi_flash_cmd" for hierarchy "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_flash_cmd:spi_flash_cmd_m0" File: C:/Users/HUIP/Desktop/project/src/spi_flash_top.v Line: 93
+Info (12128): Elaborating entity "spi_master" for hierarchy "flash_ctrl:flash_ctrl_m0|spi_flash_top:spi_flash_top_m0|spi_master:spi_master_m0" File: C:/Users/HUIP/Desktop/project/src/spi_flash_top.v Line: 110
+Info (12128): Elaborating entity "vga_timing" for hierarchy "vga_timing:vga_timing_m0" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 97
+Info (12128): Elaborating entity "vga_ram" for hierarchy "vga_ram:vga_ram_m0" File: C:/Users/HUIP/Desktop/project/src/top.v Line: 110
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_ram:vga_ram_m0|altsyncram:altsyncram_component" File: C:/Users/HUIP/Desktop/project/ip/vga_ram.v Line: 91
+Info (12130): Elaborated megafunction instantiation "vga_ram:vga_ram_m0|altsyncram:altsyncram_component" File: C:/Users/HUIP/Desktop/project/ip/vga_ram.v Line: 91
+Info (12133): Instantiated megafunction "vga_ram:vga_ram_m0|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/HUIP/Desktop/project/ip/vga_ram.v Line: 91
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16384"
+    Info (12134): Parameter "numwords_b" = "16384"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "14"
+    Info (12134): Parameter "widthad_b" = "14"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_efk1.tdf
+    Info (12023): Found entity 1: altsyncram_efk1 File: C:/Users/HUIP/Desktop/project/db/altsyncram_efk1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_efk1" for hierarchy "vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_jsa.tdf
+    Info (12023): Found entity 1: decode_jsa File: C:/Users/HUIP/Desktop/project/db/decode_jsa.tdf Line: 23
+Info (12128): Elaborating entity "decode_jsa" for hierarchy "vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated|decode_jsa:decode2" File: C:/Users/HUIP/Desktop/project/db/altsyncram_efk1.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8a.tdf
+    Info (12023): Found entity 1: decode_c8a File: C:/Users/HUIP/Desktop/project/db/decode_c8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_c8a" for hierarchy "vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated|decode_c8a:rden_decode_b" File: C:/Users/HUIP/Desktop/project/db/altsyncram_efk1.tdf Line: 47
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_3nb.tdf
+    Info (12023): Found entity 1: mux_3nb File: C:/Users/HUIP/Desktop/project/db/mux_3nb.tdf Line: 23
+Info (12128): Elaborating entity "mux_3nb" for hierarchy "vga_ram:vga_ram_m0|altsyncram:altsyncram_component|altsyncram_efk1:auto_generated|mux_3nb:mux3" File: C:/Users/HUIP/Desktop/project/db/altsyncram_efk1.tdf Line: 49
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/HUIP/Desktop/project/src/spi_flash_ctrl.v Line: 121
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lcd_r[4]" is stuck at GND File: C:/Users/HUIP/Desktop/project/src/top.v Line: 16
+    Warning (13410): Pin "lcd_g[4]" is stuck at GND File: C:/Users/HUIP/Desktop/project/src/top.v Line: 17
+    Warning (13410): Pin "lcd_b[4]" is stuck at GND File: C:/Users/HUIP/Desktop/project/src/top.v Line: 19
+    Warning (13410): Pin "lcd_b[5]" is stuck at GND File: C:/Users/HUIP/Desktop/project/src/top.v Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 23 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/HUIP/Desktop/project/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 737 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 31 output pins
+    Info (21061): Implemented 677 logic cells
+    Info (21064): Implemented 24 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Fri Mar 11 21:29:13 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/HUIP/Desktop/project/output_files/top.map.smsg.
+
+

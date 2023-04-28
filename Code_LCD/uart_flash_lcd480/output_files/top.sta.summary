@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 11.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 105.098
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.657
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.278
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 12.058
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 105.589
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.668
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.274
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 16.133
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 108.382
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.370
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.290
+TNS   : 0.000
+
+------------------------------------------------------------
