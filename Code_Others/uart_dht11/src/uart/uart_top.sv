@@ -39,7 +39,7 @@ always@(posedge clk)
 			else if(!send_busy)begin
 				send_en 	<= 'b1;
 				case(send_cnt)
-					'd13:	send_data 	<= char_data[ (DATA_NUM - 1 - send_cnt) * 8 +: 8] + dht11_data[23:19];
+					'd13:	send_data 	<= char_data[ (DATA_NUM - 1 - send_cnt) * 8 +: 8] + dht11_data[23:20];
 					'd14:	send_data 	<= char_data[ (DATA_NUM - 1 - send_cnt) * 8 +: 8] + dht11_data[19:16];
 					'd15:	send_data 	<= char_data[ (DATA_NUM - 1 - send_cnt) * 8 +: 8] + dht11_data[15:12];
 					'd16:	send_data 	<= char_data[ (DATA_NUM - 1 - send_cnt) * 8 +: 8] + dht11_data[11: 8];
