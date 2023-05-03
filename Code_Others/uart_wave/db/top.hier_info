@@ -1,0 +1,57 @@
+|uart_top
+clk => clk.IN1
+uart_tx <= uart_tx:uart_tx_m0.tx_pin
+
+
+|uart_top|uart_tx:uart_tx_m0
+clk => clk_cnt[0].CLK
+clk => clk_cnt[1].CLK
+clk => clk_cnt[2].CLK
+clk => clk_cnt[3].CLK
+clk => clk_cnt[4].CLK
+clk => clk_cnt[5].CLK
+clk => clk_cnt[6].CLK
+clk => clk_cnt[7].CLK
+clk => clk_cnt[8].CLK
+clk => clk_cnt[9].CLK
+clk => clk_cnt[10].CLK
+clk => tx_pin~reg0.CLK
+clk => send_cnt[0].CLK
+clk => send_cnt[1].CLK
+clk => send_cnt[2].CLK
+clk => send_data_r[0].CLK
+clk => send_data_r[1].CLK
+clk => send_data_r[2].CLK
+clk => send_data_r[3].CLK
+clk => send_data_r[4].CLK
+clk => send_data_r[5].CLK
+clk => send_data_r[6].CLK
+clk => send_data_r[7].CLK
+clk => state~4.DATAIN
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_data_r.OUTPUTSELECT
+send_en => send_cnt.OUTPUTSELECT
+send_en => send_cnt.OUTPUTSELECT
+send_en => send_cnt.OUTPUTSELECT
+send_en => state.OUTPUTSELECT
+send_en => state.OUTPUTSELECT
+send_en => state.OUTPUTSELECT
+send_en => state.OUTPUTSELECT
+send_busy <= send_busy.DB_MAX_OUTPUT_PORT_TYPE
+send_data[0] => send_data_r.DATAB
+send_data[1] => send_data_r.DATAB
+send_data[2] => send_data_r.DATAB
+send_data[3] => send_data_r.DATAB
+send_data[4] => send_data_r.DATAB
+send_data[5] => send_data_r.DATAB
+send_data[6] => send_data_r.DATAB
+send_data[7] => send_data_r.DATAB
+tx_pin <= tx_pin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

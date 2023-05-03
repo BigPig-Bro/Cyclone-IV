@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 03 14:35:30 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : top
+Top-level Entity Name : uart_top
+Family : Cyclone IV E
+Total logic elements : 216
+    Total combinational functions : 209
+    Dedicated logic registers : 81
+Total registers : 81
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
