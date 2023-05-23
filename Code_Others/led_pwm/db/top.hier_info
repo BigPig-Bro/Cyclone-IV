@@ -1,0 +1,105 @@
+|top
+clk => clk.IN2
+rst_n => rst_n.IN1
+led <= pwm_ctr:pwm_ctr_m0.pwm_out
+
+
+|top|pwm_rgb:pwm_rgb_m0
+clk => pwm_clk_cnt[0].CLK
+clk => pwm_clk_cnt[1].CLK
+clk => pwm_clk_cnt[2].CLK
+clk => pwm_clk_cnt[3].CLK
+clk => pwm_clk_cnt[4].CLK
+clk => pwm_clk_cnt[5].CLK
+clk => pwm_clk_cnt[6].CLK
+clk => pwm_clk_cnt[7].CLK
+clk => pwm_clk_cnt[8].CLK
+clk => pwm_clk_cnt[9].CLK
+clk => pwm_clk_cnt[10].CLK
+clk => pwm_clk_cnt[11].CLK
+clk => pwm_clk_cnt[12].CLK
+clk => pwm_clk_cnt[13].CLK
+clk => pwm_clk_cnt[14].CLK
+clk => pwm_clk_cnt[15].CLK
+clk => pwm_clk_cnt[16].CLK
+clk => pwm_clk_cnt[17].CLK
+rst_n => state.OUTPUTSELECT
+rst_n => state.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+rst_n => pwm_duty.OUTPUTSELECT
+pwm_duty[0] <= pwm_duty[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[1] <= pwm_duty[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[2] <= pwm_duty[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[3] <= pwm_duty[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[4] <= pwm_duty[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[5] <= pwm_duty[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[6] <= pwm_duty[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[7] <= pwm_duty[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[8] <= pwm_duty[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pwm_duty[9] <= pwm_duty[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|pwm_ctr:pwm_ctr_m0
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+pwm_duty[0] => Mult0.IN31
+pwm_duty[1] => Mult0.IN30
+pwm_duty[2] => Mult0.IN29
+pwm_duty[3] => Mult0.IN28
+pwm_duty[4] => Mult0.IN27
+pwm_duty[5] => Mult0.IN26
+pwm_duty[6] => Mult0.IN25
+pwm_duty[7] => Mult0.IN24
+pwm_duty[8] => Mult0.IN23
+pwm_duty[9] => Mult0.IN22
+pwm_rate[0] => Div0.IN46
+pwm_rate[1] => Div0.IN45
+pwm_rate[2] => Div0.IN44
+pwm_rate[3] => Div0.IN43
+pwm_rate[4] => Div0.IN42
+pwm_rate[5] => Div0.IN41
+pwm_rate[6] => Div0.IN40
+pwm_rate[7] => Div0.IN39
+pwm_rate[8] => Div0.IN38
+pwm_rate[9] => Div0.IN37
+pwm_rate[10] => Div0.IN36
+pwm_rate[11] => Div0.IN35
+pwm_rate[12] => Div0.IN34
+pwm_rate[13] => Div0.IN33
+pwm_rate[14] => Div0.IN32
+pwm_rate[15] => Div0.IN31
+pwm_rate[16] => Div0.IN30
+pwm_rate[17] => Div0.IN29
+pwm_rate[18] => Div0.IN28
+pwm_rate[19] => Div0.IN27
+pwm_rate[20] => Div0.IN26
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

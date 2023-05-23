@@ -1,0 +1,5 @@
+
+State Machine - |top|pwm_rgb:pwm_rgb_m0|state
+Name state.001 
+state.000 0 
+state.001 1 
