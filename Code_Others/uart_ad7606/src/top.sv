@@ -1,7 +1,7 @@
 module top (
 	input clk,    // Clock
 	input rst_n,  // Reset, active low
-	output reg [7:0] cnt,
+	
 	//AD7606硬件接口
 	output 					ad7606_convstA,	ad7606_convstB,
 	output    				ad7606_range,
@@ -15,7 +15,6 @@ module top (
 	//uart
 	output 					uart_tx
 );
-always@(posedge clk) cnt++;
 parameter CLK_FRE 	= 50; //FPGA 输入MHz
 parameter UART_RATE = 115200; //串口波特率
 parameter SEND_FRE 	= 2; //串口发送频率
