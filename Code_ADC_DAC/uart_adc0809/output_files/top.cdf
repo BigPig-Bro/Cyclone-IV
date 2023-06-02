@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10F17) Path("D:/Users/HUIP/Desktop/uart_adc0809/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10F17) Path("E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Jun 01 23:02:43 2023
+Fri Jun 02 13:46:44 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 01 23:02:43 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 13:46:44 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
@@ -177,7 +177,9 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processors 7-10        ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -186,23 +188,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; src/uart/uart_tx.sv              ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv                     ;         ;
-; src/uart/uart_top.sv             ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv                    ;         ;
-; src/top.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/uart_adc0809/src/top.sv                              ;         ;
-; src/adc0809_top.sv               ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv                      ;         ;
+; src/uart/uart_tx.sv              ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv         ;         ;
+; src/uart/uart_top.sv             ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv        ;         ;
+; src/top.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/top.sv                  ;         ;
+; src/adc0809_top.sv               ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv          ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal201.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
-; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_m9m.tdf                   ;         ;
-; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/sign_div_unsign_bkh.tdf              ;         ;
-; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/alt_u_div_a4f.tdf                    ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/add_sub_7pc.tdf                      ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/add_sub_8pc.tdf                      ;         ;
-; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_mhm.tdf                   ;         ;
-; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/sign_div_unsign_ekh.tdf              ;         ;
-; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/alt_u_div_g4f.tdf                    ;         ;
-; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_jhm.tdf                   ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_m9m.tdf       ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/sign_div_unsign_bkh.tdf  ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/alt_u_div_a4f.tdf        ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/add_sub_7pc.tdf          ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/add_sub_8pc.tdf          ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_mhm.tdf       ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/sign_div_unsign_ekh.tdf  ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/alt_u_div_g4f.tdf        ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_jhm.tdf       ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
@@ -533,103 +535,103 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 01 23:02:37 2023
+    Info: Processing started: Fri Jun 02 13:46:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_tx.sv
-    Info (12023): Found entity 1: uart_tx File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 2
+    Info (12023): Found entity 1: uart_tx File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_top.sv
-    Info (12023): Found entity 1: uart_top File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 1
+    Info (12023): Found entity 1: uart_top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_rx.sv
-    Info (12023): Found entity 1: uart_rx File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_rx.sv Line: 2
+    Info (12023): Found entity 1: uart_rx File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_rx.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/top.sv
-    Info (12023): Found entity 1: top File: D:/Users/HUIP/Desktop/uart_adc0809/src/top.sv Line: 1
+    Info (12023): Found entity 1: top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/adc0809_top.sv
-    Info (12023): Found entity 1: adc0809_top File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at uart_top.sv(83): created implicit net for "send_busy" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 83
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_tx.sv(14): Parameter Declaration in module "uart_tx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 14
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(22): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 22
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(23): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 23
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(24): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 24
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.sv(14): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_rx.sv Line: 14
-Warning (10222): Verilog HDL Parameter Declaration warning at adc0809_top.sv(26): Parameter Declaration in module "adc0809_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 26
+    Info (12023): Found entity 1: adc0809_top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at uart_top.sv(83): created implicit net for "send_busy" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 83
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_tx.sv(14): Parameter Declaration in module "uart_tx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(22): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(23): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(24): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.sv(14): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_rx.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at adc0809_top.sv(26): Parameter Declaration in module "adc0809_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 26
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "adc0809_top" for hierarchy "adc0809_top:adc0809_top_m0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/top.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(35): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(56): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(61): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(66): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 66
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(71): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 71
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(76): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(83): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 83
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(87): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(91): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 91
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(98): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 98
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(101): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 101
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(106): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 106
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(113): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 113
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(120): truncated value with size 32 to match size of target (24) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 120
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(123): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 123
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(126): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 126
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(132): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 132
-Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(139): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/uart_adc0809/src/adc0809_top.sv Line: 139
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_m0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/top.sv Line: 59
-Warning (10230): Verilog HDL assignment warning at uart_top.sv(44): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 44
-Warning (10230): Verilog HDL assignment warning at uart_top.sv(45): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 45
-Warning (10230): Verilog HDL assignment warning at uart_top.sv(46): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at uart_top.sv(62): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 62
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:uart_top_m0|uart_tx:uart_tx_m0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (26) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(51): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 51
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(55): truncated value with size 32 to match size of target (26) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(66): truncated value with size 32 to match size of target (26) File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_tx.sv Line: 66
+Info (12128): Elaborating entity "adc0809_top" for hierarchy "adc0809_top:adc0809_top_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/top.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(35): truncated value with size 32 to match size of target (10) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(56): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(61): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(66): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(71): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(76): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(83): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(87): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(91): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(98): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(101): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 101
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(106): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 106
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(113): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 113
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(120): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(123): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(126): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(132): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 132
+Warning (10230): Verilog HDL assignment warning at adc0809_top.sv(139): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/adc0809_top.sv Line: 139
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/top.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(44): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(45): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(46): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(62): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 62
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:uart_top_m0|uart_tx:uart_tx_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(51): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(55): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(66): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_tx.sv Line: 66
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod1" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 46
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div1" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 45
-Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Mod1" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 46
-Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Mod1" with the following parameter: File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 45
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Mod1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 46
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Mod1" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 46
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
-    Info (12023): Found entity 1: lpm_divide_m9m File: D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_m9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_m9m File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_m9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: D:/Users/HUIP/Desktop/uart_adc0809/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
-    Info (12023): Found entity 1: alt_u_div_a4f File: D:/Users/HUIP/Desktop/uart_adc0809/db/alt_u_div_a4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_a4f File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/alt_u_div_a4f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: D:/Users/HUIP/Desktop/uart_adc0809/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: D:/Users/HUIP/Desktop/uart_adc0809/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div0" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 44
-Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div0" with the following parameter: File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 44
+    Info (12023): Found entity 1: add_sub_8pc File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 44
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div0" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 44
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
-    Info (12023): Found entity 1: lpm_divide_mhm File: D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_mhm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_mhm File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_mhm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: D:/Users/HUIP/Desktop/uart_adc0809/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
-    Info (12023): Found entity 1: alt_u_div_g4f File: D:/Users/HUIP/Desktop/uart_adc0809/db/alt_u_div_g4f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div1" File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 45
-Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div1" with the following parameter: File: D:/Users/HUIP/Desktop/uart_adc0809/src/uart/uart_top.sv Line: 45
+    Info (12023): Found entity 1: alt_u_div_g4f File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/alt_u_div_g4f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 45
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div1" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/src/uart/uart_top.sv Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
-    Info (12023): Found entity 1: lpm_divide_jhm File: D:/Users/HUIP/Desktop/uart_adc0809/db/lpm_divide_jhm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_jhm File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/lpm_divide_jhm.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: D:/Users/HUIP/Desktop/uart_adc0809/db/alt_u_div_a4f.tdf Line: 57
+    Info (17048): Logic cell "uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_adc0809/db/alt_u_div_a4f.tdf Line: 57
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 634 device resources after synthesis - the final resource count might be different
@@ -637,8 +639,8 @@ Info (21057): Implemented 634 device resources after synthesis - the final resou
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 615 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Thu Jun 01 23:02:43 2023
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Fri Jun 02 13:46:44 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 
