@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_tx",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_db[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

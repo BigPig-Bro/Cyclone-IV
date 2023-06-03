@@ -1,0 +1,638 @@
+Analysis & Synthesis report for top
+Sat Jun 03 19:06:02 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top|uart_top:uart_top_m0|state
+  9. State Machine - |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 15. Parameter Settings for User Entity Instance: ad9280_top:ad9280_top_m0
+ 16. Parameter Settings for User Entity Instance: uart_top:uart_top_m0
+ 17. Parameter Settings for User Entity Instance: uart_top:uart_top_m0|uart_tx:uart_tx_m0
+ 18. Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Mod1
+ 19. Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Div1
+ 21. Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Mod0
+ 22. Port Connectivity Checks: "uart_top:uart_top_m0"
+ 23. Port Connectivity Checks: "ad9280_top:ad9280_top_m0"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jun 03 19:06:02 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 329                                         ;
+;     Total combinational functions  ; 323                                         ;
+;     Dedicated logic registers      ; 88                                          ;
+; Total registers                    ; 88                                          ;
+; Total pins                         ; 12                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; src/ad9280_top.sv                ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/ad9280_top.sv            ;         ;
+; src/uart/uart_tx.sv              ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv          ;         ;
+; src/uart/uart_top.sv             ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv         ;         ;
+; src/top.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/top.sv                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_m9m.tdf        ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/sign_div_unsign_bkh.tdf   ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_a4f.tdf         ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/add_sub_7pc.tdf           ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/add_sub_8pc.tdf           ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_mhm.tdf        ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/sign_div_unsign_ekh.tdf   ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_g4f.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_jhm.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 329       ;
+;                                             ;           ;
+; Total combinational functions               ; 323       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 77        ;
+;     -- 3 input functions                    ; 79        ;
+;     -- <=2 input functions                  ; 167       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 203       ;
+;     -- arithmetic mode                      ; 120       ;
+;                                             ;           ;
+; Total registers                             ; 88        ;
+;     -- Dedicated logic registers            ; 88        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 88        ;
+; Total fan-out                               ; 1115      ;
+; Average fan-out                             ; 2.56      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |top                                      ; 323 (0)             ; 88 (0)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top                                                                                                                      ; top                 ; work         ;
+;    |uart_top:uart_top_m0|                 ; 323 (92)            ; 88 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0                                                                                                 ; uart_top            ; work         ;
+;       |lpm_divide:Div0|                   ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_mhm:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                   ; lpm_divide_mhm      ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh ; work         ;
+;                |alt_u_div_g4f:divider|    ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider ; alt_u_div_g4f       ; work         ;
+;       |lpm_divide:Div1|                   ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div1|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 60 (60)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m9m:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m9m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod1|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 65 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |uart_tx:uart_tx_m0|                ; 56 (56)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0                                                                              ; uart_tx             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------+
+; State Machine - |top|uart_top:uart_top_m0|state ;
++------------+------------------------------------+
+; Name       ; state.WAIT                         ;
++------------+------------------------------------+
+; state.SEND ; 0                                  ;
+; state.WAIT ; 1                                  ;
++------------+------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0|state ;
++-------------+------------+------------+-------------+--------------+
+; Name        ; state.STOP ; state.SEND ; state.START ; state.WAIT   ;
++-------------+------------+------------+-------------+--------------+
+; state.WAIT  ; 0          ; 0          ; 0           ; 0            ;
+; state.START ; 0          ; 0          ; 1           ; 1            ;
+; state.SEND  ; 0          ; 1          ; 0           ; 1            ;
+; state.STOP  ; 1          ; 0          ; 0           ; 1            ;
++-------------+------------+------------+-------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                                 ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; ad9280_top:ad9280_top_m0|clk_cnt[0..23]                ; Stuck at GND due to stuck port data_in                             ;
+; ad9280_top:ad9280_top_m0|ad9280_clk                    ; Stuck at GND due to stuck port clock_enable                        ;
+; uart_top:uart_top_m0|send_data[7]                      ; Stuck at GND due to stuck port data_in                             ;
+; uart_top:uart_top_m0|uart_tx:uart_tx_m0|send_data_r[7] ; Stuck at GND due to stuck port data_in                             ;
+; uart_top:uart_top_m0|state~5                           ; Lost fanout                                                        ;
+; uart_top:uart_top_m0|uart_tx:uart_tx_m0|state~5        ; Lost fanout                                                        ;
+; uart_top:uart_top_m0|uart_tx:uart_tx_m0|state~6        ; Lost fanout                                                        ;
+; uart_top:uart_top_m0|uart_tx:uart_tx_m0|send_data_r[5] ; Merged with uart_top:uart_top_m0|uart_tx:uart_tx_m0|send_data_r[4] ;
+; uart_top:uart_top_m0|send_data[5]                      ; Merged with uart_top:uart_top_m0|send_data[4]                      ;
+; Total Number of Removed Registers = 32                 ;                                                                    ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++-----------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                 ;
++-----------------------------------+---------------------------+--------------------------------------------------------+
+; uart_top:uart_top_m0|send_data[7] ; Stuck at GND              ; uart_top:uart_top_m0|uart_tx:uart_tx_m0|send_data_r[7] ;
+;                                   ; due to stuck port data_in ;                                                        ;
++-----------------------------------+---------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 88    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 79    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_top:uart_top_m0|send_cnt[2]                    ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0|clk_cnt[6]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|uart_top:uart_top_m0|uart_tx:uart_tx_m0|send_cnt[1] ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 8 LEs                ; 672 LEs                ; Yes        ; |top|uart_top:uart_top_m0|send_data[3]                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                            ;
+; UART_RATE      ; 115200 ; Signed Integer                            ;
+; SEND_FRE       ; 2      ; Signed Integer                            ;
+; ADC_FRE        ; 500    ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ad9280_top:ad9280_top_m0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                               ;
+; ADC_FRE        ; 500   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_m0 ;
++----------------+--------+-----------------------------------------+
+; Parameter Name ; Value  ; Type                                    ;
++----------------+--------+-----------------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                          ;
+; UART_RATE      ; 115200 ; Signed Integer                          ;
+; SEND_FRE       ; 2      ; Signed Integer                          ;
++----------------+--------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_m0|uart_tx:uart_tx_m0 ;
++----------------+--------+------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                       ;
++----------------+--------+------------------------------------------------------------+
+; CLK_FRE        ; 50     ; Signed Integer                                             ;
+; UART_RATE      ; 115200 ; Signed Integer                                             ;
++----------------+--------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                     ;
+; LPM_WIDTHD             ; 7              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: uart_top:uart_top_m0|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "uart_top:uart_top_m0"    ;
++---------+-------+----------+------------------------+
+; Port    ; Type  ; Severity ; Details                ;
++---------+-------+----------+------------------------+
+; uart_rx ; Input ; Info     ; Explicitly unconnected ;
++---------+-------+----------+------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "ad9280_top:ad9280_top_m0" ;
++--------------+-------+----------+--------------------+
+; Port         ; Type  ; Severity ; Details            ;
++--------------+-------+----------+--------------------+
+; ad9280_start ; Input ; Info     ; Stuck at VCC       ;
++--------------+-------+----------+--------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 12                          ;
+; cycloneiii_ff         ; 88                          ;
+;     ENA               ; 79                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 324                         ;
+;     arith             ; 120                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 53                          ;
+;     normal            ; 204                         ;
+;         0 data inputs ; 15                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 77                          ;
+;                       ;                             ;
+; Max LUT depth         ; 14.90                       ;
+; Average LUT depth     ; 7.50                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Jun 03 19:05:57 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/ad9280_top.sv
+    Info (12023): Found entity 1: ad9280_top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/ad9280_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_tx.sv
+    Info (12023): Found entity 1: uart_tx File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_top.sv
+    Info (12023): Found entity 1: uart_top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart/uart_rx.sv
+    Info (12023): Found entity 1: uart_rx File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_rx.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.sv
+    Info (12023): Found entity 1: top File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/top.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at uart_top.sv(70): created implicit net for "send_busy" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 70
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_tx.sv(14): Parameter Declaration in module "uart_tx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 14
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(23): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(24): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_top.sv(25): Parameter Declaration in module "uart_top" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.sv(14): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_rx.sv Line: 14
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "ad9280_top" for hierarchy "ad9280_top:ad9280_top_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/top.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at ad9280_top.sv(16): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/ad9280_top.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at ad9280_top.sv(28): truncated value with size 32 to match size of target (24) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/ad9280_top.sv Line: 28
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/top.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(31): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(32): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(33): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at uart_top.sv(49): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 49
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_top:uart_top_m0|uart_tx:uart_tx_m0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(51): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(55): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(66): truncated value with size 32 to match size of target (26) File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_tx.sv Line: 66
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Div1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "uart_top:uart_top_m0|Mod0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 32
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Mod1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 33
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Mod1" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 33
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
+    Info (12023): Found entity 1: lpm_divide_m9m File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_m9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_a4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div0" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 31
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div0" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 31
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
+    Info (12023): Found entity 1: lpm_divide_mhm File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_mhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/sign_div_unsign_ekh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
+    Info (12023): Found entity 1: alt_u_div_g4f File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_g4f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "uart_top:uart_top_m0|lpm_divide:Div1" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 32
+Info (12133): Instantiated megafunction "uart_top:uart_top_m0|lpm_divide:Div1" with the following parameter: File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/uart/uart_top.sv Line: 32
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/lpm_divide_jhm.tdf Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ad9280_clk" is stuck at GND File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/src/top.sv Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_a4f.tdf Line: 57
+    Info (17048): Logic cell "uart_top:uart_top_m0|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_7_result_int[0]~10" File: E:/FPGA_work/Cyclone/Code_ADC_DAC/uart_ad9280/db/alt_u_div_a4f.tdf Line: 62
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 341 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 329 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Sat Jun 03 19:06:02 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:15
+
+
