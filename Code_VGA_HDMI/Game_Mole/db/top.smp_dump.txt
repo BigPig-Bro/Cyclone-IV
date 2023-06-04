@@ -1,0 +1,7 @@
+
+State Machine - |top|uart_rx:uart_rx_inst|state
+Name state.STOP state.RECV state.START state.WAIT 
+state.WAIT 0 0 0 0 
+state.START 0 0 1 1 
+state.RECV 0 1 0 1 
+state.STOP 1 0 0 1 

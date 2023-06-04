@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at rgb_timing.sv(13): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: E:/FPGA_work/Cyclone/Code_VGA_HDMI/Game_Mole/src/rgb_timing.sv Line: 13
+Info (10281): Verilog HDL Declaration information at rgb_timing.sv(17): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: E:/FPGA_work/Cyclone/Code_VGA_HDMI/Game_Mole/src/rgb_timing.sv Line: 17
+Info (10281): Verilog HDL Declaration information at game_ctrl.sv(11): object "state" differs only in case from object "STATE" in the same scope File: E:/FPGA_work/Cyclone/Code_VGA_HDMI/Game_Mole/src/game_ctrl.sv Line: 11

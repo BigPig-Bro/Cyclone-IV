@@ -1,0 +1,92 @@
+--alt_u_div DEVICE_FAMILY="Cyclone IV E" LPM_PIPELINE=0 MAXIMIZE_SPEED=5 SKIP_BITS=0 WIDTH_D=4 WIDTH_N=4 WIDTH_Q=4 WIDTH_R=4 denominator numerator quotient remainder
+--VERSION_BEGIN 20.1 cbx_cycloneii 2020:11:11:17:06:45:SJ cbx_lpm_abs 2020:11:11:17:06:45:SJ cbx_lpm_add_sub 2020:11:11:17:06:45:SJ cbx_lpm_divide 2020:11:11:17:06:45:SJ cbx_mgl 2020:11:11:17:08:38:SJ cbx_nadder 2020:11:11:17:06:46:SJ cbx_stratix 2020:11:11:17:06:46:SJ cbx_stratixii 2020:11:11:17:06:46:SJ cbx_util_mgl 2020:11:11:17:06:46:SJ  VERSION_END
+
+
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details, at
+--  https://fpgasoftware.intel.com/eula.
+
+
+FUNCTION add_sub_7pc (dataa[0..0], datab[0..0])
+RETURNS ( cout, result[0..0]);
+FUNCTION add_sub_8pc (dataa[1..0], datab[1..0])
+RETURNS ( cout, result[1..0]);
+
+--synthesis_resources = lut 9 
+SUBDESIGN alt_u_div_24f
+( 
+	denominator[3..0]	:	input;
+	numerator[3..0]	:	input;
+	quotient[3..0]	:	output;
+	remainder[3..0]	:	output;
+) 
+VARIABLE 
+	add_sub_0 : add_sub_7pc;
+	add_sub_1 : add_sub_8pc;
+	add_sub_2_result_int[3..0]	:	WIRE;
+	add_sub_2_cout	:	WIRE;
+	add_sub_2_dataa[2..0]	:	WIRE;
+	add_sub_2_datab[2..0]	:	WIRE;
+	add_sub_2_result[2..0]	:	WIRE;
+	add_sub_3_result_int[4..0]	:	WIRE;
+	add_sub_3_cout	:	WIRE;
+	add_sub_3_dataa[3..0]	:	WIRE;
+	add_sub_3_datab[3..0]	:	WIRE;
+	add_sub_3_result[3..0]	:	WIRE;
+	DenominatorIn[24..0]	: WIRE;
+	DenominatorIn_tmp[24..0]	: WIRE;
+	gnd_wire	: WIRE;
+	nose[19..0]	: WIRE;
+	NumeratorIn[19..0]	: WIRE;
+	NumeratorIn_tmp[19..0]	: WIRE;
+	prestg[15..0]	: WIRE;
+	quotient_tmp[3..0]	: WIRE;
+	sel[19..0]	: WIRE;
+	selnose[19..0]	: WIRE;
+	StageIn[19..0]	: WIRE;
+	StageIn_tmp[19..0]	: WIRE;
+	StageOut[15..0]	: WIRE;
+
+BEGIN 
+	add_sub_0.dataa[0..0] = NumeratorIn[3..3];
+	add_sub_0.datab[0..0] = DenominatorIn[0..0];
+	add_sub_1.dataa[] = ( StageIn[4..4], NumeratorIn[6..6]);
+	add_sub_1.datab[1..0] = DenominatorIn[6..5];
+	add_sub_2_result_int[] = (0, add_sub_2_dataa[]) - (0, add_sub_2_datab[]);
+	add_sub_2_result[] = add_sub_2_result_int[2..0];
+	add_sub_2_cout = !add_sub_2_result_int[3];
+	add_sub_2_dataa[] = ( StageIn[9..8], NumeratorIn[9..9]);
+	add_sub_2_datab[] = DenominatorIn[12..10];
+	add_sub_3_result_int[] = (0, add_sub_3_dataa[]) - (0, add_sub_3_datab[]);
+	add_sub_3_result[] = add_sub_3_result_int[3..0];
+	add_sub_3_cout = !add_sub_3_result_int[4];
+	add_sub_3_dataa[] = ( StageIn[14..12], NumeratorIn[12..12]);
+	add_sub_3_datab[] = DenominatorIn[18..15];
+	DenominatorIn[] = DenominatorIn_tmp[];
+	DenominatorIn_tmp[] = ( DenominatorIn[19..0], ( gnd_wire, denominator[]));
+	gnd_wire = B"0";
+	nose[] = ( B"0000", add_sub_3_cout, B"0000", add_sub_2_cout, B"0000", add_sub_1.cout, B"0000", add_sub_0.cout);
+	NumeratorIn[] = NumeratorIn_tmp[];
+	NumeratorIn_tmp[] = ( NumeratorIn[15..0], numerator[]);
+	prestg[] = ( add_sub_3_result[], GND, add_sub_2_result[], B"00", add_sub_1.result[], B"000", add_sub_0.result[]);
+	quotient[] = quotient_tmp[];
+	quotient_tmp[] = ( (! selnose[0..0]), (! selnose[5..5]), (! selnose[10..10]), (! selnose[15..15]));
+	remainder[3..0] = StageIn[19..16];
+	sel[] = ( gnd_wire, (sel[19..19] # DenominatorIn[23..23]), (sel[18..18] # DenominatorIn[22..22]), (sel[17..17] # DenominatorIn[21..21]), gnd_wire, (sel[15..15] # DenominatorIn[18..18]), (sel[14..14] # DenominatorIn[17..17]), (sel[13..13] # DenominatorIn[16..16]), gnd_wire, (sel[11..11] # DenominatorIn[13..13]), (sel[10..10] # DenominatorIn[12..12]), (sel[9..9] # DenominatorIn[11..11]), gnd_wire, (sel[7..7] # DenominatorIn[8..8]), (sel[6..6] # DenominatorIn[7..7]), (sel[5..5] # DenominatorIn[6..6]), gnd_wire, (sel[3..3] # DenominatorIn[3..3]), (sel[2..2] # DenominatorIn[2..2]), (sel[1..1] # DenominatorIn[1..1]));
+	selnose[] = ( ((! nose[19..19]) # sel[19..19]), ((! nose[18..18]) # sel[18..18]), ((! nose[17..17]) # sel[17..17]), ((! nose[16..16]) # sel[16..16]), ((! nose[15..15]) # sel[15..15]), ((! nose[14..14]) # sel[14..14]), ((! nose[13..13]) # sel[13..13]), ((! nose[12..12]) # sel[12..12]), ((! nose[11..11]) # sel[11..11]), ((! nose[10..10]) # sel[10..10]), ((! nose[9..9]) # sel[9..9]), ((! nose[8..8]) # sel[8..8]), ((! nose[7..7]) # sel[7..7]), ((! nose[6..6]) # sel[6..6]), ((! nose[5..5]) # sel[5..5]), ((! nose[4..4]) # sel[4..4]), ((! nose[3..3]) # sel[3..3]), ((! nose[2..2]) # sel[2..2]), ((! nose[1..1]) # sel[1..1]), ((! nose[0..0]) # sel[0..0]));
+	StageIn[] = StageIn_tmp[];
+	StageIn_tmp[] = ( StageOut[15..0], B"0000");
+	StageOut[] = ( ((( StageIn[14..12], NumeratorIn[12..12]) & selnose[15..15]) # (prestg[15..12] & (! selnose[15..15]))), ((( StageIn[10..8], NumeratorIn[9..9]) & selnose[10..10]) # (prestg[11..8] & (! selnose[10..10]))), ((( StageIn[6..4], NumeratorIn[6..6]) & selnose[5..5]) # (prestg[7..4] & (! selnose[5..5]))), ((( StageIn[2..0], NumeratorIn[3..3]) & selnose[0..0]) # (prestg[3..0] & (! selnose[0..0]))));
+END;
+--VALID FILE

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.130
+TNS   : -20.167
+
+Type  : Slow 1200mV 85C Model Setup 'game_ctrl:m4|clk_cnt[3]'
+Slack : -4.395
+TNS   : -48.345
+
+Type  : Slow 1200mV 85C Model Setup 'rgb_timing:m1|rgb_vs'
+Slack : -1.562
+TNS   : -2.031
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 11.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.214
+TNS   : -0.214
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rgb_timing:m1|rgb_vs'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'game_ctrl:m4|clk_cnt[3]'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'game_ctrl:m4|clk_cnt[3]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rgb_timing:m1|rgb_vs'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.786
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.697
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.385
+TNS   : -16.958
+
+Type  : Slow 1200mV 0C Model Setup 'game_ctrl:m4|clk_cnt[3]'
+Slack : -3.995
+TNS   : -43.945
+
+Type  : Slow 1200mV 0C Model Setup 'rgb_timing:m1|rgb_vs'
+Slack : -1.401
+TNS   : -1.655
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 11.824
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.326
+TNS   : -0.326
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rgb_timing:m1|rgb_vs'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'game_ctrl:m4|clk_cnt[3]'
+Slack : 0.716
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'game_ctrl:m4|clk_cnt[3]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rgb_timing:m1|rgb_vs'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.773
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.668
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.886
+TNS   : -7.223
+
+Type  : Fast 1200mV 0C Model Setup 'game_ctrl:m4|clk_cnt[3]'
+Slack : -1.306
+TNS   : -14.366
+
+Type  : Fast 1200mV 0C Model Setup 'rgb_timing:m1|rgb_vs'
+Slack : -0.285
+TNS   : -0.285
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 16.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.056
+TNS   : -0.056
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rgb_timing:m1|rgb_vs'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'game_ctrl:m4|clk_cnt[3]'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'game_ctrl:m4|clk_cnt[3]'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rgb_timing:m1|rgb_vs'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.435
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_pll_m0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.734
+TNS   : 0.000
+
+------------------------------------------------------------
