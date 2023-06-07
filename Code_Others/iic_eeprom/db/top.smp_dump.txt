@@ -1,0 +1,38 @@
+
+State Machine - |top|iic_master:iic_master_m0|state_next
+Name state_next.STATE_END state_next.READ_DATA state_next.READ_SLAVE state_next.WRITE_DATA_END state_next.WRITE_DATA state_next.STATE_REG state_next.STATE_REG_EX state_next.STATE_SLAVE state_next.0000 
+state_next.0000 0 0 0 0 0 0 0 0 0 
+state_next.STATE_SLAVE 0 0 0 0 0 0 0 1 1 
+state_next.STATE_REG_EX 0 0 0 0 0 0 1 0 1 
+state_next.STATE_REG 0 0 0 0 0 1 0 0 1 
+state_next.WRITE_DATA 0 0 0 0 1 0 0 0 1 
+state_next.WRITE_DATA_END 0 0 0 1 0 0 0 0 1 
+state_next.READ_SLAVE 0 0 1 0 0 0 0 0 1 
+state_next.READ_DATA 0 1 0 0 0 0 0 0 1 
+state_next.STATE_END 1 0 0 0 0 0 0 0 1 
+
+State Machine - |top|iic_master:iic_master_m0|state_main
+Name state_main.STATE_END state_main.STATE_ACK state_main.READ_DATA state_main.READ_SLAVE state_main.READ_SLAVE_EX state_main.READ_START state_main.WRITE_DATA_END state_main.WRITE_DATA state_main.STATE_REG state_main.STATE_REG_EX state_main.STATE_SLAVE state_main.STATE_SLAVE_EX state_main.0000 
+state_main.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state_main.STATE_SLAVE_EX 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state_main.STATE_SLAVE 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state_main.STATE_REG_EX 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state_main.STATE_REG 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state_main.WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state_main.WRITE_DATA_END 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state_main.READ_START 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state_main.READ_SLAVE_EX 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state_main.READ_SLAVE 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state_main.READ_DATA 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state_main.STATE_ACK 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state_main.STATE_END 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|eeprom_test:eeprom_test_m0|state
+Name state.VERIFY state.READ_ACK state.READ_DATA state.READ_WAIT state.WRITE_ACK state.WRITE_DATA state.0000 
+state.0000 0 0 0 0 0 0 0 
+state.WRITE_DATA 0 0 0 0 0 1 1 
+state.WRITE_ACK 0 0 0 0 1 0 1 
+state.READ_WAIT 0 0 0 1 0 0 1 
+state.READ_DATA 0 0 1 0 0 0 1 
+state.READ_ACK 0 1 0 0 0 0 1 
+state.VERIFY 1 0 0 0 0 0 1 
