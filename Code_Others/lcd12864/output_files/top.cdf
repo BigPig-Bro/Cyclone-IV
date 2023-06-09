@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("D:/Users/HUIP/Desktop/LCD12864/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6F17) Path("E:/FPGA_work/Cyclone/Code_Others/lcd12864/output_files/") File("top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

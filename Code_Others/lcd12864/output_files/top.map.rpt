@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Oct 23 14:36:06 2022
+Fri Jun 09 14:03:48 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 23 14:36:06 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 09 14:03:48 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; LCD12864_top                                ;
@@ -75,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Device                                                           ; EP4CE6F17C8        ;                    ;
 ; Top-level entity name                                            ; LCD12864_top       ; top                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -161,11 +161,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -174,18 +174,21 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------+---------+
-; src/LCD12864_top.sv              ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv   ;         ;
-; src/LCD12864_drive.sv            ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv ;         ;
-; src/vme50.txt                    ; yes             ; Auto-Found File              ; D:/Users/HUIP/Desktop/LCD12864/src/vme50.txt         ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; src/LCD12864_top.sv              ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv   ;         ;
+; src/LCD12864_drive.sv            ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_drive.sv ;         ;
+; src/vme50.txt                    ; yes             ; Auto-Found File              ; E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/vme50.txt         ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -356,7 +359,6 @@ Encoding Type:  One-Hot
 ; PAGE_NUM       ; 2        ; Signed Integer                                   ;
 ; BLOCK_NUM      ; 32       ; Signed Integer                                   ;
 ; BLOCK_BYTE_NUM ; 16       ; Signed Integer                                   ;
-; DELAY_400MS    ; 8000000  ; Signed Integer                                   ;
 ; DELAY_1000MS   ; 20000000 ; Signed Integer                                   ;
 +----------------+----------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -417,7 +419,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -427,40 +429,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 23 14:35:55 2022
+    Info: Processing started: Fri Jun 09 14:03:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd12864_top.sv
-    Info (12023): Found entity 1: LCD12864_top File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 1
+    Info (12023): Found entity 1: LCD12864_top File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd12864_drive.sv
-    Info (12023): Found entity 1: LCD12864_drive File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv Line: 1
+    Info (12023): Found entity 1: LCD12864_drive File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_drive.sv Line: 1
 Info (12127): Elaborating entity "LCD12864_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(78): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 78
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(80): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(97): truncated value with size 32 to match size of target (4) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 97
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(110): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 110
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(115): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 115
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(118): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 118
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(130): truncated value with size 32 to match size of target (7) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 130
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(136): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 136
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(139): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 139
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(158): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 158
-Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(160): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 160
-Warning (10030): Net "ram_data.data_a" at LCD12864_top.sv(30) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 30
-Warning (10030): Net "ram_data.waddr_a" at LCD12864_top.sv(30) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 30
-Warning (10030): Net "ram_data.we_a" at LCD12864_top.sv(30) has no driver or initial value, using a default initial value '0' File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 30
-Info (12128): Elaborating entity "LCD12864_drive" for hierarchy "LCD12864_drive:LCD12864_drive_m0" File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 198
-Warning (10230): Verilog HDL assignment warning at LCD12864_drive.sv(36): truncated value with size 32 to match size of target (8) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at LCD12864_drive.sv(74): truncated value with size 32 to match size of target (3) File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_drive.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(80): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(82): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 82
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(99): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(112): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 112
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(117): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 117
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(120): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(132): truncated value with size 32 to match size of target (7) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 132
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(138): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(141): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 141
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(160): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 160
+Warning (10230): Verilog HDL assignment warning at LCD12864_top.sv(162): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 162
+Warning (10030): Net "ram_data.data_a" at LCD12864_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 32
+Warning (10030): Net "ram_data.waddr_a" at LCD12864_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 32
+Warning (10030): Net "ram_data.we_a" at LCD12864_top.sv(32) has no driver or initial value, using a default initial value '0' File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 32
+Info (12128): Elaborating entity "LCD12864_drive" for hierarchy "LCD12864_drive:LCD12864_drive_m0" File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 200
+Warning (10230): Verilog HDL assignment warning at LCD12864_drive.sv(36): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_drive.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at LCD12864_drive.sv(74): truncated value with size 32 to match size of target (3) File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_drive.sv Line: 74
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "ram_data" is uninferred due to asynchronous read logic File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 30
+    Info (276007): RAM logic "ram_data" is uninferred due to asynchronous read logic File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LCD_RST" is stuck at VCC File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 5
-    Warning (13410): Pin "LCD_PSB" is stuck at VCC File: D:/Users/HUIP/Desktop/LCD12864/src/LCD12864_top.sv Line: 9
+    Warning (13410): Pin "LCD_RST" is stuck at VCC File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 6
+    Warning (13410): Pin "LCD_PSB" is stuck at VCC File: E:/FPGA_work/Cyclone/Code_Others/lcd12864/src/LCD12864_top.sv Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 11 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/Users/HUIP/Desktop/LCD12864/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file E:/FPGA_work/Cyclone/Code_Others/lcd12864/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 889 device resources after synthesis - the final resource count might be different
@@ -469,15 +471,15 @@ Info (21057): Implemented 889 device resources after synthesis - the final resou
     Info (21060): Implemented 8 bidirectional pins
     Info (21061): Implemented 858 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Sun Oct 23 14:36:06 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Fri Jun 09 14:03:49 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Users/HUIP/Desktop/LCD12864/output_files/top.map.smsg.
+The suppressed messages can be found in E:/FPGA_work/Cyclone/Code_Others/lcd12864/output_files/top.map.smsg.
 
 

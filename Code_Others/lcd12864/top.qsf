@@ -38,7 +38,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name DEVICE EP4CE6F17C8
 set_global_assignment -name TOP_LEVEL_ENTITY LCD12864_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:11:06  OCTOBER 23, 2022"
@@ -66,20 +66,20 @@ set_global_assignment -name EDA_TEST_BENCH_NAME LCD12864_top_vlg_tst -section_id
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id LCD12864_top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME LCD12864_top_vlg_tst -section_id LCD12864_top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/LCD12864_top.vt -section_id LCD12864_top_vlg_tst
-set_location_assignment PIN_60 -to rst_n
-set_location_assignment PIN_25 -to clk
-set_location_assignment PIN_141 -to LCD_DAT[7]
-set_location_assignment PIN_138 -to LCD_DAT[6]
-set_location_assignment PIN_137 -to LCD_DAT[5]
-set_location_assignment PIN_136 -to LCD_DAT[4]
-set_location_assignment PIN_135 -to LCD_DAT[3]
-set_location_assignment PIN_133 -to LCD_DAT[2]
-set_location_assignment PIN_132 -to LCD_DAT[1]
-set_location_assignment PIN_129 -to LCD_DAT[0]
-set_location_assignment PIN_128 -to LCD_E
-set_location_assignment PIN_127 -to LCD_RW
-set_location_assignment PIN_126 -to LCD_RS
-set_location_assignment PIN_142 -to LCD_PSB
+set_location_assignment PIN_N13 -to rst_n
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_A4  -to LCD_DAT[7]
+set_location_assignment PIN_B5  -to LCD_DAT[6]
+set_location_assignment PIN_A3  -to LCD_DAT[5]
+set_location_assignment PIN_B4  -to LCD_DAT[4]
+set_location_assignment PIN_A2  -to LCD_DAT[3]
+set_location_assignment PIN_B3  -to LCD_DAT[2]
+set_location_assignment PIN_C2  -to LCD_DAT[1]
+set_location_assignment PIN_B1  -to LCD_DAT[0]
+set_location_assignment PIN_B6  -to LCD_E
+set_location_assignment PIN_A5  -to LCD_RW
+set_location_assignment PIN_B7  -to LCD_RS
+set_location_assignment PIN_A6  -to LCD_PSB
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
