@@ -1,5 +1,5 @@
 Assembler report for top
-Sun Oct 23 14:50:27 2022
+Fri Jun 09 13:43:22 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/output_files/top.sof
+  5. Assembler Device Options: E:/FPGA_work/Cyclone/Code_Others/lcd1602/output_files/top.sof
   6. Assembler Messages
 
 
@@ -38,11 +38,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Oct 23 14:50:27 2022 ;
+; Assembler Status      ; Successful - Fri Jun 09 13:43:22 2023 ;
 ; Revision Name         ; top                                   ;
 ; Top-level Entity Name ; LCD1602_top                           ;
 ; Family                ; Cyclone IV E                          ;
-; Device                ; EP4CE6E22C8                           ;
+; Device                ; EP4CE6F17C8                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------+
-; Assembler Generated Files                                        ;
-+------------------------------------------------------------------+
-; File Name                                                        ;
-+------------------------------------------------------------------+
-; E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/output_files/top.sof ;
-+------------------------------------------------------------------+
++---------------------------------------------------------------+
+; Assembler Generated Files                                     ;
++---------------------------------------------------------------+
+; File Name                                                     ;
++---------------------------------------------------------------+
+; E:/FPGA_work/Cyclone/Code_Others/lcd1602/output_files/top.sof ;
++---------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/output_files/top.sof ;
-+----------------+---------------------------------------------------------------------------+
-; Option         ; Setting                                                                   ;
-+----------------+---------------------------------------------------------------------------+
-; JTAG usercode  ; 0x000AE0A0                                                                ;
-; Checksum       ; 0x000AE0A0                                                                ;
-+----------------+---------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/FPGA_work/Cyclone/Code_Others/lcd1602/output_files/top.sof ;
++----------------+------------------------------------------------------------------------+
+; Option         ; Setting                                                                ;
++----------------+------------------------------------------------------------------------+
+; JTAG usercode  ; 0x000A29BB                                                             ;
+; Checksum       ; 0x000A29BB                                                             ;
++----------------+------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 23 14:50:27 2022
+    Info: Processing started: Fri Jun 09 13:43:22 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Sun Oct 23 14:50:27 2022
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Fri Jun 09 13:43:22 2023
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

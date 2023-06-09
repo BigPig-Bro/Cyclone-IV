@@ -8,6 +8,8 @@ module LCD1602_top (
 	output [ 7:0] 	LCD1602_DAT
 );
 
+parameter CLK_FRE = 50; // FPGA 输入时钟 x Mhz
+
 parameter RS_DAT = 1;
 parameter RS_CMD = 0;
 parameter INIT_CMD_NUM = 5;
@@ -124,7 +126,7 @@ always_ff@(posedge clk,negedge rst_n)
 					send_en <= 0;
 
 			WAIT_1S:
-				if (clk_cnt == 20_000_000) begin
+				if (clk_cnt == CLK_FRE * 1_000_000) begin
 					clk_cnt <= 'd0;
 					state_main <= INIT;
 				end
@@ -138,7 +140,7 @@ always_ff@(posedge clk,negedge rst_n)
 
 
 LCD1602_drive #(
-	.CLK_FRE (20 			)
+	.CLK_FRE (CLK_FRE 			)
 	)LCD1602_drive_m0(
 	.clk			( clk			),
 

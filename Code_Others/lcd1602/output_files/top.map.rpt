@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Oct 23 14:50:08 2022
+Fri Jun 09 13:43:17 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 23 14:50:08 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 09 13:43:17 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; LCD1602_top                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 206                                         ;
-;     Total combinational functions  ; 204                                         ;
+; Total logic elements               ; 211                                         ;
+;     Total combinational functions  ; 209                                         ;
 ;     Dedicated logic registers      ; 102                                         ;
 ; Total registers                    ; 102                                         ;
 ; Total pins                         ; 13                                          ;
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Device                                                           ; EP4CE6F17C8        ;                    ;
 ; Top-level entity name                                            ; LCD1602_top        ; top                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -158,26 +158,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; src/LCD1602_top.sv               ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv   ;         ;
-; src/LCD1602_drive.sv             ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_drive.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; src/LCD1602_top.sv               ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv   ;         ;
+; src/LCD1602_drive.sv             ; yes             ; User SystemVerilog HDL File  ; E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_drive.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -185,16 +186,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 206       ;
+; Estimated Total logic elements              ; 211       ;
 ;                                             ;           ;
-; Total combinational functions               ; 204       ;
+; Total combinational functions               ; 209       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 72        ;
-;     -- 3 input functions                    ; 36        ;
-;     -- <=2 input functions                  ; 96        ;
+;     -- 3 input functions                    ; 40        ;
+;     -- <=2 input functions                  ; 97        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 135       ;
+;     -- normal mode                          ; 140       ;
 ;     -- arithmetic mode                      ; 69        ;
 ;                                             ;           ;
 ; Total registers                             ; 102       ;
@@ -207,7 +208,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 89        ;
-; Total fan-out                               ; 910       ;
+; Total fan-out                               ; 924       ;
 ; Average fan-out                             ; 2.74      ;
 +---------------------------------------------+-----------+
 
@@ -217,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name   ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------+--------------+
-; |LCD1602_top                        ; 204 (142)           ; 102 (56)                  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |LCD1602_top                                ; LCD1602_top   ; work         ;
-;    |LCD1602_drive:LCD1602_drive_m0| ; 62 (62)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD1602_top|LCD1602_drive:LCD1602_drive_m0 ; LCD1602_drive ; work         ;
+; |LCD1602_top                        ; 209 (146)           ; 102 (56)                  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |LCD1602_top                                ; LCD1602_top   ; work         ;
+;    |LCD1602_drive:LCD1602_drive_m0| ; 63 (63)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD1602_top|LCD1602_drive:LCD1602_drive_m0 ; LCD1602_drive ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -281,6 +282,7 @@ Encoding Type:  One-Hot
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                                     ;
 ; RS_DAT         ; 1     ; Signed Integer                                     ;
 ; RS_CMD         ; 0     ; Signed Integer                                     ;
 ; INIT_CMD_NUM   ; 5     ; Signed Integer                                     ;
@@ -294,7 +296,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; CLK_FRE        ; 20    ; Signed Integer                                     ;
+; CLK_FRE        ; 50    ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -321,18 +323,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR SLD      ; 4                           ;
 ;     ENA SLD           ; 4                           ;
 ;     plain             ; 40                          ;
-; cycloneiii_lcell_comb ; 205                         ;
+; cycloneiii_lcell_comb ; 210                         ;
 ;     arith             ; 69                          ;
 ;         2 data inputs ; 69                          ;
-;     normal            ; 136                         ;
+;     normal            ; 141                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 36                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 40                          ;
 ;         4 data inputs ; 72                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.54                        ;
+; Average LUT depth     ; 3.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -351,60 +353,60 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 23 14:50:02 2022
+    Info: Processing started: Fri Jun 09 13:43:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd1602_top.sv
-    Info (12023): Found entity 1: LCD1602_top File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 1
+    Info (12023): Found entity 1: LCD1602_top File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/lcd1602_drive.sv
-    Info (12023): Found entity 1: LCD1602_drive File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_drive.sv Line: 1
+    Info (12023): Found entity 1: LCD1602_drive File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_drive.sv Line: 1
 Info (12127): Elaborating entity "LCD1602_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(32): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 32
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(38): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(46): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(50): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 50
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(52): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(55): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(62): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(64): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 64
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(67): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 67
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(68): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 68
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(79): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 79
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(83): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 83
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(85): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 85
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(88): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(95): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 95
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(97): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 97
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(100): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 100
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(101): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 101
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(112): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 112
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(116): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 116
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(118): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 118
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(121): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 121
-Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(129): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 129
-Info (12128): Elaborating entity "LCD1602_drive" for hierarchy "LCD1602_drive:LCD1602_drive_m0" File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 155
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(34): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(40): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(48): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(52): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(54): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(57): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(64): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(66): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(69): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(70): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(81): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(85): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(87): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(90): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(97): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(99): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 99
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(102): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(103): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 103
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(114): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 114
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(118): truncated value with size 32 to match size of target (1) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 118
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(120): truncated value with size 32 to match size of target (8) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(123): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at LCD1602_top.sv(131): truncated value with size 32 to match size of target (4) File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 131
+Info (12128): Elaborating entity "LCD1602_drive" for hierarchy "LCD1602_drive:LCD1602_drive_m0" File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 157
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LCD1602_RW" is stuck at GND File: E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/src/LCD1602_top.sv Line: 7
+    Warning (13410): Pin "LCD1602_RW" is stuck at GND File: E:/FPGA_work/Cyclone/Code_Others/lcd1602/src/LCD1602_top.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file E:/FPGA_work/Cyclone/Code_Others/lcd1602/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 206 logic cells
+    Info (21061): Implemented 211 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Sun Oct 23 14:50:08 2022
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Fri Jun 09 13:43:17 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/FPGA_work/CYCLONE_IV/Code_Others/LCD1602/output_files/top.map.smsg.
+The suppressed messages can be found in E:/FPGA_work/Cyclone/Code_Others/lcd1602/output_files/top.map.smsg.
 
 
