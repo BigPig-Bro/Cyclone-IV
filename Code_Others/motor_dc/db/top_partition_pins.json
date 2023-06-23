@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dc_io[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_io[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dir",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
