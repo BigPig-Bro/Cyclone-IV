@@ -1,0 +1,525 @@
+Analysis & Synthesis report for top
+Mon Jun 26 06:42:45 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |beep_top|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |beep_top
+ 14. Parameter Settings for User Entity Instance: key:key_m0
+ 15. Parameter Settings for User Entity Instance: beep_driver:beep_driver_m0
+ 16. Parameter Settings for Inferred Entity Instance: beep_driver:beep_driver_m0|lpm_divide:Mod0
+ 17. Parameter Settings for Inferred Entity Instance: beep_driver:beep_driver_m0|lpm_divide:Div0
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun 26 06:42:45 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; beep_top                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 2,422                                       ;
+;     Total combinational functions  ; 2,420                                       ;
+;     Dedicated logic registers      ; 146                                         ;
+; Total registers                    ; 146                                         ;
+; Total pins                         ; 4                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; beep_top           ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; src/key.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/beep_sing/src/key.sv                                 ;         ;
+; src/beep_top.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/beep_sing/src/beep_top.sv                            ;         ;
+; src/beep_driver.sv               ; yes             ; User SystemVerilog HDL File  ; D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv                         ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_kcm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/lpm_divide_kcm.tdf                      ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/sign_div_unsign_9nh.tdf                 ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_6af.tdf                       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/add_sub_7pc.tdf                         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/add_sub_8pc.tdf                         ;         ;
+; db/lpm_divide_tim.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/lpm_divide_tim.tdf                      ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/sign_div_unsign_llh.tdf                 ;         ;
+; db/alt_u_div_u6f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf                       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 2,422         ;
+;                                             ;               ;
+; Total combinational functions               ; 2420          ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 934           ;
+;     -- 3 input functions                    ; 992           ;
+;     -- <=2 input functions                  ; 494           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 1660          ;
+;     -- arithmetic mode                      ; 760           ;
+;                                             ;               ;
+; Total registers                             ; 146           ;
+;     -- Dedicated logic registers            ; 146           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 4             ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; song_index[4] ;
+; Maximum fan-out                             ; 140           ;
+; Total fan-out                               ; 8052          ;
+; Average fan-out                             ; 3.13          ;
++---------------------------------------------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                    ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |beep_top                                 ; 2420 (663)          ; 146 (61)                  ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |beep_top                                                                                                                                                  ; beep_top            ; work         ;
+;    |beep_driver:beep_driver_m0|           ; 1723 (235)          ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0                                                                                                                       ; beep_driver         ; work         ;
+;       |lpm_divide:Div0|                   ; 193 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_tim:auto_generated|  ; 193 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated                                                                         ; lpm_divide_tim      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 193 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider                                             ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_u6f:divider|    ; 193 (193)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider                       ; alt_u_div_u6f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 1295 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_kcm:auto_generated|  ; 1295 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1295 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_6af:divider|    ; 1295 (1294)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|beep_driver:beep_driver_m0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
+;    |key:key_m0|                           ; 34 (34)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |beep_top|key:key_m0                                                                                                                                       ; key                 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------+
+; State Machine - |beep_top|state                   ;
++------------+------------+------------+------------+
+; Name       ; state.0000 ; state.WAIT ; state.PLAY ;
++------------+------------+------------+------------+
+; state.0000 ; 0          ; 0          ; 0          ;
+; state.PLAY ; 1          ; 0          ; 1          ;
+; state.WAIT ; 1          ; 1          ; 0          ;
++------------+------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++----------------------------------------+--------------------------------------------------------+
+; Register name                          ; Reason for Removal                                     ;
++----------------------------------------+--------------------------------------------------------+
+; data_high[3]                           ; Stuck at GND due to stuck port data_in                 ;
+; data_level[2,3]                        ; Stuck at GND due to stuck port data_in                 ;
+; beep_driver:beep_driver_m0|mic[6,7]    ; Stuck at GND due to stuck port data_in                 ;
+; beep_driver:beep_driver_m0|state[2,3]  ; Merged with beep_driver:beep_driver_m0|state[1]        ;
+; beep_driver:beep_driver_m0|state[1]    ; Stuck at GND due to stuck port data_in                 ;
+; state~7                                ; Lost fanout                                            ;
+; state~8                                ; Lost fanout                                            ;
+; key:key_m0|clk_delay[0]                ; Merged with beep_driver:beep_driver_m0|clk_1Mhz_cnt[0] ;
+; Total Number of Removed Registers = 11 ;                                                        ;
++----------------------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                      ;
++---------------+---------------------------+----------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                               ;
++---------------+---------------------------+----------------------------------------------------------------------+
+; data_high[3]  ; Stuck at GND              ; beep_driver:beep_driver_m0|mic[6], beep_driver:beep_driver_m0|mic[7] ;
+;               ; due to stuck port data_in ;                                                                      ;
++---------------+---------------------------+----------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 146   ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 100   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |beep_top|beep_driver:beep_driver_m0|counter[24] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |beep_top|data_long[0]                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |beep_top|key:key_m0|cnt[3]                      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |beep_top|song_index[2]                          ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |beep_top|state                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |beep_top ;
++----------------+------------------+--------------------------------------+
+; Parameter Name ; Value            ; Type                                 ;
++----------------+------------------+--------------------------------------+
+; CLK_FRE        ; 50               ; Signed Integer                       ;
+; SONG_DATA_CNT  ; 0000000011111111 ; Unsigned Binary                      ;
+; IDLE           ; 0                ; Signed Integer                       ;
+; PLAY           ; 1                ; Signed Integer                       ;
+; WAIT           ; 2                ; Signed Integer                       ;
++----------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key_m0 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                 ;
+; CNT            ; 2     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: beep_driver:beep_driver_m0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: beep_driver:beep_driver_m0|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                           ;
+; LPM_WIDTHD             ; 32             ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_kcm ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: beep_driver:beep_driver_m0|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_tim ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 146                         ;
+;     ENA               ; 36                          ;
+;     ENA SCLR          ; 64                          ;
+;     plain             ; 46                          ;
+; cycloneiii_lcell_comb ; 2420                        ;
+;     arith             ; 760                         ;
+;         2 data inputs ; 127                         ;
+;         3 data inputs ; 633                         ;
+;     normal            ; 1660                        ;
+;         0 data inputs ; 48                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 307                         ;
+;         3 data inputs ; 359                         ;
+;         4 data inputs ; 934                         ;
+;                       ;                             ;
+; Max LUT depth         ; 128.50                      ;
+; Average LUT depth     ; 82.23                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:39     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon Jun 26 06:42:01 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/key.sv
+    Info (12023): Found entity 1: key File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/beep_top.sv
+    Info (12023): Found entity 1: beep_top File: D:/Users/HUIP/Desktop/beep_sing/src/beep_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/beep_driver.sv
+    Info (12023): Found entity 1: beep_driver File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at key.sv(8): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 8
+Info (12127): Elaborating entity "beep_top" for the top level hierarchy
+Info (12128): Elaborating entity "key" for hierarchy "key:key_m0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_top.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at key.sv(12): truncated value with size 32 to match size of target (10) File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at key.sv(21): truncated value with size 32 to match size of target (1) File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at key.sv(25): truncated value with size 32 to match size of target (16) File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at key.sv(34): truncated value with size 32 to match size of target (2) File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 34
+Info (12128): Elaborating entity "beep_driver" for hierarchy "beep_driver:beep_driver_m0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_top.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at beep_driver.sv(22): truncated value with size 32 to match size of target (16) File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at beep_driver.sv(24): truncated value with size 32 to match size of target (16) File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 24
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "beep_driver:beep_driver_m0|Mod0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "beep_driver:beep_driver_m0|Div0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 50
+Info (12130): Elaborated megafunction instantiation "beep_driver:beep_driver_m0|lpm_divide:Mod0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 43
+Info (12133): Instantiated megafunction "beep_driver:beep_driver_m0|lpm_divide:Mod0" with the following parameter: File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 43
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kcm.tdf
+    Info (12023): Found entity 1: lpm_divide_kcm File: D:/Users/HUIP/Desktop/beep_sing/db/lpm_divide_kcm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: D:/Users/HUIP/Desktop/beep_sing/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_6af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: D:/Users/HUIP/Desktop/beep_sing/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: D:/Users/HUIP/Desktop/beep_sing/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "beep_driver:beep_driver_m0|lpm_divide:Div0" File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 50
+Info (12133): Instantiated megafunction "beep_driver:beep_driver_m0|lpm_divide:Div0" with the following parameter: File: D:/Users/HUIP/Desktop/beep_sing/src/beep_driver.sv Line: 50
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_tim.tdf
+    Info (12023): Found entity 1: lpm_divide_tim File: D:/Users/HUIP/Desktop/beep_sing/db/lpm_divide_tim.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: D:/Users/HUIP/Desktop/beep_sing/db/sign_div_unsign_llh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u6f.tdf
+    Info (12023): Found entity 1: alt_u_div_u6f File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 27
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_2_result_int[0]~6" File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 87
+    Info (17048): Logic cell "beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_3_result_int[0]~8" File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 92
+    Info (17048): Logic cell "beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_5_result_int[0]~10" File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 102
+    Info (17048): Logic cell "beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_10_result_int[0]~10" File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 37
+    Info (17048): Logic cell "beep_driver:beep_driver_m0|lpm_divide:Div0|lpm_divide_tim:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_13_result_int[0]~10" File: D:/Users/HUIP/Desktop/beep_sing/db/alt_u_div_u6f.tdf Line: 52
+Info (144001): Generated suppressed messages file D:/Users/HUIP/Desktop/beep_sing/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2426 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 2422 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Mon Jun 26 06:42:45 2023
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:00:53
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Users/HUIP/Desktop/beep_sing/output_files/top.map.smsg.
+
+

@@ -1,0 +1,6 @@
+
+State Machine - |beep_top|state
+Name state.0000 state.WAIT state.PLAY 
+state.0000 0 0 0 
+state.PLAY 1 0 1 
+state.WAIT 1 1 0 

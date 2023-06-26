@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at key.sv(4): object "CNT" differs only in case from object "cnt" in the same scope File: D:/Users/HUIP/Desktop/beep_sing/src/key.sv Line: 4
+Warning (10268): Verilog HDL information at beep_top.sv(29): always construct contains both blocking and non-blocking assignments File: D:/Users/HUIP/Desktop/beep_sing/src/beep_top.sv Line: 29
