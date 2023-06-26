@@ -1,0 +1,50 @@
+|top
+clk => dac904e_clk.IN1
+dac904e_db[0] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[1] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[2] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[3] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[4] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[5] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[6] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[7] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[8] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[9] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[10] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[11] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[12] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_db[13] <= dac904e_ctl:dac904e_ctl_m0.dac904e_data
+dac904e_clk <= dac904e_clk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dac904e_ctl:dac904e_ctl_m0
+clk => dac904e_data[0]~reg0.CLK
+clk => dac904e_data[1]~reg0.CLK
+clk => dac904e_data[2]~reg0.CLK
+clk => dac904e_data[3]~reg0.CLK
+clk => dac904e_data[4]~reg0.CLK
+clk => dac904e_data[5]~reg0.CLK
+clk => dac904e_data[6]~reg0.CLK
+clk => dac904e_data[7]~reg0.CLK
+clk => dac904e_data[8]~reg0.CLK
+clk => dac904e_data[9]~reg0.CLK
+clk => dac904e_data[10]~reg0.CLK
+clk => dac904e_data[11]~reg0.CLK
+clk => dac904e_data[12]~reg0.CLK
+clk => dac904e_data[13]~reg0.CLK
+dac904e_data[0] <= dac904e_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[1] <= dac904e_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[2] <= dac904e_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[3] <= dac904e_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[4] <= dac904e_data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[5] <= dac904e_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[6] <= dac904e_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[7] <= dac904e_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[8] <= dac904e_data[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[9] <= dac904e_data[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[10] <= dac904e_data[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[11] <= dac904e_data[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[12] <= dac904e_data[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac904e_data[13] <= dac904e_data[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
