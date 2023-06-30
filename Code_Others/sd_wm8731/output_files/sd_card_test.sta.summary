@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.353
+TNS   : -2287.797
+
+Type  : Slow 1200mV 85C Model Setup 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : -0.867
+TNS   : -0.867
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -1282.557
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.912
+TNS   : -2089.745
+
+Type  : Slow 1200mV 0C Model Setup 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : -0.679
+TNS   : -0.679
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -1282.557
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.737
+TNS   : -566.205
+
+Type  : Fast 1200mV 0C Model Setup 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1063.514
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m2|button_negedge'
+Slack : -1.000
+TNS   : -2.000
+
+------------------------------------------------------------
