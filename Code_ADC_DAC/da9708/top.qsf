@@ -56,13 +56,13 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_E1 -to clk
-set_location_assignment PIN_B3 -to da9708_clk
+set_location_assignment PIN_C2 -to da9708_clk
 set_location_assignment PIN_A2 -to da9708_db[7]
-set_location_assignment PIN_B4 -to da9708_db[6]
+set_location_assignment PIN_B3 -to da9708_db[6]
 set_location_assignment PIN_A3 -to da9708_db[5]
-set_location_assignment PIN_B5 -to da9708_db[4]
-set_location_assignment PIN_A6 -to da9708_db[3]
-set_location_assignment PIN_B6 -to da9708_db[2]
+set_location_assignment PIN_B4 -to da9708_db[4]
+set_location_assignment PIN_A4 -to da9708_db[3]
+set_location_assignment PIN_B5 -to da9708_db[2]
 set_location_assignment PIN_A5 -to da9708_db[1]
-set_location_assignment PIN_B7 -to da9708_db[0]
+set_location_assignment PIN_B6 -to da9708_db[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

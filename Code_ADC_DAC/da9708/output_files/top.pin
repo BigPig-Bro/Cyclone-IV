@@ -72,9 +72,9 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
 da9708_db[7]                 : A2        : output : 2.5 V             :         : 8         : Y              
 da9708_db[5]                 : A3        : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
+da9708_db[3]                 : A4        : output : 2.5 V             :         : 8         : Y              
 da9708_db[1]                 : A5        : output : 2.5 V             :         : 8         : Y              
-da9708_db[3]                 : A6        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
@@ -87,11 +87,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :      
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-da9708_clk                   : B3        : output : 2.5 V             :         : 8         : Y              
-da9708_db[6]                 : B4        : output : 2.5 V             :         : 8         : Y              
-da9708_db[4]                 : B5        : output : 2.5 V             :         : 8         : Y              
-da9708_db[2]                 : B6        : output : 2.5 V             :         : 8         : Y              
-da9708_db[0]                 : B7        : output : 2.5 V             :         : 8         : Y              
+da9708_db[6]                 : B3        : output : 2.5 V             :         : 8         : Y              
+da9708_db[4]                 : B4        : output : 2.5 V             :         : 8         : Y              
+da9708_db[2]                 : B5        : output : 2.5 V             :         : 8         : Y              
+da9708_db[0]                 : B6        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
@@ -102,7 +102,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :      
 GND                          : B15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
+da9708_clk                   : C2        : output : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                

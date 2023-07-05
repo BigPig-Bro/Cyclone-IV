@@ -1,14 +1,14 @@
 |top
 clk => clk.IN1
-da9708_db[0] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[1] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[2] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[3] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[4] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[5] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[6] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_db[7] <= da9708_ctl:da9708_ctl_m0.da9708_data
-da9708_clk <= clk.DB_MAX_OUTPUT_PORT_TYPE
+da9708_db[0] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[1] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[2] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[3] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[4] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[5] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[6] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_db[7] << da9708_ctl:da9708_ctl_m0.da9708_data
+da9708_clk << clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|da9708_ctl:da9708_ctl_m0
