@@ -1,0 +1,32 @@
+module ad1030_top#(
+    parameter CLK_FRE = 50,
+    parameter ADC_FRE = 5000
+)(
+    input           clk,
+    input           rst_n, 
+
+    input           ad1030_start, 	
+    output [9:0]    ad1030_data ,
+
+    input  [9:0]    ad1030_db,		
+    output reg      ad1030_clk,
+    output          ad1030_oe_n
+);
+
+//数据输出
+assign ad1030_oe_n = 1'b0;
+assign ad1030_data = rst_n & ad1030_start?ad1030_db : 'd0;
+
+//时钟输出
+//reg [23:0] clk_cnt = 'd0;
+//always @(posedge clk or negedge rst_n)
+//    if(!rst_n)
+//        clk_cnt <= 'd0;
+//    else if(clk_cnt == CLK_FRE * 500_000 /ADC_FRE - 1)begin
+//        ad1030_clk <= ~ad1030_clk;
+//        clk_cnt <= 'd0;
+//    end
+//    else
+//        clk_cnt <= (ad1030_start)? clk_cnt: clk_cnt + 'd1;
+always@(posedge clk) ad1030_clk <= !ad1030_clk;
+endmodule
