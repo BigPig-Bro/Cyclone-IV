@@ -9,7 +9,7 @@ module ad1030_top#(
     output [9:0]    ad1030_data ,
 
     input  [9:0]    ad1030_db,		
-    output reg      ad1030_clk,
+    output 	       	ad1030_clk,
     output          ad1030_oe_n
 );
 
@@ -18,7 +18,7 @@ assign ad1030_oe_n = 1'b0;
 assign ad1030_data = rst_n & ad1030_start?ad1030_db : 'd0;
 
 //时钟输出
-//reg [23:0] clk_cnt = 'd0;
+//	 [23:0] clk_cnt = 'd0;
 //always @(posedge clk or negedge rst_n)
 //    if(!rst_n)
 //        clk_cnt <= 'd0;
@@ -28,5 +28,6 @@ assign ad1030_data = rst_n & ad1030_start?ad1030_db : 'd0;
 //    end
 //    else
 //        clk_cnt <= (ad1030_start)? clk_cnt: clk_cnt + 'd1;
-always@(posedge clk) ad1030_clk <= !ad1030_clk;
+//always@(posedge clk) ad1030_clk <= !ad1030_clk;
+assign ad1030_clk = clk;
 endmodule
