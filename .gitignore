@@ -1,0 +1,8 @@
+#屏蔽 临时文件
+db
+greybox_tmp
+incremental_db
+output_files
+*.json
+
+
