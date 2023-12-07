@@ -131,14 +131,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/lcd/thrould_rgb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/lcd/thres_scan.sv
 set_global_assignment -name VERILOG_FILE src/lcd/display.v
 set_global_assignment -name SYSTEMVERILOG_FILE src/top.sv
-set_global_assignment -name SYSTEMVERILOG_FILE src/filter/rgb_gauss.sv
-set_global_assignment -name VHDL_FILE src/filter/linebuffer_Wapper.vhd
-set_global_assignment -name VHDL_FILE src/filter/ImageXlib_utils.vhd
-set_global_assignment -name VHDL_FILE src/filter/ImageXlib_arch.vhd
 set_global_assignment -name VERILOG_FILE src/lcd/video_timing_data.v
 set_global_assignment -name VERILOG_FILE src/lcd/rgb_timing.v
-set_global_assignment -name SYSTEMVERILOG_FILE src/iic_cam/iic_top.sv
-set_global_assignment -name SYSTEMVERILOG_FILE src/iic_cam/iic_master.sv
 set_global_assignment -name VERILOG_FILE src/sdram/sdram_core.v
 set_global_assignment -name VERILOG_FILE src/sdram/frame_read_write.v
 set_global_assignment -name VERILOG_FILE src/sdram/frame_fifo_write.v
