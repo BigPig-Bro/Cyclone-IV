@@ -10,14 +10,18 @@ module top (
 	output 					adc0809_st,
 	input 					adc0809_eoc,
 	output 					adc0809_ale,
-
+	
+	output reg [3:0] test,
+	
 	//uart
 	output 					uart_tx
 );
 parameter CLK_FRE 	= 50; //FPGA 输入MHz
 parameter UART_RATE = 115200; //串口波特率
 parameter SEND_FRE 	= 2; //串口发送频率
-parameter ADC_FRE 	= 500; //ADC0809采样频率
+parameter ADC_FRE 	= 50000; //ADC0809采样频率
+
+always@(posedge clk) test++;
 
 /********************************************************************************/
 /**************************    ADC0809驱动    ************************************/

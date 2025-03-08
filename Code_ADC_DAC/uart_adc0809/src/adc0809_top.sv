@@ -60,17 +60,17 @@ always@(posedge clk,negedge rst_n)
             START:begin
                 wait_cnt       <= wait_cnt + 'd1;
 
-                if(adc0809_start)begin
+                if(adc0809_start && adc0809_clk == 0 && adc0809_clk_cnt == 1)begin
                     adc0809_st      <= 'b1;
 
                     adc0809_state   <= ST;
                 end
             end
 
-            ST:begin // min- typ-100ns max-200ns
+            ST:begin // min- typ-100ns max-200ns,但要让CLK采到所以等一个周期
                 wait_cnt       <= wait_cnt + 'd1;
                
-                if(clk_delay >= CLK_FRE / 10 - 1)begin
+                if(adc0809_clk == 1 && adc0809_clk_cnt == 1)begin
                     adc0809_st      <= 'b0;
 
                     adc0809_state   <= WAIT_EOC_L;
