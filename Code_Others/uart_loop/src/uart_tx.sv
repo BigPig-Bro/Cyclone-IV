@@ -1,69 +1,92 @@
 // 数据位 8 停止位 1 无奇偶校验
 module uart_tx#(
-	parameter CLK_FRE 	= 50,
-	parameter UART_RATE = 115200
-	) (
-	input 				clk,    // 
-	
-	input 				send_en ,	
-	output 	 			send_busy ,	
-	input 		[ 7:0] 	send_data ,	
+    parameter CLK_FRE    = 50,
+    parameter UART_RATE = 115200
+) (
+    input             i_sys_clk,    //系统时钟
+    input             i_rst_n,     //系统复位 
+   
+    input             i_send_en ,   
+    output            o_send_busy ,   
+    input      [ 7:0] i_send_data ,   
 
-	output reg 			tx_pin = 1
+    output logic      o_tx_pin 
 );
 parameter  RATE_CNT = (CLK_FRE * 1000_000 / UART_RATE) - 1;
-reg [10:0] clk_cnt;
 
-enum {WAIT,START,SEND,STOP}STATE_TX;
-reg [1:0] state;
+typedef enum logic [1:0] {TX_WAIT, TX_START, TX_SEND, TX_STOP}STATE_TX;
+STATE_TX state;
 
-assign send_busy = state != WAIT;
+logic [25:0] clk_cnt;
+logic [ 7:0] send_data_r;
+logic [ 2:0] send_cnt;
 
-reg [ 7:0] send_data_r;
-reg [ 2:0] send_cnt;
+assign o_send_busy = state != TX_WAIT;
 
-always@(posedge clk)
-	case(state)
-		WAIT:
-			if(send_en)begin 
-				send_data_r <= send_data;
-				send_cnt <= 'd0;
+always@(posedge i_sys_clk)begin
+    if(!i_rst_n)begin
+        clk_cnt <= 0;
+        send_data_r <= 0;
+        send_cnt <= 0;
+        o_tx_pin <= 1; // 默认高电平
 
-				state <= START;
-			end
+        state <= TX_WAIT;
+    end else begin
+        case(state)
+            TX_WAIT:
+                if(i_send_en)begin 
+                    send_data_r <= i_send_data;
+                    send_cnt    <= 'd0;
 
-		START:begin 
-			tx_pin <= 0;
+                    state       <= TX_START;
+                end
 
-			if(clk_cnt == RATE_CNT)begin 
-				clk_cnt <= 0;
-				state <= SEND;
-			end
-			else
-				clk_cnt <= clk_cnt + 1;
-		end
+            TX_START:begin 
+                o_tx_pin <= 0;
 
-		SEND:begin 
-			tx_pin <= send_data_r[send_cnt];
+                if(clk_cnt >= RATE_CNT)begin 
+                    clk_cnt     <= 0;
 
-			if(clk_cnt == RATE_CNT)begin 
-				clk_cnt <= 0;
-				send_cnt <= send_cnt + 1;
-				state <= (send_cnt == 7 )?STOP : SEND ;
-			end
-			else
-				clk_cnt <= clk_cnt + 1;
-		end
+                    state   <= TX_SEND;
+                end
+                else
+                    clk_cnt <= clk_cnt + 1;
+            end
 
-		STOP:begin 
-			tx_pin <= 1;
+            TX_SEND:begin 
+                o_tx_pin <= send_data_r[send_cnt];
 
-			if(clk_cnt == RATE_CNT)begin 
-				clk_cnt <= 0;
-				state <= WAIT;
-			end
-			else
-				clk_cnt <= clk_cnt + 1;
-		end
-	endcase
+                if(clk_cnt >= RATE_CNT)begin 
+                    clk_cnt     <= 0;
+                    send_cnt    <= send_cnt + 1;
+
+                    state       <= (send_cnt >= 7 )?TX_STOP : TX_SEND ;
+                end
+                else
+                    clk_cnt     <= clk_cnt + 1;
+            end
+
+            TX_STOP:begin 
+                o_tx_pin        <= 1;
+
+                if(clk_cnt >= RATE_CNT)begin 
+                    clk_cnt     <= 0;
+                    state       <= TX_WAIT;
+                end
+                else
+                    clk_cnt     <= clk_cnt + 1;
+            end
+
+            default:begin
+                clk_cnt     <= 0;
+                send_data_r <= 0;
+                send_cnt    <= 0;
+                o_tx_pin    <= 1; // 默认高电平
+                
+                state       <= TX_WAIT;
+            end
+        endcase
+    end
+end
+
 endmodule
