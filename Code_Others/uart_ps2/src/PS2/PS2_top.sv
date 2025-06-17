@@ -89,55 +89,55 @@ always@(posedge i_sys_clk) begin
             end
 
             START:begin
-                RW_PS2_1Byte(PS2_START_A, NULL, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_START_A, NULL, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_ID : state_ps2;
             end
 
             READ_ID:begin
-                RW_PS2_1Byte(PS2_START_B, o_PS2_ID_r, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_START_B, o_PS2_ID_r, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_5A : state_ps2;
             end
 
             READ_5A:begin
-                RW_PS2_1Byte(PS2_IDLE, NULL, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, NULL, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_WW : state_ps2;
             end
 
             READ_WW:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_key_r[15:8], spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_key_r[15:8], `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_YY : state_ps2;
             end
 
             READ_YY:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_key_r[ 7:0], spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_key_r[ 7:0], `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_RX : state_ps2;
             end
 
             READ_RX:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_RX_r, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_RX_r, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_RY : state_ps2;
             end
 
             READ_RY:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_RY_r, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_RY_r, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_LX : state_ps2;
             end
 
             READ_LX:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_LX_r, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_LX_r, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? READ_LY : state_ps2;
             end
 
             READ_LY:begin
-                RW_PS2_1Byte(PS2_IDLE, o_PS2_LY_r, spi_send_req, spi_send_busy, spi_recv_valid, spi_recv_data, spi_send_data);
+                RW_PS2_1Byte(PS2_IDLE, o_PS2_LY_r, `SPI_DRIVER_BUS);
 
                 state_ps2 <= spi_done ? OUTPUT_DATA : state_ps2;
             end

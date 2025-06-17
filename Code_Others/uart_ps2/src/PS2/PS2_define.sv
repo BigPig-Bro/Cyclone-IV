@@ -2,6 +2,8 @@ localparam PS2_IDLE    = 8'h00; //PS2手柄空闲状态
 localparam PS2_START_A = 8'h01; //PS2手柄启动 A
 localparam PS2_START_B = 8'h42; //PS2手柄启动 B
 
+`define SPI_DRIVER_BUS spi_send_req,spi_send_busy,spi_recv_valid,spi_recv_data,spi_send_data
+
 task RW_PS2_1Byte(
     input        [7:0]   PS2_Write_Data, //写入数据
     output logic [7:0]   PS2_Read_Data,  //读取数据
